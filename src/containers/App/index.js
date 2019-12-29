@@ -1,20 +1,24 @@
-import React from 'react';
-import { useStoreActions, useStoreState } from 'easy-peasy';
-import { Button, Box } from 'rebass/styled-components';
+import React, { PureComponent } from 'react';
+import { Router, Route, Redirect, Switch } from 'react-router-dom';
+import history from '../../../history';
+import AppWrapper from './AppWrapper';
 
-import DataDisplay from '~/components/DataDisplay';
+const NotFoundRoute = () => <Redirect to="/" />;
 
-const App = () => {
-  const loadData = useStoreActions(actions => actions.data.loadData);
-  const isLoading = useStoreState(state => state.data.isLoading);
-  const data = useStoreState(state => state.data.data);
-
-  return (
-    <Box>
-      <Button onClick={loadData}>Load Data</Button>
-      <DataDisplay isLoading={isLoading} data={data} />
-    </Box>
-  );
-};
+class App extends PureComponent {
+  render() {
+    return (
+      <Router history={history}>
+        <Switch>
+          <Route
+            path={['/', 'profile', 'legal']}
+            component={AppWrapper}
+          />
+          <Route component={NotFoundRoute} />
+        </Switch>
+      </Router>
+    );
+  }
+}
 
 export default App;

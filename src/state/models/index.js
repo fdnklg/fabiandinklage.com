@@ -1,5 +1,10 @@
-import DataModel from './DataModel';
+/* eslint-disable */
+import LayoutModel from './LayoutModel';
+import ColorModel from './ColorModel';
+import Content from '../../../public/data/data';
 
 export default {
-  data: DataModel,
+  layout: LayoutModel,
+  color: ColorModel,
+  ...Content
 };

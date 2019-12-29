@@ -8,6 +8,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  @font-face {
+      font-family: 'Faktum Medium';
+      src: url('/public/fonts/Faktum-Medium.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+  }
+
   body {
     padding: 0;
     margin: 0;
