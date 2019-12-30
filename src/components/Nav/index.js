@@ -3,6 +3,8 @@ import { Box, Flex, Link, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 
+import Logo from '../Logo';
+
 const StyledFlex = styled(Flex)`
   color: ${p => p.c[0]};
 `;
@@ -12,6 +14,7 @@ const Nav = () => {
   const color = useStoreState(state => state.color.color);
   return (
     <StyledFlex c={color} alignItems="center">
+      <Logo />
       <Text fontWeight="bold">
         Fabian Dinklage
       </Text>

@@ -1,6 +1,7 @@
 const content = {
   "about": {
-    "intro": "Fabian Dinklage is a Berlin based designer who develops data-driven visualisations with open data as a research associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the Technologiestiftung Berlin. He works as a freelancer at the intersection of data and design and helped international organisations around the world to make sense of their data through visualisation."
+    "intro": "Fabian Dinklage is a Berlin based designer who develops data-driven visualisations with open data as a research associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the Technologiestiftung Berlin. He works as a freelancer at the intersection of data and design and helped international organisations around the world to make sense of their data through visualisation.",
+    "profileUrl": "public/images/profile.jpg"
   },
   "cta": {
     text: 'Do you have a project for me?',
