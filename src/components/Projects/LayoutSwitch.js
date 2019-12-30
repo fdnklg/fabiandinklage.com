@@ -6,6 +6,7 @@ import { Flex, Button } from 'rebass/styled-components';
 
 const StyledLayoutSwitchesWrapper = styled(Flex)`
   font-size: ${p => p.theme.fontSizes[2]};
+  font-family: ${p => p.theme.fonts.headline};
 `;
 
 const LayoutSwitch = () => {

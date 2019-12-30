@@ -18,7 +18,7 @@ const Project = ({match}) => {
   return (
     <>
       <Intro data={project}/>
-      <Flex sx={{ margin: '0 auto' }} pb={[4,5,6]} maxWidth={[1200, 900]} fontSize={[3,4,5]}>
+      <Flex sx={{ margin: '0 auto' }} pb={[4,5,6]} maxWidth={[1200, 900]} fontSize={[3,4]}>
         <StyledParagraph content={project.description} color={color}/>
       </Flex>
       <Media data={project.media} />

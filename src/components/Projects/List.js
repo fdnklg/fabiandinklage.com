@@ -25,6 +25,13 @@ const StyledTD = styled.td`
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
 `;
 
+const StyledTitle = styled.td`
+  font-family: ${p => p.theme.fonts.headline};
+  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+  width:  ${p => p.type === 'first' ? 'end' : 'start'};
+  padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+`;
+
 const isNewYear = (data,i) => {
   const l = data.length;
   const previous = data[i===0?l-1:i-1];
@@ -46,7 +53,7 @@ const List = (props) => {
                 <StyledTR c={color} border={newYear} key={`tr-${i}`}>
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
                     <Link sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
-                      <StyledTD>{p.title}</StyledTD>
+                      <StyledTitle>{p.title}</StyledTitle>
                     </Link>
                     <StyledTD type="last">{p.type}</StyledTD>
                 </StyledTR>

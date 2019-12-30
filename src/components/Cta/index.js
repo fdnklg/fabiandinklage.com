@@ -13,7 +13,7 @@ const StyledButton = styled(Button)`
   width: fit-content;
   align-self: center;
   background: none;
-  border: 2px solid ${p => p.c[0]};
+  border: 1.5px solid ${p => p.c[0]};
   color: ${p => p.c[0]};
   border-radius: 6px;
 

@@ -28,8 +28,8 @@ const AppWrapper = () => {
       <Box
         sx={{
           mx: 'auto',
-          px: [2, 4, 5, 6],
-          py: [2, 2, 4, 5],
+          px: [3, 4, 5, 6],
+          py: [3, 4, 5, 5],
         }}
       >
         <Nav />

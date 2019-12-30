@@ -9,9 +9,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-      font-family: 'Faktum Medium';
-      src: url('/public/fonts/Faktum-Medium.woff') format('woff');
-      font-weight: 400;
+      font-family: 'Faktum Regular';
+      src: url('/public/fonts/Faktum-Regular.woff2') format('woff2');
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'Faktum SemiBold';
+      src: url('/public/fonts/Faktum-SemiBold.woff2') format('woff2');
       font-style: normal;
   }
 
@@ -20,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     position: relative;
     font-family: ${p => p.theme.fonts.body};
-    font-size: ${p => p.theme.fontSizes.body}px;
+    font-size: ${p => p.theme.fontSizes[1]};
   }
 `;
 

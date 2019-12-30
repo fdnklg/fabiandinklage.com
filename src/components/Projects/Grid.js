@@ -4,11 +4,13 @@ import styled from 'styled-components';
 import { useStoreState } from 'easy-peasy';
 import { Box, Text, Image, Link } from 'rebass/styled-components';
 
+import Label from '~/components/Label';
+
 const StyledGridWrapper = styled.div`
   font-size: ${p => p.theme.fontSizes[1]};
 `;
 
-const StyledText = styled(Text)`
+const StyledText = styled(Label)`
   text-align: center;
   margin-top: 10px;
   font-size: ${p => p.theme.fontSizes[2]};

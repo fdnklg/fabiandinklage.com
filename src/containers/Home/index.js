@@ -17,7 +17,7 @@ const Home = p => {
   const color = useStoreState(state => state.color.color);
   return (
     <>
-      <StyledFlex py={[4,5,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,5]}>
+      <StyledFlex sx={{ textAlign: ['left', 'left', 'center'] }} pt={[3,5,5,6]} pb={[0,2,2,4]} width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
         <Paragraph color={color} content={intro} />
       </StyledFlex>
       <Projects />

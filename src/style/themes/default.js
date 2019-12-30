@@ -17,13 +17,12 @@ const defaultTheme = {
     gray: '#dddddf',
     highlight: 'hsla(205, 100%, 40%, 0.125)',
   },
-  schemes: [
-    ['#000', '#fff'], ['#fff', '#000']
-  ],
   fonts: {
-    body: 'Faktum Medium, sans-serif',
+    body: 'Faktum Regular, sans-serif',
+    headline: 'Faktum SemiBold, sans-serif',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96].map(px),
+  letterSpacing: [.125,.25,.5,1].map(px),
   fontWeights: {
     body: 400,
     heading: 700,
