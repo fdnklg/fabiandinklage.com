@@ -70,9 +70,9 @@ const content = {
       ]
     },
     {
-      "title": "A city in flux",
-      "path": "cityinflux0",
-      "client": "Technologiestiftung Berlin",
+      "title": "Retro Future Hackernews",
+      "path": "hackernews",
+      "client": "Experiment",
       "type": "data visualization",
       "year": 2019,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",

@@ -3,6 +3,10 @@ const px = d => {
   return `${d}px`;
 };
 
+const s = d => {
+  return `${d}s`;
+};
+
 const defaultTheme = {
   colors: {
     text: '#000',
@@ -36,6 +40,7 @@ const defaultTheme = {
     desktop: "1080px",
     hd: "1920",
   },
+  times: [.128, .256, .512].map(s),
   radii: {
     default: 4,
     circle: 99999,

@@ -45,7 +45,7 @@ const List = (props) => {
             return (
                 <StyledTR c={color} border={newYear} key={`tr-${i}`}>
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <Link variant="nav" href={`projects/${p.path}`}>
+                    <Link sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
                       <StyledTD>{p.title}</StyledTD>
                     </Link>
                     <StyledTD type="last">{p.type}</StyledTD>

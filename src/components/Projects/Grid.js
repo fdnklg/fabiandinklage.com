@@ -10,20 +10,24 @@ const StyledGridWrapper = styled.div`
 
 const StyledText = styled(Text)`
   text-align: center;
+  margin-top: 10px;
+  font-size: ${p => p.theme.fontSizes[2]};
+  color: ${p => p.c[0]};
 `;
 
 const Grid = (props) => {
   const { data } = props;
+  const color = useStoreState(state => state.color.color);
   return (
     <Box
     sx={{
       display: 'grid',
       gridGap: 4,
-      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
     }}>
       {data.map((p,i) => {
         return (
-          <Link variant="nav" href={`projects/${p.path}`}>
+          <Link sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
             <Box key={`tile-${i}`} color='primary'>
               <Image
                 src={p.thumbnail}
@@ -31,7 +35,7 @@ const Grid = (props) => {
                   width: [ '100%' ],
                 }}
               />
-              <StyledText>{p.title}</StyledText>
+              <StyledText c={color}>{p.title}</StyledText>
             </Box>
           </Link>
         )

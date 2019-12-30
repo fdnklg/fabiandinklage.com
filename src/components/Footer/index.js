@@ -14,7 +14,7 @@ const Footer = p => {
   return (
     <Flex>
       <Box width={1/2}>Copyright 2020, Fabian Dinklage</Box>
-      <Box width={1/2}>Twitter Legal Note</Box>
+      <Box sx={{ textAlign: 'end' }} width={1/2}>Twitter Legal Note</Box>
     </Flex>
   );
 };

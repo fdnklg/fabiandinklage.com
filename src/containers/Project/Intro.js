@@ -15,15 +15,15 @@ const Intro = props => {
 
   return (
     <>
-      <StyledFlex maxWidth={[1200, 900]} pt={[2,4,6]} pb={[2,3,5]}>
-        <Box fontSize={[4,5,7]} width={2/3}>{title}</Box>
-        <Box fontSize={[2,3,4]} width={1/3}>{subtitle}</Box>
+      <StyledFlex maxWidth={[1200, 900]} pt={[4,4,6]} pb={[2,3,5]}>
+        <Box fontSize={[6,6,7]} mb={[3]} width={[1, 1, 2/3]}>{title}</Box>
+        <Box sx={{ lineHeight: '1.5' }} fontSize={[3,4]} width={[1, 1, 1/3]}>{subtitle}</Box>
       </StyledFlex>
-      <StyledFlex pb={[2,3,6]} maxWidth={[1200, 900]}>
-        <Box fontSize={[1,2]} width={[1/4, 1]}><b>Year</b><br/>{year}</Box>
-        <Box fontSize={[1,2]} width={[1/4, 1]}><b>Type</b><br/>{type}</Box>
-        <Box fontSize={[1,2]} width={[1/4, 1]}><b>Client</b><br/>{client}</Box>
-        <Box fontSize={[1,2]} width={[1/4, 1]}><b>URL</b><br/>{url}</Box>
+      <StyledFlex sx={{ lineHeight: '1.5' }} pb={[2,3,5]} maxWidth={[1200, 900]}>
+        <Box mb={[3]} fontSize={[2]} width={[1/4, 1]}><b>Year</b><br/>{year}</Box>
+        <Box mb={[3]} fontSize={[2]} width={[1/4, 1]}><b>Type</b><br/>{type}</Box>
+        <Box mb={[3]} fontSize={[2]} width={[1/4, 1]}><b>Client</b><br/>{client}</Box>
+        <Box mb={[3]} fontSize={[2]} width={[1/4, 1]}><b>URL</b><br/>{url}</Box>
       </StyledFlex>
     </>
   );

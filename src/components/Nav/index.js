@@ -20,13 +20,13 @@ const Nav = () => {
       </Text>
       {/* <Button onClick={setColor}>Surprise me!</Button> */}
       <Box mx="auto" />
-      <Link mr={4} variant="nav" href="/profile">
+      <Link sx={{ textDecoration: 'none', color: color[0] }}  mr={4} variant="nav" href="/profile">
         Profile
       </Link>
-      <Link mr={4} variant="nav" href="/">
+      <Link sx={{ textDecoration: 'none', color: color[0] }}  mr={4} variant="nav" href="/">
         Projects
       </Link>
-      <Link variant="nav" href="/contact">
+      <Link sx={{ textDecoration: 'none', color: color[0] }}  variant="nav" href="/contact">
         Contact
       </Link>
     </StyledFlex>
