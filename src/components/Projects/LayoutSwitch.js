@@ -10,9 +10,12 @@ const StyledLayoutSwitchesWrapper = styled(Flex)`
 `;
 
 const StyledButton = styled(Button)`
+  cursor: pointer;
+  transition: all ${p => p.theme.times[0]} ease-in-out;
+  background-color: ${p => p.c[1]};
   &:hover {
-    color: ${p => p.c[1]};
-    background: ${p => p.c[0]};
+    cursor: pointer;
+    opacity: .5;
     transition: all ${p => p.theme.times[0]} ease-in-out;
   }
 `;
@@ -29,7 +32,7 @@ const LayoutSwitch = () => {
   return (
     <StyledLayoutSwitchesWrapper>
       {switches.map((btn,i) => {
-        return <Button sx={{ background: 'none', color: color[0] }} p={0} mr={3} mb={4} key={i} onClick={() => { setLayout(btn.value) }}>{btn.value}</Button>}
+        return <StyledButton  c={color} p={0} mr={3} mb={4} key={i} onClick={() => { setLayout(btn.value)}}>{btn.value}</StyledButton>}
       )}
     </StyledLayoutSwitchesWrapper>
   );

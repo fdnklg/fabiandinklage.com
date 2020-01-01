@@ -43,6 +43,7 @@ const content = {
     {
       "title": "A city in flux",
       "path": "cityinflux",
+      "color": ['#000', '#fff'],
       "client": "Technologiestiftung Berlin",
       "type": "data visualization",
       "year": 2019,
@@ -55,48 +56,23 @@ const content = {
       "media": [
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "800 route of public and informal mobility routes visualized",
+          "url": "public/images/cityinflux/cityinflux-start-3840x2592.jpg"
         },
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "The data can be filtered by socio-economic properties such as education",
+          "url": "public/images/cityinflux/cityinflux-detail-3840x2592.jpg"
         },
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-      ]
-    },
-    {
-      "title": "Retro Future Hackernews",
-      "path": "hackernews",
-      "client": "Experiment",
-      "type": "data visualization",
-      "year": 2019,
-      "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
-      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
-      "url": "https://city-in-flux.netlify.com/",
-      "tasks": ["concept", "visual interface design", "data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks.",
-      "media": [
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "Along inidividual rides socio-economic transformations can be observed",
+          "url": "public/images/cityinflux/cityinflux-ride-3840x2592.jpg"
         },
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "Unique story snippets can be attached to each route stop",
+          "url": "public/images/cityinflux/cityinflux-story-3840x2592.jpg"
         },
       ]
     },
@@ -105,6 +81,7 @@ const content = {
       "path": "genderinequality",
       "type": "data visualization",
       "client": "Experiment",
+      "color": ['#fff', '#000'],
       "year": 2019,
       "thumbnail": "public/images/genderinequality/genderinequality-thumb-960x640.jpg",
       "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",

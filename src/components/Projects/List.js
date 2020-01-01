@@ -17,6 +17,10 @@ const StyledTable = styled.table`
 
 const StyledTR = styled.tr`
   border-top: ${p => p.border ? '1px solid' + p.c[0] : 'none'};
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    font-size: ${p => p.theme.fontSizes[1]};
+  }
 `;
 
 const StyledTD = styled.td`
@@ -30,6 +34,16 @@ const StyledTitle = styled.td`
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
   width:  ${p => p.type === 'first' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+  transition: opacity ${p => p.theme.times[0]} ease-in-out;
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    font-size: ${p => p.theme.fontSizes[3]};
+  }
+
+  &:hover {
+    opacity: .5;
+    transition: opacity ${p => p.theme.times[0]} ease-in-out;
+  }
 `;
 
 const isNewYear = (data,i) => {

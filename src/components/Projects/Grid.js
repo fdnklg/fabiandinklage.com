@@ -13,39 +13,45 @@ const StyledGridWrapper = styled.div`
   font-size: ${p => p.theme.fontSizes[1]};
 `;
 
-const StyledBox = styled(Box)`
-  opacity: 1;
-  transition: opacity 0.3s;
-
-  &.fade-enter {
-    opacity: 0.1;
-    transition: opacity 0.3s;
-  }
-
-  &.fade-enter-active {
-    opacity: 1;
-    transition: opacity 0.3s;
-  }
-
-  // exit from
-  &.fade-exit {
-    opacity: 1;
-    transition: opacity 0.3s;
-  }
-
-  // exit to
-  &.fade-exit-active {
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-`;
-
 const StyledText = styled(Text)`
   text-align: center;
   margin-top: 7px;
   font-size: ${p => p.theme.fontSizes[2]};
   letter-spacing: ${p => p.theme.letterSpacing[2]};
   color: ${p => p.c[0]};
+`;
+
+const StyledLink = styled(Link)`
+  div {
+    div {
+      transition: opacity ${p => p.theme.times[0]} ease-in-out;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+
+    div {
+      div {
+        transition: opacity ${p => p.theme.times[0]} ease-in-out;
+        opacity: .5;
+      }
+    }
+  }
+
+  img {
+    filter: saturate(75%);
+    transition: filter ${p => p.theme.times[0]};
+
+    &:before() {
+      background: red;
+    }
+  }
+
+  img:hover {
+    filter: saturate(100%);
+    transition: filter ${p => p.theme.times[0]};
+  }
 `;
 
 const Grid = (props) => {
@@ -59,7 +65,7 @@ const Grid = (props) => {
       transitionAppear={true}
       unMountOnExit
     >
-      <StyledBox
+      <Box
       sx={{
         display: 'grid',
         gridGap: 4,
@@ -67,7 +73,7 @@ const Grid = (props) => {
       }}>
         {data.map((p,i) => {
           return (
-            <Link sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
+            <StyledLink sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
               <Box sx={{ height: 'auto', overflow: 'hidden' }} key={`tile-${i}`} color='primary'>
                   <LazyLoad height={200} offset={200}>
                     <Image
@@ -85,10 +91,10 @@ const Grid = (props) => {
                   </LazyLoad>
                 <StyledText c={color}>{p.title}</StyledText>
               </Box>
-            </Link>
+            </StyledLink>
           )
         })}
-      </StyledBox>
+      </Box>
     </CSSTransition>
   );
 };
