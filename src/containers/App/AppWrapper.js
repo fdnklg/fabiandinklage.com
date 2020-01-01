@@ -15,6 +15,7 @@ const StyledWrapper = styled.div`
 import Nav from '../../components/Nav';
 import Profile from '../Profile';
 import Project from '../Project';
+import Legal from '../Legal';
 import Cta from '../../components/Cta';
 import Home from '../Home';
 import Footer from '../../components/Footer';
@@ -36,7 +37,7 @@ const AppWrapper = () => {
         <Switch>
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/legal" component={Legal} /> */}
+          <Route exact path="/legal" component={Legal} />
           <Route exact path="/" component={Home} />
           <Route exact path={`/projects/:projectName`} component={Project} />
         </Switch>

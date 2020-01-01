@@ -1,10 +1,12 @@
 import React from 'react';
-import { Box, Flex, Link, Text, Button } from 'rebass/styled-components';
+import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 
-import Logo from '../Logo';
-import Label from '../Label';
+
+import Logo from '~/components/Logo';
+import Label from '~/components/Label';
+import Link from '~/components/Link';
 
 const StyledFlex = styled(Flex)`
   color: ${p => p.c[0]};
@@ -17,9 +19,9 @@ const Nav = () => {
   return (
     <StyledFlex c={color} alignItems="center">
       <Logo />
-      <Text fontWeight="bold">
+      <Link href="/" fontWeight="bold">
         <Label content="Fabian Dinklage"></Label>
-      </Text>
+      </Link>
       {/* <Button onClick={setColor}>Surprise me!</Button> */}
       <Box mx="auto" />
       <Link sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}  mr={4} variant="nav" href="/">

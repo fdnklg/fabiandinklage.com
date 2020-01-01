@@ -9,6 +9,14 @@ const StyledLayoutSwitchesWrapper = styled(Flex)`
   font-family: ${p => p.theme.fonts.headline};
 `;
 
+const StyledButton = styled(Button)`
+  &:hover {
+    color: ${p => p.c[1]};
+    background: ${p => p.c[0]};
+    transition: all ${p => p.theme.times[0]} ease-in-out;
+  }
+`;
+
 const LayoutSwitch = () => {
   const setLayout = useStoreActions(actions => actions.layout.setLayout);
   const color = useStoreState(state => state.color.color);

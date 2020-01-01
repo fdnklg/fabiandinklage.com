@@ -5,12 +5,13 @@ import styled from 'styled-components';
 
 const StyledText = styled(Text)`
   letter-spacing: ${ p => p.theme.letterSpacing[2] };
+  text-align: ${ p => p.align === 'center' ? 'center' : 'left' };
 `;
 
 const Label = (p) => {
   const color = useStoreState(state => state.color.color);
-  const { content } = p;
-  return <StyledText sx={{ textDecoration: 'none', color: color[0] }}>{content}</StyledText>;
+  const { content, align } = p;
+  return <StyledText align={align} sx={{ textDecoration: 'none', color: color[0] }}>{content}</StyledText>;
 }
 
 export default Label;

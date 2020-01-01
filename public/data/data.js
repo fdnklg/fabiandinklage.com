@@ -47,6 +47,7 @@ const content = {
       "type": "data visualization",
       "year": 2019,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
       "url": "https://city-in-flux.netlify.com/",
       "tasks": ["concept", "visual interface design", "data visualization"],
       "subtitle": "800 Routes of Diversity and Contrast",
@@ -76,6 +77,7 @@ const content = {
       "type": "data visualization",
       "year": 2019,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
       "url": "https://city-in-flux.netlify.com/",
       "tasks": ["concept", "visual interface design", "data visualization"],
       "subtitle": "800 Routes of Diversity and Contrast",
@@ -99,148 +101,32 @@ const content = {
       ]
     },
     {
-      "title": "A city in flux",
-      "path": "cityinflux1",
-      "client": "Technologiestiftung Berlin",
+      "title": "Gender inequality in politics",
+      "path": "genderinequality",
       "type": "data visualization",
-      "year": 2018,
-      "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
-      "url": "https://city-in-flux.netlify.com/",
-      "tasks": ["concept", "visual interface design", "data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks.",
+      "client": "Experiment",
+      "year": 2019,
+      "thumbnail": "public/images/genderinequality/genderinequality-thumb-960x640.jpg",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://fabiandinklage.com/projects/gender-equality/",
+      "tasks": ["data visualization"],
+      "subtitle": "Balance of gender in national parliaments visualized.",
+      "description": "Gender inequality in politics. It is a data visualization which shows the transformation of seats in national political parliaments by biological sex in one interactive graphic. The application visualizes the progress towards gender equality for each country and makes cultural differences between countries comparable through interaction",
       "media": [
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "Sorted by continents",
+          "url": "public/images/genderinequality/genderinequality-continents-3840x2592.jpg"
         },
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "Sorted by progression between 1990 and 2020",
+          "url": "public/images/genderinequality/genderinequality-progress-3840x2592.jpg"
         },
         {
           "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-      ]
-    },
-    {
-      "title": "A city in flux",
-      "path": "cityinflux2",
-      "client": "Technologiestiftung Berlin",
-      "type": "data visualization",
-      "year": 2018,
-      "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
-      "url": "https://city-in-flux.netlify.com/",
-      "tasks": ["concept", "visual interface design", "data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks.",
-      "media": [
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-      ]
-    },
-    {
-      "title": "A city in flux",
-      "path": "cityinflux3",
-      "client": "Technologiestiftung Berlin",
-      "type": "data visualization",
-      "year": 2018,
-      "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
-      "url": "https://city-in-flux.netlify.com/",
-      "tasks": ["concept", "visual interface design", "data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks.",
-      "media": [
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-      ]
-    },
-    {
-      "title": "A city in flux",
-      "path": "cityinflux4",
-      "client": "Technologiestiftung Berlin",
-      "type": "data visualization",
-      "year": 2017,
-      "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
-      "url": "https://city-in-flux.netlify.com/",
-      "tasks": ["concept", "visual interface design", "data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks.",
-      "media": [
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-      ]
-    },
-    {
-      "title": "A city in flux",
-      "path": "cityinflux5",
-      "client": "Technologiestiftung Berlin",
-      "type": "data visualization",
-      "client": "Technologiestiftung Berlin",
-      "year": 2017,
-      "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
-      "url": "https://city-in-flux.netlify.com/",
-      "tasks": ["concept", "visual interface design", "data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks.",
-      "media": [
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
-        },
-        {
-          "type": "img",
-          "content": "I am the media subline",
-          "url": "public/images/cityinflux/cityinflux-thumb-960x640.jpg"
+          "content": "North american countries highlighted",
+          "url": "public/images/genderinequality/genderinequality-northAmerica-3840x2592.jpg"
         },
       ]
     },
