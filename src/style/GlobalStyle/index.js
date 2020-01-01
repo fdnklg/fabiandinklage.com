@@ -8,18 +8,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  @font-face {
-      font-family: 'Faktum Regular';
-      src: url('/public/fonts/Faktum-Regular.woff2') format('woff2');
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Faktum SemiBold';
-      src: url('/public/fonts/Faktum-SemiBold.woff2') format('woff2');
-      font-style: normal;
-  }
-
   body {
     padding: 0;
     margin: 0;

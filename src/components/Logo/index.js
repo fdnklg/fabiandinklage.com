@@ -4,17 +4,21 @@ import LogoSrc from '!file-loader!~/../public/images/avatar.svg';
 import { Box } from 'rebass/styled-components';
 import { useStoreState } from 'easy-peasy';
 
+const StyledSvg = styled.svg`
+  width: 100%;
+`;
+
 const Logo = () => {
   const color = useStoreState(state => state.color.color)[0];
   return (
     <Box
       src={LogoSrc}
-      mr={3}
+      mr={[2,3,3]}
       sx={{
-        width: [ '35px' ]
+        width: [ '25px','35px','40px' ]
       }}
     >
-      <svg width="42px" height="58px" viewBox="0 0 42 58">
+      <StyledSvg width="42px" height="58px" viewBox="0 0 42 58">
           <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="avatar" transform="translate(-1.000000, 0.000000)" fillRule="nonzero" fill={color}>
                   <circle id="eyeR" cx="29" cy="26.8" r="1.6"></circle>
@@ -30,7 +34,7 @@ const Logo = () => {
                   <path d="M35.6,22.2 L28.6,20.2 L25.2,20.8 L24.9,18.9 L28.5,18.3 L28.9,18.3 L36.1,20.4 L35.6,22.2 Z" id="Shape"></path>
               </g>
           </g>
-      </svg>
+      </StyledSvg>
     </Box>
   )
 }

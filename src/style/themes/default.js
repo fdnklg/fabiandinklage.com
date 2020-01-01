@@ -34,7 +34,7 @@ const defaultTheme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512].map(px),
   sizes: {
-    mobile: "480px",
+    mobile: "580px",
     tablet: "768px",
     desktop: "1080px",
     hd: "1920",

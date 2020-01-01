@@ -40,7 +40,7 @@ const Intro = props => {
       </StyledFlex>
       <StyledFlex sx={{ lineHeight: '1.5' }} pb={[2,3,5]} maxWidth={[1200, 900]}>
         <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Type</StyledLabelBold><br/><StyledLabel>{type}</StyledLabel></Box>
-        <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Client</StyledLabelBold><br/><StyledLabel>{client}</StyledLabel></Box>
+        <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Context</StyledLabelBold><br/><StyledLabel>{client}</StyledLabel></Box>
         <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Year</StyledLabelBold><br/><StyledLabel>{year}</StyledLabel></Box>
         <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><Button href={url} px={3} py={2} c={color} fontSize={[2,3]}>Launch project</Button></Box>
       </StyledFlex>

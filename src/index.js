@@ -13,6 +13,7 @@ ReactDOM.render(
     <ThemeProvider theme={defaultTheme}>
       <>
         <GlobalStyle />
+        {/* <DynamicGlobalStyle /> */}
         <App />
       </>
     </ThemeProvider>

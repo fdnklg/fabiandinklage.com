@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import { useStoreState } from 'easy-peasy';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Link } from 'rebass/styled-components';
 
 const StyledListWrapper = styled.div`
@@ -17,6 +17,7 @@ const StyledTable = styled.table`
 
 const StyledTR = styled.tr`
   border-top: ${p => p.border ? '1px solid' + p.c[0] : 'none'};
+  padding-top: ${p => !p.border ? '1em !important' : '0 !important'};
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[1]};
@@ -57,6 +58,8 @@ const isNewYear = (data,i) => {
 const List = (props) => {
   const { data } = props;
   const color = useStoreState(state => state.color.color);
+  const setColor = useStoreActions(actions => actions.color.setColor);
+
   return (
     <StyledListWrapper>
       <StyledTable>
@@ -66,7 +69,7 @@ const List = (props) => {
             return (
                 <StyledTR c={color} border={newYear} key={`tr-${i}`}>
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <Link sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
+                    <Link onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#000', '#fff'])} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
                       <StyledTitle>{p.title}</StyledTitle>
                     </Link>
                     <StyledTD type="last">{p.type}</StyledTD>

@@ -11,19 +11,18 @@ import Paragraph from '~/components/Paragraph';
 
 
 const Contact = p => {
-  const about = useStoreState(state => state.about);
+  const contact = useStoreState(state => state.contact);
   const color = useStoreState(state => state.color.color);
-  const { intro, profileUrl } = about;
   return (
-    <Flex 
-      sx={{ textAlign: 'left', lineHeight: '1.5' }} 
-      pt={[3,5,5,6]} 
-      pb={[0,2,2,4]} 
-      width={[1, 4/5, 4/5, 3/4]} 
+    <Flex
+      sx={{ textAlign: 'left', lineHeight: '1.5' }}
+      pt={[3,5,5,6]}
+      pb={[0,2,2,4]}
+      width={[1, 4/5, 4/5, 3/4]}
       fontSize={[3,4,4,4]}
     >
       <Flex sx={{ textAlign: ['left', 'left', 'center'] }} pb={[0,2,2,4]} width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
-        <Paragraph content={intro} color={color}/>
+        <Paragraph content={contact} color={color}/>
       </Flex>
       <List sx={{textAlign: 'center !important'}}>
         <li>Fabian Dinklage</li>

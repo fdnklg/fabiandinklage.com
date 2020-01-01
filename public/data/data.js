@@ -7,6 +7,7 @@ const content = {
     text: 'Do you have a project for me?',
     btn: "Let's chat",
   },
+  "contact": "Got curious? I'm psyched to get to know you! Let's have a coffee together or reach out via one of the following channels.",
   "activities": [
     {
       "title": "Research associate",
@@ -43,7 +44,7 @@ const content = {
     {
       "title": "A city in flux",
       "path": "cityinflux",
-      "color": ['#000', '#fff'],
+      "color": ['#2B1174', '#F5F3F8'],
       "client": "Technologiestiftung Berlin",
       "type": "data visualization",
       "year": 2019,
@@ -81,7 +82,7 @@ const content = {
       "path": "genderinequality",
       "type": "data visualization",
       "client": "Experiment",
-      "color": ['#fff', '#000'],
+      "color": ['#882C94', '#F5F3F7'],
       "year": 2019,
       "thumbnail": "public/images/genderinequality/genderinequality-thumb-960x640.jpg",
       "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
@@ -104,6 +105,94 @@ const content = {
           "type": "img",
           "content": "North american countries highlighted",
           "url": "public/images/genderinequality/genderinequality-northAmerica-3840x2592.jpg"
+        },
+      ]
+    },
+    {
+      "title": "Edutech Map Berlin",
+      "path": "edutech",
+      "type": "data visualization",
+      "client": "Technologiestiftung Berlin",
+      "color": ['#41B496', '#F6FCFA'],
+      "year": 2020,
+      "thumbnail": "public/images/edutech/edutech-thumb-960x640.jpg",
+      "overlay": "public/images/edutech/edutech-thumb-960x640-2.jpg",
+      "url": "https://edutech.technologiestiftung-berlin.de",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/edutech/edutech-selected-3840x2040.jpg"
+        },
+      ]
+    },
+    {
+      "title": "Rhythm of the road",
+      "path": "rhythmoftheroad",
+      "type": "data visualization",
+      "client": "Technologiestiftung Berlin",
+      "color": ['#2824B2', '#F5F4FC'],
+      "year": 2018,
+      "thumbnail": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.jpg",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://lab.technologiestiftung-berlin.de/projects/bikerides/de/",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/rhythmoftheroad/rhythmoftheroad-pattern-3840x2246.jpg"
+        },
+        {
+          "type": "img",
+          "content": "Grid aligned layout of all bike counting stations",
+          "url": "public/images/rhythmoftheroad/rhythmoftheroad-overview-3840x2246.jpg"
+        },
+      ]
+    },
+    {
+      "title": "Mobility Sharing Flows",
+      "path": "bikesharing",
+      "type": "data visualization",
+      "client": "Technologiestiftung Berlin",
+      "color": ['#EE7B4B', '#fff'],
+      "year": 2019,
+      "thumbnail": "public/images/bikesharing/bikesharing-thumb-960x640.jpg",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://bikesharing.citylab-berlin.de",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/bikesharing/bikesharing-overview-3840x2592.jpg"
+        },
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/bikesharing/bikesharing-district-3840x2592.jpg"
+        },
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/bikesharing/bikesharing-detail-3840x2592.jpg"
+        },
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/bikesharing/bikesharing-bikestreets-3840x2592.jpg"
+        },
+        {
+          "type": "img",
+          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
+          "url": "public/images/bikesharing/bikesharing-ui-3840x2592.jpg"
         },
       ]
     },

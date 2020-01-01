@@ -24,7 +24,6 @@ const Media = props => {
                 src={media.url}
                 sx={{
                   width: [ '100%' ],
-                  background: 'red',
                   borderWidth: '0px'
                 }}
                 mt={[4,4,5]}

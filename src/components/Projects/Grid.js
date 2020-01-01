@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import { useStoreState } from 'easy-peasy';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Box, Text, Image } from 'rebass/styled-components';
 import { CSSTransition } from "react-transition-group";
 import LazyLoad from 'react-lazyload';
@@ -40,11 +40,11 @@ const StyledLink = styled(Link)`
   }
 
   img {
-    filter: saturate(75%);
+    filter: saturate(30%);
     transition: filter ${p => p.theme.times[0]};
 
-    &:before() {
-      background: red;
+    @media (max-width: ${p => p.theme.sizes.mobile}) {
+      filter: saturate(100%);
     }
   }
 
@@ -57,6 +57,8 @@ const StyledLink = styled(Link)`
 const Grid = (props) => {
   const { data } = props;
   const color = useStoreState(state => state.color.color);
+  const setColor = useStoreActions(actions => actions.color.setColor);
+
   return (
     <CSSTransition
       classNames='fade'
@@ -73,7 +75,7 @@ const Grid = (props) => {
       }}>
         {data.map((p,i) => {
           return (
-            <StyledLink sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
+            <StyledLink onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#121337', '#fff'])} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
               <Box sx={{ height: 'auto', overflow: 'hidden' }} key={`tile-${i}`} color='primary'>
                   <LazyLoad height={200} offset={200}>
                     <Image
@@ -82,12 +84,6 @@ const Grid = (props) => {
                         width: [ '100%' ],
                       }}
                     />
-                    {/* <Image
-                      src={p.overlay}
-                      sx={{
-                        width: [ '100%' ],
-                      }}
-                    /> */}
                   </LazyLoad>
                 <StyledText c={color}>{p.title}</StyledText>
               </Box>

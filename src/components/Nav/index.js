@@ -19,15 +19,15 @@ const Nav = () => {
   return (
     <StyledFlex c={color} alignItems="center">
       <Logo />
-      <Link href="/" fontWeight="bold">
+      <Link ml={2} href="/" fontWeight="bold">
         <Label content="Fabian Dinklage"></Label>
       </Link>
       {/* <Button onClick={setColor}>Surprise me!</Button> */}
       <Box mx="auto" />
-      <Link sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}  mr={4} variant="nav" href="/">
+      <Link sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}  mr={[3,3,4]} variant="nav" href="/">
         <Label content="Projects"></Label>
       </Link>
-      <Link sx={{ textDecoration: 'none', color: color[0] }}  mr={4} variant="nav" href="/profile">
+      <Link sx={{ textDecoration: 'none', color: color[0] }}  mr={[3,3,4]} variant="nav" href="/profile">
         <Label content="Profile"></Label>
       </Link>
       <Link sx={{ textDecoration: 'none', color: color[0] }}  variant="nav" href="/contact">

@@ -2,7 +2,7 @@ import { action } from 'easy-peasy';
 import { getRandomInt } from '~/utils';
 
 const ColorModel = {
-  color: ['#fff', '#000'],
+  color: ['#121337', '#fff'],
   setColor: action((state, payload) => {
     state.color = payload;
   }),

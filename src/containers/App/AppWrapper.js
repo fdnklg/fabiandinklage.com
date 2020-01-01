@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box } from 'rebass/styled-components';
-import { useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
+import { createGlobalStyle } from "styled-components"
+import { useStoreState } from 'easy-peasy';
 
 import { withRouter, Route, Switch } from 'react-router-dom';
 
@@ -10,6 +11,7 @@ const StyledWrapper = styled.div`
   height: 100%;
   background: ${p => p.c[1]};
   color: ${p => p.c[0]};
+  transition: all .25s ease-in-out;
 `;
 
 import Nav from '../../components/Nav';
@@ -24,8 +26,18 @@ import Contact from '../Contact';
 const AppWrapper = () => {
   const cta = useStoreState(state => state.cta);
   const color = useStoreState(state => state.color.color);
+
+
+const DynamicGlobalStyle = createGlobalStyle`
+  ::selection {
+    background-color: ${color[0]};
+    color: ${color[1]};
+  }
+`
+
   return (
     <StyledWrapper c={color}>
+      <DynamicGlobalStyle />
       <Box
         sx={{
           mx: 'auto',
