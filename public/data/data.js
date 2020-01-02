@@ -1,6 +1,7 @@
 const content = {
   "about": {
     "intro": "Fabian Dinklage is a Berlin based designer who develops data-driven visualisations with open data as a research associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the Technologiestiftung Berlin. He works as a freelancer at the intersection of data and design and helped international organisations around the world to make sense of their data through visualisation.",
+    "vita": "Fabian Dinklage is a Interaction Designer with the focus of information design and data visualisation. He worked as a media designer at [ballyhoo](https://ballyhoo.de) until 2012. He started working at the [infographics group](https://inforgraphics.group) in 2016. In 2017 he took part of the interactive team of the [Berliner Morgenpost](https://berliner-morgenpost.de) as a Google News Lab Fellow.",
     "profileUrl": "public/images/profile.jpg"
   },
   "cta": {

@@ -21,6 +21,12 @@ const StyledText = styled(Text)`
   color: ${p => p.c[0]};
 `;
 
+const StyledBox = styled(Box)`
+  @media (max-width: ${p => p.theme.sizes.mobile}) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+`;
+
 const StyledLink = styled(Link)`
   div {
     div {
@@ -71,7 +77,7 @@ const Grid = (props) => {
       sx={{
         display: 'grid',
         gridGap: 4,
-        gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+        gridTemplateColumns: ['repeat(auto-fit, minmax(280px, 1fr))', 'repeat(auto-fit, minmax(350px, 1fr))' , 'repeat(auto-fit, minmax(400px, 1fr))'],
       }}>
         {data.map((p,i) => {
           return (
