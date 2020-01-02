@@ -13,14 +13,14 @@ const Profile = () => {
   const { intro, profileUrl, vita } = about;
   return (
     <Flex>
-      <Flex sx={{ textAlign: ['left', 'left', 'center'] }} pt={[3,5,5,6]} pb={[0,2,2,4]} width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
-        <Paragraph content={vita} color={color}/>
-      </Flex>
       <Flex sx={{ textAlign: ['left', 'left', 'center'] }} pb={[4,5,5,6]} width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
+        <Paragraph content={vita} color={color}/>
+        <br/>
         <Paragraph content={intro} color={color}/>
       </Flex>
       <Image
         src={profileUrl}
+        pb={[4,5,5,6]}
         sx={{
           width: [ '100%', '90%', '80%' ],
           alignSelf: 'center'

@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Link } from 'rebass/styled-components';
+import { compare } from '~/utils';
 
 const StyledListWrapper = styled.div`
   font-size: ${p => p.theme.fontSizes[1]};
@@ -12,7 +13,6 @@ const StyledTable = styled.table`
   width: 100%;
   font-size: ${p => p.theme.fontSizes[4]};
   border-collapse: collapse;
-  margin: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
 `;
 
 const StyledTR = styled.tr`
@@ -21,6 +21,9 @@ const StyledTR = styled.tr`
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[1]};
+    td {
+      padding-right: 15px;
+    }
   }
 `;
 
@@ -38,7 +41,7 @@ const StyledTitle = styled.td`
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
-    font-size: ${p => p.theme.fontSizes[3]};
+    font-size: ${p => p.theme.fontSizes[2]};
   }
 
   &:hover {
@@ -59,12 +62,13 @@ const List = (props) => {
   const { data } = props;
   const color = useStoreState(state => state.color.color);
   const setColor = useStoreActions(actions => actions.color.setColor);
+  const sortedByYear = data.sort(compare);
 
   return (
     <StyledListWrapper>
       <StyledTable>
         <tbody>
-          { data.map((p,i) => {
+          { sortedByYear.map((p,i) => {
             const newYear = isNewYear(data,i)
             return (
                 <StyledTR c={color} border={newYear} key={`tr-${i}`}>

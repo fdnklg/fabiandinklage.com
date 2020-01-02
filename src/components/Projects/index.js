@@ -18,7 +18,7 @@ const Projects = (props) => {
   const color = useStoreState(state => state.color.color);
 
   return (
-    <StyledProjectsWrapper py={5}>
+    <StyledProjectsWrapper pb={[4,5,5,6]}>
       <LayoutSwitch />
       { layout == "Grid" && <Grid data={projects}/> }
       { layout == "List" && <List color={color} data={projects}/> }

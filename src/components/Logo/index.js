@@ -13,9 +13,9 @@ const Logo = () => {
   return (
     <Box
       src={LogoSrc}
-      mr={[2,3,3]}
+      mr={3}
       sx={{
-        width: [ '25px','35px','40px' ]
+        width: [ '35px','35px','40px' ]
       }}
     >
       <StyledSvg width="42px" height="58px" viewBox="0 0 42 58">

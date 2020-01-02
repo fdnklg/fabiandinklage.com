@@ -7,6 +7,9 @@ const StyledParagraph = styled(ReactMarkdown)`
   line-height: ${p => p.theme.lineHeights.body};
   letter-spacing: ${ p => p.theme.letterSpacing[1] };
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
+  p {
+    margin: 0;
+  }
 
   a {
     text-decoration: none;

@@ -43,10 +43,7 @@ const defaultTheme = {
   radii: {
     default: 4,
     circle: 99999,
-  },
-  shadows: {
-    card: '0 0 4px rgba(0, 0, 0, .125)',
-  },
+  }
 };
 
 export default defaultTheme;

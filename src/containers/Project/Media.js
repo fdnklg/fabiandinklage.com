@@ -18,18 +18,15 @@ const Media = props => {
     <>
       { data.map((media,i) => {
         return (
-          <Box>
-            <LazyLoad height={200} offset={200}>
+          <Box pb={[4, 5]}>
               <Image
                 src={media.url}
                 sx={{
                   width: [ '100%' ],
                   borderWidth: '0px'
                 }}
-                mt={[4,4,5]}
                 mb={[2,3,3]}
               />
-            </LazyLoad>
             <Label align="center" content={media.content} mb={[3,4,5]} mt={[2,2,3]}></Label>
           </Box>
         )

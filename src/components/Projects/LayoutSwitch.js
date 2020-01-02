@@ -30,12 +30,10 @@ const LayoutSwitch = () => {
     { value: 'List'}
   ]
 
-  useEffect(() => { console.log(color) })
-
   return (
     <StyledLayoutSwitchesWrapper>
       {switches.map((btn,i) => {
-        return <StyledButton  c={color} p={0} mr={3} mb={4} key={i} onClick={() => { setLayout(btn.value)}}>{btn.value}</StyledButton>}
+        return <StyledButton  c={color} p={0} mr={3} mb={[3,4]} key={i} onClick={() => { setLayout(btn.value)}}>{btn.value}</StyledButton>}
       )}
     </StyledLayoutSwitchesWrapper>
   );
