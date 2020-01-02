@@ -6,7 +6,7 @@
   "version": "6.0.1",
   "description": "lightweight react starterkit including webpack, unistore, styled components",
   "scripts": {
-    "build": "BABEL_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
+    "build": "BABEL_ENV=production webpack --config webpack/webpack.config.prod.js --colors && echo '/* /index.html  200' | cat >build/_redirects ",
     "start": "webpack-dev-server --config webpack/webpack.config.dev.js"
   },
   "repository": {
