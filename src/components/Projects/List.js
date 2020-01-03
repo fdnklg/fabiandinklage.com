@@ -31,6 +31,8 @@ const StyledTD = styled.td`
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
   width:  ${p => p.type === 'first' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+  vertical-align: top;
+  margin-top: 3px;
 `;
 
 const StyledTitle = styled.td`

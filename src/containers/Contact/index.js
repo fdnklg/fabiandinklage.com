@@ -14,29 +14,6 @@ const StyledLink = styled(Link)`
   color: ${p => p.c[0]};
 `;
 
-const StyledList = styled(List)`
-  text-align: center;
-  color: ${p => p.c};
-  margin: 0;
-
-  li {
-    font-size: ${p => p.theme.fontSizes[5]};
-    color: ${p => p.c};
-
-    @media (max-width: ${p => p.theme.sizes.tablet}) {
-      font-size: ${p => p.theme.fontSizes[4]};
-      text-align: left;
-    }
-
-    @media (max-width: ${p => p.theme.sizes.mobile}) {
-      font-size: ${p => p.theme.fontSizes[3]};
-      text-align: left;
-    }
-  }
-`;
-
-
-
 const Contact = p => {
   const contact = useStoreState(state => state.contact);
   const color = useStoreState(state => state.color.color);
@@ -50,10 +27,10 @@ const Contact = p => {
       <Flex sx={{ textAlign: ['left', 'left', 'center'] }} width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
         <Paragraph content={contact} color={color}/>
         <br />
-        <StyledList c={color}>
+        <List c={color}>
           <li><StyledLink c={color} href="mailto:mail@fabiandinklage.com">mail(at)fabiandinklage.com</StyledLink></li>
           <li>Twitter: <StyledLink c={color} href="https://twitter.com/fdnklg">@fdnklg</StyledLink></li>
-        </StyledList>
+        </List>
       </Flex>
     </Flex>
   );
