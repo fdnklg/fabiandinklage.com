@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
@@ -15,7 +15,7 @@ const StyledGridWrapper = styled.div`
 
 const StyledText = styled(Text)`
   text-align: center;
-  margin-top: 7px;
+  margin-top: 15px;
   font-size: ${p => p.theme.fontSizes[2]};
   letter-spacing: ${p => p.theme.letterSpacing[2]};
   color: ${p => p.c[0]};
@@ -45,25 +45,50 @@ const StyledLink = styled(Link)`
     }
   }
 
-  img {
-    filter: saturate(30%);
-    transition: filter ${p => p.theme.times[0]};
-
-    @media (max-width: ${p => p.theme.sizes.mobile}) {
+  div {
+    img {
       filter: saturate(100%);
+      transition: filter ${p => p.theme.times[0]};
+
+      &:hover {
+        filter: saturate(100%);
+        transition: filter ${p => p.theme.times[0]};
+      }
+
+      @media (max-width: ${p => p.theme.sizes.mobile}) {
+        filter: saturate(100%);
+      }
     }
   }
 
-  img:hover {
-    filter: saturate(100%);
-    transition: filter ${p => p.theme.times[0]};
+  div {
+    img
   }
+
 `;
+
+const ThumbnailImage = styled(Image)`
+  position: absolute;
+  transition: opacity ${ p => p.theme.times[1] } ease-in-out;
+  &:hover {
+    opacity: 0;
+    transition: opacity ${ p => p.theme.times[1] } ease-in-out;
+  }
+`
 
 const Grid = (props) => {
   const { data } = props;
   const color = useStoreState(state => state.color.color);
   const setColor = useStoreActions(actions => actions.color.setColor);
+  let ref = null;
+  let box = null;
+  let height = 'null';
+
+  useEffect(() => {
+     height = `${ref.offsetWidth / 3 * 2}px`;
+     const boxes = document.querySelectorAll('.thumb-box');
+     boxes.forEach(box => box.style.height = height);
+  })
 
   return (
     <CSSTransition
@@ -82,17 +107,23 @@ const Grid = (props) => {
         {data.map((p,i) => {
           return (
             <StyledLink onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#121337', '#fff'])} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
-              <Box sx={{ height: 'auto', overflow: 'hidden' }} key={`tile-${i}`} color='primary'>
-                  <LazyLoad height={200} offset={200}>
+              <Box className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
                     <Image
+                      ref={(target) => { ref = target; }}
+                      src={p.overlay}
+                      sx={{
+                        width: [ '100%' ],
+                        position: 'absolute'
+                      }}
+                    />
+                    <ThumbnailImage
                       src={p.thumbnail}
                       sx={{
                         width: [ '100%' ],
                       }}
                     />
-                  </LazyLoad>
-                <StyledText c={color}>{p.title}</StyledText>
               </Box>
+              <StyledText c={color}>{p.title}</StyledText>
             </StyledLink>
           )
         })}
