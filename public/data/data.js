@@ -47,7 +47,7 @@ const content = {
       "path": "cityinflux",
       "color": ['#2B1174', '#F5F3F8'],
       "client": "Technologiestiftung Berlin",
-      "type": "data visualization",
+      "type": "data vis",
       "year": 2018,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
       "overlay": "public/images/cityinflux/cityinflux-thumb-960x640.gif",
@@ -82,7 +82,7 @@ const content = {
     {
       "title": "Gender inequality in politics",
       "path": "genderinequality",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Experiment",
       "color": ['#882C94', '#F5F3F7'],
       "year": 2019,
@@ -114,7 +114,7 @@ const content = {
     {
       "title": "Edutech Map Berlin",
       "path": "edutech",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Technologiestiftung Berlin",
       "color": ['#41B496', '#F6FCFA'],
       "year": 2020,
@@ -136,7 +136,7 @@ const content = {
     {
       "title": "Rhythm of the road",
       "path": "rhythmoftheroad",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Technologiestiftung Berlin",
       "color": ['#2824B2', '#F5F4FC'],
       "year": 2018,
@@ -163,7 +163,7 @@ const content = {
     {
       "title": "Mobility Sharing Flows",
       "path": "bikesharing",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Technologiestiftung Berlin",
       "color": ['#EE7B4B', '#fff'],
       "year": 2019,
@@ -176,36 +176,41 @@ const content = {
       "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
       "media": [
         {
-          "type": "img",
+          "type": "bikesharing",
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
-          "url": "public/images/bikesharing/bikesharing-overview-3840x2592.jpg"
+          "url": "public/images/bikesharing/bikesharing-overview-3840x2592.jpg",
+          "lazy": "public/images/bikesharing/bikesharing-overview-lazy-3840x2592.jpg",
         },
         {
-          "type": "img",
+          "type": "bikesharing",
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
-          "url": "public/images/bikesharing/bikesharing-district-3840x2592.jpg"
+          "url": "public/images/bikesharing/bikesharing-district-3840x2592.jpg",
+          "lazy": "public/images/bikesharing/bikesharing-district-lazy-3840x2592.jpg",
         },
         {
-          "type": "img",
+          "type": "bikesharing",
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
-          "url": "public/images/bikesharing/bikesharing-detail-3840x2592.jpg"
+          "url": "public/images/bikesharing/bikesharing-detail-3840x2592.jpg",
+          "lazy": "public/images/bikesharing/bikesharing-detail-lazy-3840x2592.jpg",
         },
         {
-          "type": "img",
+          "type": "bikesharing",
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
-          "url": "public/images/bikesharing/bikesharing-bikestreets-3840x2592.jpg"
+          "url": "public/images/bikesharing/bikesharing-bikestreets-3840x2592.jpg",
+          "lazy": "public/images/bikesharing/bikesharing-bikestreets-lazy-3840x2592.jpg",
         },
         {
-          "type": "img",
+          "type": "bikesharing",
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
-          "url": "public/images/bikesharing/bikesharing-ui-3840x2592.jpg"
+          "url": "public/images/bikesharing/bikesharing-ui-3840x2592.jpg",
+          "lazy": "public/images/bikesharing/bikesharing-ui-lazy-3840x2592.jpg",
         },
       ]
     },
     {
       "title": "The Curricle",
       "path": "curricle",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#7042AB', '#fff'],
       "year": 2019,
@@ -222,7 +227,7 @@ const content = {
     {
       "title": "Retro Future Hacker News",
       "path": "hackernews",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#000', '#fff'],
       "year": 2018,
@@ -239,7 +244,7 @@ const content = {
     {
       "title": "Bundestag election 2017",
       "path": "candidates",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#000', '#fff'],
       "year": 2017,
@@ -256,7 +261,7 @@ const content = {
     {
       "title": "The invisible ties",
       "path": "invisties",
-      "type": "data visualization",
+      "type": "data vis",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#013ED9', '#fff'],
       "year": 2018,

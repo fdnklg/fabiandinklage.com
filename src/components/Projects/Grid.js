@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Box, Text, Image } from 'rebass/styled-components';
 import { CSSTransition } from "react-transition-group";
-import LazyLoad from 'react-lazyload';
 import ProgressiveImage from 'react-progressive-image';
 
 import Label from '~/components/Label';

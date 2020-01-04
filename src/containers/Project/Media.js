@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Flex, Box, Image, Text } from 'rebass/styled-components/';
 import LazyLoad from 'react-lazyload';
+import ProgressiveImage from 'react-progressive-image';
 
 import Label from '~/components/Label';
 
@@ -19,14 +20,16 @@ const Media = props => {
       { data.map((media,i) => {
         return (
           <Box pb={[4, 5]}>
-              <Image
-                src={media.url}
-                sx={{
-                  width: [ '100%' ],
-                  borderWidth: '0px'
-                }}
-                mb={[2,3,3]}
-              />
+
+              <ProgressiveImage src={media.url} placeholder={media.lazy}>
+                {src => <Image
+                  src={src}
+                  sx={{
+                    width: [ '100%' ],
+                  }}
+                /> }
+              </ProgressiveImage>
+
             <Label align="center" content={media.content} mb={[3,4,5]} mt={[2,2,3]}></Label>
           </Box>
         )
