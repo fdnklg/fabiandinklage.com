@@ -36,7 +36,6 @@ const Profile = () => {
           width: [ '100%', '90%', '80%' ],
           alignSelf: 'center'
         }}
-        mb={[4,5,0]}
       />
     </Flex>
   );

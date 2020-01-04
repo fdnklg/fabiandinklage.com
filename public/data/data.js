@@ -116,7 +116,7 @@ const content = {
       "client": "Technologiestiftung Berlin",
       "color": ['#41B496', '#F6FCFA'],
       "year": 2020,
-      "thumbnail": "public/images/edutech/edutech-thumb-960x640.jpg",
+      "thumbnail": "public/images/edutech/edutech-thumb-960x640.gif",
       "overlay": "public/images/edutech/edutech-thumb-960x640-2.jpg",
       "url": "https://edutech.technologiestiftung-berlin.de",
       "tasks": ["data visualization"],
@@ -137,7 +137,7 @@ const content = {
       "client": "Technologiestiftung Berlin",
       "color": ['#2824B2', '#F5F4FC'],
       "year": 2018,
-      "thumbnail": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.jpg",
+      "thumbnail": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.gif",
       "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
       "url": "https://lab.technologiestiftung-berlin.de/projects/bikerides/de/",
       "tasks": ["data visualization"],
@@ -195,6 +195,70 @@ const content = {
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
           "url": "public/images/bikesharing/bikesharing-ui-3840x2592.jpg"
         },
+      ]
+    },
+    {
+      "title": "The Curricle",
+      "path": "curricle",
+      "type": "data visualization",
+      "client": "Berkmann Klein Center (at) Harvard",
+      "color": ['#EE7B4B', '#fff'],
+      "year": 2019,
+      "thumbnail": "public/images/curricle/curricle-thumb-960x640.gif",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://curricle.net",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
+      ]
+    },
+    {
+      "title": "Retro Future Hacker News",
+      "path": "hackernews",
+      "type": "data visualization",
+      "client": "Berkmann Klein Center (at) Harvard",
+      "color": ['#EE7B4B', '#fff'],
+      "year": 2018,
+      "thumbnail": "public/images/hackernews/hackernews-thumb-960x640.gif",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://curricle.net",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
+      ]
+    },
+    {
+      "title": "Bundestag election 2017",
+      "path": "candidates",
+      "type": "data visualization",
+      "client": "Berkmann Klein Center (at) Harvard",
+      "color": ['#EE7B4B', '#fff'],
+      "year": 2017,
+      "thumbnail": "public/images/candidates/candidates-thumb-960x640.gif",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://curricle.net",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
+      ]
+    },
+    {
+      "title": "The invisible ties",
+      "path": "invisties",
+      "type": "data visualization",
+      "client": "Berkmann Klein Center (at) Harvard",
+      "color": ['#EE7B4B', '#fff'],
+      "year": 2018,
+      "thumbnail": "public/images/invisties/invisties-thumb-960x640.gif",
+      "overlay": "public/images/genderinequality/genderinequality-thumb-960x640-2.jpg",
+      "url": "https://curricle.net",
+      "tasks": ["data visualization"],
+      "subtitle": "Bike traffic in Berlin visualized",
+      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "media": [
       ]
     },
   ]

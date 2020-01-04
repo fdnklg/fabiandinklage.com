@@ -11,39 +11,47 @@ const StyledListWrapper = styled.div`
 
 const StyledTable = styled.table`
   width: 100%;
-  font-size: ${p => p.theme.fontSizes[4]};
   border-collapse: collapse;
 `;
 
 const StyledTR = styled.tr`
   border-top: ${p => p.border ? '1px solid' + p.c[0] : 'none'};
-  padding-top: ${p => !p.border ? '1em !important' : '0 !important'};
+  
+  td {
+    padding-top: ${p => p.border ? '1em !important' : '0 !important'};
+    font-size: ${p => p.theme.fontSizes[4]};
+  }
+  
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[1]};
     td {
       padding-right: 15px;
+      font-size: ${p => p.theme.fontSizes[2]};
     }
   }
 `;
 
 const StyledTD = styled.td`
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
-  width:  ${p => p.type === 'first' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   vertical-align: top;
   margin-top: 3px;
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    text-align: left;
+  }
 `;
 
 const StyledTitle = styled.td`
   font-family: ${p => p.theme.fonts.headline};
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
-  width:  ${p => p.type === 'first' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[2]};
+    text-align: left;
   }
 
   &:hover {

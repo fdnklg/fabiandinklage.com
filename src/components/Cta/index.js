@@ -18,7 +18,7 @@ const Cta = (props) => {
   const { content } = props;
   const color = useStoreState(state => state.color.color);
   return (
-    <StyledFlex pt={0} pb={[5,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,5]}>
+    <StyledFlex pt={0} pb={[4,5,5,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,5]}>
       <StyledText>{content.text}</StyledText>
         <Button c={color} mt={[3,4]} px={3} py={2} fontSize={[2,3]}>{content.btn}</Button>
     </StyledFlex>
