@@ -61,6 +61,7 @@
     "react-dom": "^16.12.0",
     "react-lazyload": "^2.6.5",
     "react-markdown": "^4.2.2",
+    "react-progressive-image": "^0.6.0",
     "react-router-dom": "^5.1.2",
     "react-transition-group": "^4.3.0",
     "rebass": "^4.0.7",

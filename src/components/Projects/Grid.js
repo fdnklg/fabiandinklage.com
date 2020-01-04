@@ -5,6 +5,7 @@ import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Box, Text, Image } from 'rebass/styled-components';
 import { CSSTransition } from "react-transition-group";
 import LazyLoad from 'react-lazyload';
+import ProgressiveImage from 'react-progressive-image';
 
 import Label from '~/components/Label';
 import Link from '~/components/Link';
@@ -116,12 +117,14 @@ const Grid = (props) => {
                         position: 'absolute'
                       }}
                     />
-                    <ThumbnailImage
-                      src={p.thumbnail}
-                      sx={{
-                        width: [ '100%' ],
-                      }}
-                    />
+                    <ProgressiveImage src={p.thumbnail} placeholder={p.lazy}>
+                      {src => <ThumbnailImage
+                        src={src}
+                        sx={{
+                          width: [ '100%' ],
+                        }}
+                      /> }
+                    </ProgressiveImage>
               </Box>
               <StyledText c={color}>{p.title}</StyledText>
             </StyledLink>

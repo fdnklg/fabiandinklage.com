@@ -254,6 +254,7 @@ const content = {
       "year": 2018,
       "thumbnail": "public/images/invisties/invisties-thumb-960x640.jpg",
       "overlay": "public/images/invisties/invisties-thumb-960x640.gif",
+      "lazy": "public/images/invisties/invisties-lazy-960x640.gif",
       "url": "https://curricle.net",
       "tasks": ["data visualization"],
       "subtitle": "Bike traffic in Berlin visualized",
