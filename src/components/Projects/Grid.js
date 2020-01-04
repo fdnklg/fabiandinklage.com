@@ -109,14 +109,16 @@ const Grid = (props) => {
           return (
             <StyledLink onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#121337', '#fff'])} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
               <Box className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
-                    <Image
-                      ref={(target) => { ref = target; }}
-                      src={p.overlay}
-                      sx={{
-                        width: [ '100%' ],
-                        position: 'absolute'
-                      }}
-                    />
+                    <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
+                      <Image
+                        ref={(target) => { ref = target; }}
+                        src={src}
+                        sx={{
+                          width: [ '100%' ],
+                          position: 'absolute'
+                        }}
+                      />
+                    </ProgressiveImage>
                     <ProgressiveImage src={p.thumbnail} placeholder={p.lazy}>
                       {src => <ThumbnailImage
                         src={src}
