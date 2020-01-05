@@ -21,12 +21,6 @@ const StyledText = styled(Text)`
   color: ${p => p.c[0]};
 `;
 
-const StyledBox = styled(Box)`
-  @media (max-width: ${p => p.theme.sizes.mobile}) {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-`;
-
 const StyledLink = styled(Link)`
   div {
     div {
@@ -36,7 +30,6 @@ const StyledLink = styled(Link)`
 
   &:hover {
     opacity: 1;
-
     div {
       div {
         transition: opacity ${p => p.theme.times[0]} ease-in-out;
@@ -47,34 +40,38 @@ const StyledLink = styled(Link)`
 
   div {
     img {
-      filter: saturate(100%);
-      transition: filter ${p => p.theme.times[0]};
+      transition: all ${p => p.theme.times[0]};
 
       &:hover {
-        filter: saturate(100%);
-        transition: filter ${p => p.theme.times[0]};
-      }
-
-      @media (max-width: ${p => p.theme.sizes.mobile}) {
-        filter: saturate(100%);
+        transition: all ${p => p.theme.times[0]};
       }
     }
   }
-
-  div {
-    img
-  }
-
 `;
 
 const ThumbnailImage = styled(Image)`
   position: absolute;
   transition: opacity ${ p => p.theme.times[1] } ease-in-out;
+  filter: saturate(.25);
+
+  @media (max-width: ${p => p.theme.sizes.mobile}) {
+    filter: saturate(1);
+  }
   &:hover {
     opacity: 0;
     transition: opacity ${ p => p.theme.times[1] } ease-in-out;
   }
 `
+
+const GifImage = styled(Image)`
+  filter: saturate(1);
+`;
+
+const StyledBox = styled(Box)`
+  @media (max-width: ${p => p.theme.sizes.mobile}) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+`;
 
 const Grid = (props) => {
   const { data } = props;
@@ -107,14 +104,14 @@ const Grid = (props) => {
         {data.map((p,i) => {
           return (
             <StyledLink onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#121337', '#fff'])} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
-              <Box className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
+              <StyledBox className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
                     <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
-                      {src => <Image
+                      {src => <GifImage
                         ref={(target) => { ref = target; }}
                         src={src}
                         sx={{
                           width: [ '100%' ],
-                          position: 'absolute'
+                          position: 'absolute',
                         }}
                       /> }
                     </ProgressiveImage>
@@ -126,7 +123,7 @@ const Grid = (props) => {
                         }}
                       /> }
                     </ProgressiveImage>
-              </Box>
+              </StyledBox>
               <StyledText c={color}>{p.title}</StyledText>
             </StyledLink>
           )
