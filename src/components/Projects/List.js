@@ -43,6 +43,21 @@ const StyledTD = styled.td`
   }
 `;
 
+const StyledTDType = styled.td`
+  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+  padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+  vertical-align: top;
+  margin-top: 3px;
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    text-align: left;
+  }
+
+  @media (max-width: ${p => p.theme.sizes.mobile}) {
+    display: none;
+  }
+`;
+
 const StyledTitle = styled.td`
   font-family: ${p => p.theme.fonts.headline};
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
@@ -86,7 +101,7 @@ const List = (props) => {
                     <Link onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#000', '#fff'])} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
                       <StyledTitle>{p.title}</StyledTitle>
                     </Link>
-                    <StyledTD type="last">{p.type}</StyledTD>
+                    <StyledTDType type="last">{p.type}</StyledTDType>
                 </StyledTR>
             )
           }) }

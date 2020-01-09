@@ -57,6 +57,7 @@ const ThumbnailImage = styled(Image)`
   @media (max-width: ${p => p.theme.sizes.mobile}) {
     filter: saturate(1);
   }
+
   &:hover {
     opacity: 0;
     transition: opacity ${ p => p.theme.times[1] } ease-in-out;

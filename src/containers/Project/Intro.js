@@ -15,6 +15,7 @@ const StyledFlex = styled(Flex)`
 
 const StyledTitle = styled(Box)`
   font-family: ${p => p.theme.fonts.headline};
+  line-height: 110%;
 `;
 
 const StyledLabel = styled.span`
@@ -34,15 +35,15 @@ const Intro = props => {
 
   return (
     <>
-      <StyledFlex maxWidth={[1200, 900]} pb={[4,5,5,6]}>
-        <StyledTitle fontSize={[5,6,7]} mb={[3]} width={[1, 1, 4/8]}>{title}</StyledTitle>
+      <StyledFlex maxWidth={[1200, 900]} pb={[3,3,3,4]}>
+        <StyledTitle pr={[4]} fontSize={[5,6,7]} mb={[3]} width={[1, 1, 4/8]}>{title}</StyledTitle>
         <Box sx={{ lineHeight: '1.5' }} fontSize={[3,4]} width={[1, 1, 4/8]}>{subtitle}</Box>
       </StyledFlex>
       <StyledFlex sx={{ lineHeight: '1.5' }} pb={[4,5,5,6]} maxWidth={[1200, 900]}>
-        <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Type</StyledLabelBold><br/><StyledLabel>{type}</StyledLabel></Box>
-        <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Context</StyledLabelBold><br/><StyledLabel>{client}</StyledLabel></Box>
-        <Box mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Year</StyledLabelBold><br/><StyledLabel>{year}</StyledLabel></Box>
-        <Box mt={[2,4]} mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><Button href={url} px={3} py={2} c={color} fontSize={[2,3]}>Launch project</Button></Box>
+        <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Type</StyledLabelBold><br/><StyledLabel>{type}</StyledLabel></Box>
+        <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Context</StyledLabelBold><br/><StyledLabel>{client}</StyledLabel></Box>
+        <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><StyledLabelBold>Year</StyledLabelBold><br/><StyledLabel>{year}</StyledLabel></Box>
+        <Box mt={[2,2,2]} mb={[3]} fontSize={[2]} width={[1, 1, 2/8]}><Button href={url} px={3} py={2} c={color} fontSize={[2,2,2,3]}>Launch project</Button></Box>
       </StyledFlex>
     </>
   );

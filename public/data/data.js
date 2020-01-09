@@ -47,7 +47,7 @@ const content = {
       "path": "cityinflux",
       "color": ['#2B1174', '#F5F3F8'],
       "client": "Technologiestiftung Berlin",
-      "type": "data vis",
+      "type": "data visualization",
       "year": 2018,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
       "overlay": "public/images/cityinflux/cityinflux-thumb-960x640.gif",
@@ -60,29 +60,33 @@ const content = {
         {
           "type": "img",
           "content": "800 route of public and informal mobility routes visualized",
-          "url": "public/images/cityinflux/cityinflux-start-3840x2592.jpg"
+          "url": "public/images/cityinflux/cityinflux-start-3840x2592.jpg",
+          "lazy": "public/images/cityinflux/cityinflux-start-lazy-3840x2592.jpg",
         },
         {
           "type": "img",
           "content": "The data can be filtered by socio-economic properties such as education",
-          "url": "public/images/cityinflux/cityinflux-detail-3840x2592.jpg"
+          "url": "public/images/cityinflux/cityinflux-detail-3840x2592.jpg",
+          "lazy": "public/images/cityinflux/cityinflux-detail-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
           "content": "Along inidividual rides socio-economic transformations can be observed",
-          "url": "public/images/cityinflux/cityinflux-ride-3840x2592.jpg"
+          "url": "public/images/cityinflux/cityinflux-ride-3840x2592.jpg",
+          "lazy": "public/images/cityinflux/cityinflux-ride-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
           "content": "Unique story snippets can be attached to each route stop",
-          "url": "public/images/cityinflux/cityinflux-story-3840x2592.jpg"
+          "url": "public/images/cityinflux/cityinflux-story-3840x2592.jpg",
+          "lazy": "public/images/cityinflux/cityinflux-story-lazy-3840x2592.jpg"
         },
       ]
     },
     {
       "title": "Gender inequality in politics",
       "path": "genderinequality",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Experiment",
       "color": ['#882C94', '#F5F3F7'],
       "year": 2019,
@@ -97,24 +101,27 @@ const content = {
         {
           "type": "img",
           "content": "Sorted by continents",
-          "url": "public/images/genderinequality/genderinequality-continents-3840x2592.jpg"
+          "url": "public/images/genderinequality/genderinequality-continents-3840x2592.jpg",
+          "lazy": "public/images/genderinequality/genderinequality-continents-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
           "content": "Sorted by progression between 1990 and 2020",
-          "url": "public/images/genderinequality/genderinequality-progress-3840x2592.jpg"
+          "url": "public/images/genderinequality/genderinequality-progress-3840x2592.jpg",
+          "lazy": "public/images/genderinequality/genderinequality-progress-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
           "content": "North american countries highlighted",
-          "url": "public/images/genderinequality/genderinequality-northAmerica-3840x2592.jpg"
+          "url": "public/images/genderinequality/genderinequality-northAmerica-3840x2592.jpg",
+          "lazy": "public/images/genderinequality/genderinequality-northAmerica-lazy-3840x2592.jpg"
         },
       ]
     },
     {
-      "title": "Edutech Map Berlin",
+      "title": "Educational Technology in Berlin",
       "path": "edutech",
-      "type": "data vis",
+      "type": "Mapping",
       "client": "Technologiestiftung Berlin",
       "color": ['#41B496', '#F6FCFA'],
       "year": 2020,
@@ -122,21 +129,46 @@ const content = {
       "overlay": "public/images/edutech/edutech-thumb-960x640.gif",
       "lazy": "public/images/edutech/edutech-lazy-960x640.jpg",
       "url": "https://edutech.technologiestiftung-berlin.de",
-      "tasks": ["data visualization"],
-      "subtitle": "Bike traffic in Berlin visualized",
-      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "tasks": ["mapping"],
+      "subtitle": "EdTech services of Berlin made accessible for actors of civil-society.",
+      "description": "I was asked to develop an overview of digital services for the education system in the form of a searchable map. The goal of the project is to create a shared language about EdTech and gain overview knowledge of the actors of digital change in the education system through interaction. The application shines through simplicity and clear typography across all devices.",
       "media": [
         {
           "type": "img",
-          "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
-          "url": "public/images/edutech/edutech-selected-3840x2040.jpg"
+          "content": "Filter EdTech institutions along different categories.",
+          "url": "public/images/edutech/edutech-overlay-3840x2040.jpg",
+          "lazy": "public/images/edutech/edutech-overlay-lazy-3840x2040.jpg"
+        },
+        {
+          "type": "img",
+          "content": "A set of distinctive colors and tags help to distinguish the range of services.",
+          "url": "public/images/edutech/edutech-tags-3840x2040.jpg",
+          "lazy": "public/images/edutech/edutech-tags-lazy-3840x2040.jpg"
+        },
+        {
+          "type": "img",
+          "content": "All institutions are listed and sortable with an ease of effort.",
+          "url": "public/images/edutech/edutech-list-3840x2040.jpg",
+          "lazy": "public/images/edutech/edutech-list-lazy-3840x2040.jpg"
+        },
+        {
+          "type": "img",
+          "content": "Filtering out institutions of interest can be done along different types e.g. target group, category and others.",
+          "url": "public/images/edutech/edutech-search-3840x2040.jpg",
+          "lazy": "public/images/edutech/edutech-search-lazy-3840x2040.jpg"
+        },
+        {
+          "type": "img",
+          "content": "A set of detailed information about each insitution is accessible via interaction.",
+          "url": "public/images/edutech/edutech-tooltip-3840x2040.jpg",
+          "lazy": "public/images/edutech/edutech-tooltip-lazy-3840x2040.jpg"
         },
       ]
     },
     {
       "title": "Rhythm of the road",
       "path": "rhythmoftheroad",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Technologiestiftung Berlin",
       "color": ['#2824B2', '#F5F4FC'],
       "year": 2018,
@@ -163,7 +195,7 @@ const content = {
     {
       "title": "Mobility Sharing Flows",
       "path": "bikesharing",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Technologiestiftung Berlin",
       "color": ['#EE7B4B', '#fff'],
       "year": 2019,
@@ -210,7 +242,7 @@ const content = {
     {
       "title": "The Curricle",
       "path": "curricle",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#7042AB', '#fff'],
       "year": 2019,
@@ -227,7 +259,7 @@ const content = {
     {
       "title": "Retro Future Hacker News",
       "path": "hackernews",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#000', '#fff'],
       "year": 2018,
@@ -244,7 +276,7 @@ const content = {
     {
       "title": "Bundestag election 2017",
       "path": "candidates",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#000', '#fff'],
       "year": 2017,
@@ -261,7 +293,7 @@ const content = {
     {
       "title": "The invisible ties",
       "path": "invisties",
-      "type": "data vis",
+      "type": "data visualization",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#013ED9', '#fff'],
       "year": 2018,

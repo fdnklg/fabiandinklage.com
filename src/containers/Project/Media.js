@@ -24,13 +24,14 @@ const Media = props => {
               <ProgressiveImage src={media.url} placeholder={media.lazy}>
                 {src => <Image
                   src={src}
+                  mb={2}
                   sx={{
                     width: [ '100%' ],
                   }}
                 /> }
               </ProgressiveImage>
 
-            <Label align="center" content={media.content} mb={[3,4,5]} mt={[2,2,3]}></Label>
+            <Label align="center" content={media.content}></Label>
           </Box>
         )
       }) }

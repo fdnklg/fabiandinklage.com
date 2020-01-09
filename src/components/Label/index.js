@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Link, Text, Button } from 'rebass/styled-components';
+import { Text } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 
