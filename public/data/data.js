@@ -1,14 +1,14 @@
 const content = {
   "about": {
-    "intro": "Fabian Dinklage is a Berlin based designer who develops data-driven visualizations with open data as a research associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the Technologiestiftung Berlin. He works as a freelancer at the intersection of data and design and helped international organisations around the world to create insight of their data through visualization.",
-    "vita": "Fabian Dinklage is a Interaction Designer with the focus of information design and data visualization. He worked as a media designer at [ballyhoo](https://ballyhoo.de) until 2012. He started working at the [infographics group](https://inforgraphics.group) in 2016. In 2017 he took part of the interactive team of the [Berliner Morgenpost](https://berliner-morgenpost.de) as a Google News Lab Fellow.",
-    "profileUrl": "public/images/profile.jpg"
+    "intro": "Fabian Dinklage is a Berlin based designer who develops data-driven visualizations with open data as a research associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) and the [CityLAB Berlin](https://citylab-berlin.org) of the Technologiestiftung Berlin. He works as a freelancer at the intersection of data and design and helped international organisations to gain insight of their data through visualization.",
+    "vita": "Fabian Dinklage is a Interaction Designer with the focus of information design and data visualization. He worked as a media designer at [ballyhoo](https://ballyhoo.de) until 2012. He studied Interface Design at the [University of Applied Sciences, Potsdam](http://fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). He started working at the [infographics group](https://inforgraphics.group) in 2016. In 2017 he took part of the interactive team of the [Berliner Morgenpost](https://berliner-morgenpost.de) as a Google News Lab Fellow. Since 2018 he works as a research associate at the intersection of open data and data visualization in the [Technologiesitftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/) and the [CityLAB Berlin](https://citylab-berlin.org/)",
+    "profileUrl": "public/images/profile__.jpg"
   },
   "cta": {
     text: 'Do you have a project for me?',
     btn: "Let's chat!",
   },
-  "contact": "Got curious? I'm psyched to get to know you! Let's have a coffee together or reach out via one of the following channels.",
+  "contact": "Are you interested in a collaboration? I'm happy to hear from you. Let's have a coffee together or reach out via one of the following channels:",
   "activities": [
     {
       "title": "Research associate",
@@ -46,8 +46,8 @@ const content = {
       "title": "A city in flux",
       "path": "cityinflux",
       "color": ['#2B1174', '#F5F3F8'],
-      "client": "Technologiestiftung Berlin",
-      "type": "Data Visualization",
+      "client": "GiZ",
+      "type": "Mapping",
       "year": 2018,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
       "overlay": "public/images/cityinflux/cityinflux-thumb-960x640.gif",
@@ -195,7 +195,7 @@ const content = {
     {
       "title": "Shared Mobility Flows",
       "path": "bikesharing",
-      "type": "Data Visualization",
+      "type": "Mapping",
       "client": "Technologiestiftung Berlin",
       "color": ['#EE7B4B', '#fff'],
       "year": 2019,
@@ -285,14 +285,14 @@ const content = {
       "path": "hackernews",
       "type": "Data Visualization",
       "client": "Experiment",
-      "color": ['#000', '#fff'],
+      "color": ['#000', '#f2f2f2'],
       "year": 2018,
       "thumbnail": "public/images/hackernews/hackernews-thumb-960x640.jpg",
       "overlay": "public/images/hackernews/hackernews-thumb-960x640.gif",
       "lazy": "public/images/hackernews/hackernews-lazy-960x640.jpg",
       "url": "https://hackernews.fabiandinklage.com",
       "tasks": ["Data Visualization"],
-      "subtitle": "Visualizing controversy and popularity of information through networks.",
+      "subtitle": "Visualizing controversy and popularity of information of a news incubator.",
       "description": "How is information visualized in the digital space? Usually lists dominate the organisation of content for practical reasons of readability. Together with [Florian Zia](https://twitter.com/florianzia) questioned the status quo of webdesign and usability and created an experimental reader application for the information platform Hacker News. The application can be used an alternative reader. It visualizes controversy and popularity through the complexity of networks. The project was developed within the experimental web typography course Retro Future Webdesign guided by [Prof. Boris Müller](https://twitter.com/borism) at the University of Applied Sciences Potsdam.",
       "media": [
         {
@@ -334,7 +334,7 @@ const content = {
       "url": "https://interaktiv.morgenpost.de/kandidaten-bundestagswahl-2017/",
       "tasks": ["Data Visualization"],
       "subtitle": "Bike traffic in Berlin visualized",
-      "description": "All 2559 direct candidates - who they are, what they stand for Profession, origin, political closeness: The individual points stand for candidates who want to enter the next Bundestag by first vote. The interactive team of the Berliner Morgenpost and I developed this visualization to provide an overview of all electable candidates.",
+      "description": "All 2559 direct candidates - who they are, what they stand for Profession, origin, political closeness: The individual points stand for candidates who want to enter the next Bundestag by first vote. Together with the interactive team of the Berliner Morgenpost I had the honor to develop this visualization to provide an overview of all electable candidates.",
       "media": [
         {
           "type": "candidates",

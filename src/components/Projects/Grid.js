@@ -109,7 +109,7 @@ const Grid = (props) => {
       }}>
         {data.map((p,i) => {
           return (
-            <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colors)} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
+            <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
               <StyledBox className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
                     <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
                       {src => <GifImage

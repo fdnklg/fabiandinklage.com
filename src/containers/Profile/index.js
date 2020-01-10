@@ -17,6 +17,7 @@ const Profile = () => {
       <Flex sx={{ textAlign: ['left', 'left', 'center'] }} pb={[4,5,5,6]} width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
         <Paragraph content={vita} color={color}/>
         <br/>
+        <br/>
         {/* <Paragraph content={intro} color={color}/> */}
         <List c={color}>
           <li>Selected Clients:</li>

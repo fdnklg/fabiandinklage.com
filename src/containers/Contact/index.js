@@ -29,7 +29,7 @@ const Contact = p => {
         <br />
         <List c={color}>
           <li><StyledLink c={color} href="mailto:mail@fabiandinklage.com">mail(at)fabiandinklage.com</StyledLink></li>
-          <li>Twitter: <StyledLink c={color} href="https://twitter.com/fdnklg">@fdnklg</StyledLink></li>
+          <li><StyledLink c={color} href="https://twitter.com/fdnklg">@fdnklg</StyledLink></li>
         </List>
       </Flex>
     </Flex>
