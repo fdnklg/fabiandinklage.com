@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Image, Box, Flex } from 'rebass/styled-components/';
+import { colorMode } from '~/utils';
 
 import Intro from './Intro';
 import Media from './Media';
@@ -18,8 +19,10 @@ const Project = ({match}) => {
   const project = projects.filter(p => p.path === match.params.projectName)[0];
 
   useEffect(() => {
-    setColor(project.color);
-  });
+    const colors = colorMode(project.color);
+    setColor(colors);
+    console.log(colors);
+  }, []);
 
   return (
     <>

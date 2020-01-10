@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { createGlobalStyle } from "styled-components"
-import { useStoreState } from 'easy-peasy';
+import { useStoreState, useStoreActions } from 'easy-peasy';
+import { colorMode } from '~/utils';
 
 import { withRouter, Route, Switch } from 'react-router-dom';
 
@@ -25,7 +26,8 @@ import Contact from '../Contact';
 
 const AppWrapper = () => {
   const cta = useStoreState(state => state.cta);
-  const color = useStoreState(state => state.color.color);
+  let color = useStoreState(state => state.color.color);
+  const setColor = useStoreActions(actions => actions.color.setColor);
 
 
 const DynamicGlobalStyle = createGlobalStyle`

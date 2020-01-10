@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
+import { colorMode } from '~/utils';
 import { Box, Text, Image } from 'rebass/styled-components';
 import { CSSTransition } from "react-transition-group";
 import ProgressiveImage from 'react-progressive-image';
@@ -81,12 +82,16 @@ const Grid = (props) => {
   let ref = null;
   let box = null;
   let height = 'null';
+  let colors = '';
 
   useEffect(() => {
-     height = `${ref.offsetWidth / 3 * 2}px`;
-     const boxes = document.querySelectorAll('.thumb-box');
-     boxes.forEach(box => box.style.height = height);
-  })
+    height = `${ref.offsetWidth / 3 * 2}px`;
+    const boxes = document.querySelectorAll('.thumb-box');
+    boxes.forEach(box => box.style.height = height);
+
+    const colors = colorMode(color)
+    setColor(colors);
+  }, [])
 
   return (
     <CSSTransition
@@ -104,7 +109,7 @@ const Grid = (props) => {
       }}>
         {data.map((p,i) => {
           return (
-            <StyledLink onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#121337', '#fff'])} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
+            <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colors)} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
               <StyledBox className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
                     <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
                       {src => <GifImage
