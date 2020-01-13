@@ -4,8 +4,12 @@ import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Link } from 'rebass/styled-components';
 import { compare, colorMode } from '~/utils';
+import Transition from "react-transition-group/Transition";
+import { opacityFromState } from '~/utils/animation';
 
 const StyledListWrapper = styled.div`
+  opacity: ${props => opacityFromState(props.state)};
+  transition: all ${p => p.theme.times[1]} ease-in-out;
   font-size: ${p => p.theme.fontSizes[1]};
 `;
 
@@ -83,32 +87,42 @@ const isNewYear = (data,i) => {
   return previous.year !== current.year;
 }
 
-const List = (props) => {
-  const { data } = props;
+const List = (p) => {
+  const { data } = p;
   const colorDefault = useStoreState(state => state.color.default);
   const color = useStoreState(state => state.color.color);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
 
   return (
-    <StyledListWrapper>
-      <StyledTable>
-        <tbody>
-          { sortedByYear.map((p,i) => {
-            const newYear = isNewYear(data,i)
-            return (
-                <StyledTR c={color} border={newYear} key={`tr-${i}`}>
-                    <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <Link onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colorDefault)} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
-                      <StyledTitle>{p.title}</StyledTitle>
-                    </Link>
-                    <StyledTDType type="last">{p.type}</StyledTDType>
-                </StyledTR>
-            )
-          }) }
-        </tbody>
-      </StyledTable>
-    </StyledListWrapper>
+    <Transition
+      in={true}
+      timeout={0}
+      appear={true}
+      mountOnEnter={true}
+      unmountOnExit={true}
+    >
+      {state => (
+        <StyledListWrapper state={state}>
+          <StyledTable>
+            <tbody>
+              { sortedByYear.map((p,i) => {
+                const newYear = isNewYear(data,i)
+                return (
+                    <StyledTR c={color} border={newYear} key={`tr-${i}`}>
+                        <StyledTD>{newYear ? p.year : ''}</StyledTD>
+                        <Link onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colorDefault)} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
+                          <StyledTitle>{p.title}</StyledTitle>
+                        </Link>
+                        <StyledTDType type="last">{p.type}</StyledTDType>
+                    </StyledTR>
+                )
+              }) }
+            </tbody>
+          </StyledTable>
+        </StyledListWrapper>
+      )}
+    </Transition>
   );
 };
 

@@ -45,11 +45,11 @@ const AppWrapper = () => {
           py: [3, 4, 5, 5],
         }}
       >
-        <Nav />
+        <Nav timeout={500} />
         <Switch>
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/legal" component={Legal} />
+          <Route exact path="/contact" component={() => <Contact timeout={625}/>} />
+          <Route exact path="/profile" component={() => <Profile timeout={625}/>} />
+          <Route exact path="/legal" component={() => <Legal timeout={625}/>} />
           <Route exact path="/" component={Home} />
           <Route exact path={`/projects/:projectName`} component={Project} />
         </Switch>
