@@ -27,15 +27,13 @@ import Contact from '../Contact';
 const AppWrapper = () => {
   const cta = useStoreState(state => state.cta);
   let color = useStoreState(state => state.color.color);
-  const setColor = useStoreActions(actions => actions.color.setColor);
 
-
-const DynamicGlobalStyle = createGlobalStyle`
-  ::selection {
-    background-color: ${color[0]};
-    color: ${color[1]};
-  }
-`
+  const DynamicGlobalStyle = createGlobalStyle`
+    ::selection {
+      background-color: ${color[0]};
+      color: ${color[1]};
+    }
+  `
 
   return (
     <StyledWrapper c={color}>

@@ -13,7 +13,7 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const Project = ({match}) => {
-  const projects = useStoreState(state => state.projects)
+  const projects = useStoreState(state => state.projects);
   const color = useStoreState(state => state.color.color)
   const setColor = useStoreActions(actions => actions.color.setColor);
   const project = projects.filter(p => p.path === match.params.projectName)[0];

@@ -11,7 +11,7 @@ class App extends PureComponent {
       <Router history={history}>
         <Switch>
           <Route
-            path={['/', 'profile', 'legal']}
+            path={['/', 'profile']}
             component={AppWrapper}
           />
           <Route component={NotFoundRoute} />

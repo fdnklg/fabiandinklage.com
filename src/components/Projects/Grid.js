@@ -6,6 +6,7 @@ import { colorMode } from '~/utils';
 import { Box, Text, Image } from 'rebass/styled-components';
 import { CSSTransition } from "react-transition-group";
 import ProgressiveImage from 'react-progressive-image';
+import { compare } from '~/utils';
 
 import Label from '~/components/Label';
 import Link from '~/components/Link';
@@ -78,7 +79,9 @@ const StyledBox = styled(Box)`
 const Grid = (props) => {
   const { data } = props;
   const color = useStoreState(state => state.color.color);
+  const colorDefault = useStoreState(state => state.color.default);
   const setColor = useStoreActions(actions => actions.color.setColor);
+  const sortedByYear = data.sort(compare);
   let ref = null;
   let box = null;
   let height = 'null';
@@ -88,9 +91,6 @@ const Grid = (props) => {
     height = `${ref.offsetWidth / 3 * 2}px`;
     const boxes = document.querySelectorAll('.thumb-box');
     boxes.forEach(box => box.style.height = height);
-
-    const colors = colorMode(color)
-    setColor(colors);
   }, [])
 
   return (
@@ -109,7 +109,7 @@ const Grid = (props) => {
       }}>
         {data.map((p,i) => {
           return (
-            <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
+            <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() => { setColor(colorDefault) }} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
               <StyledBox className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
                     <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
                       {src => <GifImage

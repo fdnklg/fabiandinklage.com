@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Link } from 'rebass/styled-components';
-import { compare } from '~/utils';
+import { compare, colorMode } from '~/utils';
 
 const StyledListWrapper = styled.div`
   font-size: ${p => p.theme.fontSizes[1]};
@@ -85,6 +85,7 @@ const isNewYear = (data,i) => {
 
 const List = (props) => {
   const { data } = props;
+  const colorDefault = useStoreState(state => state.color.default);
   const color = useStoreState(state => state.color.color);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
@@ -98,7 +99,7 @@ const List = (props) => {
             return (
                 <StyledTR c={color} border={newYear} key={`tr-${i}`}>
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <Link onMouseOver={() =>  setColor(p.color)} onMouseOut={() =>  setColor(['#000', '#fff'])} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
+                    <Link onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colorDefault)} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
                       <StyledTitle>{p.title}</StyledTitle>
                     </Link>
                     <StyledTDType type="last">{p.type}</StyledTDType>
