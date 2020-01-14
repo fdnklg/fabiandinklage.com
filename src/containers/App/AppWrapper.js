@@ -53,8 +53,8 @@ const AppWrapper = () => {
           <Route exact path="/" component={Home} />
           <Route exact path={`/projects/:projectName`} component={Project} />
         </Switch>
-        <Cta content={cta}/>
-        <Footer />
+        <Cta timeout={875} content={cta}/>
+        <Footer timeout={1000} />
 
       </Box>
     </StyledWrapper>
