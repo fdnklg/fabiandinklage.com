@@ -1,13 +1,15 @@
 @font-face {
-  font-family: 'Faktum Regular';
-  src: url('Faktum-Regular.woff2') format('woff2');
+  font-family: 'Space Grotesk Regular';
+  src: url('SpaceGrotesk-Regular.otf') format('opentype');
+  /* src: url('Faktum-Regular.woff2') format('woff2'); */
   /* src: url('/public/fonts/Mier-A-Regular.otf') format('opentype'); */
   font-style: normal;
 }
 
 @font-face {
-    font-family: 'Faktum SemiBold';
-    src: url('Faktum-SemiBold.woff2') format('woff2');
+    font-family: 'Space Grotesk Bold';
+    src: url('SpaceGrotesk-Bold.otf') format('opentype');
+    /* src: url('Faktum-SemiBold.woff2') format('woff2'); */
     /* src: url('/public/fonts/Mier-A-Bold.otf') format('opentype'); */
     font-style: normal;
 }

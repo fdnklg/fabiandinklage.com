@@ -18,8 +18,8 @@ const defaultTheme = {
     highlight: 'hsla(205, 100%, 40%, 0.125)',
   },
   fonts: {
-    body: 'Faktum Regular, sans-serif',
-    headline: 'Faktum SemiBold, sans-serif',
+    body: 'Space Grotesk Regular, sans-serif',
+    headline: 'Space Grotesk Bold, sans-serif',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96].map(px),
   letterSpacing: [.125,.25,.5,1].map(px),
