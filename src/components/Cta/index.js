@@ -18,6 +18,12 @@ const StyledText = styled(Text)`
   align-self: center;
 `;
 
+const StyledA = styled.a`
+  padding-top: 20px;
+  align-self: center;
+  text-decoration: none;
+`;
+
 const Cta = (props) => {
   const { content, timeout } = props;
   const color = useStoreState(state => state.color.color);
@@ -32,7 +38,9 @@ const Cta = (props) => {
       {state => (
         <StyledFlex state={state} pt={0} pb={[4,5,5,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,5]}>
           <StyledText>{content.text}</StyledText>
+          <StyledA href="mailto:mail@fabiandinklage.com">
             <Button c={color} mt={[3,4]} px={3} py={2} fontSize={[2,3]}>{content.btn}</Button>
+          </StyledA>
         </StyledFlex>
       )}
     </Transition>

@@ -43,9 +43,6 @@ const Footer = p => {
             <Link mr={[3,4,4]} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href="/legal">
               Legal Note
             </Link>
-            <Link sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href="https://twitter.com/fdnklg">
-              Twitter
-            </Link>
           </StyledBox>
         </StyledFlex>
       )}

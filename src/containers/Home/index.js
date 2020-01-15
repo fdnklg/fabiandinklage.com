@@ -18,9 +18,9 @@ const Home = p => {
   return (
     <>
       <StyledFlex sx={{ textAlign: ['left', 'left', 'center'] }} pb={[4,5,5,6]}  width={[1, 4/5, 4/5, 3/4]} fontSize={[3,4,4,5]}>
-        <Paragraph color={color} content={intro} timeout={625} />
+        <Paragraph color={color} content={intro} timeout={700} />
       </StyledFlex>
-      <Projects timeout={750} />
+      <Projects timeout={900} />
     </>
   );
 };

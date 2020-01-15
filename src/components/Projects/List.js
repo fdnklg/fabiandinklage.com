@@ -41,6 +41,7 @@ const StyledTD = styled.td`
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   vertical-align: top;
   margin-top: 3px;
+  letter-spacing: .5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     text-align: left;
@@ -52,6 +53,7 @@ const StyledTDType = styled.td`
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   vertical-align: top;
   margin-top: 3px;
+  letter-spacing: .5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     text-align: left;
@@ -67,6 +69,7 @@ const StyledTitle = styled.td`
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
+  letter-spacing: .5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[2]};

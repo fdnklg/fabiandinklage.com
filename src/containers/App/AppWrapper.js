@@ -33,6 +33,10 @@ const AppWrapper = () => {
       background-color: ${color[0]};
       color: ${color[1]};
     }
+
+    html {
+      background: ${color[1]};
+    }
   `
 
   return (
@@ -47,14 +51,14 @@ const AppWrapper = () => {
       >
         <Nav timeout={500} />
         <Switch>
-          <Route exact path="/contact" component={() => <Contact timeout={625}/>} />
-          <Route exact path="/profile" component={() => <Profile timeout={625}/>} />
-          <Route exact path="/legal" component={() => <Legal timeout={625}/>} />
+          <Route exact path="/contact" component={() => <Contact timeout={700}/>} />
+          <Route exact path="/profile" component={() => <Profile timeout={700}/>} />
+          <Route exact path="/legal" component={() => <Legal timeout={700}/>} />
           <Route exact path="/" component={Home} />
           <Route exact path={`/projects/:projectName`} component={Project} />
         </Switch>
-        <Cta timeout={875} content={cta}/>
-        <Footer timeout={1000} />
+        <Cta timeout={900} content={cta}/>
+        <Footer timeout={1100} />
 
       </Box>
     </StyledWrapper>

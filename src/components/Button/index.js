@@ -7,7 +7,7 @@ const StyledButton = styled(Link)`
   width: fit-content;
   align-self: center;
   background: none;
-  border: 1.5px solid ${p => p.c[0]};
+  border: 1.25px solid ${p => p.c[0]};
   color: ${p => p.c[0]};
   border-radius: 6px;
   text-decoration: none;
