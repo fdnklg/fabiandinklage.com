@@ -19,6 +19,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   border-bottom: 1px solid ${p => p.c[0]};
   color: ${p => p.c[0]};
+  letter-spacing: ${p => p.theme.letterSpacing[2]};
 `;
 
 const Contact = p => {
