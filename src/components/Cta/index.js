@@ -40,7 +40,7 @@ const Cta = (props) => {
         <StyledFlex state={state} pt={0} pb={[5,6,6,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,4,5]}>
           <StyledText fontSize={[3,4,4,5]}>{content.text}</StyledText>
           <StyledA href="mailto:mail@fabiandinklage.com">
-            <Button c={color} mt={[3,4,5]} px={3} py={2} fontSize={[3,4,4,4]}>{content.btn}</Button>
+            <Button c={color} mt={[3,4,5]} px={3} py={2} fontSize={[2,3,3,3]}>{content.btn}</Button>
           </StyledA>
         </StyledFlex>
       )}
