@@ -24,6 +24,8 @@ const StyledTR = styled.tr`
   td {
     padding-top: ${p => p.border ? '1em !important' : '0 !important'};
     font-size: ${p => p.theme.fontSizes[4]};
+    transition: all ${p => p.theme.times[0]} ease-in-out;
+    color: ${p => p.c[0]};
   }
   
 
@@ -78,7 +80,7 @@ const StyledTitle = styled.td`
 
   &:hover {
     opacity: .5;
-    transition: opacity ${p => p.theme.times[0]} ease-in-out;
+    transition: all ${p => p.theme.times[1]} ease-in-out;
   }
 `;
 

@@ -34,7 +34,6 @@ const Profile = (p) => {
             <Paragraph timeout={625} content={vita} color={color}/>
             <br/>
             <br/>
-            {/* <Paragraph content={intro} color={color}/> */}
               <List timeout={750} c={color}>
                 <li>Selected Clients:</li>
                 <li></li>

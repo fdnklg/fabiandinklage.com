@@ -55,7 +55,7 @@ const AppWrapper = () => {
           <Route exact path="/profile" component={() => <Profile timeout={700}/>} />
           <Route exact path="/legal" component={() => <Legal timeout={700}/>} />
           <Route exact path="/" component={Home} />
-          <Route exact path={`/projects/:projectName`} component={Project} />
+          <Route exact path="/projects/:projectName" component={Project} />
         </Switch>
         <Cta timeout={900} content={cta}/>
         <Footer timeout={1100} />

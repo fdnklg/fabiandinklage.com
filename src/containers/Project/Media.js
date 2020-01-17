@@ -21,7 +21,7 @@ const Media = props => {
         return (
           <Box pb={[4, 5]}>
 
-              <ProgressiveImage src={media.url} placeholder={media.lazy}>
+              <ProgressiveImage key={`media-key-${i}`} src={media.url} placeholder={media.lazy}>
                 {src => <Image
                   src={src}
                   mb={2}
@@ -31,7 +31,7 @@ const Media = props => {
                 /> }
               </ProgressiveImage>
 
-            <Label align="center" content={media.content}></Label>
+            <Label key={`media-label-${i}`}  align="center" content={media.content}></Label>
           </Box>
         )
       }) }

@@ -119,7 +119,7 @@ const Grid = (p) => {
           }}>
             {data.map((p,i) => {
               return (
-                <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() => { setColor(colorDefault) }} sx={{ textDecoration: 'none' }} variant="nav" href={`projects/${p.path}`}>
+                <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() => { setColor(colorDefault) }} sx={{ textDecoration: 'none' }} key={`griditem-key-${i}`} variant="nav" href={`projects/${p.path}`}>
                   <StyledThumbBox className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
                         <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
                           {src => <GifImage

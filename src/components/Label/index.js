@@ -4,7 +4,7 @@ import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 
 const StyledText = styled(Text)`
-  letter-spacing: ${ p => p.theme.letterSpacing[3] };
+  letter-spacing: ${ p => p.theme.letterSpacing[2] };
   text-align: ${ p => p.align} 
   }};
 `;

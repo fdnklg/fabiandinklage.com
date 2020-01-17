@@ -22,6 +22,8 @@ const Projects = (p) => {
   const projects = useStoreState(action => action.projects)
   const color = useStoreState(state => state.color.color);
 
+  const filtered = projects.filter(p => p.visible);
+
   return (
     <Transition
       in={true}
@@ -32,9 +34,9 @@ const Projects = (p) => {
     >
       {state => (
         <StyledProjectsWrapper state={state} pb={[4,5,5,6]}>
-          <LayoutSwitch />
-          { layout == "Grid" && <Grid data={projects}/> }
-          { layout == "List" && <List color={color} data={projects}/> }
+          <LayoutSwitch c={color} />
+          { layout == "Grid" && <Grid data={filtered}/> }
+          { layout == "List" && <List color={color} data={filtered}/> }
         </StyledProjectsWrapper>
       )}
     </Transition>

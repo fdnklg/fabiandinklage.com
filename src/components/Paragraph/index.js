@@ -18,11 +18,11 @@ const StyledParagraph = styled(ReactMarkdown)`
     text-decoration: none;
     border-bottom: 1px solid ${p => p.c[0]};
     color: ${p => p.c[0]};
-    transition: opacity ${p => p.theme.times[0]} ease-in-out;
+    transition: all ${p => p.theme.times[1]} ease-in-out;
 
     &:hover {
       opacity: .5;
-      transition: opacity ${p => p.theme.times[0]} ease-in-out;
+      transition: all ${p => p.theme.times[1]} ease-in-out;
     }
   }
 `;

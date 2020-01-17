@@ -11,16 +11,16 @@ const StyledUl = styled.ul`
   margin: 0;
 
   li {
-    font-size: ${p => p.theme.fontSizes[5]};
+    ${'' /* font-size: ${p => p.theme.fontSizes[5]}; */}
     color: ${p => p.c};
 
     @media (max-width: ${p => p.theme.sizes.tablet}) {
-      font-size: ${p => p.theme.fontSizes[4]};
+      ${'' /* font-size: ${p => p.theme.fontSizes[4]}; */}
       text-align: left;
     }
 
     @media (max-width: ${p => p.theme.sizes.mobile}) {
-      font-size: ${p => p.theme.fontSizes[3]};
+      ${'' /* font-size: ${p => p.theme.fontSizes[3]}; */}
       text-align: left;
     }
   }

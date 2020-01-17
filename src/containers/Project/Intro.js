@@ -27,12 +27,12 @@ const StyledTitle = styled(Box)`
 
 const StyledLabel = styled.span`
   font-family: ${p => p.theme.fonts.body};
-  letter-spacing: ${p => p.theme.letterSpacing[3]}
+  letter-spacing: ${p => p.theme.letterSpacing[2]}
 `;
 
 const StyledLabelBold = styled.span`
   font-family: ${p => p.theme.fonts.headline};
-  letter-spacing: ${p => p.theme.letterSpacing[3]}
+  letter-spacing: ${p => p.theme.letterSpacing[2]}
 `;
 
 const Intro = props => {

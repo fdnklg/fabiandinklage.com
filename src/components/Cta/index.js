@@ -11,11 +11,12 @@ const StyledFlex = styled(Flex)`
   margin: 0 auto;
   flex-direction: column;
   opacity: ${props => opacityFromState(props.state)};
-  transition: all ${p => p.theme.times[1]} ease-in-out;
+  transition: all ${p => p.theme.times[0]} ease-in-out;
 `;
 
 const StyledText = styled(Text)`
   align-self: center;
+  transition: all ${p => p.theme.times[0]} ease-in-out;
 `;
 
 const StyledA = styled.a`
@@ -36,10 +37,10 @@ const Cta = (props) => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledFlex state={state} pt={0} pb={[5,5,6,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,5]}>
-          <StyledText>{content.text}</StyledText>
+        <StyledFlex state={state} pt={0} pb={[5,6,6,6]} width={[1, 4/5, 3/4, 2/3]} fontSize={[3,4,4,5]}>
+          <StyledText fontSize={[3,4,4,5]}>{content.text}</StyledText>
           <StyledA href="mailto:mail@fabiandinklage.com">
-            <Button c={color} mt={[3,4]} px={3} py={2} fontSize={[2,3]}>{content.btn}</Button>
+            <Button c={color} mt={[3,4,5]} px={3} py={2} fontSize={[3,4,4,4]}>{content.btn}</Button>
           </StyledA>
         </StyledFlex>
       )}
