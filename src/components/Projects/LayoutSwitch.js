@@ -9,9 +9,10 @@ import ListIcon from '!file-loader!~/../public/images/list.svg';
 import IconGrid from '~/components/IconGrid'
 import IconList from '~/components/IconList'
 
-const StyledLayoutSwitchesWrapper = styled(Flex)`
+const StyledLayoutSwitchesWrapper = styled.div`
   font-size: ${p => p.theme.fontSizes[2]};
   font-family: ${p => p.theme.fonts.headline};
+  width: 100%;
 `;
 
 const StyledImg = styled.img`
@@ -43,6 +44,7 @@ const LayoutSwitch = () => {
     cursor: pointer;
     transition: all ${p => p.theme.times[0]} ease-in-out;
     color: ${p => p.c[0]};
+    width: 25px;
     background: none;
     opacity: ${p => p.activeNow === active ? 1 : .1};
     &:focus { outline:0; }
