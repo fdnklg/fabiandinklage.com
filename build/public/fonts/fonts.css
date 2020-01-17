@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Mier A Regular';
+  /* src: url('SpaceGrotesk-Regular.otf') format('opentype'); */
+  /* src: url('Faktum-Regular.woff2') format('woff2'); */
+  src: url('Mier-A-Regular.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mier A Bold';
+    /* src: url('SpaceGrotesk-Bold.otf') format('opentype'); */
+    /* src: url('Faktum-SemiBold.woff2') format('woff2'); */
+    src: url('Mier-A-Bold.otf') format('opentype');
+    font-style: normal;
+}

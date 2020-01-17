@@ -5,8 +5,8 @@ const content = {
     "profileUrl": "public/images/profile___.jpg"
   },
   "cta": {
-    text: 'Do you have a project for me?',
-    btn: "Let's chat.",
+    text: 'How could we work together?',
+    btn: "Let me know!",
   },
   "contact": "Are you interested in a collaboration? I'm happy to hear from you. Let's have a coffee together or reach out via one of the following channels:",
   "activities": [
