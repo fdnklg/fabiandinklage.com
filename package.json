@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
+    "@n8tb1t/use-scroll-position": "^1.0.43",
     "@rebass/preset": "^4.0.5",
     "core-js": "^3.6.0",
     "easy-peasy": "^3.2.3",

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
@@ -9,6 +9,7 @@ import ProgressiveImage from 'react-progressive-image';
 import { compare } from '~/utils';
 import Transition from "react-transition-group/Transition";
 import { opacityFromState } from '~/utils/animation';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 import Label from '~/components/Label';
@@ -64,6 +65,12 @@ const ThumbnailImage = styled(Image)`
   transition: opacity ${ p => p.theme.times[1] } ease-in-out;
   filter: saturate(.25);
 
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    &.hide {
+      opacity: 0;
+    }
+  }
+
   @media (max-width: ${p => p.theme.sizes.mobile}) {
     filter: saturate(1);
   }
@@ -90,6 +97,7 @@ const Grid = (p) => {
   const colorDefault = useStoreState(state => state.color.default);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
+  const [hideOnScroll, setHideOnScroll] = useState(true)
   let ref = null;
   let box = null;
   let height = 'null';
@@ -100,6 +108,30 @@ const Grid = (p) => {
     const boxes = document.querySelectorAll('.thumb-box');
     boxes.forEach(box => box.style.height = height);
   }, [])
+
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      const thumbnails = document.querySelectorAll('.thumbnail-img');
+
+      thumbnails.forEach((thumb,i) => {
+        const elm = thumb.getBoundingClientRect();
+        if (elm.top < 400 && elm.top > 100) {
+          thumb.classList.add('hide');
+        } else {
+          thumb.classList.remove('hide');
+        }
+      })
+
+      const isShow = currPos.y > prevPos.y
+      if (isShow !== hideOnScroll) setHideOnScroll(isShow)
+    },
+    [hideOnScroll],
+    null,
+    false,
+    300
+  )
+
+  console.log(hideOnScroll);
 
   return (
     <Transition
@@ -133,6 +165,7 @@ const Grid = (p) => {
                         </ProgressiveImage>
                         <ProgressiveImage src={p.thumbnail} placeholder={p.lazy}>
                           {src => <ThumbnailImage
+                            className="thumbnail-img"
                             src={src}
                             sx={{
                               width: [ '100%' ],
