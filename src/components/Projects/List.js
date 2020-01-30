@@ -22,7 +22,7 @@ const StyledTR = styled.tr`
   border-top: ${p => p.border ? '1px solid' + p.c[0] : 'none'};
   
   td {
-    padding-top: ${p => p.border ? '1em !important' : '0 !important'};
+    padding-top: ${p => p.border ? `${p.theme.space[3]} !important` : '0 !important'};
     font-size: ${p => p.theme.fontSizes[4]};
     transition: all ${p => p.theme.times[0]} ease-in-out;
     color: ${p => p.c[0]};
