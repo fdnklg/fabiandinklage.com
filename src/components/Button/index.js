@@ -6,6 +6,8 @@ const StyledButton = styled(Link)`
   cursor: pointer;
   width: fit-content;
   align-self: center;
+  padding-top: 4px;
+  padding-bottom: 10px;
   background: none;
   border: 1px solid ${p => p.c[0]};
   color: ${p => p.c[0]};

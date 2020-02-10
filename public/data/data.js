@@ -86,7 +86,7 @@ const content = {
     },
     {
       "title": "Gender inequality in politics",
-      "path": "genderinequality",
+      "path": "gender-equality",
       "type": "Data visualization",
       "client": "Experiment",
       "color": ['#882C94', '#F5F3F7'],
@@ -251,7 +251,7 @@ const content = {
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#7042AB', '#F8F7FC'],
       "year": 2019,
-      "visible": false,
+      "visible": true,
       "thumbnail": "public/images/curricle/curricle-thumb-960x640.jpg",
       "overlay": "public/images/curricle/curricle-thumb-960x640.gif",
       "lazy": "public/images/curricle/curricle-lazy-960x640.jpg",

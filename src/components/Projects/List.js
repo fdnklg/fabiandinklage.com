@@ -7,6 +7,8 @@ import { compare, colorMode } from '~/utils';
 import Transition from "react-transition-group/Transition";
 import { opacityFromState } from '~/utils/animation';
 
+import Button from '../Button/';
+
 const StyledListWrapper = styled.div`
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
@@ -22,7 +24,8 @@ const StyledTR = styled.tr`
   border-top: ${p => p.border ? '1px solid' + p.c[0] : 'none'};
   
   td {
-    padding-top: ${p => p.border ? `${p.theme.space[3]} !important` : '0 !important'};
+    padding-top: ${p => p.newYear ? p.theme.space[4] : '15px'};
+    padding-bottom: ${p => p.lastItemOfYear ? p.theme.space[4] : '15px'};
     font-size: ${p => p.theme.fontSizes[4]};
     transition: all ${p => p.theme.times[0]} ease-in-out;
     color: ${p => p.c[0]};
@@ -41,7 +44,7 @@ const StyledTR = styled.tr`
 const StyledTD = styled.td`
   text-align: ${p => p.type === 'last' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
-  vertical-align: top;
+  margin-top: ${p => p.type === 'last' ? '10px': '0px'};
   margin-top: 3px;
   letter-spacing: .5px;
 
@@ -51,17 +54,22 @@ const StyledTD = styled.td`
 `;
 
 const StyledTDType = styled.td`
-  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
-  vertical-align: top;
   margin-top: 3px;
   letter-spacing: .5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
-    text-align: left;
+    text-align: ${p => p.type === 'last' ? 'end' : 'start'};
   }
 
   @media (max-width: ${p => p.theme.sizes.mobile}) {
+    display: none;
+  }
+`;
+
+const StyledTDButton = styled(StyledTDType)`
+  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+  @media (max-width: ${p => p.theme.sizes.desktop}) {
     display: none;
   }
 `;
@@ -92,6 +100,14 @@ const isNewYear = (data,i) => {
   return previous.year !== current.year;
 }
 
+const lastItemOfYear = (data,i) => {
+  const l = data.length;
+  const previous = data[i===0?l-1:i-1];
+  const current = data[i];
+  const next = data[i===l-1?0:i+1];
+  return next.year !== current.year;
+}
+
 const List = (p) => {
   const { data } = p;
   const colorDefault = useStoreState(state => state.color.default);
@@ -112,14 +128,17 @@ const List = (p) => {
           <StyledTable>
             <tbody>
               { sortedByYear.map((p,i) => {
-                const newYear = isNewYear(data,i)
+                console.log(p);
+                const newYear = isNewYear(data,i);
+                const lastItem = lastItemOfYear(data,i);
                 return (
-                    <StyledTR c={color} border={newYear} key={`tr-${i}`}>
+                    <StyledTR lastItemOfYear={lastItem} newYear={newYear} c={color} border={newYear} key={`tr-${i}`}>
                         <StyledTD>{newYear ? p.year : ''}</StyledTD>
                         <Link onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colorDefault)} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
                           <StyledTitle>{p.title}</StyledTitle>
                         </Link>
                         <StyledTDType type="last">{p.type}</StyledTDType>
+                        <StyledTDButton type="last"><Button href={p.url} target="_blank" px={3} py={2} c={color} fontSize={[2,2,2,3]}>Launch now</Button></StyledTDButton>
                     </StyledTR>
                 )
               }) }
