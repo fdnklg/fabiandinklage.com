@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState } from 'easy-peasy';
 import { Box } from 'rebass/styled-components';
-import Transition from "react-transition-group/Transition";
+import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 
 import LayoutSwitch from './LayoutSwitch';
@@ -16,10 +16,10 @@ const StyledProjectsWrapper = styled(Box)`
   font-size: ${p => p.theme.fontSizes[1]};
 `;
 
-const Projects = (p) => {
+const Projects = p => {
   const { timeout } = p;
-  const layout = useStoreState(actions => actions.layout.layout)
-  const projects = useStoreState(action => action.projects)
+  const layout = useStoreState(actions => actions.layout.layout);
+  const projects = useStoreState(action => action.projects);
   const color = useStoreState(state => state.color.color);
 
   const filtered = projects.filter(p => p.visible);
@@ -33,10 +33,10 @@ const Projects = (p) => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledProjectsWrapper state={state} pb={[4,5,5,6]}>
+        <StyledProjectsWrapper state={state} pb={[4, 5, 5, 6]}>
           <LayoutSwitch c={color} />
-          { layout == "Grid" && <Grid data={filtered}/> }
-          { layout == "List" && <List color={color} data={filtered}/> }
+          {layout == 'Grid' && <Grid data={filtered} />}
+          {layout == 'List' && <List color={color} data={filtered} />}
         </StyledProjectsWrapper>
       )}
     </Transition>

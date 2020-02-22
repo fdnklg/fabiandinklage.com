@@ -26,15 +26,6 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        include: Path.resolve(__dirname, '../src'),
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: {
-          emitWarning: true,
-        }
-      },
-      {
         test: /\.css$/,
         use: [
           'style-loader',

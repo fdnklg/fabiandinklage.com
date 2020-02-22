@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
-import Transition from "react-transition-group/Transition";
+import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 
 import Logo from '~/components/Logo';
@@ -19,12 +19,12 @@ const StyledFlex = styled(Flex)`
 const StyledLink = styled(Link)`
   @media (max-width: ${p => p.theme.sizes.mobile}) {
     div:last-of-type {
-        display: none;
-      }
+      display: none;
+    }
   }
 `;
 
-const Nav = (p) => {
+const Nav = p => {
   const { timeout } = p;
   const setColor = useStoreActions(actions => actions.color.setColor);
   const color = useStoreState(state => state.color.color);
@@ -37,23 +37,52 @@ const Nav = (p) => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledFlex state={state} pb={[4,5,5,6]} c={color} alignItems="center">
-          <StyledLink sx={{flexDirection: 'row', display: 'flex', alignItems: 'center'}}  ml={2} href="/" fontWeight="bold">
+        <StyledFlex
+          state={state}
+          pb={[4, 5, 5, 6]}
+          c={color}
+          alignItems="center"
+        >
+          <StyledLink
+            sx={{ flexDirection: 'row', display: 'flex', alignItems: 'center' }}
+            ml={2}
+            href="/"
+            fontWeight="bold"
+          >
             <Logo />
             <Label content="Fabian Dinklage"></Label>
           </StyledLink>
           {/* <Button onClick={setColor}>Surprise me!</Button> */}
           <Box mx="auto" />
-          <Link sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}  mr={[3,3,4]} variant="nav" href="/">
+          <Link
+            sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}
+            mr={[3, 3, 4]}
+            variant="nav"
+            href="/"
+          >
             <Label content="Projects"></Label>
           </Link>
-          <Link sx={{ textDecoration: 'none', color: color[0] }}  mr={[3,3,4]} variant="nav" href="/profile">
+          <Link
+            sx={{ textDecoration: 'none', color: color[0] }}
+            mr={[3, 3, 4]}
+            variant="nav"
+            href="/profile"
+          >
             <Label content="Profile"></Label>
           </Link>
-          <Link sx={{ textDecoration: 'none', color: color[0] }} mr={[3,3,4]} variant="nav" href="/contact">
+          <Link
+            sx={{ textDecoration: 'none', color: color[0] }}
+            mr={[3, 3, 4]}
+            variant="nav"
+            href="/contact"
+          >
             <Label content="Contact"></Label>
           </Link>
-          <Link sx={{ textDecoration: 'none', color: color[0] }}  variant="nav" href="https://twitter.com/fdnklg">
+          <Link
+            sx={{ textDecoration: 'none', color: color[0] }}
+            variant="nav"
+            href="https://twitter.com/fdnklg"
+          >
             <Label content="Follow"></Label>
           </Link>
         </StyledFlex>

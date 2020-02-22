@@ -9,37 +9,73 @@ const content = {
     btn: "Let me know!",
   },
   "contact": "Are you interested in a collaboration? I'm happy to hear from you. Let's have a coffee together or reach out via one of the following channels:",
+  "exihibitions": [
+    {
+      "title": "CityLAB Berlin - Permanent Exhibition",
+      "description": "Short text about the exhibition."
+
+    }
+  ],
   "activities": [
     {
       "title": "Research associate",
+      "type": "work",
+      "context": "at the [Ideation and Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)",
       "duration": "2018 – now",
-      "description": "at the [Ideation and Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)"
+      "description": "Short text about the activities in this context."
     },
     {
       "title": "Freelance",
+      "type": "work",
+      "context": "Interaction Design & Data Visualisation",
       "duration": "2014 – now",
-      "description": "Interaction Design & Data Visualisation for several clients and projects of all sizes"
+      "description": "Short text about the activities in this context."
     },
     {
-      "title": "Google News Lab Fellowship",
+      "title": "Google News Lab Fellower",
+      "type": "work",
+      "context": "at the Interactive Team of the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)",
       "duration": "2018",
-      "description": "at the Interactive Team of the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)"
+      "description": "Short text about the activities in this context."
     },
     {
       "title": "Interaction Design Studies",
+      "type": "education",
       "duration": "2018",
       "description": "at the [Malmö University](http://mah.se/), Sweden"
     },
     {
+      "title": "Infographic Artist",
+      "type": "work",
+      "duration": "2016 – 2017",
+      "description": "at the [Malmö University](http://mah.se/), Sweden"
+    },
+    {
       "title": "Interface Design Studies",
+      "type": "education",
       "duration": "2016 – 2017",
       "description": "at [Infographics Group](https://infographics.group/), Berlin"
     },
     {
       "title": "Digital & Print Media Designer",
+      "type": "work",
       "duration": "2010 – 2013",
       "description": "at the [ballyhoo media agency](https://www.ballyhoo.de/), Hamburg"
-    }
+    },
+    {
+      "title": "Shared Mobility Flows",
+      "type": "exhibition",
+      "duration": "2019",
+      "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
+      "description": "Short text about the activities in this context."
+    },
+    {
+      "title": "Shared Mobility Flows",
+      "type": "talk",
+      "duration": "2019",
+      "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
+      "description": "Short text about the activities in this context."
+    },
   ],
   "projects": [
     {
@@ -127,7 +163,7 @@ const content = {
       "client": "Technologiestiftung Berlin",
       "color": ['#41B496', '#F6FCFA'],
       "year": 2020,
-      "visible": false,
+      "visible": true,
       "thumbnail": "public/images/edutech/edutech-thumb-960x640.jpg",
       "overlay": "public/images/edutech/edutech-thumb-960x640.gif",
       "lazy": "public/images/edutech/edutech-lazy-960x640.jpg",

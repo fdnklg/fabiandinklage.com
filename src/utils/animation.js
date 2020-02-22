@@ -1,12 +1,12 @@
 export const opacityFromState = state => {
   switch (state) {
-    case "entering":
+    case 'entering':
       return 0;
-    case "entered":
+    case 'entered':
       return 1;
-    case "exiting":
+    case 'exiting':
       return 0;
-    case "exited":
+    case 'exited':
       return 0;
     default:
       return 0;
@@ -14,5 +14,5 @@ export const opacityFromState = state => {
 };
 
 export default {
-  opacityFromState
+  opacityFromState,
 };

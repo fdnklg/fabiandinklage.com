@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import { useStoreState } from 'easy-peasy';
-import Transition from "react-transition-group/Transition";
+import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 
 import Label from '~/components/Label';
@@ -29,18 +29,18 @@ const Footer = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      { state => (
+      {state => (
         <StyledFlex state={state}>
-          <StyledBox
-            width={1/2}
-          >
-            <Label content="©2020, Fabian Dinklage"/>
+          <StyledBox width={1 / 2}>
+            <Label content="©2020, Fabian Dinklage" />
           </StyledBox>
-          <StyledBox 
-            sx={{ textAlign: 'end' }} 
-            width={1/2}
-          >
-            <Link mr={[3,4,4]} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href="/legal">
+          <StyledBox sx={{ textAlign: 'end' }} width={1 / 2}>
+            <Link
+              mr={[3, 4, 4]}
+              sx={{ textDecoration: 'none', color: color[0] }}
+              variant="nav"
+              href="/legal"
+            >
               Legal Note
             </Link>
           </StyledBox>

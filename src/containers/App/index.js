@@ -10,10 +10,7 @@ class App extends PureComponent {
     return (
       <Router history={history}>
         <Switch>
-          <Route
-            path={['/', 'profile']}
-            component={AppWrapper}
-          />
+          <Route path={['/', 'profile']} component={AppWrapper} />
           <Route component={NotFoundRoute} />
         </Switch>
       </Router>

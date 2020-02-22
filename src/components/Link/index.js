@@ -8,7 +8,7 @@ const StyledLink = styled(Link)`
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
 
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
     transition: opacity ${p => p.theme.times[0]} ease-in-out;
   }
 `;

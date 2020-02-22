@@ -12,9 +12,9 @@ const StyledParagraph = styled(Paragraph)`
   text-align: left !important;
 `;
 
-const Project = ({match}) => {
+const Project = ({ match }) => {
   const projects = useStoreState(state => state.projects);
-  const color = useStoreState(state => state.color.color)
+  const color = useStoreState(state => state.color.color);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const project = projects.filter(p => p.path === match.params.projectName)[0];
 
@@ -26,9 +26,18 @@ const Project = ({match}) => {
 
   return (
     <>
-      <Intro timeout={625} data={project}/>
-      <Flex sx={{ margin: '0 auto' }} pb={[4,5,6]} maxWidth={[1200, 900]} fontSize={[3,4]}>
-        <StyledParagraph timeout={750} content={project.description} color={color}/>
+      <Intro timeout={625} data={project} />
+      <Flex
+        sx={{ margin: '0 auto' }}
+        pb={[4, 5, 6]}
+        maxWidth={[1200, 900]}
+        fontSize={[3, 4]}
+      >
+        <StyledParagraph
+          timeout={750}
+          content={project.description}
+          color={color}
+        />
       </Flex>
       <Media data={project.media} />
     </>

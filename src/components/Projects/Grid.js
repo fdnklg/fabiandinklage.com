@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { colorMode } from '~/utils';
 import { Box, Text, Image } from 'rebass/styled-components';
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition } from 'react-transition-group';
 import ProgressiveImage from 'react-progressive-image';
 import { compare } from '~/utils';
-import Transition from "react-transition-group/Transition";
+import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import Label from '~/components/Label';
 import Link from '~/components/Link';
@@ -44,7 +43,7 @@ const StyledLink = styled(Link)`
     div {
       div {
         transition: opacity ${p => p.theme.times[0]} ease-in-out;
-        opacity: .5;
+        opacity: 0.5;
       }
     }
   }
@@ -62,8 +61,8 @@ const StyledLink = styled(Link)`
 
 const ThumbnailImage = styled(Image)`
   position: absolute;
-  transition: opacity ${ p => p.theme.times[1] } ease-in-out;
-  filter: saturate(.25);
+  transition: opacity ${p => p.theme.times[1]} ease-in-out;
+  filter: saturate(0.25);
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     &.hide {
@@ -77,9 +76,9 @@ const ThumbnailImage = styled(Image)`
 
   &:hover {
     opacity: 0;
-    transition: opacity ${ p => p.theme.times[1] } ease-in-out;
+    transition: opacity ${p => p.theme.times[1]} ease-in-out;
   }
-`
+`;
 
 const GifImage = styled(Image)`
   filter: saturate(1);
@@ -91,45 +90,45 @@ const StyledThumbBox = styled(Box)`
   }
 `;
 
-const Grid = (p) => {
+const Grid = p => {
   const { data } = p;
   const color = useStoreState(state => state.color.color);
   const colorDefault = useStoreState(state => state.color.default);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
-  const [hideOnScroll, setHideOnScroll] = useState(true)
+  const [hideOnScroll, setHideOnScroll] = useState(true);
   let ref = null;
   let box = null;
   let height = 'null';
   let colors = '';
 
   useEffect(() => {
-    height = `${ref.offsetWidth / 3 * 2}px`;
+    height = `${(ref.offsetWidth / 3) * 2}px`;
     const boxes = document.querySelectorAll('.thumb-box');
-    boxes.forEach(box => box.style.height = height);
-  }, [])
+    boxes.forEach(box => (box.style.height = height));
+  }, []);
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const thumbnails = document.querySelectorAll('.thumbnail-img');
 
-      thumbnails.forEach((thumb,i) => {
+      thumbnails.forEach((thumb, i) => {
         const elm = thumb.getBoundingClientRect();
         if (elm.top < 400 && elm.top > 100) {
           thumb.classList.add('hide');
         } else {
           thumb.classList.remove('hide');
         }
-      })
+      });
 
-      const isShow = currPos.y > prevPos.y
-      if (isShow !== hideOnScroll) setHideOnScroll(isShow)
+      const isShow = currPos.y > prevPos.y;
+      if (isShow !== hideOnScroll) setHideOnScroll(isShow);
     },
     [hideOnScroll],
     null,
     false,
     300
-  )
+  );
 
   console.log(hideOnScroll);
 
@@ -141,43 +140,71 @@ const Grid = (p) => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      { state => (
+      {state => (
         <StyledBox
           state={state}
           sx={{
             display: 'grid',
             gridGap: 4,
-            gridTemplateColumns: ['repeat(auto-fit, minmax(280px, 1fr))', 'repeat(auto-fit, minmax(350px, 1fr))' , 'repeat(auto-fit, minmax(400px, 1fr))'],
-          }}>
-            {data.map((p,i) => {
-              return (
-                <StyledLink onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() => { setColor(colorDefault) }} sx={{ textDecoration: 'none' }} key={`griditem-key-${i}`} variant="nav" href={`projects/${p.path}`}>
-                  <StyledThumbBox className="thumb-box" ref={(target) => { box = target; }} sx={{ overflow: 'hidden', position: 'relative' }} key={`tile-${i}`} color='primary'>
-                        <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
-                          {src => <GifImage
-                            ref={(target) => { ref = target; }}
-                            src={src}
-                            sx={{
-                              width: [ '100%' ],
-                              position: 'absolute',
-                            }}
-                          /> }
-                        </ProgressiveImage>
-                        <ProgressiveImage src={p.thumbnail} placeholder={p.lazy}>
-                          {src => <ThumbnailImage
-                            className="thumbnail-img"
-                            src={src}
-                            sx={{
-                              width: [ '100%' ],
-                            }}
-                          /> }
-                        </ProgressiveImage>
-                  </StyledThumbBox>
-                  <StyledText c={color}>{p.title}</StyledText>
-                </StyledLink>
-              )
-            })}
-          </StyledBox>
+            gridTemplateColumns: [
+              'repeat(auto-fit, minmax(280px, 1fr))',
+              'repeat(auto-fit, minmax(350px, 1fr))',
+              'repeat(auto-fit, minmax(400px, 1fr))',
+            ],
+          }}
+        >
+          {data.map((p, i) => {
+            return (
+              <StyledLink
+                onMouseOver={() => setColor(colorMode(p.color))}
+                onMouseOut={() => {
+                  setColor(colorDefault);
+                }}
+                sx={{ textDecoration: 'none' }}
+                key={`griditem-key-${i}`}
+                variant="nav"
+                href={`projects/${p.path}`}
+              >
+                <StyledThumbBox
+                  className="thumb-box"
+                  ref={target => {
+                    box = target;
+                  }}
+                  sx={{ overflow: 'hidden', position: 'relative' }}
+                  key={`tile-${i}`}
+                  color="primary"
+                >
+                  <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
+                    {src => (
+                      <GifImage
+                        ref={target => {
+                          ref = target;
+                        }}
+                        src={src}
+                        sx={{
+                          width: ['100%'],
+                          position: 'absolute',
+                        }}
+                      />
+                    )}
+                  </ProgressiveImage>
+                  <ProgressiveImage src={p.thumbnail} placeholder={p.lazy}>
+                    {src => (
+                      <ThumbnailImage
+                        className="thumbnail-img"
+                        src={src}
+                        sx={{
+                          width: ['100%'],
+                        }}
+                      />
+                    )}
+                  </ProgressiveImage>
+                </StyledThumbBox>
+                <StyledText c={color}>{p.title}</StyledText>
+              </StyledLink>
+            );
+          })}
+        </StyledBox>
       )}
     </Transition>
   );

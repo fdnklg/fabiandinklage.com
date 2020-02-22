@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Link } from 'rebass/styled-components';
 import { compare, colorMode } from '~/utils';
-import Transition from "react-transition-group/Transition";
+import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 
 import Button from '../Button/';
@@ -21,16 +21,15 @@ const StyledTable = styled.table`
 `;
 
 const StyledTR = styled.tr`
-  border-top: ${p => p.border ? '1px solid' + p.c[0] : 'none'};
-  
+  border-top: ${p => (p.border ? '1px solid' + p.c[0] : 'none')};
+
   td {
-    padding-top: ${p => p.newYear ? p.theme.space[4] : '15px'};
-    padding-bottom: ${p => p.lastItemOfYear ? p.theme.space[4] : '15px'};
+    padding-top: ${p => (p.newYear ? p.theme.space[4] : '15px')};
+    padding-bottom: ${p => (p.lastItemOfYear ? p.theme.space[4] : '15px')};
     font-size: ${p => p.theme.fontSizes[4]};
     transition: all ${p => p.theme.times[0]} ease-in-out;
     color: ${p => p.c[0]};
   }
-  
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[1]};
@@ -42,11 +41,11 @@ const StyledTR = styled.tr`
 `;
 
 const StyledTD = styled.td`
-  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+  text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
-  margin-top: ${p => p.type === 'last' ? '10px': '0px'};
+  margin-top: ${p => (p.type === 'last' ? '10px' : '0px')};
   margin-top: 3px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     text-align: left;
@@ -56,10 +55,10 @@ const StyledTD = styled.td`
 const StyledTDType = styled.td`
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   margin-top: 3px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
-    text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+    text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
   }
 
   @media (max-width: ${p => p.theme.sizes.mobile}) {
@@ -68,7 +67,7 @@ const StyledTDType = styled.td`
 `;
 
 const StyledTDButton = styled(StyledTDType)`
-  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+  text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
   @media (max-width: ${p => p.theme.sizes.desktop}) {
     display: none;
   }
@@ -76,10 +75,10 @@ const StyledTDButton = styled(StyledTDType)`
 
 const StyledTitle = styled.td`
   font-family: ${p => p.theme.fonts.headline};
-  text-align: ${p => p.type === 'last' ? 'end' : 'start'};
+  text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
   padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     font-size: ${p => p.theme.fontSizes[2]};
@@ -87,28 +86,28 @@ const StyledTitle = styled.td`
   }
 
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
     transition: all ${p => p.theme.times[1]} ease-in-out;
   }
 `;
 
-const isNewYear = (data,i) => {
+const isNewYear = (data, i) => {
   const l = data.length;
-  const previous = data[i===0?l-1:i-1];
+  const previous = data[i === 0 ? l - 1 : i - 1];
   const current = data[i];
-  const next = data[i===l-1?0:i+1];
+  const next = data[i === l - 1 ? 0 : i + 1];
   return previous.year !== current.year;
-}
+};
 
-const lastItemOfYear = (data,i) => {
+const lastItemOfYear = (data, i) => {
   const l = data.length;
-  const previous = data[i===0?l-1:i-1];
+  const previous = data[i === 0 ? l - 1 : i - 1];
   const current = data[i];
-  const next = data[i===l-1?0:i+1];
+  const next = data[i === l - 1 ? 0 : i + 1];
   return next.year !== current.year;
-}
+};
 
-const List = (p) => {
+const List = p => {
   const { data } = p;
   const colorDefault = useStoreState(state => state.color.default);
   const color = useStoreState(state => state.color.color);
@@ -127,21 +126,44 @@ const List = (p) => {
         <StyledListWrapper state={state}>
           <StyledTable>
             <tbody>
-              { sortedByYear.map((p,i) => {
+              {sortedByYear.map((p, i) => {
                 console.log(p);
-                const newYear = isNewYear(data,i);
-                const lastItem = lastItemOfYear(data,i);
+                const newYear = isNewYear(data, i);
+                const lastItem = lastItemOfYear(data, i);
                 return (
-                    <StyledTR lastItemOfYear={lastItem} newYear={newYear} c={color} border={newYear} key={`tr-${i}`}>
-                        <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                        <Link onMouseOver={() =>  setColor(colorMode(p.color))} onMouseOut={() =>  setColor(colorDefault)} sx={{ textDecoration: 'none', color: color[0] }} variant="nav" href={`projects/${p.path}`}>
-                          <StyledTitle>{p.title}</StyledTitle>
-                        </Link>
-                        <StyledTDType type="last">{p.type}</StyledTDType>
-                        <StyledTDButton type="last"><Button href={p.url} target="_blank" px={3} py={2} c={color} fontSize={[2,2,2,3]}>Launch now</Button></StyledTDButton>
-                    </StyledTR>
-                )
-              }) }
+                  <StyledTR
+                    lastItemOfYear={lastItem}
+                    newYear={newYear}
+                    c={color}
+                    border={newYear}
+                    key={`tr-${i}`}
+                  >
+                    <StyledTD>{newYear ? p.year : ''}</StyledTD>
+                    <Link
+                      onMouseOver={() => setColor(colorMode(p.color))}
+                      onMouseOut={() => setColor(colorDefault)}
+                      sx={{ textDecoration: 'none', color: color[0] }}
+                      variant="nav"
+                      href={`projects/${p.path}`}
+                    >
+                      <StyledTitle>{p.title}</StyledTitle>
+                    </Link>
+                    <StyledTDType type="last">{p.type}</StyledTDType>
+                    <StyledTDButton type="last">
+                      <Button
+                        href={p.url}
+                        target="_blank"
+                        px={3}
+                        py={2}
+                        c={color}
+                        fontSize={[2, 2, 2, 3]}
+                      >
+                        Launch now
+                      </Button>
+                    </StyledTDButton>
+                  </StyledTR>
+                );
+              })}
             </tbody>
           </StyledTable>
         </StyledListWrapper>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box } from 'rebass/styled-components';
 import styled from 'styled-components';
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { colorMode } from '~/utils';
 
@@ -12,13 +12,14 @@ const StyledWrapper = styled.div`
   height: 100%;
   background: ${p => p.c[1]};
   color: ${p => p.c[0]};
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 `;
 
 import Nav from '../../components/Nav';
 import Profile from '../Profile';
 import Project from '../Project';
 import Legal from '../Legal';
+import Cv from '../Cv';
 import Cta from '../../components/Cta';
 import Home from '../Home';
 import Footer from '../../components/Footer';
@@ -37,7 +38,7 @@ const AppWrapper = () => {
     html {
       background: ${color[1]};
     }
-  `
+  `;
 
   return (
     <StyledWrapper c={color}>
@@ -51,15 +52,27 @@ const AppWrapper = () => {
       >
         <Nav timeout={500} />
         <Switch>
-          <Route exact path="/contact" component={() => <Contact timeout={700}/>} />
-          <Route exact path="/profile" component={() => <Profile timeout={700}/>} />
-          <Route exact path="/legal" component={() => <Legal timeout={700}/>} />
+          <Route
+            exact
+            path="/contact"
+            component={() => <Contact timeout={700} />}
+          />
+          <Route exact path="/cv" component={() => <Cv timeout={700} />} />
+          <Route
+            exact
+            path="/profile"
+            component={() => <Profile timeout={700} />}
+          />
+          <Route
+            exact
+            path="/legal"
+            component={() => <Legal timeout={700} />}
+          />
           <Route exact path="/" component={Home} />
           <Route exact path="/projects/:projectName" component={Project} />
         </Switch>
-        <Cta timeout={900} content={cta}/>
+        <Cta timeout={900} content={cta} />
         <Footer timeout={1100} />
-
       </Box>
     </StyledWrapper>
   );

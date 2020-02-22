@@ -22,7 +22,7 @@ const defaultTheme = {
     headline: 'Mier A Bold, sans-serif',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96].map(px),
-  letterSpacing: [.125,.25,.5,1].map(px),
+  letterSpacing: [0.125, 0.25, 0.5, 1].map(px),
   fontWeights: {
     body: 400,
     heading: 700,
@@ -34,16 +34,16 @@ const defaultTheme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512].map(px),
   sizes: {
-    mobile: "580px",
-    tablet: "768px",
-    desktop: "1080px",
-    hd: "1920",
+    mobile: '580px',
+    tablet: '768px',
+    desktop: '1080px',
+    hd: '1920',
   },
-  times: [.128, .256, .512].map(s),
+  times: [0.128, 0.256, 0.512].map(s),
   radii: {
     default: 4,
     circle: 99999,
-  }
+  },
 };
 
 export default defaultTheme;

@@ -17,24 +17,33 @@ const Media = props => {
   const { data } = props;
   return (
     <>
-      { data.map((media,i) => {
+      {data.map((media, i) => {
         return (
           <Box pb={[4, 5]}>
-
-              <ProgressiveImage key={`media-key-${i}`} src={media.url} placeholder={media.lazy}>
-                {src => <Image
+            <ProgressiveImage
+              key={`media-key-${i}`}
+              src={media.url}
+              placeholder={media.lazy}
+            >
+              {src => (
+                <Image
                   src={src}
                   mb={2}
                   sx={{
-                    width: [ '100%' ],
+                    width: ['100%'],
                   }}
-                /> }
-              </ProgressiveImage>
+                />
+              )}
+            </ProgressiveImage>
 
-            <Label key={`media-label-${i}`}  align="center" content={media.content}></Label>
+            <Label
+              key={`media-label-${i}`}
+              align="center"
+              content={media.content}
+            ></Label>
           </Box>
-        )
-      }) }
+        );
+      })}
     </>
   );
 };

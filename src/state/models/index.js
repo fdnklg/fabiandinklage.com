@@ -6,5 +6,5 @@ import Content from '../../../public/data/data';
 export default {
   layout: LayoutModel,
   color: ColorModel,
-  ...Content
+  ...Content,
 };
