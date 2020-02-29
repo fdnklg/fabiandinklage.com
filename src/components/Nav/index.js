@@ -72,18 +72,10 @@ const Nav = p => {
           </Link>
           <Link
             sx={{ textDecoration: 'none', color: color[0] }}
-            mr={[3, 3, 4]}
             variant="nav"
             href="/contact"
           >
             <Label content="Contact"></Label>
-          </Link>
-          <Link
-            sx={{ textDecoration: 'none', color: color[0] }}
-            variant="nav"
-            href="https://twitter.com/fdnklg"
-          >
-            <Label content="Follow"></Label>
           </Link>
         </StyledFlex>
       )}

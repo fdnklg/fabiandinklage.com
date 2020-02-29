@@ -1,6 +1,6 @@
 const content = {
   "about": {
-    "intro": "Fabian Dinklage is a Berlin based designer who develops data-driven visualizations with open data as a research associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) and the [CityLAB Berlin](https://citylab-berlin.org) of the Technologiestiftung Berlin. He works as a freelancer at the intersection of data and design and helped international organisations to gain insight of their data through visualization.",
+    "intro": "Fabian Dinklage is a Berlin based Data Visualization & Interaction Designer who develops interactive data-driven experiences. He is also a Research Associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) and the [CityLAB Berlin](https://citylab-berlin.org) of the Technologiestiftung Berlin. He helps international organisations making their information useful through visualization.",
     "vita": "Fabian Dinklage is a Interaction Designer with the focus of information design and data visualization. He studied Interface Design at the [University of Applied Sciences, Potsdam](http://fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). He started working at the [Infographics Group](https://infographics.group) in 2016. In 2017 he took part of the interactive team of the [Berliner Morgenpost](https://berliner-morgenpost.de) as a Google News Lab Fellow. Since 2018 he works as a research associate at the intersection of open data and data visualization in the [Technologiesitftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/) and the [CityLAB Berlin](https://citylab-berlin.org/)",
     "profileUrl": "public/images/profile___.jpg"
   },
@@ -19,63 +19,95 @@ const content = {
   "activities": [
     {
       "title": "Research associate",
-      "type": "work",
-      "context": "at the [Ideation and Prototyping Lab](https://lab.technologiestiftung-berlin.de/) of the [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)",
+      "type": "experience",
+      "context": "[Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)  \nand [CityLAB Berlin](https://www.citylba-berlin.org)",
       "duration": "2018 – now",
-      "description": "Short text about the activities in this context."
+      "description": "Crafting interactive data-driven prototypes with open data to enhance Berlin's everyday lives."
     },
     {
-      "title": "Freelance",
-      "type": "work",
-      "context": "Interaction Design & Data Visualisation",
+      "title": "Freelance Work",
+      "type": "experience",
+      "context": "Governmental institutions,  \ncompanies and conferences",
       "duration": "2014 – now",
-      "description": "Short text about the activities in this context."
+      "description": "Interaction design, art direction, data visualization, implementation and consulting."
     },
     {
-      "title": "Google News Lab Fellower",
-      "type": "work",
-      "context": "at the Interactive Team of the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)",
+      "title": "Google News Lab Fellowship",
+      "type": "experience",
+      "context": "at the Interactive Team  \nof the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)",
       "duration": "2018",
-      "description": "Short text about the activities in this context."
+      "description": "Development of interactive web based data visualizations for the upcoming Bundestag elections."
     },
     {
       "title": "Interaction Design Studies",
       "type": "education",
-      "duration": "2018",
-      "description": "at the [Malmö University](http://mah.se/), Sweden"
+      "duration": "2017",
+      "context": "at the [Malmö University](http://mah.se/), Sweden",
+      "description": "Service design concept for the city of Malmö to reduce food waste in public kitchens."
     },
     {
       "title": "Infographic Artist",
-      "type": "work",
+      "type": "experience",
       "duration": "2016 – 2017",
-      "description": "at the [Malmö University](http://mah.se/), Sweden"
+      "context": "[Infographics Group](https://infographics.group/), Berlin",
+      "description": "Visual interface design & frontend development of data driven interactive visualizations.",
     },
     {
-      "title": "Interface Design Studies",
+      "title": "Interface Design (B.A.)",
       "type": "education",
-      "duration": "2016 – 2017",
-      "description": "at [Infographics Group](https://infographics.group/), Berlin"
+      "duration": "2015 – 2018",
+      "context": "[University of Applied Sciences](https://design.fh-potsdam.de/)",
+      "description": "Studies of information design, data visualization and user centric design processes."
     },
     {
-      "title": "Digital & Print Media Designer",
-      "type": "work",
-      "duration": "2010 – 2013",
-      "description": "at the [ballyhoo media agency](https://www.ballyhoo.de/), Hamburg"
+      "title": "Media Designer",
+      "type": "experience",
+      "duration": "2011 – 2014",
+      "context": "[ballyhoo media agency](https://www.ballyhoo.de/), Hamburg",
+      "description": "Visual Interface Design for clients like  \nSpiegel Online, and Payback"
     },
     {
-      "title": "Shared Mobility Flows",
+      "title": "Media Design Traineeship",
+      "type": "education",
+      "duration": "2011 – 2013",
+      "context": "Vocational school for media and communication",
+      "description": "Visual Interface Design for clients like  \nSpiegel Online and Payback"
+    },
+    {
+      "title": "CityLAB permanent exhibition",
       "type": "exhibition",
       "duration": "2019",
-      "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
-      "description": "Short text about the activities in this context."
+      "context": "Interactive [Shared mobility flows](https://bikesharing.citylab-berlin.org) Visualization",
+      "description": "The interactive piece is part of the exhibition for innovation in the public sector."
     },
     {
-      "title": "Shared Mobility Flows",
-      "type": "talk",
+      "title": "CityVis.io: Visualising Cities Exhibition",
+      "type": "exhibition",
       "duration": "2019",
-      "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
-      "description": "Short text about the activities in this context."
+      "context": "[A city in Flux: 800 routes of diversity and contrast](https://city-in-flux.netlify.com/)",
+      "description": "The interactive piece was exhibited and shortlisted."
     },
+    {
+      "title": "[Information+](http://informationplusconference.com/2018/) Conference",
+      "type": "other",
+      "duration": "2018",
+      "context": "InfoVis conference, Potsdam",
+      "description": "Development of a unique interactive visual language and website for the InfoVis conference."
+    },
+    {
+      "title": "Lecture: Data Visualization fundamentals",
+      "type": "other",
+      "duration": "2020",
+      "context": "E-Artsup University, Paris",
+      "description": "Held a lecture about fundamental approaches to Data Visualization."
+    },
+    // {
+    //   "title": "Shared Mobility Flows",
+    //   "type": "talk",
+    //   "duration": "2019",
+    //   "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
+    //   "description": "Short text about the activities in this context."
+    // },
   ],
   "projects": [
     {
@@ -378,7 +410,7 @@ const content = {
       "url": "https://interaktiv.morgenpost.de/kandidaten-bundestagswahl-2017/",
       "tasks": ["Data visualization"],
       "subtitle": "Bike traffic in Berlin visualized",
-      "description": "All 2559 direct candidates - who they are, what they stand for Profession, origin, political closeness: The individual points stand for candidates who want to enter the next Bundestag by first vote. Together with the interactive team of the Berliner Morgenpost I had the honor to develop this visualization to provide an overview of all electable candidates.",
+      "description": "There are 2559 direct candidates from various parties available for election to the Bundestag. In the context of the Google News Fellowship, I developed various interactive visualizations about the elections together with the Interactive Team of the Berliner Morgenpost. The web-based visualization enables users to obtain further perspectives on all direct candidates. Each candidate, represented by a dot, can be sorted and compared according to profession, origin, age or political closeness. Invisible underlying Structures are made visible through visualization. The application is based on the Federal Election Commissioner's data on all approved candidates.",
       "media": [
         {
           "type": "candidates",

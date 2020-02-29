@@ -5,10 +5,10 @@ const StyledUl = styled.ul`
   padding: 0;
   list-style: none;
   margin-top: 0;
-  text-align: center;
+  ${'' /* text-align: center; */}
   line-height: 150%;
   color: ${p => p.c};
-  margin: 0;
+  ${'' /* margin: 0; */}
 
   li {
     ${'' /* font-size: ${p => p.theme.fontSizes[5]}; */}

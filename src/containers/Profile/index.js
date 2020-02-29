@@ -8,10 +8,15 @@ import { opacityFromState } from '~/utils/animation';
 import Paragraph from '~/components/Paragraph';
 import Flex from '~/components/Flex';
 import List from '~/components/List';
+import Cv from '~/components/Cv';
 
 const StyledFlex = styled(Flex)`
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
+`;
+
+const StyledLi = styled.li`
+  font-family: 'Mier A Bold';
 `;
 
 const Profile = p => {
@@ -39,25 +44,30 @@ const Profile = p => {
             <Paragraph timeout={625} content={vita} color={color} />
             <br />
             <br />
+            <br />
+            <br />
+            <Image
+              src={profileUrl}
+              pb={[4, 5, 5, 6]}
+              sx={{
+                width: ['100%'],
+                alignSelf: 'center',
+              }}
+            />
+            <br />
             <List timeout={750} c={color}>
-              <li>Selected Clients:</li>
-              <li></li>
+              <StyledLi>Selected Clients:</StyledLi>
               <li>Berkmann Klein Center (at) Harvard</li>
-              <li>Google News Lab</li>
-              <li>Massachusetts Institute of Technology</li>
-              <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
               <li>Berliner Morgenpost</li>
+              <li>brand eins</li>
               <li>Deutsches Historisches Museum</li>
+              <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
+              <li>Google News Lab</li>
+              <li>MIT (Massachusetts Institute of Technology)</li>
+              <li>Spiegel Online</li>
             </List>
           </Flex>
-          <Image
-            src={profileUrl}
-            pb={[4, 5, 5, 6]}
-            sx={{
-              width: ['100%', '90%', '80%'],
-              alignSelf: 'center',
-            }}
-          />
+          <Cv timeout={700} />
         </StyledFlex>
       )}
     </Transition>

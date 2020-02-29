@@ -19,7 +19,6 @@ import Nav from '../../components/Nav';
 import Profile from '../Profile';
 import Project from '../Project';
 import Legal from '../Legal';
-import Cv from '../Cv';
 import Cta from '../../components/Cta';
 import Home from '../Home';
 import Footer from '../../components/Footer';
@@ -57,7 +56,6 @@ const AppWrapper = () => {
             path="/contact"
             component={() => <Contact timeout={700} />}
           />
-          <Route exact path="/cv" component={() => <Cv timeout={700} />} />
           <Route
             exact
             path="/profile"
