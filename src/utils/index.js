@@ -16,7 +16,6 @@ export const compare = (a, b) => {
 
 export const colorMode = arr => {
   const now = new Date().getHours();
-  console.log(now);
   if (now < 6 || now >= 20) {
     return [arr[1], arr[0]];
   } else {

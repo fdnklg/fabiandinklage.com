@@ -8,6 +8,7 @@ import { opacityFromState } from '~/utils/animation';
 
 import List from '~/components/List';
 import Flex from '~/components/Flex';
+import Title from '~/components/Title';
 import Paragraph from '~/components/Paragraph';
 
 const StyledBox = styled(Box)`
@@ -18,7 +19,7 @@ const StyledBox = styled(Box)`
 const StyledParagraphSmall = styled(ReactMarkdown)`
   letter-spacing: .25px;
   font-size: ${p => p.theme.fontSizes[2]};
-  ${'' /* font-family: 'Mier A Bold'; */}
+  opacity: .5;
   p {
     margin-bottom: 0 !important;
   }
@@ -67,23 +68,6 @@ const StyledParagraph = styled(ReactMarkdown)`
   }
 `;
 
-const StyledSectionTitle = styled(ReactMarkdown)`
-  font-family: 'Mier A Bold';
-  margin: 0 auto;
-  p {
-    font-size: ${p => p.theme.fontSizes[5]};
-    margin-bottom: 20px;
-  }
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    margin: initial;
-
-    p {
-      font-size: ${p => p.theme.fontSizes[3]};
-      margin-bottom: 10px;
-    }
-  }
-`;
-
 const StyledTitle = styled(ReactMarkdown)`
   font-size: ${p => p.theme.fontSizes[4]};
   line-height: 150%;
@@ -91,7 +75,7 @@ const StyledTitle = styled(ReactMarkdown)`
 
   p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   a {
@@ -123,7 +107,7 @@ const StyledButton = styled(Button)`
   font-size: ${p => p.theme.fontSizes[3]};
   color: ${p => p.active ? p.c[1] : p.c[0] };
   outline: none;
-  border-radius: 6px;
+  border-radius: 30px;
   text-decoration: none;
   transition: all ${p => p.theme.times[0]} ease-in-out;
 
@@ -159,6 +143,7 @@ const Cv = p => {
   const activities = useStoreState(state => state.activities);
   const [ filteredActivities, setFilteredActivities ] = useState(activities);
   const color = useStoreState(state => state.color.color);
+  const [filteredTypes, setFilteredTypes] = useState(['Experience']);
 
   let filterArr = [];
   activities.forEach(activity => {
@@ -167,7 +152,14 @@ const Cv = p => {
     }
   })
 
-  const [ filterState, setFilter ] = useState(filterArr);
+  useEffect(() => {
+
+    let filtered = activities.filter(activity => {
+      return filteredTypes.includes(activity.type)
+    });
+
+    setFilteredActivities(filtered);
+  }, [filteredTypes])
 
   const toggleArrayItem = (a, v) => {
     var i = a.indexOf(v);
@@ -180,13 +172,8 @@ const Cv = p => {
     }
   }
 
-  const handleClick = (stateArr, value) => {
-    toggleArrayItem(stateArr, value);
-    stateArr = [value];
-    let filtered = activities.filter(activity => {
-      return filterState.includes(activity.type)
-    });
-    setFilteredActivities(filtered)
+  const handleClick = (value) => {
+    setFilteredTypes([value]);
   }
 
 
@@ -200,17 +187,18 @@ const Cv = p => {
     >
       {state => (
         <>
-          <StyledSectionTitle timeout={625} source='Activities:' color={color} />
+          <Title timeout={625} source='Resumé' color={color} />
           <StyledButtonWrapper>
-            {filterArr.map(filter => {
-              const active = filterState.includes(filter);
+            {filterArr.map(f => {
+              const active = filteredTypes.includes(f);
+              console.log(filteredTypes)
               return (
                 <StyledButton
                   active={active}
                   c={color}
-                  onClick={() => handleClick(filterState, filter)}
+                  onClick={() => handleClick(f)}
                 >
-                  {filter}
+                  {f}
                 </StyledButton>
               )
             })}

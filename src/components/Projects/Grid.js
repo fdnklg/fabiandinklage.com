@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
@@ -23,12 +23,25 @@ const StyledBox = styled(Box)`
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
-const StyledText = styled(Text)`
-  text-align: center;
-  margin-top: 15px;
-  font-size: ${p => p.theme.fontSizes[2]};
-  letter-spacing: ${p => p.theme.letterSpacing[2]};
-  color: ${p => p.c[0]};
+const ThumbnailImage = styled(Image)`
+  position: absolute;
+  transition: opacity ${p => p.theme.times[1]} ease-in-out;
+  filter: saturate(0.25);
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    &.hide {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: ${p => p.theme.sizes.mobile}) {
+    filter: saturate(1);
+  }
+
+  &:hover {
+    opacity: 0;
+    transition: opacity ${p => p.theme.times[1]} ease-in-out;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -59,27 +72,6 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const ThumbnailImage = styled(Image)`
-  position: absolute;
-  transition: opacity ${p => p.theme.times[1]} ease-in-out;
-  filter: saturate(0.25);
-
-  @media (max-width: ${p => p.theme.sizes.tablet}) {
-    &.hide {
-      opacity: 0;
-    }
-  }
-
-  @media (max-width: ${p => p.theme.sizes.mobile}) {
-    filter: saturate(1);
-  }
-
-  &:hover {
-    opacity: 0;
-    transition: opacity ${p => p.theme.times[1]} ease-in-out;
-  }
-`;
-
 const GifImage = styled(Image)`
   filter: saturate(1);
 `;
@@ -96,17 +88,41 @@ const Grid = p => {
   const colorDefault = useStoreState(state => state.color.default);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
+  const [activeIndex, setActiveIndex] = useState(null);
   const [hideOnScroll, setHideOnScroll] = useState(true);
-  let ref = null;
-  let box = null;
-  let height = 'null';
+  const [height, setHeight] = useState(null);
+  let observed = null;
   let colors = '';
 
-  useEffect(() => {
-    height = `${(ref.offsetWidth / 3) * 2}px`;
+  const StyledText = styled(Text)`
+    margin-top: 15px;
+    line-height: 140%;
+    transition: opacity ${p => p.theme.times[1]} ease-in-out;
+    font-size: ${p => p.theme.fontSizes[2]};
+    letter-spacing: ${p => p.theme.letterSpacing[2]};
+    color: ${p => p.c[0]};
+
+    b {
+      font-family: 'Mier A Bold';
+    }
+  `;
+
+  const handleResize = (w) => {
+    const h = (w / 3) * 2;
     const boxes = document.querySelectorAll('.thumb-box');
-    boxes.forEach(box => (box.style.height = height));
-  }, []);
+    boxes.forEach(box => (box.style.height = `${h}px`));
+  }
+
+  useEffect(() => {
+    console.log(activeIndex);
+    handleResize(observed.offsetWidth)
+    window.addEventListener('resize', () => handleResize(observed.offsetWidth))
+  }, [observed, activeIndex]);
+
+  const handleMouseOver = (color, index) => {
+    setColor(colorMode(color))
+    setActiveIndex(index);
+  }
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
@@ -129,8 +145,6 @@ const Grid = p => {
     false,
     300
   );
-
-  console.log(hideOnScroll);
 
   return (
     <Transition
@@ -156,9 +170,10 @@ const Grid = p => {
           {data.map((p, i) => {
             return (
               <StyledLink
-                onMouseOver={() => setColor(colorMode(p.color))}
+                onMouseOver={() => handleMouseOver(p.color, i)}
                 onMouseOut={() => {
                   setColor(colorDefault);
+                  setActiveIndex(null);
                 }}
                 sx={{ textDecoration: 'none' }}
                 key={`griditem-key-${i}`}
@@ -167,9 +182,6 @@ const Grid = p => {
               >
                 <StyledThumbBox
                   className="thumb-box"
-                  ref={target => {
-                    box = target;
-                  }}
                   sx={{ overflow: 'hidden', position: 'relative' }}
                   key={`tile-${i}`}
                   color="primary"
@@ -178,9 +190,13 @@ const Grid = p => {
                     {src => (
                       <GifImage
                         ref={target => {
-                          ref = target;
+                          // only set ref dom object if it exists!
+                          if (target) {
+                            observed = target;
+                          }
                         }}
                         src={src}
+                        index={i}
                         sx={{
                           width: ['100%'],
                           position: 'absolute',
@@ -193,6 +209,7 @@ const Grid = p => {
                       <ThumbnailImage
                         className="thumbnail-img"
                         src={src}
+                        index={i}
                         sx={{
                           width: ['100%'],
                         }}
@@ -200,7 +217,13 @@ const Grid = p => {
                     )}
                   </ProgressiveImage>
                 </StyledThumbBox>
-                <StyledText c={color}>{p.title}</StyledText>
+                <StyledText 
+                  c={color}
+                  index={i}
+                >
+                  <b>{p.title}: </b>
+                  {p.subtitle}
+                </StyledText>
               </StyledLink>
             );
           })}

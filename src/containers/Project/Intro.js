@@ -30,6 +30,10 @@ const StyledLabel = styled.span`
   letter-spacing: ${p => p.theme.letterSpacing[2]};
 `;
 
+const SpacedStyledLabel = styled(StyledLabel)`
+  ${'' /* padding-bottom: 8px; */}
+`;
+
 const StyledLabelBold = styled.span`
   font-family: ${p => p.theme.fonts.headline};
   letter-spacing: ${p => p.theme.letterSpacing[2]};
@@ -37,7 +41,7 @@ const StyledLabelBold = styled.span`
 
 const Intro = props => {
   const { data, timeout } = props;
-  const { title, subtitle, year, type, client, url } = data;
+  const { title, subtitle, year, tasks, client, url } = data;
   const color = useStoreState(state => state.color.color);
 
   return (
@@ -84,19 +88,20 @@ const Intro = props => {
               </Button>
             </Box>
             <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold>Type</StyledLabelBold>
+              <StyledLabelBold>Context</StyledLabelBold>
               <br />
-              <StyledLabel>{type}</StyledLabel>
+              <StyledLabel>{client}</StyledLabel>
             </Box>
             <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
               <StyledLabelBold>Year</StyledLabelBold>
               <br />
               <StyledLabel>{year}</StyledLabel>
             </Box>
-            <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold>Context</StyledLabelBold>
-              <br />
-              <StyledLabel>{client}</StyledLabel>
+            <Box sx={{display: 'flex', flexDirection: 'column'}} pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
+              <StyledLabelBold>Tasks</StyledLabelBold>
+              {tasks.map(t => (
+                <><SpacedStyledLabel>{t}</SpacedStyledLabel></>
+              ))}
             </Box>
           </StyledFlex>
         </StyledWrapper>

@@ -12,6 +12,10 @@ const StyledParagraph = styled(ReactMarkdown)`
   opacity: ${props => opacityFromState(props.state)};
   p {
     margin: 0;
+
+    strong {
+      font-family: 'Mier A Bold';
+    }
   }
 
   a {

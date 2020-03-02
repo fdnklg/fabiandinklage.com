@@ -9,6 +9,9 @@ import Paragraph from '~/components/Paragraph';
 import Flex from '~/components/Flex';
 import List from '~/components/List';
 import Cv from '~/components/Cv';
+import Title from '~/components/Title';
+
+
 
 const StyledFlex = styled(Flex)`
   opacity: ${props => opacityFromState(props.state)};
@@ -17,6 +20,10 @@ const StyledFlex = styled(Flex)`
 
 const StyledLi = styled.li`
   font-family: 'Mier A Bold';
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 `;
 
 const Profile = p => {
@@ -41,6 +48,7 @@ const Profile = p => {
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
+            <Title timeout={625} source='About me' color={color} />
             <Paragraph timeout={625} content={vita} color={color} />
             <br />
             <br />
@@ -56,10 +64,9 @@ const Profile = p => {
             />
             <br />
             <List timeout={750} c={color}>
-              <StyledLi>Selected Clients:</StyledLi>
+              <li><Title timeout={625} source='Selected Clients' color={color} /></li>
               <li>Berkmann Klein Center (at) Harvard</li>
               <li>Berliner Morgenpost</li>
-              <li>brand eins</li>
               <li>Deutsches Historisches Museum</li>
               <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
               <li>Google News Lab</li>

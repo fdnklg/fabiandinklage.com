@@ -11,7 +11,7 @@ const StyledButton = styled(Link)`
   background: none;
   border: 1px solid ${p => p.c[0]};
   color: ${p => p.c[0]};
-  border-radius: 6px;
+  border-radius: 30px;
   text-decoration: none;
   transition: all ${p => p.theme.times[0]} ease-in-out;
 

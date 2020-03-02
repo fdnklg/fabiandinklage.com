@@ -18,7 +18,7 @@ const Home = p => {
   return (
     <>
       <StyledFlex
-        sx={{ textAlign: ['left', 'left', 'center'] }}
+        sx={{ textAlign: ['left', 'center', 'center'] }}
         pb={[4, 5, 5, 6]}
         width={[1, 4 / 5, 4 / 5, 3 / 4]}
         fontSize={[3, 4, 4, 5]}

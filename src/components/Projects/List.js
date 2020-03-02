@@ -29,6 +29,16 @@ const StyledTR = styled.tr`
     font-size: ${p => p.theme.fontSizes[4]};
     transition: all ${p => p.theme.times[0]} ease-in-out;
     color: ${p => p.c[0]};
+
+    @media (max-width: ${p => p.theme.sizes.desktop}) {
+      padding-top: ${p => (p.newYear ? p.theme.space[3] : '11px')};
+      padding-bottom: ${p => (p.lastItemOfYear ? p.theme.space[3] : '11px')};
+    }
+
+    @media (max-width: ${p => p.theme.sizes.tablet}) {
+      padding-top: ${p => (p.newYear ? p.theme.space[3] : '8px')};
+      padding-bottom: ${p => (p.lastItemOfYear ? p.theme.space[3] : '8px')};
+    }
   }
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {

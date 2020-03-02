@@ -1,7 +1,7 @@
 const content = {
   "about": {
-    "intro": "Fabian Dinklage is a Berlin based Data Visualization & Interaction Designer who develops interactive data-driven experiences. He is also a Research Associate at the [Innovation & Prototyping Lab](https://lab.technologiestiftung-berlin.de/) and the [CityLAB Berlin](https://citylab-berlin.org) of the Technologiestiftung Berlin. He helps international organisations making their information useful through visualization.",
-    "vita": "Fabian Dinklage is a Interaction Designer with the focus of information design and data visualization. He studied Interface Design at the [University of Applied Sciences, Potsdam](http://fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). He started working at the [Infographics Group](https://infographics.group) in 2016. In 2017 he took part of the interactive team of the [Berliner Morgenpost](https://berliner-morgenpost.de) as a Google News Lab Fellow. Since 2018 he works as a research associate at the intersection of open data and data visualization in the [Technologiesitftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/) and the [CityLAB Berlin](https://citylab-berlin.org/)",
+    "intro": "Hey there! My name is Fabian Dinklage and I make your information useful through **data visualization**. With a deep interest in data I help international organisations, institutions and businesses to craft joyful interactive data-driven experiences. Equipped with human centered design methods I **consult**, **design**, **develop** and **implement** ideas that become productive tools and provide meaningful answers to your most pressing questions.",
+    "vita": "I'm a Berlin-based designer and technologist focused on Data Visualization and Interaction Design. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). I do prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
     "profileUrl": "public/images/profile___.jpg"
   },
   "cta": {
@@ -19,99 +19,99 @@ const content = {
   "activities": [
     {
       "title": "Research associate",
-      "type": "experience",
-      "context": "[Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)  \nand [CityLAB Berlin](https://www.citylba-berlin.org)",
+      "type": "Experience",
+      "context": "at the [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)  \nand [CityLAB Berlin](https://www.citylba-berlin.org)",
       "duration": "2018 – now",
       "description": "Crafting interactive data-driven prototypes with open data to enhance Berlin's everyday lives."
     },
     {
       "title": "Freelance Work",
-      "type": "experience",
-      "context": "Governmental institutions,  \ncompanies and conferences",
+      "type": "Experience",
+      "context": "for organisations, institutions,  \bbusinesses and conferences",
       "duration": "2014 – now",
       "description": "Interaction design, art direction, data visualization, implementation and consulting."
     },
     {
       "title": "Google News Lab Fellowship",
-      "type": "experience",
+      "type": "Experience",
       "context": "at the Interactive Team  \nof the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)",
       "duration": "2018",
       "description": "Development of interactive web based data visualizations for the upcoming Bundestag elections."
     },
     {
       "title": "Interaction Design Studies",
-      "type": "education",
+      "type": "Education",
       "duration": "2017",
       "context": "at the [Malmö University](http://mah.se/), Sweden",
       "description": "Service design concept for the city of Malmö to reduce food waste in public kitchens."
     },
     {
       "title": "Infographic Artist",
-      "type": "experience",
+      "type": "Experience",
       "duration": "2016 – 2017",
-      "context": "[Infographics Group](https://infographics.group/), Berlin",
+      "context": "at the [Infographics Group](https://infographics.group/), Berlin",
       "description": "Visual interface design & frontend development of data driven interactive visualizations.",
     },
     {
       "title": "Interface Design (B.A.)",
-      "type": "education",
+      "type": "Education",
       "duration": "2015 – 2018",
-      "context": "[University of Applied Sciences](https://design.fh-potsdam.de/)",
+      "context": "at [University of Applied Sciences](https://design.fh-potsdam.de/)",
       "description": "Studies of information design, data visualization and user centric design processes."
     },
     {
       "title": "Media Designer",
-      "type": "experience",
-      "duration": "2011 – 2014",
-      "context": "[ballyhoo media agency](https://www.ballyhoo.de/), Hamburg",
-      "description": "Visual Interface Design for clients like  \nSpiegel Online, and Payback"
+      "type": "Experience",
+      "duration": "2010 – 2014",
+      "context": "at [ballyhoo media agency](https://www.ballyhoo.de/), Hamburg",
+      "description": "Wireframes and Visual Interface Design for clients like Spiegel Online and Payback."
     },
     {
       "title": "Media Design Traineeship",
-      "type": "education",
-      "duration": "2011 – 2013",
+      "type": "Education",
+      "duration": "2010 – 2013",
       "context": "Vocational school for media and communication",
-      "description": "Visual Interface Design for clients like  \nSpiegel Online and Payback"
+      "description": "Learning about fundamental communication methods and principles of graphic design."
     },
     {
       "title": "CityLAB permanent exhibition",
-      "type": "exhibition",
+      "type": "Exhibition",
       "duration": "2019",
-      "context": "Interactive [Shared mobility flows](https://bikesharing.citylab-berlin.org) Visualization",
+      "context": "Interactive [Shared Mobility Flows](https://bikesharing.citylab-berlin.org) Visualization",
       "description": "The interactive piece is part of the exhibition for innovation in the public sector."
     },
     {
-      "title": "CityVis.io: Visualising Cities Exhibition",
-      "type": "exhibition",
+      "title": "Exhibited: [A City In Flux](https://city-in-flux.netlify.com/)",
+      "type": "Exhibition",
       "duration": "2019",
-      "context": "[A city in Flux: 800 routes of diversity and contrast](https://city-in-flux.netlify.com/)",
+      "context": "at the CityVis.io: Visualising Cities",
       "description": "The interactive piece was exhibited and shortlisted."
     },
     {
       "title": "[Information+](http://informationplusconference.com/2018/) Conference",
-      "type": "other",
+      "type": "Other",
       "duration": "2018",
       "context": "InfoVis conference, Potsdam",
-      "description": "Development of a unique interactive visual language and website for the InfoVis conference."
+      "description": "Development of an interactive visual language and website for the InfoVis conference."
     },
     {
       "title": "Lecture: Data Visualization fundamentals",
-      "type": "other",
+      "type": "Other",
       "duration": "2020",
       "context": "E-Artsup University, Paris",
       "description": "Held a lecture about fundamental approaches to Data Visualization."
     },
-    // {
-    //   "title": "Shared Mobility Flows",
-    //   "type": "talk",
-    //   "duration": "2019",
-    //   "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
-    //   "description": "Short text about the activities in this context."
-    // },
+    {
+      "title": "Exhibited: Shared Mobility Flows",
+      "type": "Exhibition",
+      "duration": "2019",
+      "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
+      "description": "Exhibiting the interactive mobility visualization as part of the conference."
+    },
   ],
   "projects": [
     {
-      "title": "A city in flux",
+      "title": "A City In Flux",
       "path": "cityinflux",
       "color": ['#2B1174', '#F5F3F8'],
       "client": "GiZ",
@@ -123,8 +123,8 @@ const content = {
       "lazy": "public/images/cityinflux/cityinflux-lazy-960x640.jpg",
       "url": "https://city-in-flux.netlify.com/",
       "tasks": ["concept", "visual interface design", "Data visualization"],
-      "subtitle": "800 Routes of Diversity and Contrast",
-      "description": "»City in Flux« visualizes the informal and formal mobility networks in Cape Town. It reveals hidden patterns and dividing lines throughout the city and tells meaningful stories that help to understand the developments in the city's physical and social mobility networks. The prototype combines geospatial mobility data and socio-economic statistics of the urban area of Cape Town.",
+      "subtitle": "Mapping socio-economic and mobility data of Cape Town.",
+      "description": "Cape Town's mobility is characterized by formal and informal mobility networks consisting of taxis and buses. These services are mostly self-organised. What image of a city emerges when combining social and economic data with mobility data? What stirring stories are contained in this data and how can they be conveyed with the help of digital tools? The interactive piece visualizes unique route profiles of the informal and formal mobility networks of Cape Town. The intention of the prototype is to motivate users to get information about the diverse living conditions of the city and to contribute their own perspectives on spatial and social mobility. Exemplarily, it is shown how annotation for specific routes opens up the space for personal stories along routes. The mobility data was provided by the startup [WhereIsMyTransport](https://www.whereismytransport.com/). The socio-economic data were obtained from qualitative surveys conducted by the [Federal Statistical Office of South Africa](http://www.statssa.gov.za/).",
       "media": [
         {
           "type": "img",
@@ -153,10 +153,10 @@ const content = {
       ]
     },
     {
-      "title": "Gender inequality in politics",
+      "title": "Gender Inequality In Politics",
       "path": "gender-equality",
-      "type": "Data visualization",
-      "client": "Experiment",
+      "type": "Data Visualization",
+      "client": "Self initiated",
       "color": ['#882C94', '#F5F3F7'],
       "year": 2019,
       "visible": true,
@@ -164,9 +164,9 @@ const content = {
       "thumbnail": "public/images/genderinequality/genderinequality-thumb-960x640.jpg",
       "lazy": "public/images/genderinequality/genderinequality-lazy-960x640.jpg",
       "url": "https://genderequality.fabiandinklage.com/",
-      "tasks": ["Data visualization"],
-      "subtitle": "How did gender equality in national parliaments transform on a global scale?",
-      "description": "This visualization which shows the transformation of seats in national political parliaments by biological sex in one interactive piece. The progress towards gender equality for each country is visualized. Cultural differences between countries are comparable and can be highlighted through filtering along geographical and structural dimensions.",
+      "tasks": ["Visualization Prototyping", "Visual Language", "Frontend Development"],
+      "subtitle": "How gender equal are political decisions made on a country level and what are underlying trends?",
+      "description": "Gender equality in political decision-making is a reality in very few countries. Women are often underrepresented and are not sufficiently involved in decision-making processes. How can a status quo communication of gender equality in politics be communicated? How can an awareness of gender relations in the world be developed? The interactive data visualization invites the user to quickly browse the development of gender distribution of 174 national parliaments between 1990 and 2018. Along geographical and categorical filters – such as development – highlight significant facets of the dataset. An interactive globe facilitates orientation while exploring the data. The data set is provided from the data portal of the United Nations.",
       "media": [
         {
           "type": "img",
@@ -189,20 +189,20 @@ const content = {
       ]
     },
     {
-      "title": "Educational Technology in Berlin",
+      "title": "Educational Technology In Berlin",
       "path": "edutech",
       "type": "Mapping",
       "client": "Technologiestiftung Berlin",
       "color": ['#41B496', '#F6FCFA'],
       "year": 2020,
-      "visible": true,
+      "visible": false,
       "thumbnail": "public/images/edutech/edutech-thumb-960x640.jpg",
       "overlay": "public/images/edutech/edutech-thumb-960x640.gif",
       "lazy": "public/images/edutech/edutech-lazy-960x640.jpg",
       "url": "https://edutech.technologiestiftung-berlin.de",
-      "tasks": ["mapping"],
-      "subtitle": "EdTech services of Berlin made accessible for actors of civil-society.",
-      "description": "I was asked to develop an overview of digital services for the education system in the form of a searchable map. The goal of the project is to create a shared language about EdTech and gain overview knowledge of the actors of digital change in the education system through interaction. The application shines through simplicity and clear typography across all devices.",
+      "tasks": ["Backend (CMS)", "Visual Interface Design", "Frontend Development"],
+      "subtitle": "Innovative digital education services of Berlin made accessible for civil-society.",
+      "description": "A large number of digital education services are located in the urban area of Berlin. How can these offers be classified and made more accessible through visualization? An interactive map enables people to explore and stroll thtough the landscape of digital educational services. Elaborated options to filter like: offered services, audience and location help the user to find services of interest in the urban area of Berlin. The data set was collected from a qualitative survey conducted by the client.",
       "media": [
         {
           "type": "img",
@@ -237,9 +237,9 @@ const content = {
       ]
     },
     {
-      "title": "Rhythm of the road",
+      "title": "Rhythm Of The Road",
       "path": "rhythmoftheroad",
-      "type": "Data visualization",
+      "type": "Data Visualization",
       "client": "Technologiestiftung Berlin",
       "color": ['#2824B2', '#F5F4FC'],
       "year": 2018,
@@ -248,9 +248,9 @@ const content = {
       "overlay": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.gif",
       "lazy": "public/images/rhythmoftheroad/rhythmoftheroad-lazy-960x640.jpg",
       "url": "https://lab.technologiestiftung-berlin.de/projects/bikerides/de/",
-      "tasks": ["Data visualization"],
-      "subtitle": "Bike traffic in Berlin visualized",
-      "description": "Since 2013, cycle traffic has been recorded automatically throughout the city with the aid of counting stations embedded in the road. The visualization shows annual, weekly and daily driving patterns and aggregates more than 50.000 data points of 26 counting stations over the last six years in Berlin.",
+      "tasks": ["Data Analysis", "Data visualization", "Frontend Development"],
+      "subtitle": "Berlin's temporal cycling patterns visualized.",
+      "description": "Since 2015, the Berlin Senate Administration has been recording bicycle traffic in the city using automated counting stations. How can Berlin's 26 counting stations be aggregated and made accessible? The interactive visualisation allows users to read out the wheel counting stations that have been put into operation and to discover temporal patterns of Berlin cyclists. The visualization shows daily, weekly and annual cycling patterns. Furthermore, the data can be displayed in three levels of detail (median, absolute, maximum). The data comes from 26 permanent counting stations embedded in the ground and comprises more than 8760 counts.",
       "media": [
         {
           "type": "img",
@@ -268,7 +268,7 @@ const content = {
       "title": "Shared Mobility Flows",
       "path": "bikesharing",
       "type": "Mapping",
-      "client": "Technologiestiftung Berlin",
+      "client": "CityLAB Berlin",
       "color": ['#EE7B4B', '#fff'],
       "year": 2019,
       "visible": true,
@@ -276,9 +276,9 @@ const content = {
       "overlay": "public/images/bikesharing/bikesharing-thumb-960x640.gif",
       "lazy": "public/images/bikesharing/bikesharing-lazy-960x640.jpg",
       "url": "https://bikesharing.citylab-berlin.org",
-      "tasks": ["Data visualization"],
-      "subtitle": "Explore and analyse the daily use of shared bike mobility in Berlin.",
-      "description": "This prototype was part of a research project that investigated potentials and challenges of shared mobility in Berlin. The process of data transformation led to new insights about creating a mobility data standard. The visualization immerses into the daily and seasonal usage of two shared bike service providers. The prototype was further developed together with district planners and supplemented by concrete scenarios.",
+      "tasks": ["Data Analysis", "Backend Infrastructure", "Visual Interface Design", "Data visualization"],
+      "subtitle": "Explore and analyse spatio-temporal patterns of Berlin's shared bike mobility providers.",
+      "description": "Urban mobility is constantly changing. Bikesharing has been used more and more in large cities for several years now, allowing bikes to be rented and parked flexibly throughout the city. How can the collected data help in urban planning and create insights into usage and frequency in the Berlin area? The interactive visualization, optimized for touch screen, enables the user to explore the potential of shared mobility services for each district of Berlin and to analyze the usage over time. The intent is to create interest and consciousness through an overview of rental bike offers in Berlin through a data-driven immersive interface. Micro scenarios provide additional information about the spatial conditions of Berlin. The project is part of the permanent exhibition of [CityLAB Berlin](https://citylab-berlin.org) from June 2019. It was also exhibited at the techDetector conference in Berlin in September 2019, organized by [GiZ](https://giz.de). A backend infrastructure was developed to process the bike-data on a daily basis by public APIs of the providers Lidl-Bike and Next-Bike. A set of scripts analyse and transform the bike rides and bring them into the correct formats.",
       "media": [
         {
           "type": "bikesharing",
@@ -313,9 +313,9 @@ const content = {
       ]
     },
     {
-      "title": "The Curricle",
+      "title": "The Curricle Lens",
       "path": "curricle",
-      "type": "Data visualization",
+      "type": "Data Visualization",
       "client": "Berkmann Klein Center (at) Harvard",
       "color": ['#7042AB', '#F8F7FC'],
       "year": 2019,
@@ -324,9 +324,9 @@ const content = {
       "overlay": "public/images/curricle/curricle-thumb-960x640.gif",
       "lazy": "public/images/curricle/curricle-lazy-960x640.jpg",
       "url": "https://curricle.net",
-      "tasks": ["Data visualization"],
+      "tasks": ["Storytelling Design", "Frontend Development"],
       "subtitle": "Visualized, Annotaded, Connected: what should the course catalog look like in the 21st century?",
-      "description": "This project is collaboration with the [Metalab](https://metalabharvard.github.io/). The curricle investigates the patterns and stories of studies of the University of Harvard and curates findings in a story driven approach. Together with [Kim Albrecht](https://kimalbrecht.com/), who was responsible for stories and visualization, we created an interactive platform for the audience to make a deep dive into the history of Harvard's course structure.",
+      "description": "The Harvard course catalog is characterized by constant change. Changing course content and historical events, such as social movements, influence teaching and learning. This research project was a collaboration with the [Metalab](https://metalabharvard.github.io/). Together with [Kim Albrecht](https://kimalbrecht.com/), who was responsible for stories and visualization we developed the research project Curricle Lens which enables users to explore historical events from Harvard's course catalogue. The data can be explored through four extensive storylines. A scroll-based storytelling module immerses into the complex course structures which unfold over time and provide additional context through pointed essays. Responsive cues in the visualization the user’s information experience and highlight important data points in the visualization. The data is from Harvard's course catalog from 1990 to 2020.",
       "media": [
         {
           "type": "curricle",
@@ -357,7 +357,7 @@ const content = {
     {
       "title": "Retro Future Hacker News",
       "path": "hackernews",
-      "type": "Data visualization",
+      "type": "Data Visualization",
       "client": "Experiment",
       "color": ['#000', '#f2f2f2'],
       "year": 2018,
@@ -366,9 +366,9 @@ const content = {
       "overlay": "public/images/hackernews/hackernews-thumb-960x640.gif",
       "lazy": "public/images/hackernews/hackernews-lazy-960x640.jpg",
       "url": "https://hackernews.fabiandinklage.com",
-      "tasks": ["Data visualization"],
-      "subtitle": "Visualizing controversy and popularity of information of a news incubator.",
-      "description": "Usually dominate lists the structure of content for practical reasons of readability. Together with [Florian Zia](https://twitter.com/florianzia) questioned the status quo of the web and rules of usability and created an experimental reader application for the information platform Hacker News. We explored the expressiveness of raw typographic design and visualized controversy and popularity of Hacker News content. The result is a responsive cyber-punk text ready. The project was developed within the experimental web typography course Retro Future Webdesign guided by [Prof. Boris Müller](https://twitter.com/borism) at the University of Applied Sciences Potsdam.",
+      "tasks": ["Concept", "Visual Language", "Typography", "Frontend Development"],
+      "subtitle": "Visualizing controversy and popularity of the news aggregator.",
+      "description": "The social media site [Hacker News](https://news.ycombinator.com/) is a news aggregator, focusing on computer science and information technology. Its design is bare-bones but it has complex functionality for voting and discussions. The experimental interactive visualization allows the user to explore current articles of the platform. Comments are displayed chronologically for each article and nested comments are created in new interpretations of lists. The result is a typographic cyber punk reader that exchanges usability and conventionality for rawness and resistance against the common sense of usability and web standards. This project was developed with [Florian Zia](https://twitter.com/flozia) and supervised by [Boris Müller](https://twitter.com/borism) at the [University of Applied Sciences, Potsdam]().",
       "media": [
         {
           "type": "hackernews",
@@ -397,9 +397,9 @@ const content = {
       ]
     },
     {
-      "title": "Bundestag election 2017",
+      "title": "Election Candidates 2017",
       "path": "candidates",
-      "type": "Data visualization",
+      "type": "Data Visualization",
       "client": "Berliner Morgenpost",
       "color": ['#000', '#F2F2F2'],
       "year": 2017,
@@ -408,8 +408,8 @@ const content = {
       "overlay": "public/images/candidates/candidates-thumb-960x640.gif",
       "lazy": "public/images/candidates/candidates-lazy-960x640.jpg",
       "url": "https://interaktiv.morgenpost.de/kandidaten-bundestagswahl-2017/",
-      "tasks": ["Data visualization"],
-      "subtitle": "Bike traffic in Berlin visualized",
+      "tasks": ["Data Visualization", "Frontend Development"],
+      "subtitle": "Who they are and what they are standing for?",
       "description": "There are 2559 direct candidates from various parties available for election to the Bundestag. In the context of the Google News Fellowship, I developed various interactive visualizations about the elections together with the Interactive Team of the Berliner Morgenpost. The web-based visualization enables users to obtain further perspectives on all direct candidates. Each candidate, represented by a dot, can be sorted and compared according to profession, origin, age or political closeness. Invisible underlying Structures are made visible through visualization. The application is based on the Federal Election Commissioner's data on all approved candidates.",
       "media": [
         {
@@ -457,9 +457,9 @@ const content = {
       ]
     },
     {
-      "title": "Invisible ties of Meetup",
+      "title": "Invisible Ties Of Meetup",
       "path": "invisties",
-      "type": "Data visualization",
+      "type": "Data Visualization",
       "client": "Bachelor Thesis",
       "color": ['#013ED9', '#F3F6FD'],
       "year": 2018,
@@ -468,9 +468,9 @@ const content = {
       "overlay": "public/images/invisties/invisties-thumb-960x640.gif",
       "lazy": "public/images/invisties/invisties-lazy-960x640.jpg",
       "url": "https://meetup.fabiandinklage.com/",
-      "tasks": ["Data visualization"],
+      "tasks": ["Concept & Design", "Data Analysis", "Data Visualization", "Frontend Development"],
       "subtitle": "Ten years of meetup history visualized and annotated.",
-      "description": "This thesis explores the material of the social platform meetup. The platform contains 75.000 past events of more than 3.000 meetup groups in the time 2009 to 2019. A working prototype provides an interface to explore all organized meetups of Berlin within the last 10 years. While attendees get lots of information around their interests the prototype aims to create insight around the social network data and compare temporal structures. How did the platform grow and which interests are most represented? How socially related are groups from one to another? This approach tries to find answers to these questions while providing a fluid and story driven experience.",
+      "description": "This experimental exploratory data visualization invites the user to compare categories of interest along indicators like popularity, activity of members or social closeness. How did the use of the platform grow in the past decade. How was it used by the audience? A responsive storytelling module enriches the visualization with valuable context and creates a playful story driven experience. The collected data was scraped from the platform and contains more than 75.000 meetup events of ~3.000 groups of the past 10 years which were located in Berlin.",
       "media": [
         {
           "type": "invisties",
