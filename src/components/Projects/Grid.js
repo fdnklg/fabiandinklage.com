@@ -101,9 +101,17 @@ const Grid = p => {
     font-size: ${p => p.theme.fontSizes[2]};
     letter-spacing: ${p => p.theme.letterSpacing[2]};
     color: ${p => p.c[0]};
+    opacity: 1;
+
+    cite {
+      font-family: 'Mier A Regular';
+      opacity: .5;
+      font-style: normal;
+    }
 
     b {
       font-family: 'Mier A Bold';
+      opacity: 1;
     }
   `;
 
@@ -114,7 +122,6 @@ const Grid = p => {
   }
 
   useEffect(() => {
-    console.log(activeIndex);
     handleResize(observed.offsetWidth)
     window.addEventListener('resize', () => handleResize(observed.offsetWidth))
   }, [observed, activeIndex]);
@@ -161,9 +168,9 @@ const Grid = p => {
             display: 'grid',
             gridGap: 4,
             gridTemplateColumns: [
-              'repeat(auto-fit, minmax(280px, 1fr))',
+              'repeat(auto-fit, minmax(260px, 1fr))',
+              'repeat(auto-fit, minmax(300px, 1fr))',
               'repeat(auto-fit, minmax(350px, 1fr))',
-              'repeat(auto-fit, minmax(400px, 1fr))',
             ],
           }}
         >
@@ -195,8 +202,9 @@ const Grid = p => {
                             observed = target;
                           }
                         }}
-                        src={src}
+                        src={p.overlay}
                         index={i}
+                        alt={p.alt}
                         sx={{
                           width: ['100%'],
                           position: 'absolute',
@@ -208,7 +216,8 @@ const Grid = p => {
                     {src => (
                       <ThumbnailImage
                         className="thumbnail-img"
-                        src={src}
+                        src={p.thumbnail}
+                        alt={p.alt}
                         index={i}
                         sx={{
                           width: ['100%'],
@@ -222,7 +231,7 @@ const Grid = p => {
                   index={i}
                 >
                   <b>{p.title}: </b>
-                  {p.subtitle}
+                  <cite>{p.subtitle}</cite>
                 </StyledText>
               </StyledLink>
             );

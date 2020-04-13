@@ -56,6 +56,7 @@ const Profile = p => {
             <br />
             <Image
               src={profileUrl}
+              alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
               pb={[4, 5, 5, 6]}
               sx={{
                 width: ['100%'],
@@ -63,18 +64,19 @@ const Profile = p => {
               }}
             />
             <br />
+            <Title timeout={625} source='Selected Clients' color={color} />
             <List timeout={750} c={color}>
-              <li><Title timeout={625} source='Selected Clients' color={color} /></li>
               <li>Berkmann Klein Center (at) Harvard</li>
               <li>Berliner Morgenpost</li>
               <li>Deutsches Historisches Museum</li>
+              <li>Deutsche Bahn</li>
               <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
               <li>Google News Lab</li>
               <li>MIT (Massachusetts Institute of Technology)</li>
               <li>Spiegel Online</li>
             </List>
           </Flex>
-          <Cv timeout={700} />
+          <Cv timeout={900} />
         </StyledFlex>
       )}
     </Transition>

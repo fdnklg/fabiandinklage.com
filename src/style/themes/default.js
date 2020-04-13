@@ -11,7 +11,7 @@ const defaultTheme = {
   colors: {
     text: '#000',
     background: '#fff',
-    primary: '#07c',
+    primary: 'lighten(10, #121337)',
     secondary: '#30c',
     muted: '#f6f6f9',
     gray: '#dddddf',
@@ -37,7 +37,7 @@ const defaultTheme = {
     mobile: '580px',
     tablet: '768px',
     desktop: '1080px',
-    hd: '1920',
+    hd: '1920px',
   },
   times: [0.128, 0.256, 0.512].map(s),
   radii: {

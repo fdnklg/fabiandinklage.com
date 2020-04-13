@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { colorMode } from '~/utils';
+import {Helmet} from 'react-helmet';
 
 import { withRouter, Route, Switch } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ import Nav from '../../components/Nav';
 import Profile from '../Profile';
 import Project from '../Project';
 import Legal from '../Legal';
+import Services from '../../components/Services';
 import Cta from '../../components/Cta';
 import Home from '../Home';
 import Footer from '../../components/Footer';
@@ -26,6 +28,7 @@ import Contact from '../Contact';
 
 const AppWrapper = () => {
   const cta = useStoreState(state => state.cta);
+  const services = useStoreState(state => state.services);
   let color = useStoreState(state => state.color.color);
 
   const DynamicGlobalStyle = createGlobalStyle`
@@ -41,14 +44,29 @@ const AppWrapper = () => {
 
   return (
     <StyledWrapper c={color}>
+      <Helmet>
+        <title>Fabian Dinklage – Data Visualization & Interaction Design</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+        <meta name="description" content="Fabian Dinklage is a freelance data visualization and interaction designer based in Berlin."/>
+        <meta lang="en" name="keywords" content="Fabian Dinklage, data visualization, information visualization, visualization, datavis, data vis, data viz, interaction design, interface design, information graphics, data mining, data science, information aesthetics, information design, Berlin,  information architecture" />
+        <meta lang="de" name="keywords" content="Fabian Dinklage, datenvisualisierung, informationsvisualisierung, datavis, interface design, informationsdesign, informationsarchitektur, datenjournalismus, infografik" />
+        <meta http-equiv="content-language" content="en" />
+
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:title" content="Fabian Dinklage – Data Visualization & Interaction Design"></meta>
+        <meta name="twitter:description" content="Fabian Dinklage is a freelance data visualization and interaction designer based in Berlin." />
+
+      </Helmet>
       <DynamicGlobalStyle />
       <Box
         sx={{
           mx: 'auto',
+          height: '100vh',
           px: [3, 4, 5, 6],
           py: [3, 4, 5, 5],
         }}
-      >
+      > 
+        <>
         <Nav timeout={500} />
         <Switch>
           <Route
@@ -69,8 +87,10 @@ const AppWrapper = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/projects/:projectName" component={Project} />
         </Switch>
-        <Cta timeout={900} content={cta} />
-        <Footer timeout={1100} />
+        <Route exact path="/" render={() => <Services content={services} timeout={900} />} />
+        <Route exact path="/" render={() => <Cta timeout={1100} content={cta} />} />
+        </>
+        <Footer timeout={1300} />
       </Box>
     </StyledWrapper>
   );

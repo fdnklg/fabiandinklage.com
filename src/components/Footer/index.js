@@ -30,7 +30,7 @@ const Footer = p => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledFlex state={state}>
+        <StyledFlex sx={{mb: ['4','5']}} state={state}>
           <StyledBox width={1 / 2}>
             <Label content="©2020, Fabian Dinklage" />
           </StyledBox>
@@ -42,6 +42,14 @@ const Footer = p => {
               href="/legal"
             >
               Legal Note
+            </Link>
+            <Link
+              mr={[3, 4, 4]}
+              sx={{ textDecoration: 'none', color: color[0] }}
+              variant="nav"
+              href="https://photos.fabiandinklage.com"
+            >
+              Photos
             </Link>
             <Link
               // mr={[3, 4, 4]}

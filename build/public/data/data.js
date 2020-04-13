@@ -1,6 +1,7 @@
 const content = {
   "about": {
-    "intro": "Hey there! My name is Fabian Dinklage and I make your information useful through **data visualization**. With a deep interest in data I help international organisations, institutions and businesses to craft joyful interactive data-driven experiences. Equipped with human centered design methods I **consult**, **design**, **develop** and **implement** ideas that become productive tools and provide meaningful answers to your most pressing questions.",
+    "intro": "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
+    // "intro": "Hey there! My name is Fabian Dinklage and I make your information useful through **data visualization**. With a deep interest in data I help international organisations, institutions and businesses to craft joyful interactive data-driven experiences. Equipped with human centered design methods I **consult**, **design**, **develop** and **implement** ideas that become productive tools and provide meaningful answers to your most pressing questions.",
     "vita": "I'm a Berlin-based designer and technologist focused on Data Visualization and Interaction Design. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). I do prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
     "profileUrl": "public/images/profile___.jpg"
   },
@@ -15,6 +16,17 @@ const content = {
       "description": "Short text about the exhibition."
 
     }
+  ],
+  "services": [
+    {
+      "title": 'Data Analysis & Visualization',
+      // "description": 'Most of our clients come to us with a large data set or database and the need for an interface that can consume that data and deliver it to their users in an intuitive and well-structured way. We work with our clients to understand their domain and the insights they want to provide to their users.'
+      "description": "I analyse, transform, and organise your data to find underlying structures and patterns. I embrace the design process, prototype ideas with code and work closely with you to develop engaging data-driven experiences that are easy to use and provide valueable perspectives that engage to act. I'm interested in complex and data-dense problems and develop novel solutions to your most pressing questions."
+    },
+    {
+      "title": 'Interface Design & Consultancy',
+      "description": 'I define concept directions, create wireframes and create consistent visual styles to provide a joyful user experience. I do ideation workshops with stakeholders to develop elaborated digital products. I review your product and find potential opportunities of improvement. Together we develop a strategy to develop your product further.'
+    },
   ],
   "activities": [
     {
@@ -120,6 +132,7 @@ const content = {
       "visible": true,
       "thumbnail": "public/images/cityinflux/cityinflux-thumb-960x640.jpg",
       "overlay": "public/images/cityinflux/cityinflux-thumb-960x640.gif",
+      "alt": "data visualization, mapping, datavis, data visualisation, datenvisualisierung: a city in flux – 800 route of public and informal mobility routes visualized",
       "lazy": "public/images/cityinflux/cityinflux-lazy-960x640.jpg",
       "url": "https://city-in-flux.netlify.com/",
       "tasks": ["concept", "visual interface design", "Data visualization"],
@@ -128,24 +141,28 @@ const content = {
       "media": [
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: a city in flux – 800 route of public and informal mobility routes visualized",
           "content": "800 route of public and informal mobility routes visualized",
           "url": "public/images/cityinflux/cityinflux-start-3840x2592.jpg",
           "lazy": "public/images/cityinflux/cityinflux-start-lazy-3840x2592.jpg",
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: a city in flux – The data can be filtered by socio-economic properties such as education",
           "content": "The data can be filtered by socio-economic properties such as education",
           "url": "public/images/cityinflux/cityinflux-detail-3840x2592.jpg",
           "lazy": "public/images/cityinflux/cityinflux-detail-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: a city in flux – Along inidividual rides socio-economic transformations can be observed",
           "content": "Along inidividual rides socio-economic transformations can be observed",
           "url": "public/images/cityinflux/cityinflux-ride-3840x2592.jpg",
           "lazy": "public/images/cityinflux/cityinflux-ride-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: a city in flux – Unique story snippets can be attached to each route stop",
           "content": "Unique story snippets can be attached to each route stop",
           "url": "public/images/cityinflux/cityinflux-story-3840x2592.jpg",
           "lazy": "public/images/cityinflux/cityinflux-story-lazy-3840x2592.jpg"
@@ -163,6 +180,7 @@ const content = {
       "overlay": "public/images/genderinequality/genderinequality-thumb-960x640.gif",
       "thumbnail": "public/images/genderinequality/genderinequality-thumb-960x640.jpg",
       "lazy": "public/images/genderinequality/genderinequality-lazy-960x640.jpg",
+      "alt": "data visualization, datavis, data visualisation, datenvisualisierung, Visual Language, Frontend development: Gender Inequality In Politics – How gender equal are political decisions made on a country level and what are underlying trends?",
       "url": "https://genderequality.fabiandinklage.com/",
       "tasks": ["Visualization Prototyping", "Visual Language", "Frontend Development"],
       "subtitle": "How gender equal are political decisions made on a country level and what are underlying trends?",
@@ -170,18 +188,21 @@ const content = {
       "media": [
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: gender inequality – data sorted by continents",
           "content": "Sorted by continents",
           "url": "public/images/genderinequality/genderinequality-continents-3840x2592.jpg",
           "lazy": "public/images/genderinequality/genderinequality-continents-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: gender inequality – data sorted by progression between 1990 and 2020",
           "content": "Sorted by progression between 1990 and 2020",
           "url": "public/images/genderinequality/genderinequality-progress-3840x2592.jpg",
           "lazy": "public/images/genderinequality/genderinequality-progress-lazy-3840x2592.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: gender inequality – North american countries highlighted",
           "content": "North american countries highlighted",
           "url": "public/images/genderinequality/genderinequality-northAmerica-3840x2592.jpg",
           "lazy": "public/images/genderinequality/genderinequality-northAmerica-lazy-3840x2592.jpg"
@@ -199,6 +220,7 @@ const content = {
       "thumbnail": "public/images/edutech/edutech-thumb-960x640.jpg",
       "overlay": "public/images/edutech/edutech-thumb-960x640.gif",
       "lazy": "public/images/edutech/edutech-lazy-960x640.jpg",
+      "alt": "data visualization, datavis, map, data visualisation, datenvisualisierung, Visual Language, Frontend development: Educational Technology In Berlin – Innovative digital education services of Berlin made accessible for civil-society.",
       "url": "https://edutech.technologiestiftung-berlin.de",
       "tasks": ["Backend (CMS)", "Visual Interface Design", "Frontend Development"],
       "subtitle": "Innovative digital education services of Berlin made accessible for civil-society.",
@@ -206,30 +228,35 @@ const content = {
       "media": [
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: educational technology map – Filter EdTech institutions along different categories.",
           "content": "Filter EdTech institutions along different categories.",
           "url": "public/images/edutech/edutech-overlay-3840x2040.jpg",
           "lazy": "public/images/edutech/edutech-overlay-lazy-3840x2040.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: educational technology map – A set of distinctive colors and tags help to distinguish the range of services.",
           "content": "A set of distinctive colors and tags help to distinguish the range of services.",
           "url": "public/images/edutech/edutech-tags-3840x2040.jpg",
           "lazy": "public/images/edutech/edutech-tags-lazy-3840x2040.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: educational technology map – All institutions are listed and sortable with an ease of effort.",
           "content": "All institutions are listed and sortable with an ease of effort.",
           "url": "public/images/edutech/edutech-list-3840x2040.jpg",
           "lazy": "public/images/edutech/edutech-list-lazy-3840x2040.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: educational technology map – Filtering out institutions of interest can be done along different types e.g. target group, category and others.",
           "content": "Filtering out institutions of interest can be done along different types e.g. target group, category and others.",
           "url": "public/images/edutech/edutech-search-3840x2040.jpg",
           "lazy": "public/images/edutech/edutech-search-lazy-3840x2040.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: educational technology map – A set of detailed information about each insitution is accessible via interaction.",
           "content": "A set of detailed information about each insitution is accessible via interaction.",
           "url": "public/images/edutech/edutech-tooltip-3840x2040.jpg",
           "lazy": "public/images/edutech/edutech-tooltip-lazy-3840x2040.jpg"
@@ -244,6 +271,7 @@ const content = {
       "color": ['#2824B2', '#F5F4FC'],
       "year": 2018,
       "visible": true,
+      "alt": "data visualization, datavis, map, data visualisation, datenvisualisierung, Visual Language, Frontend development: Rhythm Of The Road – Berlin's temporal cycling patterns visualized.",
       "thumbnail": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.jpg",
       "overlay": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.gif",
       "lazy": "public/images/rhythmoftheroad/rhythmoftheroad-lazy-960x640.jpg",
@@ -254,11 +282,13 @@ const content = {
       "media": [
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: Rhythm of the road – Daily, weekly and monthly analysis of Berlin's cyclists",
           "content": "Daily, weekly and monthly analysis of Berlin's cyclists",
           "url": "public/images/rhythmoftheroad/rhythmoftheroad-pattern-3840x2246.jpg"
         },
         {
           "type": "img",
+          "alt": "data visualization, datenvisualisierung: Rhythm of the road – Grid aligned layout of all bike counting stations",
           "content": "Grid aligned layout of all bike counting stations",
           "url": "public/images/rhythmoftheroad/rhythmoftheroad-overview-3840x2246.jpg"
         },
@@ -273,6 +303,7 @@ const content = {
       "year": 2019,
       "visible": true,
       "thumbnail": "public/images/bikesharing/bikesharing-thumb-960x640.jpg",
+      "alt": "data visualization, datavis, map, data visualisation, datenvisualisierung, Visual Language, Frontend development: Shared Mobility Flows – Explore and analyse spatio-temporal patterns of Berlin's shared bike mobility providers.",
       "overlay": "public/images/bikesharing/bikesharing-thumb-960x640.gif",
       "lazy": "public/images/bikesharing/bikesharing-lazy-960x640.jpg",
       "url": "https://bikesharing.citylab-berlin.org",
@@ -282,30 +313,35 @@ const content = {
       "media": [
         {
           "type": "bikesharing",
+          "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Find out how districts compare with one another.",
           "content": "Find out how districts compare with one another.",
           "url": "public/images/bikesharing/bikesharing-overview-3840x2040.jpg",
           "lazy": "public/images/bikesharing/bikesharing-overview-lazy-3840x2040.jpg",
         },
         {
           "type": "bikesharing",
+          "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – The user interface facilitates the navigation through the daily data with ease.",
           "content": "The user interface facilitates the navigation through the daily data with ease.",
           "url": "public/images/bikesharing/bikesharing-ui-3840x2040.jpg",
           "lazy": "public/images/bikesharing/bikesharing-ui-lazy-3840x2040.jpg",
         },
         {
           "type": "bikesharing",
+          "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Approximate bike routes are visualized through trails animated over time.",
           "content": "Approximate bike routes are visualized through trails animated over time.",
           "url": "public/images/bikesharing/bikesharing-trails-3840x2040.jpg",
           "lazy": "public/images/bikesharing/bikesharing-trails-lazy-3840x2040.jpg",
         },
         {
           "type": "bikesharing",
+          "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Designated areas are highlighted and contain micro storielines.",
           "content": "Designated areas are highlighted and contain micro storielines.",
           "url": "public/images/bikesharing/bikesharing-szenario-3840x2040.jpg",
           "lazy": "public/images/bikesharing/bikesharing-szenario-lazy-3840x2040.jpg",
         },
         {
           "type": "bikesharing",
+          "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – A closer look on the map reveals a 3D perspective including shapes of buildings.",
           "content": "A closer look on the map reveals a 3D perspective including shapes of buildings.",
           "url": "public/images/bikesharing/bikesharing-zoom-3840x2040.jpg",
           "lazy": "public/images/bikesharing/bikesharing-zoom-lazy-3840x2040.jpg",
@@ -323,6 +359,7 @@ const content = {
       "thumbnail": "public/images/curricle/curricle-thumb-960x640.jpg",
       "overlay": "public/images/curricle/curricle-thumb-960x640.gif",
       "lazy": "public/images/curricle/curricle-lazy-960x640.jpg",
+      "alt": "data visualization, datenvisualisierung: The Curricle Lens – Visualized, Annotaded, Connected: what should the course catalog look like in the 21st century",
       "url": "https://curricle.net",
       "tasks": ["Storytelling Design", "Frontend Development"],
       "subtitle": "Visualized, Annotaded, Connected: what should the course catalog look like in the 21st century?",
@@ -330,24 +367,28 @@ const content = {
       "media": [
         {
           "type": "curricle",
+          "alt": "data visualization, datenvisualisierung: The Curricle Lens – While course structures stay consistent, labeling them is a continuous process.",
           "content": "While course structures stay consistent, labeling them is a continuous process.",
           "url": "public/images/curricle/curricle-label-3840x2040.jpg",
           "lazy": "public/images/curricle/curricle-label-lazy-3840x2040.jpg",
         },
         {
           "type": "curricle",
+          "alt": "data visualization, datenvisualisierung: The Curricle Lens – While scrolling through the story, patterns can be highlighted at some points.",
           "content": "While scrolling through the story, patterns can be highlighted at some points.",
           "url": "public/images/curricle/curricle-highlight-3840x2040.jpg",
           "lazy": "public/images/curricle/curricle-highlight-lazy-3840x2040.jpg",
         },
         {
           "type": "curricle",
+          "alt": "data visualization, datenvisualisierung: The Curricle Lens – Interesting patterns are annotaded.",
           "content": "Interesting patterns are annotaded.",
           "url": "public/images/curricle/curricle-tooltip-3840x2040.jpg",
           "lazy": "public/images/curricle/curricle-tooltip-lazy-3840x2040.jpg",
         },
         {
           "type": "curricle",
+          "alt": "data visualization, datenvisualisierung: The Curricle Lens – The audience can choose between a set of five storylines.",
           "content": "The audience can choose between a set of five storylines.",
           "url": "public/images/curricle/curricle-intro-3840x2040.jpg",
           "lazy": "public/images/curricle/curricle-intro-lazy-3840x2040.jpg",
@@ -365,6 +406,7 @@ const content = {
       "thumbnail": "public/images/hackernews/hackernews-thumb-960x640.jpg",
       "overlay": "public/images/hackernews/hackernews-thumb-960x640.gif",
       "lazy": "public/images/hackernews/hackernews-lazy-960x640.jpg",
+      "alt": "data visualization, datenvisualisierung: Retro Future Hacker News – Visualizing controversy and popularity of the news aggregator.",
       "url": "https://hackernews.fabiandinklage.com",
       "tasks": ["Concept", "Visual Language", "Typography", "Frontend Development"],
       "subtitle": "Visualizing controversy and popularity of the news aggregator.",
@@ -372,24 +414,28 @@ const content = {
       "media": [
         {
           "type": "hackernews",
+          "alt": "data visualization, datenvisualisierung: Retro Future Hacker News – Explore current hot topics of the news incubator Hacker News and their comments positioned by age and controversity.",
           "content": "Explore current hot topics of the news incubator Hacker News and their comments positioned by age and controversity.",
           "url": "public/images/hackernews/hackernews-topic-black-3840x2040.jpg",
           "lazy": "public/images/hackernews/hackernews-topic-black-lazy-3840x2040.jpg",
         },
         {
           "type": "hackernews",
+          "alt": "data visualization, datenvisualisierung: Retro Future Hacker News – A new layout for lists of nested comments.",
           "content": "A new layout for lists of nested comments.",
           "url": "public/images/hackernews/hackernews-comments-black-3840x2040.jpg",
           "lazy": "public/images/hackernews/hackernews-comments-black-lazy-3840x2040.jpg",
         },
         {
           "type": "hackernews",
+          "alt": "data visualization, datenvisualisierung: Retro Future Hacker News – The inverted version of the view of topics.",
           "content": "The inverted version of the view of topics.",
           "url": "public/images/hackernews/hackernews-topic-white-3840x2040.jpg",
           "lazy": "public/images/hackernews/hackernews-topic-white-lazy-3840x2040.jpg",
         },
         {
           "type": "hackernews",
+          "alt": "data visualization, datenvisualisierung: Retro Future Hacker News – The inverted version of the view of comments for a selected topic.",
           "content": "The inverted version of the view of comments for a selected topic.",
           "url": "public/images/hackernews/hackernews-comments-white-3840x2040.jpg",
           "lazy": "public/images/hackernews/hackernews-comments-white-lazy-3840x2040.jpg",
@@ -404,6 +450,7 @@ const content = {
       "color": ['#000', '#F2F2F2'],
       "year": 2017,
       "visible": true,
+      "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Who they are and what they are standing for?",
       "thumbnail": "public/images/candidates/candidates-thumb-960x640.jpg",
       "overlay": "public/images/candidates/candidates-thumb-960x640.gif",
       "lazy": "public/images/candidates/candidates-lazy-960x640.jpg",
@@ -414,42 +461,49 @@ const content = {
       "media": [
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Each circle represents one candidate and is mapped by their party.",
           "content": "Each circle represents one candidate and is mapped by their party.",
           "url": "public/images/candidates/candidates-1-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-1-lazy-3840x2040.jpg",
         },
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Each circle represents one candidate and is mapped by their party.",
           "content": "Who is already in the Bundestag?",
           "url": "public/images/candidates/candidates-2-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-2-lazy-3840x2040.jpg",
         },
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – What are their electives professions?",
           "content": "What are their electives professions?",
           "url": "public/images/candidates/candidates-3-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-3-lazy-3840x2040.jpg",
         },
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Each party is divided by their share of gender.",
           "content": "Each party is divided by their share of gender.",
           "url": "public/images/candidates/candidates-4-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-4-lazy-3840x2040.jpg",
         },
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Mapped by age.",
           "content": "Mapped by age.",
           "url": "public/images/candidates/candidates-5-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-5-lazy-3840x2040.jpg",
         },
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Mapped by location.",
           "content": "Mapped by location.",
           "url": "public/images/candidates/candidates-6-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-6-lazy-3840x2040.jpg",
         },
         {
           "type": "candidates",
+          "alt": "data visualization, datenvisualisierung: Election Candidates 2017 – Mapped by political closeness.",
           "content": "Mapped by political closeness.",
           "url": "public/images/candidates/candidates-7-3840x2040.jpg",
           "lazy": "public/images/candidates/candidates-7-lazy-3840x2040.jpg",
@@ -463,6 +517,7 @@ const content = {
       "client": "Bachelor Thesis",
       "color": ['#013ED9', '#F3F6FD'],
       "year": 2018,
+      "alt": "data visualization, datenvisualisierung: Invisible Ties Of Meetup – Ten years of meetup history visualized and annotated.",
       "visible": true,
       "thumbnail": "public/images/invisties/invisties-thumb-960x640.jpg",
       "overlay": "public/images/invisties/invisties-thumb-960x640.gif",
@@ -474,30 +529,35 @@ const content = {
       "media": [
         {
           "type": "invisties",
+          "alt": "Invisible Ties Of Meetup – Let yourself guide by a story driven introduction or dive into the data by your own.",
           "content": "Let yourself guide by a story driven introduction or dive into the data by your own.",
           "url": "public/images/invisties/invisties-intro-3840x2040.jpg",
           "lazy": "public/images/invisties/invisties-intro-lazy-3840x2040.jpg",
         },
         {
           "type": "invisties",
+          "alt": "Invisible Ties Of Meetup – A storytelling component leads the user through the beginnings of the platform in Berlin and provides guidance about the usage of the platform.",
           "content": "A storytelling component leads the user through the beginnings of the platform in Berlin and provides guidance about the usage of the platform.",
           "url": "public/images/invisties/invisties-story-3840x2040.jpg",
           "lazy": "public/images/invisties/invisties-story-lazy-3840x2040.jpg",
         },
         {
           "type": "invisties",
+          "alt": "Invisible Ties Of Meetup – Each event (circle) is connected to the actual meetup platform and provides further context.",
           "content": "Each event (circle) is connected to the actual meetup platform and provides further context.",
           "url": "public/images/invisties/invisties-tooltip-3840x2040.jpg",
           "lazy": "public/images/invisties/invisties-tooltip-lazy-3840x2040.jpg",
         },
         {
           "type": "invisties",
+          "alt": "Invisible Ties Of Meetup – Meetup groups with more than 15% of shared members are connected with lines while distance maps the common share of members.",
           "content": "Meetup groups with more than 15% of shared members are connected with lines while distance maps the common share of members.",
           "url": "public/images/invisties/invisties-network-3840x2040.jpg",
           "lazy": "public/images/invisties/invisties-network-lazy-3840x2040.jpg",
         },
         {
           "type": "invisties",
+          "alt": "Invisible Ties Of Meetup – The growth of each category over time.",
           "content": "The growth of each category over time.",
           "url": "public/images/invisties/invisties-overview-3840x2040.jpg",
           "lazy": "public/images/invisties/invisties-overview-lazy-3840x2040.jpg",

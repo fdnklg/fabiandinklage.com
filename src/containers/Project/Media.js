@@ -27,7 +27,8 @@ const Media = props => {
             >
               {src => (
                 <Image
-                  src={src}
+                  src={media.url}
+                  alt={media.alt}
                   mb={2}
                   sx={{
                     width: ['100%'],

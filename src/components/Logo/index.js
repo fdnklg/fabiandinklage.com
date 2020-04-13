@@ -20,7 +20,6 @@ const Logo = () => {
     >
       <StyledSvg width="42px" height="58px" viewBox="0 0 42 58">
         <g
-          id="Page-1"
           stroke="none"
           strokeWidth="1"
           fill="none"

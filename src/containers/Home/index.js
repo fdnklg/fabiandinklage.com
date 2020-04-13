@@ -21,7 +21,7 @@ const Home = p => {
         sx={{ textAlign: ['left', 'center', 'center'] }}
         pb={[4, 5, 5, 6]}
         width={[1, 4 / 5, 4 / 5, 3 / 4]}
-        fontSize={[3, 4, 4, 5]}
+        fontSize={[4, 5, 6, 6]}
       >
         <Paragraph color={color} content={intro} timeout={700} />
       </StyledFlex>

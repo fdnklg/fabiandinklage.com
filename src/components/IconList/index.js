@@ -12,7 +12,6 @@ const IconList = () => {
   return (
     <svg width="20px" height="20px" viewBox="0 0 10 9">
       <g
-        id="Page-1"
         stroke="none"
         strokeWidth="1"
         fill="none"
