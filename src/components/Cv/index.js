@@ -19,7 +19,7 @@ const StyledBox = styled(Box)`
 const StyledParagraphSmall = styled(ReactMarkdown)`
   letter-spacing: .25px;
   font-size: ${p => p.theme.fontSizes[2]};
-  opacity: .5;
+  opacity: .66;
   p {
     margin-bottom: 0 !important;
   }
@@ -230,7 +230,7 @@ const Cv = p => {
                   ></StyledParagraph>
                   <StyledParagraph
                     c={color}
-                    opacity={.5}
+                    opacity={.66}
                     source={activity.description}
                   ></StyledParagraph>
                 </div>

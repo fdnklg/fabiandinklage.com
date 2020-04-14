@@ -65,7 +65,7 @@ const Intro = props => {
             <StyledTitle
               pr={[4]}
               c={color}
-              fontSize={[5, 6, 7]}
+              fontSize={[6, 6, 8]}
               mb={[3]}
               width={[1, 1, 4 / 8]}
             >
@@ -85,7 +85,7 @@ const Intro = props => {
             pb={[4, 5, 5, 5]}
             maxWidth={[1200, 900]}
           >
-            <Box mt={[2, 2, 2]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
+            <Box mt={[2, 2, 2]} mb={[4,4,5,5]} fontSize={[2]} width={[1, 1, 2 / 8]}>
               <Button
                 href={url}
                 px={3}
@@ -96,12 +96,12 @@ const Intro = props => {
                 Launch now
               </Button>
             </Box>
-            <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
+            <Box pr={[3]} mb={[3]} fontSize={[2,3,3]} width={[1, 1, 2 / 8]}>
               <StyledLabelBold c={color}>Context</StyledLabelBold>
               <br />
               <StyledLabel c={color}>{client}</StyledLabel>
             </Box>
-            <Box pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
+            <Box pr={[3]} mb={[3]} fontSize={[2,3,3]} width={[1, 1, 2 / 8]}>
               <StyledLabelBold c={color}>Year</StyledLabelBold>
               <br />
               <StyledLabel c={color}>{year}</StyledLabel>

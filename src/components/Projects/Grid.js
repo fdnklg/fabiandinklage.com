@@ -105,7 +105,7 @@ const Grid = p => {
 
     cite {
       font-family: 'Mier A Regular';
-      opacity: .5;
+      opacity: .66;
       font-style: normal;
     }
 

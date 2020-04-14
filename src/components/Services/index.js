@@ -67,7 +67,7 @@ const Services = p => {
                   fontFamily: 'body', 
                   width: ['100%', '100%', '65%', '70%'],
                   lineHeight: 'body',
-                  opacity: .5,
+                  opacity: .66,
                   letterSpacing: '0.125px'
                 }}
                 fontSize={[3, 4, 4, 4]}

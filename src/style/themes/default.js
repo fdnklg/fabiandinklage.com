@@ -21,7 +21,7 @@ const defaultTheme = {
     body: 'Mier A Regular, sans-serif',
     headline: 'Mier A Bold, sans-serif',
   },
-  fontSizes: [14, 14, 14, 16, 20, 26, 30, 48, 72].map(px),
+  fontSizes: [14, 14, 14, 16, 20, 26, 30, 48, 62].map(px),
   letterSpacing: [0.125, 0.25, 0.5, 1].map(px),
   fontWeights: {
     body: 400,
