@@ -18,12 +18,6 @@ const Project = ({ match }) => {
   const setColor = useStoreActions(actions => actions.color.setColor);
   const project = projects.filter(p => p.path === match.params.projectName)[0];
 
-  useEffect(() => {
-    const colors = colorMode(project.color);
-    setColor(colors);
-    console.log(colors);
-  }, []);
-
   return (
     <>
       <Intro timeout={625} data={project} />

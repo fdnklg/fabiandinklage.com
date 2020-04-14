@@ -3,7 +3,7 @@ import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
-import { opacityFromState } from '~/utils/animation';
+import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Logo from '~/components/Logo';
 import Label from '~/components/Label';
@@ -39,7 +39,6 @@ const Nav = p => {
       {state => (
         <StyledFlex
           state={state}
-          pb={[4, 5, 5, 6]}
           c={color}
           alignItems="center"
         >

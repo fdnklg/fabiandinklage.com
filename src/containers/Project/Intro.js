@@ -54,7 +54,7 @@ const Intro = props => {
     >
       {state => (
         <StyledWrapper state={state}>
-          <StyledFlex maxWidth={[1200, 900]} pb={[3, 3, 3, 4]}>
+          <StyledFlex maxWidth={[1200, 900]} pb={[3, 3, 3, 4]} pt={[4,5,5, 6]}>
             <StyledTitle
               pr={[4]}
               fontSize={[5, 6, 7]}

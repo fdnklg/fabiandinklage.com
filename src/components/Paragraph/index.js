@@ -2,14 +2,17 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
-import { opacityFromState } from '~/utils/animation';
+import { opacityFromState, positionFromState } from '~/utils/animation';
+import { Box } from 'rebass/styled-components';
 
 const StyledParagraph = styled(ReactMarkdown)`
   color: ${p => p.c[0]};
   line-height: ${p => p.theme.lineHeights.body};
   letter-spacing: ${p => p.theme.letterSpacing[1]};
   transition: all ${p => p.theme.times[1]} ease-in-out;
+  transform: ${props => positionFromState(props.state)};
   opacity: ${props => opacityFromState(props.state)};
+
   p {
     margin: 0;
 
@@ -17,6 +20,7 @@ const StyledParagraph = styled(ReactMarkdown)`
       font-family: 'Mier A Bold';
     }
   }
+
 
   a {
     text-decoration: none;
@@ -32,7 +36,7 @@ const StyledParagraph = styled(ReactMarkdown)`
 `;
 
 const Paragraph = p => {
-  const { content, color, timeout } = p;
+  const { content, color, timeout, padding } = p;
 
   return (
     <Transition
@@ -42,7 +46,15 @@ const Paragraph = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => <StyledParagraph state={state} c={color} source={content} />}
+      {state => (
+        <Box
+          sx={{
+            pt: padding ? [4, 5, 5, 6] : 0
+          }}
+        >
+          <StyledParagraph state={state} c={color} source={content} />
+        </Box>
+      )}
     </Transition>
   );
 };

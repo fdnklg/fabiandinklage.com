@@ -21,11 +21,11 @@ const Home = p => {
         sx={{ textAlign: ['left', 'center', 'center'] }}
         pb={[4, 5, 5, 6]}
         width={[1, 4 / 5, 4 / 5, 3 / 4]}
-        fontSize={[4, 5, 6, 6]}
+        fontSize={[3, 5, 5, 6]}
       >
-        <Paragraph color={color} content={intro} timeout={700} />
+        <Paragraph padding="true" color={color} content={intro} timeout={500} />
       </StyledFlex>
-      <Projects timeout={900} />
+      <Projects timeout={700} />
     </>
   );
 };

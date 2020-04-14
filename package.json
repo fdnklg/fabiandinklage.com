@@ -8,7 +8,8 @@
   "scripts": {
     "build": "BABEL_ENV=production webpack --config webpack/webpack.config.prod.js --colors && echo '/* /index.html  200' | cat >build/_redirects && echo 'User-Agent: * \nDisallow: ' | cat >build/robots.txt",
     "start": "webpack-dev-server --config webpack/webpack.config.dev.js",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap",
+    "sitemap": "babel-node src/sitemap/generator.js"
   },
   "repository": {
     "url": "git@github.com:wbkd/react-starter.git",
@@ -18,8 +19,9 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.7.4",
     "autoprefixer": "^9.7.3",
     "babel-eslint": "^10.0.3",
@@ -34,6 +36,7 @@
     "mini-css-extract-plugin": "^0.8.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
+    "react-router-sitemap": "^1.2.0",
     "react-svg-loader": "^3.0.3",
     "style-loader": "^1.1.1",
     "webpack": "^4.41.4",

@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
-import { Image } from 'rebass/styled-components';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 
 import Paragraph from '~/components/Paragraph';
 import Flex from '~/components/Flex';
 import List from '~/components/List';
+import Image from '~/components/Image';
 import Cv from '~/components/Cv';
 import Title from '~/components/Title';
 
@@ -44,12 +44,12 @@ const Profile = p => {
         <StyledFlex state={state}>
           <Flex
             sx={{ textAlign: ['left', 'left', 'center'] }}
-            pb={[4, 5, 5, 6]}
+            py={[4, 5, 5, 6]}
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
-            <Title timeout={625} source='About me' color={color} />
-            <Paragraph timeout={625} content={vita} color={color} />
+            <Title timeout={750} source='About me' color={color} />
+            <Paragraph timeout={750} content={vita} color={color} />
             <br />
             <br />
             <br />
@@ -57,15 +57,11 @@ const Profile = p => {
             <Image
               src={profileUrl}
               alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
-              pb={[4, 5, 5, 6]}
-              sx={{
-                width: ['100%'],
-                alignSelf: 'center',
-              }}
+              timeout={1000}
             />
             <br />
-            <Title timeout={625} source='Selected Clients' color={color} />
-            <List timeout={750} c={color}>
+            <Title timeout={1000} source='Selected Clients' color={color} />
+            <List timeout={1000} c={color}>
               <li>Berkmann Klein Center (at) Harvard</li>
               <li>Berliner Morgenpost</li>
               <li>Deutsches Historisches Museum</li>
@@ -76,7 +72,7 @@ const Profile = p => {
               <li>Spiegel Online</li>
             </List>
           </Flex>
-          <Cv timeout={900} />
+          <Cv timeout={1000} />
         </StyledFlex>
       )}
     </Transition>

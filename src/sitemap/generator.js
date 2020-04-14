@@ -1,0 +1,27 @@
+import { sitemapBuilder as buildSitemap, paramsApplier as applyParams } from 'react-router-sitemap';
+import path from 'path'; // add path which will be needed for file write
+import fs from 'fs'; // import file system object
+
+const routes = ['/', '/contact', '/profile', '/legal', '/projects/:slug'];
+
+const config = {
+  '/projects/:slug': [
+    { slug: ['gender-equality', 'cityinflux', 'edutech', 'rhythmoftheroad', 'bikesharing', 'curricle', 'candidates', 'invisties'] }
+  ]
+};
+
+const paths = applyParams(routes, config);
+
+// use your website root address here. Optimally you can
+// include dev and production enviorenments with variable
+const hostname = 'https://fabiandinklage.com';
+
+// define our destination folder and sitemap file name
+const dest = path.resolve('public/', 'sitemap.xml');
+
+// Generate sitemap and return Sitemap instance
+const sitemap = buildSitemap(hostname, paths);
+
+// write sitemap.xml file in /public folder
+// Access the sitemap content by converting it with .toString() method
+fs.writeFileSync(dest, sitemap.toString())

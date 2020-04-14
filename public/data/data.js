@@ -3,7 +3,7 @@ const content = {
     "intro": "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
     // "intro": "Hey there! My name is Fabian Dinklage and I make your information useful through **data visualization**. With a deep interest in data I help international organisations, institutions and businesses to craft joyful interactive data-driven experiences. Equipped with human centered design methods I **consult**, **design**, **develop** and **implement** ideas that become productive tools and provide meaningful answers to your most pressing questions.",
     "vita": "I'm a Berlin-based designer and technologist focused on Data Visualization and Interaction Design. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). I do prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
-    "profileUrl": "public/images/profile___.jpg"
+    "profileUrl": "public/images/profile____.jpg"
   },
   "cta": {
     text: 'How could we work together?',
@@ -19,13 +19,13 @@ const content = {
   ],
   "services": [
     {
-      "title": 'Data Analysis & Visualization',
+      "title": 'Data Visualization',
       // "description": 'Most of our clients come to us with a large data set or database and the need for an interface that can consume that data and deliver it to their users in an intuitive and well-structured way. We work with our clients to understand their domain and the insights they want to provide to their users.'
       "description": "I analyse, transform, and organise your data to find underlying structures and patterns. I embrace the design process, prototype ideas with code and work closely with you to develop engaging data-driven experiences that are easy to use and provide valueable perspectives that engage to act. I'm interested in complex and data-dense problems and develop novel solutions to your most pressing questions."
     },
     {
       "title": 'Interface Design & Consultancy',
-      "description": 'I define concept directions, create wireframes and create consistent visual styles to provide a joyful user experience. I do ideation workshops with stakeholders to develop elaborated digital products. I review your product and find potential opportunities of improvement. Together we develop a strategy to develop your product further.'
+      "description": 'I define concept directions, create wireframes and create consistent visual styles to provide a joyful user experience. I do ideation workshops with stakeholders to develop elaborated digital products. I review your product and find potential opportunities of improvement.'
     },
   ],
   "activities": [

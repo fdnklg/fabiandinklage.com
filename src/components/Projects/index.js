@@ -4,14 +4,16 @@ import styled from 'styled-components';
 import { useStoreState } from 'easy-peasy';
 import { Box } from 'rebass/styled-components';
 import Transition from 'react-transition-group/Transition';
-import { opacityFromState } from '~/utils/animation';
+import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import LayoutSwitch from './LayoutSwitch';
 import Grid from './Grid';
 import List from './List';
+import Title from '../Title';
 
 const StyledProjectsWrapper = styled(Box)`
   opacity: ${props => opacityFromState(props.state)};
+  transform: ${props => positionFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
   font-size: ${p => p.theme.fontSizes[1]};
 `;
@@ -34,6 +36,7 @@ const Projects = p => {
     >
       {state => (
         <StyledProjectsWrapper state={state} pb={[4, 5, 5, 6]}>
+          <Title timeout={625} source='Selected Projects' color={color} />
           <LayoutSwitch c={color} />
           {layout == 'Grid' && <Grid data={filtered} />}
           {layout == 'List' && <List color={color} data={filtered} />}

@@ -30,11 +30,11 @@ const Footer = p => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledFlex sx={{mb: ['4','5']}} state={state}>
-          <StyledBox width={1 / 2}>
-            <Label content="©2020, Fabian Dinklage" />
+        <StyledFlex sx={{mb: ['3', '4', '5']}} state={state}>
+          <StyledBox width={[1 / 3, 1 / 2]}>
+            <Label content="©2020, F.D." />
           </StyledBox>
-          <StyledBox sx={{ textAlign: 'end' }} width={1 / 2}>
+          <StyledBox sx={{ textAlign: 'end' }} width={[2 / 3, 1 / 2]}>
             <Link
               mr={[3, 4, 4]}
               sx={{ textDecoration: 'none', color: color[0] }}

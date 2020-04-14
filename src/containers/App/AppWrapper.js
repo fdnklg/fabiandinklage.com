@@ -61,36 +61,39 @@ const AppWrapper = () => {
       <Box
         sx={{
           mx: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
           height: '100vh',
           px: [3, 4, 5, 6],
-          py: [3, 4, 5, 5],
+          pt: [3, 4, 5, 5],
+          pb: [0],
         }}
       > 
         <>
-        <Nav timeout={500} />
+        <Nav timeout={300} />
         <Switch>
           <Route
             exact
             path="/contact"
-            component={() => <Contact timeout={700} />}
+            render={() => <Contact timeout={700} />}
           />
           <Route
             exact
             path="/profile"
-            component={() => <Profile timeout={700} />}
+            render={() => <Profile timeout={700} />}
           />
           <Route
             exact
             path="/legal"
-            component={() => <Legal timeout={700} />}
+            render={() => <Legal timeout={700} />}
           />
           <Route exact path="/" component={Home} />
           <Route exact path="/projects/:projectName" component={Project} />
         </Switch>
-        <Route exact path="/" render={() => <Services content={services} timeout={900} />} />
-        <Route exact path="/" render={() => <Cta timeout={1100} content={cta} />} />
+        <Route exact path="/" render={() => <Services content={services} timeout={700} />} />
+        <Route exact path="/" render={() => <Cta timeout={700} content={cta} />} />
         </>
-        <Footer timeout={1300} />
+        <Footer timeout={900} />
       </Box>
     </StyledWrapper>
   );
