@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
+import history from '../../../history';
 
 import Logo from '~/components/Logo';
 import Label from '~/components/Label';
@@ -12,7 +13,7 @@ import Link from '~/components/Link';
 const StyledFlex = styled(Flex)`
   color: ${p => p.c[0]};
   font-family: ${p => p.theme.fonts.headline};
-  opacity: ${props => opacityFromState(props.state)};
+  opacity: 1;
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
@@ -26,19 +27,18 @@ const StyledLink = styled(Link)`
 
 const Nav = p => {
   const { timeout } = p;
-  const setColor = useStoreActions(actions => actions.color.setColor);
   const color = useStoreState(state => state.color.color);
   return (
-    <Transition
-      in={true}
-      timeout={timeout}
-      appear={true}
-      mountOnEnter={true}
-      unmountOnExit={true}
-    >
-      {state => (
+    // <Transition
+    //   in={true}
+    //   timeout={timeout}
+    //   appear={true}
+    //   mountOnEnter={true}
+    //   unmountOnExit={true}
+    // >
+    //   {state => (
         <StyledFlex
-          state={state}
+          // state={state}
           c={color}
           alignItems="center"
         >
@@ -48,18 +48,18 @@ const Nav = p => {
             href="/"
             fontWeight="bold"
           >
-            <Logo />
-            <Label content="Fabian Dinklage"></Label>
+            <Logo c={color} />
+            <Label c={color} content="Fabian Dinklage"></Label>
           </StyledLink>
-          {/* <Button onClick={setColor}>Surprise me!</Button> */}
           <Box mx="auto" />
           <Link
             sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}
             mr={[3, 3, 4]}
+            c={color}
             variant="nav"
             href="/"
           >
-            <Label content="Projects"></Label>
+            <Label disabled={history.location.pathname !== '/'} content="Projects"></Label>
           </Link>
           <Link
             sx={{ textDecoration: 'none', color: color[0] }}
@@ -67,18 +67,18 @@ const Nav = p => {
             variant="nav"
             href="/profile"
           >
-            <Label content="Profile"></Label>
+            <Label disabled={history.location.pathname !== '/profile'} content="Profile"></Label>
           </Link>
           <Link
             sx={{ textDecoration: 'none', color: color[0] }}
             variant="nav"
             href="/contact"
           >
-            <Label content="Contact"></Label>
+            <Label disabled={history.location.pathname !== '/contact'} content="Contact"></Label>
           </Link>
         </StyledFlex>
-      )}
-    </Transition>
+      /* )}
+    </Transition> */
   );
 };
 

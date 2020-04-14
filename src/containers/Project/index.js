@@ -14,13 +14,16 @@ const StyledParagraph = styled(Paragraph)`
 
 const Project = ({ match }) => {
   const projects = useStoreState(state => state.projects);
-  const color = useStoreState(state => state.color.color);
-  const setColor = useStoreActions(actions => actions.color.setColor);
   const project = projects.filter(p => p.path === match.params.projectName)[0];
+  const setColor = useStoreActions(actions => actions.color.setColor);
+
+  useEffect(() => {
+    setColor(project.color)
+  }, [project])
 
   return (
     <>
-      <Intro timeout={625} data={project} />
+      <Intro color={project.color} timeout={1000} data={project} />
       <Flex
         sx={{ margin: '0 auto' }}
         pb={[4, 5, 6]}
@@ -28,9 +31,9 @@ const Project = ({ match }) => {
         fontSize={[3, 4]}
       >
         <StyledParagraph
-          timeout={750}
+          timeout={1200}
           content={project.description}
-          color={color}
+          color={project.color}
         />
       </Flex>
       <Media data={project.media} />

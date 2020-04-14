@@ -58,7 +58,7 @@ const Services = p => {
                   pr: '40px',
                   mb: ['2', '2','2', '0']
                 }}
-                fontSize={[3, 3, 4, 5]}
+                fontSize={[3, 5, 5, 5]}
               >
                 {tile.title}
               </Text>
@@ -70,7 +70,7 @@ const Services = p => {
                   opacity: .5,
                   letterSpacing: '0.125px'
                 }}
-                fontSize={[3]}
+                fontSize={[3, 4, 4, 4]}
               >
                 {tile.description}
               </Text>

@@ -99,12 +99,12 @@ const StyledButton = styled(Button)`
   cursor: pointer;
   width: fit-content;
   align-self: center;
-  padding-top: 4px;
+  padding-top: 7px;
   margin: 0 10px 10px 0;
   padding-bottom: 10px;
   background: ${p => p.active ? p.c[0] : 'none'};
   border: 1px solid ${p => p.c[0]};
-  font-size: ${p => p.theme.fontSizes[3]};
+  font-size: ${p => p.theme.fontSizes[4]};
   color: ${p => p.active ? p.c[1] : p.c[0] };
   outline: none;
   border-radius: 30px;
@@ -187,11 +187,10 @@ const Cv = p => {
     >
       {state => (
         <>
-          <Title timeout={625} source='Resumé' color={color} />
+          <Title timeout={800} source='Resumé' color={color} />
           <StyledButtonWrapper>
             {filterArr.map(f => {
               const active = filteredTypes.includes(f);
-              console.log(filteredTypes)
               return (
                 <StyledButton
                   active={active}

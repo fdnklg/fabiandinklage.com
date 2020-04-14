@@ -33,7 +33,7 @@ const StyledImg = styled.img`
 const LayoutSwitch = () => {
   const setLayout = useStoreActions(actions => actions.layout.setLayout);
   const color = useStoreState(state => state.color.color);
-  const [active, setActive] = useState('grid');
+  const [active, setActive] = useState('Grid');
 
   const handleClick = selected => {
     setActive(selected);
@@ -46,13 +46,13 @@ const LayoutSwitch = () => {
     color: ${p => p.c[0]};
     width: 25px;
     background: none;
-    opacity: ${p => (p.activeNow === active ? 1 : 0.1)};
+    opacity: ${p => (p.activeNow === p.value ? 1 : 0.5)};
     &:focus {
       outline: 0;
     }
     &:hover {
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 1;
       transition: all ${p => p.theme.times[0]} ease-in-out;
     }
   `;
@@ -68,6 +68,7 @@ const LayoutSwitch = () => {
         return (
           <StyledButton
             activeNow={active}
+            value={btn.value}
             c={color}
             p={0}
             mr={3}

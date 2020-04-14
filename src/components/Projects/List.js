@@ -12,7 +12,7 @@ import Button from '../Button/';
 const StyledListWrapper = styled.div`
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
-  font-size: ${p => p.theme.fontSizes[1]};
+  font-size: ${p => p.theme.fontSizes[3]};
 `;
 
 const StyledTable = styled.table`
@@ -42,10 +42,10 @@ const StyledTR = styled.tr`
   }
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
-    font-size: ${p => p.theme.fontSizes[1]};
+    font-size: ${p => p.theme.fontSizes[4]};
     td {
       padding-right: 15px;
-      font-size: ${p => p.theme.fontSizes[2]};
+      font-size: ${p => p.theme.fontSizes[3]};
     }
   }
 `;
@@ -91,7 +91,7 @@ const StyledTitle = styled.td`
   letter-spacing: 0.5px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
-    font-size: ${p => p.theme.fontSizes[2]};
+    font-size: ${p => p.theme.fontSizes[3]};
     text-align: left;
   }
 
@@ -137,7 +137,6 @@ const List = p => {
           <StyledTable>
             <tbody>
               {sortedByYear.map((p, i) => {
-                console.log(p);
                 const newYear = isNewYear(data, i);
                 const lastItem = lastItemOfYear(data, i);
                 return (

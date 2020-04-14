@@ -48,8 +48,8 @@ const Profile = p => {
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
-            <Title timeout={750} source='About me' color={color} />
-            <Paragraph timeout={750} content={vita} color={color} />
+            <Title timeout={timeout + 200} source='About me' color={color} />
+            <Paragraph timeout={timeout + 200} content={vita} color={color} />
             <br />
             <br />
             <br />
@@ -57,11 +57,11 @@ const Profile = p => {
             <Image
               src={profileUrl}
               alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
-              timeout={1000}
+              timeout={timeout + 400}
             />
             <br />
-            <Title timeout={1000} source='Selected Clients' color={color} />
-            <List timeout={1000} c={color}>
+            <Title timeout={timeout + 400} source='Selected Clients' color={color} />
+            <List timeout={timeout + 400} c={color}>
               <li>Berkmann Klein Center (at) Harvard</li>
               <li>Berliner Morgenpost</li>
               <li>Deutsches Historisches Museum</li>
@@ -72,7 +72,7 @@ const Profile = p => {
               <li>Spiegel Online</li>
             </List>
           </Flex>
-          <Cv timeout={1000} />
+          <Cv timeout={timeout + 400} />
         </StyledFlex>
       )}
     </Transition>

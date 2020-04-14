@@ -23,9 +23,9 @@ const Home = p => {
         width={[1, 4 / 5, 4 / 5, 3 / 4]}
         fontSize={[3, 5, 5, 6]}
       >
-        <Paragraph padding="true" color={color} content={intro} timeout={500} />
+        <Paragraph padding="true" color={color} content={intro} timeout={800} />
       </StyledFlex>
-      <Projects timeout={700} />
+      <Projects timeout={1000} />
     </>
   );
 };

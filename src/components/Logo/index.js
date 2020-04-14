@@ -8,8 +8,8 @@ const StyledSvg = styled.svg`
   width: 100%;
 `;
 
-const Logo = () => {
-  const color = useStoreState(state => state.color.color)[0];
+const Logo = p => {
+  const { c } = p;
   return (
     <Box
       src={LogoSrc}
@@ -29,7 +29,7 @@ const Logo = () => {
             id="avatar"
             transform="translate(-1.000000, 0.000000)"
             fillRule="nonzero"
-            fill={color}
+            fill={c[0]}
           >
             <circle id="eyeR" cx="29" cy="26.8" r="1.6"></circle>
             <path

@@ -9,6 +9,7 @@ import Button from '~/components/Button';
 
 const StyledFlex = styled(Flex)`
   margin: 0 auto;
+  color: ${p => p.c[0]};
   flex-direction: column;
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[0]} ease-in-out;
@@ -16,11 +17,13 @@ const StyledFlex = styled(Flex)`
 
 const StyledText = styled(Text)`
   align-self: center;
+  color: ${p => p.c[0]};
   transition: all ${p => p.theme.times[0]} ease-in-out;
 `;
 
 const StyledA = styled.a`
   padding-top: 20px;
+  color: ${p => p.c[0]};
   align-self: center;
   text-decoration: none;
 `;
@@ -39,13 +42,14 @@ const Cta = props => {
       {state => (
         <StyledFlex
           state={state}
+          c={color}
           pt={0}
           pb={[5, 6, 6, 6]}
           width={[1, 4 / 5, 3 / 4, 2 / 3]}
           fontSize={[3, 4, 4, 5]}
         >
-          <StyledText fontSize={[3, 4, 4, 5]}>{content.text}</StyledText>
-          <StyledA href="mailto:mail@fabiandinklage.com">
+          <StyledText c={color} fontSize={[3, 4, 4, 5]}>{content.text}</StyledText>
+          <StyledA c={color} href="mailto:mail@fabiandinklage.com">
             <Button
               c={color}
               mt={[3, 4, 5]}

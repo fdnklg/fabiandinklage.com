@@ -47,9 +47,9 @@ const Contact = p => {
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
-            <Paragraph padding={false} content={contact} timeout={500} color={color} />
+            <Paragraph padding={false} content={contact} timeout={timeout + 200} color={color} />
             <br />
-            <List c={color}>
+            <List timeout={timeout + 400} c={color}>
               <li>
                 <StyledLink c={color} href="mailto:mail@fabiandinklage.com">
                   mail(at)fabiandinklage.com

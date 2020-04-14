@@ -11,7 +11,6 @@ import { withRouter, Route, Switch } from 'react-router-dom';
 const StyledWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background: ${p => p.c[1]};
   color: ${p => p.c[0]};
   transition: all 0.25s ease-in-out;
 `;
@@ -70,30 +69,30 @@ const AppWrapper = () => {
         }}
       > 
         <>
-        <Nav timeout={300} />
+        <Nav timeout={400} />
         <Switch>
           <Route
             exact
             path="/contact"
-            render={() => <Contact timeout={700} />}
+            render={() => <Contact timeout={800} />}
           />
           <Route
             exact
             path="/profile"
-            render={() => <Profile timeout={700} />}
+            render={() => <Profile timeout={800} />}
           />
           <Route
             exact
             path="/legal"
-            render={() => <Legal timeout={700} />}
+            render={() => <Legal timeout={800} />}
           />
           <Route exact path="/" component={Home} />
           <Route exact path="/projects/:projectName" component={Project} />
         </Switch>
-        <Route exact path="/" render={() => <Services content={services} timeout={700} />} />
-        <Route exact path="/" render={() => <Cta timeout={700} content={cta} />} />
+        <Route exact path="/" render={() => <Services content={services} timeout={800} />} />
+        <Route exact path="/" render={() => <Cta timeout={800} content={cta} />} />
         </>
-        <Footer timeout={900} />
+        <Footer timeout={1000} />
       </Box>
     </StyledWrapper>
   );

@@ -10,12 +10,14 @@ const StyledTitle = styled(ReactMarkdown)`
   transform: ${props => positionFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
   margin-bottom: 15px;
+  min-height: 30px;
   width: fit-content;
+  color: ${p => p.c[0]};
   p {
     margin-bottom: 15px;
     font-family: 'Mier A Bold';
     font-size: ${p => p.theme.fontSizes[2]};
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
   @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
@@ -36,7 +38,7 @@ const StyledTitle = styled(ReactMarkdown)`
 `;
 
 const Title = p => {
-  const { source, timeout } = p;
+  const { source, color, timeout } = p;
   return (
     <Transition
       in={true}
@@ -46,8 +48,8 @@ const Title = p => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledTitle state={state}>{source}</StyledTitle>
-      )}
+        <StyledTitle state={state} c={color}>{source}</StyledTitle>
+       )}
     </Transition>
   )
 }
