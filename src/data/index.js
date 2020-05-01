@@ -606,8 +606,8 @@ export const content = {
         "profileUrl": "public/images/profile____.jpg"
       },
       "cta": {
-        text: 'How could we work together?',
-        btn: "Let me know!",
+        text: 'Haben Sie Interesse?',
+        btn: "Jetzt kontaktieren",
       },
       "contact": "Sind Sie an einer Zusammenarbeit interessiert? Ich freue mich, von Ihnen zu hören. Lassen Sie uns gemeinsam einen Kaffee trinken oder über einen der folgenden Kanäle Kontakt aufnehmen:",
       "exihibitions": [

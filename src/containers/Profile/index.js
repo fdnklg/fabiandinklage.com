@@ -43,13 +43,14 @@ const StyledLi = styled.li`
 
 const Profile = p => {
   const { timeout } = p;
-  const base = useStoreState(state => state.base);
   const color = useStoreState(state => state.color.color);
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const base = useStoreState(state => state.base);
   const about = content[base].about;
   const { intro, profileUrl, vita } = about;
 
-  console.log('about', about)
+  const titleAbout = content[base].title.about;
+  const titleClients = content[base].title.clients;
 
   return (
     <Transition
@@ -67,14 +68,14 @@ const Profile = p => {
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
-            <Title timeout={timeout + 200} source='About me' color={color} />
+            <Title timeout={timeout + 200} source={titleAbout} color={color} />
             <Paragraph timeout={timeout + 200} content={vita} color={color} />
             <Image
               src={profileUrl}
               alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
               timeout={timeout + 400}
             />
-            <Title timeout={timeout + 600} source='Selected Clients' color={color} />
+            <Title timeout={timeout + 600} source={titleClients} color={color} />
             <List timeout={timeout + 600} c={color}>
               <li>Berkmann Klein Center (at) Harvard</li>
               <li>Berliner Morgenpost</li>

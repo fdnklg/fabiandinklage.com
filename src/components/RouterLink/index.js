@@ -18,7 +18,6 @@ const StyledRouterLink = styled(Link)`
 
 const RouterLink = p => {
   const { to, label, color, disabled, children } = p;
-  console.log(disabled, 'disabled')
   return (
     <StyledRouterLink disabled={disabled} color={color[0]} to={to}>{children}</StyledRouterLink>
   )

@@ -47,7 +47,6 @@ const AppWrapper = () => {
   let setIsPrerendering = useStoreActions(actions => actions.layout.setIsPrerendering);
 
   const base = useStoreState(state => state.base);
-  const services = content[base].services;
   const cta = content[base].cta;
 
   const isPrerendering = () => {
@@ -81,7 +80,7 @@ const AppWrapper = () => {
     <StyledWrapper c={color}>
       {base === 'en' && (
         <Helmet>
-          <title>Fabian Dinklage – Data Visualization & Interaction Design</title>
+          <title>Fabian Dinklage – Data Visualization & Interface Design</title>
           <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
           <meta name="description" content="Fabian Dinklage is a freelance data visualization and interaction designer based in Berlin."/>
           <meta lang="en" name="keywords" content="Fabian Dinklage, data visualization, information visualization, visualization, datavis, data vis, data viz, interaction design, interface design, information graphics, data mining, data science, information aesthetics, information design, Berlin,  information architecture" />
@@ -96,17 +95,15 @@ const AppWrapper = () => {
       )}
       {base === 'de' && (
         <Helmet>
-          <title>Fabian Dinklage – Datenvisualisierung & Interface Design</title>
+          <title>Fabian Dinklage – Datenvisualisierung & Interfacedesign</title>
           <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
-          <meta name="description" content="Fabian Dinklage is a freelance data visualization and interaction designer based in Berlin."/>
-          <meta lang="en" name="keywords" content="Fabian Dinklage, data visualization, information visualization, visualization, datavis, data vis, data viz, interaction design, interface design, information graphics, data mining, data science, information aesthetics, information design, Berlin,  information architecture" />
-          <meta lang="de" name="keywords" content="Fabian Dinklage, datenvisualisierung, informationsvisualisierung, datavis, interface design, informationsdesign, informationsarchitektur, datenjournalismus, infografik, Berlin" />
+          <meta name="description" content="Fabian Dinklage ist freiberuflicher Informationsdesigner mit Fokus auf Datenvisualisierung aus Berlin."/>
+          <meta lang="de" name="keywords" content="Fabian Dinklage, datenvisualisierung, informationsvisualisierung, datavis, interface design, informationsdesign, informationsarchitektur, datenjournalismus, infografik, Berlin, Deutschland" />
           <meta http-equiv="content-language" content="en" />
 
           <meta name="twitter:card" content="summary"></meta>
-          <meta name="twitter:title" content="Fabian Dinklage – Data Visualization & Interaction Design"></meta>
-          <meta name="twitter:description" content="Fabian Dinklage is a freelance data visualization and interaction designer based in Berlin." />
-
+          <meta name="twitter:title" content="Fabian Dinklage – Datenvisualisierung & Interfacedesign"></meta>
+          <meta name="twitter:description" content="Fabian Dinklage ist freiberuflicher Informationsdesigner mit Fokus auf Datenvisualisierung aus Berlin." />
         </Helmet>
       )}
       <DynamicGlobalStyle />
@@ -122,26 +119,26 @@ const AppWrapper = () => {
         }}
       > 
         <InnerWrapper>
-          <Nav timeout={400} />
+          <Nav timeout={200} />
           <Route
             exact
             path={`/contact/${baseLang}`}
-            render={() => <Contact timeout={800} />}
+            render={() => <Contact timeout={500} />}
           />
           <Route
             exact
             path={`/profile/${baseLang}`}
-            render={() => <Profile timeout={800} />}
+            render={() => <Profile timeout={500} />}
           />
           <Route
             exact
             path={`/legal/${baseLang}`}
-            render={() => <Legal timeout={800} />}
+            render={() => <Legal timeout={500} />}
           />
           <Route exact path={`/home/${baseLang}`} component={Home} />
           <Route exact path={`/projects/:projectName/${baseLang}/`} component={Project} />
-          <Route exact path={`/home/${baseLang}/`} render={() => <Services content={services} timeout={1200} />} />
-          <Route exact path={`/home/${baseLang}/`} render={() => <Cta timeout={1400} content={cta} />} />
+          <Route exact path={`/home/${baseLang}/`} render={() => <Services timeout={900} />} />
+          <Route exact path={`/home/${baseLang}/`} render={() => <Cta timeout={1200} />} />
           <Footer timeout={1000} />
         </InnerWrapper>
       </Box>

@@ -6,6 +6,7 @@ import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Button from '~/components/Button';
+import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
   margin: 0 auto;
@@ -45,9 +46,11 @@ const StyledA = styled.a`
 `;
 
 const Cta = props => {
-  const { content, timeout } = props;
+  const { timeout } = props;
   const color = useStoreState(state => state.color.color);
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const base = useStoreState(state => state.base);
+  const cta = content[base].cta;
   return (
     <Transition
       in={true}
@@ -67,7 +70,7 @@ const Cta = props => {
           width={[1, 4 / 5, 3 / 4, 2 / 3]}
           fontSize={[3, 4, 4, 5]}
         >
-          <StyledText c={color} fontSize={[3, 4, 4, 5]}>{content.text}</StyledText>
+          <StyledText c={color} fontSize={[3, 4, 4, 5]}>{cta.text}</StyledText>
           <StyledA c={color} href="mailto:mail@fabiandinklage.com">
             <Button
               c={color}
@@ -76,7 +79,7 @@ const Cta = props => {
               py={2}
               fontSize={[2, 3, 3, 3]}
             >
-              {content.btn}
+              {cta.btn}
             </Button>
           </StyledA>
         </StyledFlex>

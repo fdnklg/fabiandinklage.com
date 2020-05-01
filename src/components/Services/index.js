@@ -7,6 +7,7 @@ import { Box, Flex, Text } from 'rebass/styled-components';
 import Transition from 'react-transition-group/Transition';
 
 import Title from '../Title/';
+import { content } from '~/data'
 
 const StyledBox = styled(Box)`
   opacity: ${props => {
@@ -30,9 +31,12 @@ const StyledBox = styled(Box)`
 `;
 
 const Services = p => {
-  const { content, timeout } = p;
+  const { timeout } = p;
   const color = useStoreState(state => state.color.color);
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const base = useStoreState(state => state.base);
+  const services = content[base].services;
+  const title = content[base].title.services;
 
   return (
     <Transition
@@ -54,8 +58,8 @@ const Services = p => {
             px: ['0%', '0%', '6%', '8%']
           }}
         >
-          <Title timeout={timeout} source='Services' color={color} />
-          {content.map((tile,i) => (
+          <Title timeout={timeout} source={title} color={color} />
+          {services.map((tile,i) => (
             <Flex
               sx={{
                 alignItems: 'center',

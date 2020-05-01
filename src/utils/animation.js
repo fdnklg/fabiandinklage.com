@@ -28,6 +28,21 @@ export const positionFromState = state => {
   }
 };
 
+export const positionTopFromState = state => {
+  switch (state) {
+    case 'entering':
+      return 'translateY(-20px)';
+    case 'entered':
+      return 'translateY(0px)';
+    case 'exiting':
+      return 'translateY(-20px)';
+    case 'exited':
+      return 'translateY(-20px)';
+    default:
+      return 'translateY(-20px)';
+  }
+};
+
 export const displayFromState = state => {
   switch (state) {
     case 'entering':

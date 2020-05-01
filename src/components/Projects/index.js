@@ -42,6 +42,7 @@ const Projects = p => {
 
   const base = useStoreState(state => state.base);
   const projects = content[base].projects;
+  const title = content[base].title.projects;
 
   const filtered = projects.filter(p => p.visible);
 
@@ -55,7 +56,7 @@ const Projects = p => {
     >
       {state => (
         <StyledProjectsWrapper isPrerendering={isPrerendering} state={state} pb={[4, 5, 5, 6]}>
-          <Title timeout={625} source='Selected Projects' color={color} />
+          <Title timeout={625} source={title} color={color} />
           <LayoutSwitch c={color} />
           {layout == 'Grid' && <Grid data={filtered} />}
           {layout == 'List' && <List color={color} data={filtered} />}
