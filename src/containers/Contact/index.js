@@ -6,7 +6,7 @@ import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Flex from '~/components/Flex';
-import List from '~/components/List';
+import Form from '~/components/Form';
 import Link from '~/components/Link';
 import Paragraph from '~/components/Paragraph';
 import { content } from '~/data/'
@@ -66,18 +66,7 @@ const Contact = p => {
           >
             <Paragraph paddingBottom={true} padding={false} content={contact} timeout={timeout + 200} color={color} />
 
-            <List timeout={timeout + 400} c={color}>
-              <li>
-                <StyledLink c={color} href="mailto:mail@fabiandinklage.com">
-                  mail(at)fabiandinklage.com
-                </StyledLink>
-              </li>
-              <li>
-                <StyledLink c={color} href="https://twitter.com/fdnklg">
-                  @fdnklg
-                </StyledLink>
-              </li>
-            </List>
+            <Form />
           </Flex>
         </StyledFlex>
       )}

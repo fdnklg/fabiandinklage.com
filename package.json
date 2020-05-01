@@ -81,6 +81,7 @@
     "@babel/polyfill": "^7.8.7",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@rebass/preset": "^4.0.5",
+    "axios": "^0.19.2",
     "core-js": "^3.6.0",
     "easy-peasy": "^3.2.3",
     "es6-promise-promise": "^1.0.0",

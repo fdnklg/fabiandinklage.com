@@ -10,6 +10,13 @@ export const content = {
       photos: 'Photos',
       twitter: 'Follow me',
     },
+    "form": {
+      "message": "Your message",
+      "name": "Your name here",
+      "mail": "Your E-Mail",
+      "btnSend": "Send Message",
+      "btnSuccess": "Message sended!",
+    },
     title: {
       projects: 'selected projects',
       services: 'services',
@@ -587,6 +594,13 @@ export const content = {
       projects: 'Projekte',
       profile: 'Profil',
       contact: 'Kontakt',
+    },
+    "form": {
+      "message": "Deine Nachricht",
+      "name": "Dein Name",
+      "mail": "Deine E-Mail",
+      "btnSend": "Nachricht senden",
+      "btnSuccess": "Nachricht gesendet",
     },
     "footer": {
       legal: 'Impressum',
