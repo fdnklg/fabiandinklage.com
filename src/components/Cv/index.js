@@ -4,17 +4,15 @@ import styled from 'styled-components';
 import { useStoreState } from 'easy-peasy';
 import { Box, Text, Image, Button } from 'rebass/styled-components';
 import Transition from 'react-transition-group/Transition';
-import { opacityFromState } from '~/utils/animation';
+import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import List from '~/components/List';
 import Flex from '~/components/Flex';
 import Title from '~/components/Title';
 import Paragraph from '~/components/Paragraph';
+import { content } from '~/data';
 
-const StyledBox = styled(Box)`
-  opacity: ${props => opacityFromState(props.state)};
-  transition: all ${p => p.theme.times[1]} ease-in-out;
-`;
+const StyledBox = styled(Box)``;
 
 const StyledParagraphSmall = styled(ReactMarkdown)`
   letter-spacing: .25px;
@@ -48,7 +46,7 @@ const StyledParagraph = styled(ReactMarkdown)`
 
   p {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   a {
@@ -129,20 +127,44 @@ const StyledList = styled(List)`
 
 const StyledButtonWrapper = styled.div`
   padding-bottom: 40px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
+  @media screen and (max-width: ${p => p.theme.sizes.mobile}) {
     padding-bottom: 20px;
-    margin: initial;
+    justify-content: flex-start;
   }
+`;
+
+const CvWrapper = styled.div`
+  opacity: ${props => {
+    if (props.isPrerendering) {
+      return 0
+    } else {
+      return opacityFromState(props.state)
+    }
+  }};
+
+  transform: ${props => {
+    if (props.isPrerendering) {
+      return 'translateY(10px)'
+    } else {
+      return positionFromState(props.state)
+    }
+  }};
+
+  transition: all ${p => p.theme.times[0]} ease-in-out;
 `;
 
 
 const Cv = p => {
   const { timeout } = p;
-  const activities = useStoreState(state => state.activities);
+  const base = useStoreState(state => state.base);
+  const activities = content[base].activities;
   const [ filteredActivities, setFilteredActivities ] = useState(activities);
   const color = useStoreState(state => state.color.color);
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   const [filteredTypes, setFilteredTypes] = useState(['Experience']);
 
   let filterArr = [];
@@ -153,7 +175,6 @@ const Cv = p => {
   })
 
   useEffect(() => {
-
     let filtered = activities.filter(activity => {
       return filteredTypes.includes(activity.type)
     });
@@ -176,7 +197,6 @@ const Cv = p => {
     setFilteredTypes([value]);
   }
 
-
   return (
     <Transition
       in={true}
@@ -186,8 +206,8 @@ const Cv = p => {
       unmountOnExit={true}
     >
       {state => (
-        <>
-          <Title timeout={800} source='Resumé' color={color} />
+        <CvWrapper state={state} isPrerendering={isPrerendering}>
+          <Title timeout={timeout} source='Resumé' color={color} />
           <StyledButtonWrapper>
             {filterArr.map(f => {
               const active = filteredTypes.includes(f);
@@ -203,11 +223,10 @@ const Cv = p => {
             })}
           </StyledButtonWrapper>
           <StyledBox
-            state={state}
             sx={{
               display: 'grid',
-              gridGap: [2,3,4,5],
-              mb: ['40px', '120px'],
+              gridGap: [2,3,4,3],
+              mb: ['40px', '100px'],
               gridTemplateColumns: [
                 'repeat(auto-fit, minmax(300px, 1fr))',
               ],
@@ -237,7 +256,7 @@ const Cv = p => {
               );
             })}
           </StyledBox>
-        </>
+        </CvWrapper>
       )}
     </Transition>
   );

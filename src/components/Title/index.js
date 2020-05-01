@@ -1,13 +1,27 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+import { useStoreState } from 'easy-peasy';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 import Transition from 'react-transition-group/Transition';
 
 const StyledTitle = styled(ReactMarkdown)`
   margin: 0 auto;
-  opacity: ${props => opacityFromState(props.state)};
-  transform: ${props => positionFromState(props.state)};
+  opacity: ${props => {
+    if (props.isPrerendering) {
+      return 0
+    } else {
+      return opacityFromState(props.state)
+    }
+  }};
+
+  transform: ${props => {
+    if (props.isPrerendering) {
+      return 'translateY(10px)'
+    } else {
+      return positionFromState(props.state)
+    }
+  }};
   transition: all ${p => p.theme.times[1]} ease-in-out;
   margin-bottom: 15px;
   min-height: 30px;
@@ -39,6 +53,7 @@ const StyledTitle = styled(ReactMarkdown)`
 
 const Title = p => {
   const { source, color, timeout } = p;
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   return (
     <Transition
       in={true}
@@ -48,7 +63,7 @@ const Title = p => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledTitle state={state} c={color}>{source}</StyledTitle>
+        <StyledTitle isPrerendering={isPrerendering} state={state} c={color}>{source}</StyledTitle>
        )}
     </Transition>
   )

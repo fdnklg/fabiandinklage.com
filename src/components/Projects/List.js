@@ -2,12 +2,13 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
-import { Link } from 'rebass/styled-components';
-import { compare, colorMode } from '~/utils';
+import { Box } from 'rebass/styled-components';
+import { compare } from '~/utils';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 
 import Button from '../Button/';
+import RouterLink from '../RouterLink/';
 
 const StyledListWrapper = styled.div`
   opacity: ${props => opacityFromState(props.state)};
@@ -121,6 +122,7 @@ const List = p => {
   const { data } = p;
   const colorDefault = useStoreState(state => state.color.default);
   const color = useStoreState(state => state.color.color);
+  const base = useStoreState(state => state.base);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
 
@@ -148,15 +150,16 @@ const List = p => {
                     key={`tr-${i}`}
                   >
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <Link
-                      onMouseOver={() => setColor(colorMode(p.color))}
+                    <RouterLink color={color} to={`/projects/${p.path}/${base}`}>
+                    <Box
+                      onMouseOver={() => setColor(p.color)}
                       onMouseOut={() => setColor(colorDefault)}
                       sx={{ textDecoration: 'none', color: color[0] }}
                       variant="nav"
-                      href={`projects/${p.path}`}
                     >
                       <StyledTitle>{p.title}</StyledTitle>
-                    </Link>
+                    </Box>
+                    </RouterLink>
                     <StyledTDType type="last">{p.type}</StyledTDType>
                     <StyledTDButton type="last">
                       <Button

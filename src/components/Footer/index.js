@@ -5,6 +5,7 @@ import { Flex, Box } from 'rebass/styled-components';
 import { useStoreState } from 'easy-peasy';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
+import { content } from '~/data';
 
 import Label from '~/components/Label';
 import Link from '~/components/Link';
@@ -19,8 +20,10 @@ const StyledFlex = styled(Flex)`
 `;
 
 const Footer = p => {
-  const { content, timeout } = p;
+  const { timeout } = p;
   const color = useStoreState(state => state.color.color);
+  const base = useStoreState(state => state.base);
+  const footer = content[base].footer;
   return (
     <Transition
       in={true}
@@ -30,18 +33,18 @@ const Footer = p => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledFlex sx={{mb: ['3', '4', '5']}} state={state}>
+        <StyledFlex sx={{pb: ['3', '4', '5']}} state={state}>
           <StyledBox width={[1 / 3, 1 / 2]}>
             <Label content="©2020, F.D." />
           </StyledBox>
-          <StyledBox sx={{ textAlign: 'end' }} width={[2 / 3, 1 / 2]}>
+          <StyledBox sx={{ textAlign: 'right' }} width={[2 / 3, 1 / 2]}>
             <Link
               mr={[3, 4, 4]}
               sx={{ textDecoration: 'none', color: color[0] }}
               variant="nav"
-              href="/legal"
+              href={`/legal/${base}`}
             >
-              Legal Note
+              {footer.legal}
             </Link>
             <Link
               mr={[3, 4, 4]}
@@ -49,7 +52,7 @@ const Footer = p => {
               variant="nav"
               href="https://photos.fabiandinklage.com"
             >
-              Photos
+              {footer.photos}
             </Link>
             <Link
               // mr={[3, 4, 4]}
@@ -57,7 +60,7 @@ const Footer = p => {
               variant="nav"
               href="https://twitter.com/fdnklg"
             >
-              Follow me
+              {footer.twitter}
             </Link>
           </StyledBox>
         </StyledFlex>

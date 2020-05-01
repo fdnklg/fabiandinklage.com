@@ -1,21 +1,27 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect } from 'react';
 import { Router, Route, Redirect, Switch } from 'react-router-dom';
 import history from '../../../history';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 import AppWrapper from './AppWrapper';
 
-const NotFoundRoute = () => <Redirect to="/" />;
+const language = navigator.language.split(/[-_]/)[0];
+const base = '/:(en|de)?';
 
-class App extends PureComponent {
-  render() {
-    return (
-      <Router history={history}>
-        <Switch>
-          <Route path={['/', 'profile']} component={AppWrapper} />
-          <Route component={NotFoundRoute} />
-        </Switch>
-      </Router>
-    );
-  }
+
+const App = p => {
+  var userLang = navigator.language || navigator.userLanguage;
+  const setBase = useStoreActions(actions => actions.setBase);
+  const base = useStoreState(state => state.base);
+
+  const NotFoundRoute = () => <Redirect to={`/home/${base}`} />;
+  return (
+    <Router history={history}>
+      <Switch>
+        <Route path={['/']} component={AppWrapper} />
+        <Route component={NotFoundRoute} />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;

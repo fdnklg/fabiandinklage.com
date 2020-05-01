@@ -1,3 +1,3 @@
-const routes = ['/', '/contact', '/projects/:slug'];
+const routes = ['/en/home', '/de/home' '/en/contact', '/de/contact', '/projects/:slug'];
 
 export default routes;

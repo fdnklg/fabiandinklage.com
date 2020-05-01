@@ -9,9 +9,23 @@ import Label from '~/components/Label';
 import Button from '~/components/Button';
 
 const StyledWrapper = styled.div`
-  opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
-  transform: ${props => positionFromState(props.state)};
+
+    opacity: ${props => {
+    if (props.isPrerendering) {
+      return 0
+    } else {
+      return opacityFromState(props.state)
+    }
+  }};
+
+  transform: ${props => {
+    if (props.isPrerendering) {
+      return 'translateY(10px)'
+    } else {
+      return positionFromState(props.state)
+    }
+  }};
 `;
 
 const StyledFlex = styled(Flex)`
@@ -50,6 +64,7 @@ const StyledLabelBold = styled.span`
 const Intro = props => {
   const { data, timeout, color } = props;
   const { title, subtitle, year, tasks, client, url } = data;
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
 
   return (
     <Transition
@@ -60,7 +75,7 @@ const Intro = props => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledWrapper state={state}>
+        <StyledWrapper state={state} isPrerendering={isPrerendering}>
           <StyledFlex maxWidth={[1200, 900]} pb={[3, 3, 3, 4]} pt={[4,5,5, 6]}>
             <StyledTitle
               pr={[4]}

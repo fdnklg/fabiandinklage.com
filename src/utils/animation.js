@@ -5,7 +5,7 @@ export const opacityFromState = state => {
     case 'entered':
       return 1;
     case 'exiting':
-      return 0;
+      return .5;
     case 'exited':
       return 0;
     default:
@@ -28,7 +28,23 @@ export const positionFromState = state => {
   }
 };
 
+export const displayFromState = state => {
+  switch (state) {
+    case 'entering':
+      return 'block';
+    case 'entered':
+      return 'block';
+    case 'exiting':
+      return 'none';
+    case 'exited':
+      return 'none';
+    default:
+      return 'none';
+  }
+};
+
 export default {
   opacityFromState,
-  positionFromState
+  positionFromState,
+  displayFromState
 };

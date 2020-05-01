@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
-import { colorMode } from '~/utils';
 import { Box, Text, Image } from 'rebass/styled-components';
 import { CSSTransition } from 'react-transition-group';
 import ProgressiveImage from 'react-progressive-image';
@@ -13,6 +12,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import Label from '~/components/Label';
 import Link from '~/components/Link';
+import RouterLink from '~/components/RouterLink';
 
 const StyledGridWrapper = styled.div`
   font-size: ${p => p.theme.fontSizes[1]};
@@ -85,6 +85,7 @@ const StyledThumbBox = styled(Box)`
 const Grid = p => {
   const { data } = p;
   const color = useStoreState(state => state.color.color);
+  const base = useStoreState(state => state.base);
   const colorDefault = useStoreState(state => state.color.default);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
@@ -122,12 +123,14 @@ const Grid = p => {
   }
 
   useEffect(() => {
-    handleResize(observed.offsetWidth)
-    window.addEventListener('resize', () => handleResize(observed.offsetWidth))
+    if (observed) {
+      handleResize(observed.offsetWidth)
+      window.addEventListener('resize', () => handleResize(observed.offsetWidth))
+    }
   }, [observed, activeIndex]);
 
   const handleMouseOver = (color, index) => {
-    setColor(colorMode(color))
+    setColor(color)
     setActiveIndex(index);
   }
 
@@ -176,7 +179,8 @@ const Grid = p => {
         >
           {data.map((p, i) => {
             return (
-              <StyledLink
+              <RouterLink color={color} to={`/projects/${p.path}/${base}`}>
+              <Box
                 onMouseOver={() => handleMouseOver(p.color, i)}
                 onMouseOut={() => {
                   setColor(colorDefault);
@@ -185,7 +189,7 @@ const Grid = p => {
                 sx={{ textDecoration: 'none' }}
                 key={`griditem-key-${i}`}
                 variant="nav"
-                href={`projects/${p.path}`}
+                href={`projects/${p.path}/${base}`}
               >
                 <StyledThumbBox
                   className="thumb-box"
@@ -233,7 +237,8 @@ const Grid = p => {
                   <b>{p.title}: </b>
                   <cite>{p.subtitle}</cite>
                 </StyledText>
-              </StyledLink>
+              </Box>
+              </RouterLink>
             );
           })}
         </StyledBox>

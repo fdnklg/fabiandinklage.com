@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import Transition from 'react-transition-group/Transition';
-import { opacityFromState } from '~/utils/animation';
+import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Paragraph from '~/components/Paragraph';
 import Flex from '~/components/Flex';
@@ -11,10 +11,25 @@ import Image from '~/components/Image';
 import Cv from '~/components/Cv';
 import Title from '~/components/Title';
 
-
+import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
-  opacity: ${props => opacityFromState(props.state)};
+  opacity: ${props => {
+    if (props.isPrerendering) {
+      return 0
+    } else {
+      return opacityFromState(props.state)
+    }
+  }};
+
+  transform: ${props => {
+    if (props.isPrerendering) {
+      return 'translateY(10px)'
+    } else {
+      return positionFromState(props.state)
+    }
+  }};
+  width: 100%;
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
@@ -28,9 +43,13 @@ const StyledLi = styled.li`
 
 const Profile = p => {
   const { timeout } = p;
-  const about = useStoreState(state => state.about);
+  const base = useStoreState(state => state.base);
   const color = useStoreState(state => state.color.color);
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const about = content[base].about;
   const { intro, profileUrl, vita } = about;
+
+  console.log('about', about)
 
   return (
     <Transition
@@ -41,7 +60,7 @@ const Profile = p => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledFlex state={state}>
+        <StyledFlex state={state} isPrerendering={isPrerendering}>
           <Flex
             sx={{ textAlign: ['left', 'left', 'center'] }}
             py={[4, 5, 5, 6]}
@@ -50,18 +69,13 @@ const Profile = p => {
           >
             <Title timeout={timeout + 200} source='About me' color={color} />
             <Paragraph timeout={timeout + 200} content={vita} color={color} />
-            <br />
-            <br />
-            <br />
-            <br />
             <Image
               src={profileUrl}
               alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
               timeout={timeout + 400}
             />
-            <br />
-            <Title timeout={timeout + 400} source='Selected Clients' color={color} />
-            <List timeout={timeout + 400} c={color}>
+            <Title timeout={timeout + 600} source='Selected Clients' color={color} />
+            <List timeout={timeout + 600} c={color}>
               <li>Berkmann Klein Center (at) Harvard</li>
               <li>Berliner Morgenpost</li>
               <li>Deutsches Historisches Museum</li>
@@ -72,7 +86,7 @@ const Profile = p => {
               <li>Spiegel Online</li>
             </List>
           </Flex>
-          <Cv timeout={timeout + 400} />
+          <Cv timeout={timeout + 800} />
         </StyledFlex>
       )}
     </Transition>

@@ -1,14 +1,17 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 import history from '../../../history';
+import { getPosition } from '../../utils';
 
 import Logo from '~/components/Logo';
 import Label from '~/components/Label';
 import Link from '~/components/Link';
+import RouterLink from '~/components/RouterLink';
+import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
   color: ${p => p.c[0]};
@@ -17,68 +20,92 @@ const StyledFlex = styled(Flex)`
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLabel = styled.span`
   @media (max-width: ${p => p.theme.sizes.mobile}) {
-    div:last-of-type {
-      display: none;
-    }
+    display: none;
   }
 `;
 
+const StyledLanguageSwitch = styled.span``;
+
 const Nav = p => {
   const { timeout } = p;
+  const setBase = useStoreActions(actions => actions.setBase);
+  const base = useStoreState(state => state.base);
+  const navContent = content[base].nav;
   const color = useStoreState(state => state.color.color);
+
+  const handleLanguage = () => {
+    setBase();
+  };
+
+  useEffect(() => {
+    const location = history.location.pathname;
+    const pos = getPosition(history.location.pathname, '/', -1);
+    const newLocation = location.slice(0, pos - 3) + '/' + base;
+    history.push(newLocation);
+  }, [base]);
+
   return (
-    // <Transition
-    //   in={true}
-    //   timeout={timeout}
-    //   appear={true}
-    //   mountOnEnter={true}
-    //   unmountOnExit={true}
-    // >
-    //   {state => (
-        <StyledFlex
-          // state={state}
-          c={color}
-          alignItems="center"
+    <StyledFlex c={color} alignItems="center">
+      <Box
+        sx={{ flexDirection: 'row', display: 'flex', alignItems: 'center' }}
+        ml={2}
+      >
+        <RouterLink color={color} to={`/home/${base}`}>
+        <Flex sx={{ alignItems: 'center' }}>
+          <Logo c={color} />
+          <StyledLabel>Fabian Dinklage</StyledLabel>
+        </Flex>
+        </RouterLink>
+      </Box>
+      <Box mx="auto" />
+      <Box
+        sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}
+        mr={[3, 3, 4]}
+        c={color}
+        variant="nav"
+      >
+        <RouterLink
+          disabled={history.location.pathname !== `/home/${base}`}
+          color={color}
+          to={`/home/${base}`}
         >
-          <StyledLink
-            sx={{ flexDirection: 'row', display: 'flex', alignItems: 'center' }}
-            ml={2}
-            href="/"
-            fontWeight="bold"
-          >
-            <Logo c={color} />
-            <Label c={color} content="Fabian Dinklage"></Label>
-          </StyledLink>
-          <Box mx="auto" />
-          <Link
-            sx={{ textDecoration: 'none', color: color[0], cursor: 'pointer' }}
-            mr={[3, 3, 4]}
-            c={color}
-            variant="nav"
-            href="/"
-          >
-            <Label disabled={history.location.pathname !== '/'} content="Projects"></Label>
-          </Link>
-          <Link
-            sx={{ textDecoration: 'none', color: color[0] }}
-            mr={[3, 3, 4]}
-            variant="nav"
-            href="/profile"
-          >
-            <Label disabled={history.location.pathname !== '/profile'} content="Profile"></Label>
-          </Link>
-          <Link
-            sx={{ textDecoration: 'none', color: color[0] }}
-            variant="nav"
-            href="/contact"
-          >
-            <Label disabled={history.location.pathname !== '/contact'} content="Contact"></Label>
-          </Link>
-        </StyledFlex>
-      /* )}
-    </Transition> */
+          {navContent.projects}
+        </RouterLink>
+      </Box>
+      <Box
+        sx={{ textDecoration: 'none', color: color[0] }}
+        mr={[3, 3, 4]}
+        variant="nav"
+        href={`/profile/${base}`}
+      >
+        <RouterLink
+          disabled={history.location.pathname !== `/profile/${base}`}
+          color={color}
+          to={`/profile/${base}`}
+        >
+          {navContent.profile}
+        </RouterLink>
+      </Box>
+      <Box
+        sx={{ textDecoration: 'none', color: color[0] }}
+        variant="nav"
+        mr={[3, 3, 4]}
+        href={`/contact/${base}`}
+      >
+        <RouterLink
+          disabled={history.location.pathname !== `/contact/${base}`}
+          color={color}
+          to={`/contact/${base}`}
+        >
+          {navContent.contact}
+        </RouterLink>
+      </Box>
+      <StyledLanguageSwitch onClick={() => handleLanguage()}>
+        {base === 'en' ? 'DE' : 'EN'}
+      </StyledLanguageSwitch>
+    </StyledFlex>
   );
 };
 

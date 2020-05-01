@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState } from 'easy-peasy';
 import { Flex } from 'rebass/styled-components';
+import { content } from '~/data/';
 
 import Paragraph from '~/components/Paragraph';
 import Projects from '~/components/Projects';
@@ -12,8 +13,9 @@ const StyledFlex = styled(Flex)`
 `;
 
 const Home = p => {
-  const intro = useStoreState(actions => actions.about.intro);
   const color = useStoreState(state => state.color.color);
+  const base = useStoreState(state => state.base);
+  const intro = content[base].about.intro;
 
   return (
     <>
@@ -23,7 +25,12 @@ const Home = p => {
         width={[1, 4 / 5, 4 / 5, 3 / 4]}
         fontSize={[3, 5, 5, 6]}
       >
-        <Paragraph padding="true" color={color} content={intro} timeout={800} />
+        <Paragraph
+          paddingTop={true}
+          color={color}
+          content={intro}
+          timeout={800}
+        />
       </StyledFlex>
       <Projects timeout={1000} />
     </>

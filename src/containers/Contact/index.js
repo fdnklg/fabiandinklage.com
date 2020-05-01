@@ -9,10 +9,24 @@ import Flex from '~/components/Flex';
 import List from '~/components/List';
 import Link from '~/components/Link';
 import Paragraph from '~/components/Paragraph';
+import { content } from '~/data/'
 
 const StyledFlex = styled(Flex)`
-  opacity: ${props => opacityFromState(props.state)};
-  transform: ${props => positionFromState(props.state)};
+  opacity: ${props => {
+    if (props.isPrerendering) {
+      return 0;
+    } else {
+      return opacityFromState(props.state);
+    }
+  }};
+
+  transform: ${props => {
+    if (props.isPrerendering) {
+      return 'translateY(10px)';
+    } else {
+      return positionFromState(props.state);
+    }
+  }};
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
@@ -25,8 +39,10 @@ const StyledLink = styled(Link)`
 
 const Contact = p => {
   const { timeout } = p;
-  const contact = useStoreState(state => state.contact);
+  const base = useStoreState(state => state.base);
+  const contact = content[base].contact;
   const color = useStoreState(state => state.color.color);
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   return (
     <Transition
       in={true}
@@ -38,7 +54,8 @@ const Contact = p => {
       {state => (
         <StyledFlex
           state={state}
-          sx={{ textAlign: 'left', lineHeight: '1.5', flexGrow: '1', display: 'flex', justifyContent: 'center' }}
+          isPrerendering={isPrerendering}
+          sx={{ textAlign: 'left', lineHeight: '1.5', flexGrow: '1', display: 'flex', pt: ['32px', '0px', '0px'], justifyContent: ['flex-start', 'center', 'center'] }}
           width={[1, 4 / 5, 4 / 5, 3 / 4]}
           fontSize={[3, 4, 4, 4]}
         >
@@ -47,8 +64,8 @@ const Contact = p => {
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
-            <Paragraph padding={false} content={contact} timeout={timeout + 200} color={color} />
-            <br />
+            <Paragraph paddingBottom={true} padding={false} content={contact} timeout={timeout + 200} color={color} />
+
             <List timeout={timeout + 400} c={color}>
               <li>
                 <StyledLink c={color} href="mailto:mail@fabiandinklage.com">

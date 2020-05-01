@@ -4,6 +4,8 @@ import styledNormalize from 'styled-normalize';
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
 
+  /* autoprefixer grid: autoplace */
+
   * {
     box-sizing: border-box;
   }

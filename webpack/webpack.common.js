@@ -29,6 +29,9 @@ module.exports = {
     new Webpack.ProvidePlugin({
       config: '~/../config.json'
     }),
+    new Webpack.ProvidePlugin({
+    Promise: 'es6-promise-promise',
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: Path.resolve(__dirname, '../src/index.html'),

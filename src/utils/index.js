@@ -14,17 +14,27 @@ export const compare = (a, b) => {
   return 0;
 };
 
-export const colorMode = arr => {
-  const now = new Date().getHours();
-  if (now < 6 || now >= 20) {
-    return [arr[1], arr[0]];
-  } else {
-    return arr;
-  }
-};
+export function getPosition(string, subString, index) {
+  return string.split(subString, index).join(subString).length;
+}
+
+export const piwik = (_paq) => {
+  const u = "https://matomo.fabiandinklage.com/matomo/";
+  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  _paq.push(['setSiteId', '1']);
+  let d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.type='text/javascript'; 
+  g.async=true; 
+  g.defer=true; 
+  g.src=u+'matomo.js'; 
+  s.parentNode.insertBefore(g,s);
+
+  return _paq;
+}
 
 export default {
   getRandomInt,
+  getPosition,
   compare,
-  colorMode,
+  piwik
 };

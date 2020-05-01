@@ -1,5 +1,8 @@
 # fabiandinklage.com
 
+
+> Note: Add all to be `included` routes into the `package.json` to be sure that react.snap will pre-render.
+
 ## Installation
 
 ```sh
