@@ -14,7 +14,7 @@ import RouterLink from '~/components/RouterLink';
 import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
-  font-weight: bold;
+  font-family: ${p => p.theme.fonts.headline};
   opacity: ${props => {
     if (props.isPrerendering) {
       return 0
@@ -76,6 +76,8 @@ const Nav = p => {
     const pos = getPosition(history.location.pathname, '/', -1);
     const newLocation = location.slice(0, pos - 3) + '/' + base;
     history.push(newLocation);
+
+    console.log(!history.location.pathname.includes('projects'));
   }, [base]);
 
   return (
@@ -113,7 +115,7 @@ const Nav = p => {
             variant="nav"
           >
             <RouterLink
-              disabled={history.location.pathname !== `/home/${base}`}
+              disabled={!history.location.pathname.includes('projects')}
               color={color}
               to={`/home/${base}`}
             >

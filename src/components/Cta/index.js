@@ -6,10 +6,12 @@ import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Button from '~/components/Button';
+import RouterLink from '~/components/RouterLink';
 import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
   margin: 0 auto;
+  justify-content: center;
   color: ${p => p.c[0]};
   flex-direction: column;
 
@@ -71,7 +73,7 @@ const Cta = props => {
           fontSize={[3, 4, 4, 5]}
         >
           <StyledText c={color} fontSize={[3, 4, 4, 5]}>{cta.text}</StyledText>
-          <StyledA c={color} href="mailto:mail@fabiandinklage.com">
+          <RouterLink marginTop={'30px'} color={color} to={`/contact/${base}`}>
             <Button
               c={color}
               mt={[3, 4, 5]}
@@ -81,7 +83,7 @@ const Cta = props => {
             >
               {cta.btn}
             </Button>
-          </StyledA>
+          </RouterLink>
         </StyledFlex>
       )}
     </Transition>

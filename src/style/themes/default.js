@@ -12,6 +12,7 @@ const defaultTheme = {
     text: '#000',
     background: '#fff',
     primary: 'lighten(10, #121337)',
+    primaryLight: '#E6E6EA',
     secondary: '#30c',
     muted: '#f6f6f9',
     gray: '#dddddf',

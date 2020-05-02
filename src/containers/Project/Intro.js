@@ -43,6 +43,7 @@ const StyledTitle = styled(Box)`
   font-family: ${p => p.theme.fonts.headline};
   line-height: 110%;
   color: ${p => p.c[0]};
+
 `;
 
 const StyledLabel = styled.span`
@@ -80,7 +81,7 @@ const Intro = props => {
             <StyledTitle
               pr={[4]}
               c={color}
-              fontSize={[6, 6, 8]}
+              fontSize={[6, 6, 7]}
               mb={[3]}
               width={[1, 1, 4 / 8]}
             >

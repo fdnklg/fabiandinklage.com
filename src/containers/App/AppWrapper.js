@@ -119,21 +119,21 @@ const AppWrapper = () => {
         }}
       > 
         <InnerWrapper>
-          <Nav timeout={200} />
+          <Nav timeout={100} />
           <Route
             exact
             path={`/contact/${baseLang}`}
-            render={() => <Contact timeout={500} />}
+            render={() => <Contact timeout={400} />}
           />
           <Route
             exact
             path={`/profile/${baseLang}`}
-            render={() => <Profile timeout={500} />}
+            render={() => <Profile timeout={400} />}
           />
           <Route
             exact
             path={`/legal/${baseLang}`}
-            render={() => <Legal timeout={500} />}
+            render={() => <Legal timeout={400} />}
           />
           <Route exact path={`/home/${baseLang}`} component={Home} />
           <Route exact path={`/projects/:projectName/${baseLang}/`} component={Project} />

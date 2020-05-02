@@ -29,10 +29,10 @@ const Home = p => {
           paddingTop={true}
           color={color}
           content={intro}
-          timeout={600}
+          timeout={400}
         />
       </StyledFlex>
-      <Projects timeout={800} />
+      <Projects timeout={700} />
     </>
   );
 };

@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const StyledRouterLink = styled(Link)`
   cursor: pointer;
+  align-self: center;
+  margin-top: ${p => p.marginTop};
   letter-spacing: .5px;
   text-decoration: none;
   color: ${p => p.color};
@@ -17,9 +19,9 @@ const StyledRouterLink = styled(Link)`
 `;
 
 const RouterLink = p => {
-  const { to, label, color, disabled, children } = p;
+  const { to, label, color, disabled, children, marginTop } = p;
   return (
-    <StyledRouterLink disabled={disabled} color={color[0]} to={to}>{children}</StyledRouterLink>
+    <StyledRouterLink marginTop={marginTop} disabled={disabled} color={color[0]} to={to}>{children}</StyledRouterLink>
   )
 }
 
