@@ -1,96 +1,119 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-import { useStoreState } from 'easy-peasy';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Box, Text, Image, Button } from 'rebass/styled-components';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 
-import List from '~/components/List';
-import Flex from '~/components/Flex';
 import Title from '~/components/Title';
-import Paragraph from '~/components/Paragraph';
 import { content } from '~/data';
 
-const StyledBox = styled(Box)``;
+const StyledListWrapper = styled.div`
+  opacity: ${props => opacityFromState(props.state)};
+  transition: all ${p => p.theme.times[1]} ease-in-out;
+  font-size: ${p => p.theme.fontSizes[3]};
+`;
 
-const StyledParagraphSmall = styled(ReactMarkdown)`
-  letter-spacing: .25px;
-  font-size: ${p => p.theme.fontSizes[2]};
+const StyledButtonWrapper = styled.div`
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (max-width: ${p => p.theme.sizes.mobile}) {
+    padding-bottom: 20px;
+    justify-content: flex-start;
+  }
+`;
+
+const StyledTD = styled.td`
+  text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
+  padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+  margin-top: ${p => (p.type === 'last' ? '10px' : '0px')};
+  margin-top: 3px;
+  vertical-align: top;
+  width: ${p => p.width};
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  text-align: ${p => p.align};
+  padding-right: 10px;
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    text-align: left;
+  }
+`;
+
+const FlexCol = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledDescription = styled.span`
+  font-family: ${p => p.theme.fonts.body};
+  padding: ${p => p.theme.space[2]} 0px ${p => p.theme.space[3]} 0;
+  letter-spacing: 0.5px;
+  width: 100%;
   opacity: .66;
-  p {
-    margin-bottom: 0 !important;
+`;
+
+const TitleSpan = styled.span`
+  font-family: ${p => p.theme.fonts.headline};
+`;
+
+const StyledTitle = styled.td`
+  font-family: ${p => p.theme.fonts.headline};
+  text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
+  padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+  transition: opacity ${p => p.theme.times[0]} ease-in-out;
+  letter-spacing: 0.5px;
+
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    font-size: ${p => p.theme.fontSizes[3]};
+    text-align: left;
   }
-  a {
-    text-decoration: none;
-    border-bottom: 1px solid ${p => p.c[0]};
-    color: ${p => p.c[0]};
+
+  &:hover {
+    opacity: 0.5;
     transition: all ${p => p.theme.times[1]} ease-in-out;
-
-    &:hover {
-      opacity: 0.5;
-      transition: all ${p => p.theme.times[1]} ease-in-out;
-    }
-  }
-
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    font-size: ${p => p.theme.fontSizes[2]};
   }
 `;
 
-const StyledParagraph = styled(ReactMarkdown)`
-  margin-top: 0;
-  font-size: ${p => p.theme.fontSizes[4]};
-  line-height: 150%;
-  opacity: ${p => p.opacity};
+const StyledTR = styled.tr`
+  border-top: ${p => (p.border ? '1px solid' + p.c[0] : 'none')};
+  opacity: ${p => p.highlighted ? 1 : .33};
 
-  p {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-
-  a {
-    text-decoration: none;
-    border-bottom: 1px solid ${p => p.c[0]};
+  td {
+    padding-top: ${p => (p.newYear ? p.theme.space[4] : '15px')};
+    padding-bottom: ${p => (p.lastItemOfYear ? p.theme.space[4] : '15px')};
+    font-size: ${p => p.theme.fontSizes[4]};
+    transition: all ${p => p.theme.times[0]} ease-in-out;
     color: ${p => p.c[0]};
-    transition: all ${p => p.theme.times[1]} ease-in-out;
 
-    &:hover {
-      opacity: 0.5;
-      transition: all ${p => p.theme.times[1]} ease-in-out;
+    @media (max-width: ${p => p.theme.sizes.desktop}) {
+      padding-top: ${p => (p.newYear ? p.theme.space[3] : '11px')};
+      padding-bottom: ${p => (p.lastItemOfYear ? p.theme.space[3] : '11px')};
+    }
+
+    @media (max-width: ${p => p.theme.sizes.tablet}) {
+      padding-top: ${p => (p.newYear ? p.theme.space[3] : '8px')};
+      padding-bottom: ${p => (p.lastItemOfYear ? p.theme.space[3] : '8px')};
     }
   }
 
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    font-size: ${p => p.theme.fontSizes[3]};
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
+    font-size: ${p => p.theme.fontSizes[4]};
+    td {
+      padding-right: 15px;
+      font-size: ${p => p.theme.fontSizes[3]};
+    }
   }
 `;
 
-const StyledTitle = styled(ReactMarkdown)`
-  font-size: ${p => p.theme.fontSizes[4]};
-  line-height: 150%;
-  font-family: 'Mier A Bold';
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0px;
-  }
-
-  a {
-    text-decoration: none;
-    border-bottom: 1px solid ${p => p.c[0]};
-    color: ${p => p.c[0]};
-    transition: all ${p => p.theme.times[1]} ease-in-out;
-
-    &:hover {
-      opacity: 0.5;
-      transition: all ${p => p.theme.times[1]} ease-in-out;
-    }
-  }
-
-  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
-    font-size: ${p => p.theme.fontSizes[3]};
-  }
+const StyledTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 `;
 
 const StyledButton = styled(Button)`
@@ -121,50 +144,14 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledList = styled(List)`
-  text-align: left;
-`;
-
-const StyledButtonWrapper = styled.div`
-  padding-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  @media screen and (max-width: ${p => p.theme.sizes.mobile}) {
-    padding-bottom: 20px;
-    justify-content: flex-start;
-  }
-`;
-
-const CvWrapper = styled.div`
-  opacity: ${props => {
-    if (props.isPrerendering) {
-      return 0
-    } else {
-      return opacityFromState(props.state)
-    }
-  }};
-
-  transform: ${props => {
-    if (props.isPrerendering) {
-      return 'translateY(10px)'
-    } else {
-      return positionFromState(props.state)
-    }
-  }};
-
-  transition: all ${p => p.theme.times[0]} ease-in-out;
-`;
-
-
-const Cv = p => {
+const CVList = p => {
   const { timeout } = p;
   const base = useStoreState(state => state.base);
-  const activities = content[base].activities;
-  const [ filteredActivities, setFilteredActivities ] = useState(activities);
   const color = useStoreState(state => state.color.color);
+  const activities = content[base].activities;
+  let observed = null;
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const [ filteredActivities, setFilteredActivities ] = useState(activities);
   const [filteredTypes, setFilteredTypes] = useState(['Experience']);
 
   let filterArr = [];
@@ -173,40 +160,59 @@ const Cv = p => {
       filterArr.push(activity.type)
     }
   })
+  filterArr.push('All')
+
+  const handleResize = (w) => {
+    const boxes = document.querySelectorAll('.td-desktop');
+    if (w < 768) {
+      boxes.forEach(box => (box.style.display = `none`));
+    } else {
+      boxes.forEach(box => (box.style.display = ``));
+    }
+  }
+
+  const handleClick = (value) => {
+    console.log(value)
+    setFilteredTypes([value]);
+  }
+
+
+  useEffect(() => {
+    if (observed) {
+      handleResize(observed.offsetWidth)
+      window.addEventListener('resize', () => handleResize(observed.offsetWidth))
+    }
+  }, [observed]);
 
   useEffect(() => {
     let filtered = activities.filter(activity => {
       return filteredTypes.includes(activity.type)
     });
-
     setFilteredActivities(filtered);
-  }, [filteredTypes])
 
-  const toggleArrayItem = (a, v) => {
-    var i = a.indexOf(v);
-    if (i === -1) {
-      a.push(v);
-      setFilter(a);
-    } else {
-      a.splice(i,1);
-      setFilter(a);
+    if (filteredTypes.includes('All')) {
+      setFilteredActivities(activities);
     }
-  }
 
-  const handleClick = (value) => {
-    setFilteredTypes([value]);
-  }
+  }, [filteredTypes])
 
   return (
     <Transition
       in={true}
-      timeout={timeout}
+      timeout={0}
       appear={true}
       mountOnEnter={true}
       unmountOnExit={true}
     >
       {state => (
-        <CvWrapper state={state} isPrerendering={isPrerendering}>
+        <StyledListWrapper
+          state={state}
+          ref={target => {
+            if (target) {
+              observed = target;
+            }
+          }}
+        >
           <Title timeout={timeout} source='Resumé' color={color} />
           <StyledButtonWrapper>
             {filterArr.map(f => {
@@ -222,44 +228,47 @@ const Cv = p => {
               )
             })}
           </StyledButtonWrapper>
-          <StyledBox
-            sx={{
-              display: 'grid',
-              gridGap: [2,3,4,3],
-              mb: ['40px', '100px'],
-              gridTemplateColumns: [
-                'repeat(auto-fit, minmax(300px, 1fr))',
-              ],
-            }}
-          >
-            {filteredActivities.map(activity => {
-              return (
-                <div>
-                  <StyledParagraphSmall 
+          <StyledTable>
+            <tbody>
+              {filteredActivities.map((item,i) => {
+                return (
+                  <StyledTR
+                    lastItemOfYear={activities.length - 1 === i}
+                    highlighted={filteredTypes.includes(item.type) || filteredTypes.includes('All')}
+                    newYear={false}
                     c={color}
-                    source={`${activity.duration} / ${activity.type}`}
-                  ></StyledParagraphSmall>
-                  <StyledTitle
-                    c={color}
-                    source={activity.title}
-                  ></StyledTitle>
-                  <StyledParagraph
-                    c={color}
-                    source={activity.context}
-                  ></StyledParagraph>
-                  <StyledParagraph
-                    c={color}
-                    opacity={.66}
-                    source={activity.description}
-                  ></StyledParagraph>
-                </div>
-              );
-            })}
-          </StyledBox>
-        </CvWrapper>
+                    border={true}
+                    key={`tr-cv-${i}`}
+                  >
+                    <StyledTD width={'10%'} className="td-desktop">
+                      {item.duration}
+                    </StyledTD>
+                    <StyledTD width={'40%'}>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          flexDirection: 'column'
+                        }}
+                      >
+                      <TitleSpan>{item.title}</TitleSpan>
+                      <StyledDescription>{item.description}</StyledDescription>
+                      </Box>
+                    </StyledTD>
+                    <StyledTD width={'30%'} className="td-desktop">
+                      {item.context}
+                    </StyledTD>
+                    <StyledTD align={'right'} width={'15%'} className="td-desktop">
+                      {item.type}
+                    </StyledTD>
+                  </StyledTR>
+                )
+              })}
+            </tbody>
+          </StyledTable>
+        </StyledListWrapper>
       )}
-    </Transition>
-  );
-};
+      </Transition>
+  )
+}
 
-export default Cv;
+export default CVList;

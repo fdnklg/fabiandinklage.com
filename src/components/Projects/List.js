@@ -77,6 +77,18 @@ const StyledTDType = styled.td`
   }
 `;
 
+const StyledButtonWrapper = styled.div`
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (max-width: ${p => p.theme.sizes.mobile}) {
+    padding-bottom: 20px;
+    justify-content: flex-start;
+  }
+`;
+
 const StyledTDButton = styled(StyledTDType)`
   text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
   @media (max-width: ${p => p.theme.sizes.desktop}) {

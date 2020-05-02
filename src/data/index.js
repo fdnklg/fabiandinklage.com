@@ -58,21 +58,21 @@ export const content = {
         {
           "title": "Research associate",
           "type": "Experience",
-          "context": "at the [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)  \nand [CityLAB Berlin](https://www.citylba-berlin.org)",
+          "context": "Technologiestfitung Berlin, CityLAB Berlin",
           "duration": "2018 – now",
           "description": "Crafting interactive data-driven prototypes with open data to enhance Berlin's everyday lives."
         },
         {
           "title": "Freelance Work",
           "type": "Experience",
-          "context": "for organisations, institutions,  \bbusinesses and conferences",
+          "context": "organisations, institutions,  \bbusinesses and conferences",
           "duration": "2014 – now",
           "description": "Interaction design, art direction, data visualization, implementation and consulting."
         },
         {
           "title": "Google News Lab Fellowship",
           "type": "Experience",
-          "context": "at the Interactive Team  \nof the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)",
+          "context": "Berliner Morgenpost",
           "duration": "2018",
           "description": "Development of interactive web based data visualizations for the upcoming Bundestag elections."
         },
@@ -80,28 +80,28 @@ export const content = {
           "title": "Interaction Design Studies",
           "type": "Education",
           "duration": "2017",
-          "context": "at the [Malmö University](http://mah.se/), Sweden",
+          "context": "Malmö University, Sweden",
           "description": "Service design concept for the city of Malmö to reduce food waste in public kitchens."
         },
         {
           "title": "Infographic Artist",
           "type": "Experience",
           "duration": "2016 – 2017",
-          "context": "at the [Infographics Group](https://infographics.group/), Berlin",
+          "context": "Infographics Group, Berlin",
           "description": "Visual interface design & frontend development of data driven interactive visualizations.",
         },
         {
           "title": "Interface Design (B.A.)",
           "type": "Education",
           "duration": "2015 – 2018",
-          "context": "at [University of Applied Sciences](https://design.fh-potsdam.de/)",
+          "context": "University of Applied Sciences Potsdam",
           "description": "Studies of information design, data visualization and user centric design processes."
         },
         {
           "title": "Media Designer",
           "type": "Experience",
           "duration": "2010 – 2014",
-          "context": "at [ballyhoo media agency](https://www.ballyhoo.de/), Hamburg",
+          "context": "ballyhoo, Hamburg",
           "description": "Wireframes and Visual Interface Design for clients like Spiegel Online and Payback."
         },
         {
@@ -115,18 +115,18 @@ export const content = {
           "title": "CityLAB permanent exhibition",
           "type": "Exhibition",
           "duration": "2019",
-          "context": "Interactive [Shared Mobility Flows](https://bikesharing.citylab-berlin.org) Visualization",
+          "context": "Shared Mobility Flows",
           "description": "The interactive piece is part of the exhibition for innovation in the public sector."
         },
         {
           "title": "Exhibited: [A City In Flux](https://city-in-flux.netlify.com/)",
           "type": "Exhibition",
           "duration": "2019",
-          "context": "at the CityVis.io: Visualising Cities",
+          "context": "CityVis.io: Visualising Cities",
           "description": "The interactive piece was exhibited and shortlisted."
         },
         {
-          "title": "[Information+](http://informationplusconference.com/2018/) Conference",
+          "title": "Information+ Conference",
           "type": "Other",
           "duration": "2018",
           "context": "InfoVis conference, Potsdam",
@@ -143,7 +143,7 @@ export const content = {
           "title": "Exhibited: Shared Mobility Flows",
           "type": "Exhibition",
           "duration": "2019",
-          "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
+          "context": "techDetector, Berlin",
           "description": "Exhibiting the interactive mobility visualization as part of the conference."
         },
       ],
@@ -618,8 +618,7 @@ export const content = {
       clients: 'ausgewählte kunden',
     },
     "about": {
-        "intro": "Hallo, ich bin Fabian Dinklage, freiberuflicher **Informationsdesigner** aus Berlin, mit dem Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle **Interfaces** und interaktive datengesteuerte Produkte. Nutzer-zentrierte Visualisierungen schaffen neue Sichtweisen auf deine Daten und hilft diese noch besser zu verstehen und nutzbar zu machen.
-",
+        "intro": "Hallo, ich bin Fabian Dinklage, freiberuflicher **Informationsdesigner** aus Berlin, mit dem Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle **Interfaces** und interaktive datengesteuerte Produkte. Nutzer-zentrierte Visualisierungen schaffen neue Sichtweisen auf deine Daten und hilft diese noch besser zu verstehen und nutzbar zu machen.",
         "vita": "Ich bin ein in Berlin ansässiger Designer und Technologe mit den Schwerpunkten Datenvisualisierung und Interaktionsdesign. Ich absolvierte den Studiengang Interface Design an der [Fachhochschule Potsdam] (https://design.fh-potsdam.de/) und war im Studiengang Interaction Design an der [Universität Malmö, Schweden] immatrikuliert (http://mah.se/). Ich betreibe prototypenbasierte Forschung für das [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) der [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) und das [CityLAB Berlin](https://citylab-berlin.org) mit offenen Daten. mit denen ich zusammengearbeitet habe: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/).",
         "profileUrl": "public/images/profile____.jpg"
       },
@@ -652,21 +651,21 @@ export const content = {
         {
           "title": "Research associate",
           "type": "Experience",
-          "context": "at the [Technologiestiftung Berlin](https://www.technologiestiftung-berlin.de/de/startseite/)  \nand [CityLAB Berlin](https://www.citylba-berlin.org)",
+          "context": "Technologiestfitung Berlin, CityLAB Berlin",
           "duration": "2018 – now",
           "description": "Crafting interactive data-driven prototypes with open data to enhance Berlin's everyday lives."
         },
         {
           "title": "Freelance Work",
           "type": "Experience",
-          "context": "for organisations, institutions,  \bbusinesses and conferences",
+          "context": "organisations, institutions,  \bbusinesses and conferences",
           "duration": "2014 – now",
           "description": "Interaction design, art direction, data visualization, implementation and consulting."
         },
         {
           "title": "Google News Lab Fellowship",
           "type": "Experience",
-          "context": "at the Interactive Team  \nof the [Berliner Morgenpost](https://www.morgenpost.de/interaktiv/)",
+          "context": "Berliner Morgenpost",
           "duration": "2018",
           "description": "Development of interactive web based data visualizations for the upcoming Bundestag elections."
         },
@@ -674,28 +673,28 @@ export const content = {
           "title": "Interaction Design Studies",
           "type": "Education",
           "duration": "2017",
-          "context": "at the [Malmö University](http://mah.se/), Sweden",
+          "context": "Malmö University, Sweden",
           "description": "Service design concept for the city of Malmö to reduce food waste in public kitchens."
         },
         {
           "title": "Infographic Artist",
           "type": "Experience",
           "duration": "2016 – 2017",
-          "context": "at the [Infographics Group](https://infographics.group/), Berlin",
+          "context": "Infographics Group, Berlin",
           "description": "Visual interface design & frontend development of data driven interactive visualizations.",
         },
         {
           "title": "Interface Design (B.A.)",
           "type": "Education",
           "duration": "2015 – 2018",
-          "context": "at [University of Applied Sciences](https://design.fh-potsdam.de/)",
+          "context": "University of Applied Sciences Potsdam",
           "description": "Studies of information design, data visualization and user centric design processes."
         },
         {
           "title": "Media Designer",
           "type": "Experience",
           "duration": "2010 – 2014",
-          "context": "at [ballyhoo media agency](https://www.ballyhoo.de/), Hamburg",
+          "context": "ballyhoo, Hamburg",
           "description": "Wireframes and Visual Interface Design for clients like Spiegel Online and Payback."
         },
         {
@@ -709,18 +708,18 @@ export const content = {
           "title": "CityLAB permanent exhibition",
           "type": "Exhibition",
           "duration": "2019",
-          "context": "Interactive [Shared Mobility Flows](https://bikesharing.citylab-berlin.org) Visualization",
+          "context": "Shared Mobility Flows",
           "description": "The interactive piece is part of the exhibition for innovation in the public sector."
         },
         {
           "title": "Exhibited: [A City In Flux](https://city-in-flux.netlify.com/)",
           "type": "Exhibition",
           "duration": "2019",
-          "context": "at the CityVis.io: Visualising Cities",
+          "context": "CityVis.io: Visualising Cities",
           "description": "The interactive piece was exhibited and shortlisted."
         },
         {
-          "title": "[Information+](http://informationplusconference.com/2018/) Conference",
+          "title": "Information+ Conference",
           "type": "Other",
           "duration": "2018",
           "context": "InfoVis conference, Potsdam",
@@ -737,7 +736,7 @@ export const content = {
           "title": "Exhibited: Shared Mobility Flows",
           "type": "Exhibition",
           "duration": "2019",
-          "context": "at the [techDetector](http://launch.techdetector.de/), Berlin",
+          "context": "techDetector, Berlin",
           "description": "Exhibiting the interactive mobility visualization as part of the conference."
         },
       ],

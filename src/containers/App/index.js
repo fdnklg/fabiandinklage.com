@@ -14,7 +14,7 @@ const App = p => {
   const base = useStoreState(state => state.base);
 
   useEffect(() => {
-    history.push(`/home/${base}`)
+    // history.push(`/home/${base}`)
   }, [])
 
   const NotFoundRoute = () => <Redirect to={`/home/${base}`} />;
