@@ -76,8 +76,6 @@ const Nav = p => {
     const pos = getPosition(history.location.pathname, '/', -1);
     const newLocation = location.slice(0, pos - 3) + '/' + base;
     history.push(newLocation);
-
-    console.log(!history.location.pathname.includes('projects'));
   }, [base]);
 
   return (

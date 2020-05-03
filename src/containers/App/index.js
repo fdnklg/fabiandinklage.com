@@ -4,17 +4,17 @@ import history from '../../../history';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import AppWrapper from './AppWrapper';
 
-const language = navigator.language.split(/[-_]/)[0];
 const base = '/:(en|de)?';
 
 
 const App = p => {
-  var userLang = navigator.language || navigator.userLanguage;
+  const userLang = navigator.language.split(/[-_]/)[0] !== 'de' ? 'en' : 'de';
   const setBase = useStoreActions(actions => actions.setBase);
   const base = useStoreState(state => state.base);
 
   useEffect(() => {
-    // history.push(`/home/${base}`)
+    setBase(userLang)
+    history.push(`/home/${userLang}`)
   }, [])
 
   const NotFoundRoute = () => <Redirect to={`/home/${base}`} />;

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box } from 'rebass/styled-components';
+import { Box, Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
@@ -7,6 +7,8 @@ import {Helmet} from 'react-helmet';
 import { piwik } from '../../utils/';
 import { content } from '~/data';
 
+import List from '~/components/List';
+import Title from '~/components/Title';
 import { withRouter, Route, Switch } from 'react-router-dom';
 const baseLang = '(en|de)';
 
@@ -48,6 +50,7 @@ const AppWrapper = () => {
 
   const base = useStoreState(state => state.base);
   const cta = content[base].cta;
+  const titleClients = content[base].title.clients;
 
   const isPrerendering = () => {
     return navigator.userAgent == "ReactSnap"
@@ -138,6 +141,30 @@ const AppWrapper = () => {
           <Route exact path={`/home/${baseLang}`} component={Home} />
           <Route exact path={`/projects/:projectName/${baseLang}/`} component={Project} />
           <Route exact path={`/home/${baseLang}/`} render={() => <Services timeout={900} />} />
+          <Route exact path={`/home/${baseLang}/`} render={() => (
+            <>
+              <Flex
+                sx={{ textAlign: ['left', 'left', 'center'], px: [0, 0, 5, 6], flexDirection: 'column', margin: ['0','0 auto'] }}
+                pb={[4, 5, 5, 6]}
+                width={[1, 1, 4 / 5, 3 / 4]}
+                fontSize={[3, 4, 4, 5]}
+              >
+                <>
+                <Title timeout={600} source={titleClients} color={color} />
+                <List timeout={600} c={color}>
+                  <li>Berkmann Klein Center (at) Harvard</li>
+                  <li>Berliner Morgenpost</li>
+                  <li>Deutsches Historisches Museum</li>
+                  <li>Deutsche Bahn</li>
+                  <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
+                  <li>Google News Lab</li>
+                  <li>MIT (Massachusetts Institute of Technology)</li>
+                  <li>Spiegel Online</li>
+                </List>
+                </>
+              </Flex>
+            </>
+          )} />
           <Route exact path={`/home/${baseLang}/`} render={() => <Cta timeout={1200} />} />
           <Footer timeout={1000} />
         </InnerWrapper>

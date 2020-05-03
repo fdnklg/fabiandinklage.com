@@ -13,7 +13,7 @@ const translations = {
   },
   de: {
     about: {
-      intro: "Hallo, ich bin Fabian Dinklage, ein freiberuflicher **Datenvisualisierer** und **Informationsdesigner** mit Sitz in Berlin. Ich entwerfe Interfaces und gestalte interaktive **datengesteuerte Erfahrungen**, die Ihnen helfen, Ihre Daten zu verstehen."
+      intro: "Hallo, ich bin Fabian Dinklage, ein freiberuflicher **Datenvisualisierer** und **Informationsdesigner** mit Sitz in Berlin. Ich entwerfe Interfaces und gestalte interaktive **datengesteuerte Erfahrungen**, die dir helfen, deine Daten zu verstehen."
     }
   }
 }

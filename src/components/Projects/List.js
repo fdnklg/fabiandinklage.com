@@ -9,6 +9,7 @@ import { opacityFromState } from '~/utils/animation';
 
 import Button from '../Button/';
 import RouterLink from '../RouterLink/';
+import { content } from '~/data/';
 
 const StyledListWrapper = styled.div`
   opacity: ${props => opacityFromState(props.state)};
@@ -134,9 +135,10 @@ const List = p => {
   const { data } = p;
   const colorDefault = useStoreState(state => state.color.default);
   const color = useStoreState(state => state.color.color);
-  const base = useStoreState(state => state.base);
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
+  const base = useStoreState(state => state.base);
+  const others = content[base].others;
 
   return (
     <Transition
@@ -182,7 +184,7 @@ const List = p => {
                         c={color}
                         fontSize={[2, 2, 2, 3]}
                       >
-                        Launch now
+                        {others.launch}
                       </Button>
                     </StyledTDButton>
                   </StyledTR>

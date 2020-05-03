@@ -13,6 +13,7 @@ const StyledListWrapper = styled.div`
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
   font-size: ${p => p.theme.fontSizes[3]};
+  margin-bottom: 60px;
 `;
 
 const StyledButtonWrapper = styled.div`
@@ -29,7 +30,7 @@ const StyledButtonWrapper = styled.div`
 
 const StyledTD = styled.td`
   text-align: ${p => (p.type === 'last' ? 'end' : 'start')};
-  padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[3]} 0;
+  padding: ${p => p.theme.space[3]} 0px ${p => p.theme.space[2]} 0;
   margin-top: ${p => (p.type === 'last' ? '10px' : '0px')};
   margin-top: 3px;
   vertical-align: top;
@@ -37,7 +38,7 @@ const StyledTD = styled.td`
   letter-spacing: 0.5px;
   font-size: 16px;
   text-align: ${p => p.align};
-  padding-right: 10px;
+  padding-right: 20px;
 
   @media (max-width: ${p => p.theme.sizes.tablet}) {
     text-align: left;
@@ -51,7 +52,7 @@ const FlexCol = styled.div`
 
 const StyledDescription = styled.span`
   font-family: ${p => p.theme.fonts.body};
-  padding: ${p => p.theme.space[2]} 0px ${p => p.theme.space[3]} 0;
+  padding: ${p => p.theme.space[1]} 0px ${p => p.theme.space[2]} 0;
   letter-spacing: 0.5px;
   width: 100%;
   opacity: .66;
@@ -148,34 +149,38 @@ const CVList = p => {
   const { timeout } = p;
   const base = useStoreState(state => state.base);
   const color = useStoreState(state => state.color.color);
-  const activities = content[base].activities;
+  let activities = content[base].activities;
+  let title = content[base].title;
   let observed = null;
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   const [ filteredActivities, setFilteredActivities ] = useState(activities);
-  const [filteredTypes, setFilteredTypes] = useState(['Experience']);
+  const all = base === 'en' ? 'All' : 'Alle';
+  const [filteredTypes, setFilteredTypes] = useState([all]);
+  activities = activities.sort((a,b) => b.date - a.date);
 
   let filterArr = [];
+  filterArr.push(all)
   activities.forEach(activity => {
     if (!filterArr.includes(activity.type)) {
       filterArr.push(activity.type)
     }
   })
-  filterArr.push('All')
 
   const handleResize = (w) => {
     const boxes = document.querySelectorAll('.td-desktop');
+    const mobileItems = document.querySelectorAll('.td-mobile');
     if (w < 768) {
       boxes.forEach(box => (box.style.display = `none`));
+      mobileItems.forEach(box => (box.style.display = ``));
     } else {
       boxes.forEach(box => (box.style.display = ``));
+      mobileItems.forEach(box => (box.style.display = `none`));
     }
   }
 
   const handleClick = (value) => {
-    console.log(value)
     setFilteredTypes([value]);
   }
-
 
   useEffect(() => {
     if (observed) {
@@ -188,12 +193,16 @@ const CVList = p => {
     let filtered = activities.filter(activity => {
       return filteredTypes.includes(activity.type)
     });
+
     setFilteredActivities(filtered);
 
-    if (filteredTypes.includes('All')) {
+    if (filteredTypes.includes(all)) {
       setFilteredActivities(activities);
     }
 
+    setTimeout(() => {
+      handleResize(observed.offsetWidth)
+    }, 50);
   }, [filteredTypes])
 
   return (
@@ -213,7 +222,7 @@ const CVList = p => {
             }
           }}
         >
-          <Title timeout={timeout} source='Resumé' color={color} />
+          <Title timeout={timeout} source={title.cv} color={color} />
           <StyledButtonWrapper>
             {filterArr.map(f => {
               const active = filteredTypes.includes(f);
@@ -234,7 +243,7 @@ const CVList = p => {
                 return (
                   <StyledTR
                     lastItemOfYear={activities.length - 1 === i}
-                    highlighted={filteredTypes.includes(item.type) || filteredTypes.includes('All')}
+                    highlighted={filteredTypes.includes(item.type) || filteredTypes.includes(all)}
                     newYear={false}
                     c={color}
                     border={true}
@@ -250,15 +259,14 @@ const CVList = p => {
                           flexDirection: 'column'
                         }}
                       >
+                      <StyledDescription className="td-mobile">{item.duration}</StyledDescription>
                       <TitleSpan>{item.title}</TitleSpan>
+                      <StyledDescription className="td-mobile">{item.context}</StyledDescription>
                       <StyledDescription>{item.description}</StyledDescription>
                       </Box>
                     </StyledTD>
                     <StyledTD width={'30%'} className="td-desktop">
                       {item.context}
-                    </StyledTD>
-                    <StyledTD align={'right'} width={'15%'} className="td-desktop">
-                      {item.type}
                     </StyledTD>
                   </StyledTR>
                 )

@@ -6,7 +6,6 @@ import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Paragraph from '~/components/Paragraph';
 import Flex from '~/components/Flex';
-import List from '~/components/List';
 import Image from '~/components/Image';
 import Cv from '~/components/Cv';
 import Title from '~/components/Title';
@@ -50,7 +49,6 @@ const Profile = p => {
   const { intro, profileUrl, vita } = about;
 
   const titleAbout = content[base].title.about;
-  const titleClients = content[base].title.clients;
 
   return (
     <Transition
@@ -64,7 +62,7 @@ const Profile = p => {
         <StyledFlex state={state} isPrerendering={isPrerendering}>
           <Flex
             sx={{ textAlign: ['left', 'left', 'center'] }}
-            py={[4, 5, 5, 6]}
+            pt={[4, 5, 5, 6]}
             width={[1, 4 / 5, 4 / 5, 3 / 4]}
             fontSize={[3, 4, 4, 5]}
           >
@@ -75,19 +73,8 @@ const Profile = p => {
               alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
               timeout={timeout + 400}
             />
-            <Title timeout={timeout + 600} source={titleClients} color={color} />
-            <List timeout={timeout + 600} c={color}>
-              <li>Berkmann Klein Center (at) Harvard</li>
-              <li>Berliner Morgenpost</li>
-              <li>Deutsches Historisches Museum</li>
-              <li>Deutsche Bahn</li>
-              <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
-              <li>Google News Lab</li>
-              <li>MIT (Massachusetts Institute of Technology)</li>
-              <li>Spiegel Online</li>
-            </List>
           </Flex>
-          <Cv timeout={timeout + 800} />
+          <Cv timeout={timeout + 700} />
         </StyledFlex>
       )}
     </Transition>

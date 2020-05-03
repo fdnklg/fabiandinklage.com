@@ -7,6 +7,7 @@ import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Label from '~/components/Label';
 import Button from '~/components/Button';
+import { content } from '~/data';
 
 const StyledWrapper = styled.div`
   transition: all ${p => p.theme.times[1]} ease-in-out;
@@ -66,6 +67,8 @@ const Intro = props => {
   const { data, timeout, color } = props;
   const { title, subtitle, year, tasks, client, url } = data;
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const base = useStoreState(state => state.base);
+  const others = content[base].others;
 
   return (
     <Transition
@@ -109,21 +112,21 @@ const Intro = props => {
                 c={color}
                 fontSize={[2, 2, 2, 3]}
               >
-                Launch now
+                {others.launch}
               </Button>
             </Box>
             <Box pr={[3]} mb={[3]} fontSize={[2,3,3]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold c={color}>Context</StyledLabelBold>
+              <StyledLabelBold c={color}>{others.context}</StyledLabelBold>
               <br />
               <StyledLabel c={color}>{client}</StyledLabel>
             </Box>
             <Box pr={[3]} mb={[3]} fontSize={[2,3,3]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold c={color}>Year</StyledLabelBold>
+              <StyledLabelBold c={color}>{others.year}</StyledLabelBold>
               <br />
               <StyledLabel c={color}>{year}</StyledLabel>
             </Box>
             <Box sx={{display: 'flex', flexDirection: 'column'}} pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold c={color}>Tasks</StyledLabelBold>
+              <StyledLabelBold c={color}>{others.tasks}</StyledLabelBold>
               {tasks.map(t => (
                 <><SpacedStyledLabel c={color}>{t}</SpacedStyledLabel></>
               ))}

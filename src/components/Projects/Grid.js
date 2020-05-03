@@ -171,9 +171,9 @@ const Grid = p => {
             display: 'grid',
             gridGap: 4,
             gridTemplateColumns: [
-              'repeat(auto-fit, minmax(260px, 1fr))',
+              'repeat(auto-fit, minmax(250px, 1fr))',
+              'repeat(auto-fit, minmax(240px, 1fr))',
               'repeat(auto-fit, minmax(300px, 1fr))',
-              'repeat(auto-fit, minmax(350px, 1fr))',
             ],
           }}
         >

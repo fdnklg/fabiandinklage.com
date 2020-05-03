@@ -21,6 +21,9 @@ const Project = ({ match }) => {
 
   useEffect(() => {
     setColor(project.color)
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 50);
   }, [project])
 
   return (

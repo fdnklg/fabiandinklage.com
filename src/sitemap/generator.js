@@ -44,8 +44,6 @@ const dest = path.resolve('public/', 'sitemap.xml');
 // Generate sitemap and return Sitemap instance
 const sitemap = buildSitemap(hostname, paths);
 
-console.log(sitemap);
-
 // write sitemap.xml file in /public folder
 // Access the sitemap content by converting it with .toString() method
 fs.writeFileSync(dest, sitemap.toString());

@@ -23,7 +23,7 @@ const Home = p => {
         sx={{ textAlign: ['left', 'center', 'center'] }}
         pb={[4, 5, 5, 6]}
         width={[1, 4 / 5, 4 / 5, 3 / 4]}
-        fontSize={[3, 5, 5, 6]}
+        fontSize={[3, 5, 5, 5]}
       >
         <Paragraph
           paddingTop={true}

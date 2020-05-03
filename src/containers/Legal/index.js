@@ -8,6 +8,7 @@ import { opacityFromState, positionFromState } from '~/utils/animation';
 import Button from '~/components/Button';
 import List from '~/components/List';
 import Flex from '~/components/Flex';
+import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
   opacity: ${props => opacityFromState(props.state)};
@@ -31,6 +32,8 @@ const StyledList = styled(List)`
 const Profile = p => {
   const { timeout } = p;
   const color = useStoreState(state => state.color.color);
+  const base = useStoreState(state => state.base);
+  const legal = content[base].legal;
   return (
     <Transition
       in={true}
@@ -47,54 +50,43 @@ const Profile = p => {
           width={[1, 4 / 5, 4 / 5, 3 / 4]}
           fontSize={[3, 4, 4, 4]}
         >
-          <h2>Legal note</h2>
+          <h2>{legal.title}</h2>
 
           <StyledParagraph>
-            Information in accordance with section 5 TMG and person responsible
-            for content in accordance with 55 Abs. 2 RStV
+            {legal.p1}
           </StyledParagraph>
 
           <StyledList>
-            <li>Fabian Dinklage</li>
-            <li>Schlegelstraße 22</li>
-            <li>10115 Berlin</li>
-            <li>Germany</li>
+            {legal.li1.map(item => (
+              <li>{item}</li>
+            ))}
           </StyledList>
 
           <StyledHeadline>Contact</StyledHeadline>
 
           <StyledList>
-            <li>mail(at)fabiandinklage.com</li>
-            <li>fabiandinklage.com</li>
+            {legal.li2.map(item => (
+              <li>{item}</li>
+            ))}
           </StyledList>
 
           <StyledHeadline>VAT Number</StyledHeadline>
 
           <StyledList>
-            <li>
-              VAT indentification number in accorance with section 27 a of the
-              German VAT act: <br /> DE 291545410
-            </li>
+            {legal.li3.map(item => (
+              <li>{item}</li>
+            ))}
           </StyledList>
 
-          <h2>Disclaimer</h2>
+          <h2>{legal.disclaimer}</h2>
 
-          <StyledHeadline>Accountability for content</StyledHeadline>
+          <StyledHeadline>{legal.accountability}</StyledHeadline>
 
           <StyledParagraph>
-            The contents of our pages have been created with the utmost care.
-            However, we cannot guarantee the contents' accuracy, completeness or
-            topicality. According to statutory provisions, we are furthermore
-            responsible for our own content on these web pages. In this context,
-            please note that we are accordingly not obliged to monitor merely
-            the transmitted or saved information of third parties, or
-            investigate circumstances pointing to illegal activity. Our
-            obligations to remove or block the use of information under
-            generally applicable laws remain unaffected by this as per §§ 8 to
-            10 of the Telemedia Act (TMG).
+            {legal.p2}
           </StyledParagraph>
 
-          <StyledHeadline>Accountability for links</StyledHeadline>
+          <StyledHeadline>{legal.links}</StyledHeadline>
 
           <StyledParagraph>
             Responsibility for the content of external links (to web pages of
@@ -104,18 +96,10 @@ const Profile = p => {
             link immediately.
           </StyledParagraph>
 
-          <StyledHeadline>Copyright</StyledHeadline>
+          <StyledHeadline>{legal.copyright}</StyledHeadline>
 
           <StyledParagraph>
-            Our web pages and their contents are subject to German copyright
-            law. Unless expressly permitted by law (§ 44a et seq. of the
-            copyright law), every form of utilizing, reproducing or processing
-            works subject to copyright protection on our web pages requires the
-            prior consent of the respective owner of the rights. Individual
-            reproductions of a work are allowed only for private use, so must
-            not serve either directly or indirectly for earnings. Unauthorized
-            utilization of copyrighted works is punishable (§ 106 of the
-            copyright law).
+            {legal.p3}
           </StyledParagraph>
 
           {/* <StyledHeadline>Use of Matomo</StyledHeadline>
