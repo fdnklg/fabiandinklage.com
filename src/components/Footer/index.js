@@ -9,6 +9,7 @@ import { content } from '~/data';
 
 import Label from '~/components/Label';
 import Link from '~/components/Link';
+import RouterLink from '~/components/RouterLink';
 
 const StyledBox = styled(Box)`
   font-family: ${p => p.theme.fonts.headline};
@@ -38,16 +39,11 @@ const Footer = p => {
             <Label content="©2020, F.D." />
           </StyledBox>
           <StyledBox sx={{ textAlign: 'right' }} width={[2 / 3, 1 / 2]}>
-            <Link
-              mr={[3, 4, 4]}
-              sx={{ textDecoration: 'none', color: color[0] }}
-              variant="nav"
-              href={`/legal/${base}`}
-            >
+            <RouterLink color={color} to={`/legal/${base}`}>
               {footer.legal}
-            </Link>
+            </RouterLink>
             <Link
-              mr={[3, 4, 4]}
+              mx={[3, 4, 4]}
               sx={{ textDecoration: 'none', color: color[0] }}
               variant="nav"
               href="https://photos.fabiandinklage.com"

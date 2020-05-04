@@ -8,9 +8,9 @@ import { action } from 'easy-peasy';
 export default {
   layout: LayoutModel,
   color: ColorModel,
-  base: 'de',
+  base: null,
   setBase: action((state, payload) => {
-    state.base = state.base === 'en' ? 'de' : 'en';
+    state.base = payload
   }),
   ...Content,
 };

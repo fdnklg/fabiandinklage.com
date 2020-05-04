@@ -159,12 +159,6 @@ const CVList = p => {
   activities = activities.sort((a,b) => b.date - a.date);
 
   let filterArr = [];
-  filterArr.push(all)
-  activities.forEach(activity => {
-    if (!filterArr.includes(activity.type)) {
-      filterArr.push(activity.type)
-    }
-  })
 
   const handleResize = (w) => {
     const boxes = document.querySelectorAll('.td-desktop');
@@ -181,6 +175,15 @@ const CVList = p => {
   const handleClick = (value) => {
     setFilteredTypes([value]);
   }
+
+  useEffect(() => {
+    filterArr.push(all)
+    activities.forEach(activity => {
+      if (!filterArr.includes(activity.type)) {
+        filterArr.push(activity.type)
+      }
+    })
+  }, [])
 
   useEffect(() => {
     if (observed) {

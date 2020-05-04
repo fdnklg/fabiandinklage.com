@@ -156,9 +156,9 @@ const AppWrapper = () => {
                   <li>Berliner Morgenpost</li>
                   <li>Deutsches Historisches Museum</li>
                   <li>Deutsche Bahn</li>
-                  <li>GiZ (Gesellschaft für internationale Zusammenarbeit)</li>
+                  <li>GiZ</li>
                   <li>Google News Lab</li>
-                  <li>MIT (Massachusetts Institute of Technology)</li>
+                  <li>MIT</li>
                   <li>Spiegel Online</li>
                 </List>
                 </>

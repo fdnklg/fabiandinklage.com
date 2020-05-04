@@ -7,21 +7,26 @@ const StyledRouterLink = styled(Link)`
   align-self: center;
   margin-top: ${p => p.marginTop};
   letter-spacing: .5px;
+  height: 100%;
   text-decoration: none;
   color: ${p => p.color};
   transition: opacity ${p => p.theme.times[0]} ease-in-out;
   opacity: ${p => p.disabled ? .5 : 1}
 
-  &:hover {
-    opacity: 0.5;
+  a {
+    transition: opacity ${p => p.theme.times[0]} ease-in-out;
+  }
+
+  a&:hover {
+    opacity: ${p => !p.hover ? .5 : 1};
     transition: opacity ${p => p.theme.times[0]} ease-in-out;
   }
 `;
 
 const RouterLink = p => {
-  const { to, label, color, disabled, children, marginTop } = p;
+  const { to, label, color, disabled, children, marginTop, hover } = p;
   return (
-    <StyledRouterLink marginTop={marginTop} disabled={disabled} color={color[0]} to={to}>{children}</StyledRouterLink>
+    <StyledRouterLink hover={hover} marginTop={marginTop} disabled={disabled} color={color[0]} to={to}>{children}</StyledRouterLink>
   )
 }
 

@@ -17,6 +17,8 @@ const Home = p => {
   const base = useStoreState(state => state.base);
   const intro = content[base].about.intro;
 
+  console.log('intro', intro, base)
+
   return (
     <>
       <StyledFlex

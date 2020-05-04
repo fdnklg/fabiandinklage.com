@@ -28,7 +28,8 @@ export const content = {
       "p2": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG).",
       "links": "Accountability for links",
       "copyright": "Copyright",
-      "p3": "Our web pages and their contents are subject to German copyright law. Unless expressly permitted by law (§ 44a et seq. of the copyright law), every form of utilizing, reproducing or processing works subject to copyright protection on our web pages requires the prior consent of the respective owner of the rights. Individual reproductions of a work are allowed only for private use, so must not serve either directly or indirectly for earnings. Unauthorized utilization of copyrighted works is punishable (§ 106 of the copyright law)."
+      "p3": "Our web pages and their contents are subject to German copyright law. Unless expressly permitted by law (§ 44a et seq. of the copyright law), every form of utilizing, reproducing or processing works subject to copyright protection on our web pages requires the prior consent of the respective owner of the rights. Individual reproductions of a work are allowed only for private use, so must not serve either directly or indirectly for earnings. Unauthorized utilization of copyrighted works is punishable (§ 106 of the copyright law).",
+      "p4": "Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately."
     },
     "title": {
       projects: 'selected projects',
@@ -45,8 +46,8 @@ export const content = {
     },
     "about": {
         "intro": "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
-        "vita": "I'm a Berlin-based designer and technologist focused on Data Visualization and Interaction Design. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). I do prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
-        "profileUrl": "public/images/profile____.jpg"
+        "vita": "I'm a Berlin-based designer and technologist focused on **Data Visualization** and **Interaction Design**. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). I do prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
+        "profileUrl": "public/images/profile___.jpg"
       },
       "cta": {
         text: 'Interested in a collaboration?',
@@ -54,7 +55,7 @@ export const content = {
       },
       "contact": {
         title: "Say Hi!",
-        subtitle: "Do you have an idea about a collaboration or want to reach out? Let me know!"
+        subtitle: "Do you have an idea to collaborate or want to reach out? Let me know!"
       },
       "exihibitions": [
         {
@@ -155,7 +156,7 @@ export const content = {
           "title": "Lecture: Data Visualization fundamentals",
           "type": "Other",
           "duration": "2020",
-          "context": "E-Artsup University, Paris",
+          "context": "E-Artsup University Paris",
           "description": "Held a lecture about fundamental approaches to Data Visualization."
         },
         {
@@ -645,7 +646,8 @@ export const content = {
       "accountability": "Verantwortlichkeit für den Inhalt",
       "p2": "Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Nach den gesetzlichen Bestimmungen bin ich darüber hinaus für eigene Inhalte auf diesen Webseiten verantwortlich. In diesem Zusammenhang weise ich darauf hin, dass ich nicht verpflichtet bin, übermittelte oder gespeicherte fremde Informationen lediglich zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon gemäß §§ 8 bis 10 TMG unberührt.",
       "copyright": "Urheberrecht",
-      "p3": "Unsere Webseiten und deren Inhalte unterliegen dem deutschen Urheberrecht. Jede Form der Nutzung, Vervielfältigung oder Bearbeitung der urheberrechtlich geschützten Werke auf unseren Webseiten bedarf, soweit nicht ausdrücklich gesetzlich gestattet (§ 44a ff. UrhG), der vorherigen Zustimmung des jeweiligen Rechteinhabers. Einzelne Vervielfältigungen eines Werkes sind nur für den privaten Gebrauch gestattet, dürfen also weder direkt noch indirekt der Gewinnerzielung dienen. Die unbefugte Verwertung urheberrechtlich geschützter Werke ist strafbar (§ 106 Urheberrechtsgesetz)."
+      "p3": "Unsere Webseiten und deren Inhalte unterliegen dem deutschen Urheberrecht. Jede Form der Nutzung, Vervielfältigung oder Bearbeitung der urheberrechtlich geschützten Werke auf unseren Webseiten bedarf, soweit nicht ausdrücklich gesetzlich gestattet (§ 44a ff. UrhG), der vorherigen Zustimmung des jeweiligen Rechteinhabers. Einzelne Vervielfältigungen eines Werkes sind nur für den privaten Gebrauch gestattet, dürfen also weder direkt noch indirekt der Gewinnerzielung dienen. Die unbefugte Verwertung urheberrechtlich geschützter Werke ist strafbar (§ 106 Urheberrechtsgesetz).",
+      "p4": "Für den Inhalt externer Links (zu Webseiten Dritter) sind ausschließlich die Betreiber der verlinkten Seiten verantwortlich. Rechtswidrige Inhalte waren für uns zum Zeitpunkt der Verlinkung nicht erkennbar. Sollte uns eine Rechtsverletzung bekannt werden, werden wir den entsprechenden Link unverzüglich entfernen."
     },
     title: {
       projects: 'ausgewählte projekte',
@@ -655,9 +657,9 @@ export const content = {
       clients: 'Kollaborationen',
     },
     "about": {
-        "intro": "Hallo, ich bin Fabian Dinklage, freiberuflicher **Informationsdesigner** aus Berlin, mit dem Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle **Interfaces** und interaktive datengesteuerte Produkte. Nutzer-zentrierte Visualisierungen schaffen neue Sichtweisen auf deine Daten und hilft Dir diese noch besser zu verstehen und nutzbar zu machen.",
-        "vita": "Ich bin ein in Berlin ansässiger **Informationsdesigner** und **Entwickler** mit den Schwerpunkten Datenvisualisierung und Interaktionsdesign. Ich absolvierte den Studiengang Interface Design an der [Fachhochschule Potsdam] (https://design.fh-potsdam.de/) und war im Studiengang Interaction Design an der [Universität Malmö, Schweden](http://mah.se/) immatrikuliert. Momentan entwickle interaktive Prototypen für das [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) der [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) und das [CityLAB Berlin](https://citylab-berlin.org) mit offenen Daten. Einige Institutionen mit denen ich in der Vergangenheit zusammenarbeiten durfte: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/).",
-        "profileUrl": "public/images/profile____.jpg"
+        "intro": "Hallo, ich bin Fabian Dinklage, ein in Berlin ansässiger, freiberuflicher **Informationsdesigner** mit Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle ich Interfaces und interaktive datengesteuerte Produkte. Visualisierungen schaffen neue Sichtweisen auf deine Daten und helfen Dir diese besser zu verstehen und nutzbar zu machen.",
+        "vita": "Ich bin ein in Berlin ansässiger **Informationsdesigner** und **Entwickler** mit den Schwerpunkten **Datenvisualisierung** und **Interaktionsdesign**. Momentan entwickle interaktive Prototypen für das [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) der [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) und für das [CityLAB Berlin](https://citylab-berlin.org) mit offenen Daten. Einige Institutionen mit denen ich in der Vergangenheit zusammenarbeiten durfte: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/).",
+        "profileUrl": "public/images/profile___.jpg"
       },
       "cta": {
         text: 'Interesse geweckt?',
@@ -665,7 +667,7 @@ export const content = {
       },
       "contact": {
         title: "Sag Hallo!",
-        subtitle: "Hast du eine Projektidee? Schicke mir gerne eine Nachricht oder eine Mail an mail(at)fabiandinklage.com"
+        subtitle: "Hast du eine Projektidee? Schick mir eine Nachricht hier oder eine E-Mail an mail(at)fabiandinklage.com."
       },
       "exihibitions": [
         {
@@ -677,11 +679,11 @@ export const content = {
       "services": [
         {
           "title": 'Datenvisualisierung',
-          "description": "Ich analysiere und organisiere deine Daten, um mit Ihnen neue Einsichten zu gewinnen. Mein Designprozess zeichnet sich durch iteratives Vorgehen, interaktive Prototypen und eine enge Zusammenarbeit aus. Gemeinsam prüfen wir Annahmen und entwickeln interaktive Datenvisualisierungen, die Ihnen wertvolle Perspektiven für deine Daten geben. Ich interessiere mich für datenintensive Probleme und die Entwicklung innovativer Plattformen, die ihnen die Arbeit erleichtern."
+          "description": "Ich analysiere und organisiere deine Daten, um mit Dir neue Einsichten zu gewinnen. Mein Designprozess zeichnet sich durch iteratives Vorgehen, interaktive Prototypen und eine enge Zusammenarbeit aus. Gemeinsam prüfen wir Annahmen und entwickeln interaktive Datenvisualisierungen, die Dir wertvolle Perspektiven für deine Daten geben. Ich interessiere mich für datenintensive Probleme und die Entwicklung innovativer Plattformen, die Dir die Arbeit erleichtern."
         },
         {
           "title": 'Interface Design & Beratung',
-          "description": 'Ich entwickle Design Konzepte, erstelle Wireframes und übersetze deine Anforderungen in ein Interface, dass visuell konsistent und einzigartig ist. In gemeinsamen Ideen-Workshops mit allen beteiligten Parteien, ganzheitliche und zielgerichtete digitale Produkte zu entwickeln. Wenn Sie bereits ein Produkt haben, helfe ich ihnen dabei Potenziale zu finden und Möglichkeiten der Umsetzung zu finden.'
+          "description": 'Ich entwickle Design Konzepte, erstelle Wireframes und übersetze deine Anforderungen in ein Interface, das visuell konsistent und einzigartig ist. Wir entwickeln gemeinsamen Ideen-Workshops ganzheitliche und zielgerichtete digitale Werkzeuge. Wenn Du bereits ein Produkt hast, unterstütze ich dabei Potenziale zu finden und effektiv umzusetzen.'
         },
       ],
       "activities": [
@@ -691,7 +693,7 @@ export const content = {
           "context": "Technologiestfitung Berlin, CityLAB Berlin",
           "duration": "2018 – Heute",
           "date": new Date(),
-          "description": "Erstellung interaktiver Prototypen mit offenen Daten für ein offenes Berlin."
+          "description": "Erstellung interaktiver Prototypen mit offenen Daten für ein offenes Berlin"
         },
         {
           "title": "Freelance Projekte",
@@ -707,7 +709,7 @@ export const content = {
           "context": "Berliner Morgenpost",
           "duration": "2017",
           "date": new Date("2017-08-01"),
-          "description": "Umsetzung datengetriebener Prototypen für die Bundestagswahl 2017."
+          "description": "Umsetzung datengetriebener Prototypen für die Bundestagswahl 2017"
         },
         {
           "title": "Interaction Design (B.A.)",
@@ -731,7 +733,7 @@ export const content = {
           "duration": "2015 – 2018",
           "date": new Date("2015-10-15"),
           "context": "University of Applied Sciences Potsdam",
-          "description": "Studium: Informationsdesign, Datenvisualiserung und Nutzer-zentrierte Design Prozesse"
+          "description": "Studium: Informationsdesign, Datenvisualisierung und Nutzer-zentrierte Design Prozesse"
         },
         {
           "title": "Media Designer",
@@ -739,7 +741,7 @@ export const content = {
           "duration": "2010 – 2014",
           "date": new Date("2010-08-01"),
           "context": "ballyhoo, Hamburg",
-          "description": "Wireframes und Visual Interface Design für Auftraggeber wie Spiegel Online oder Payback."
+          "description": "Wireframes und Visual Interface Design für AuftraggeberInnen wie Spiegel Online oder Payback"
         },
         {
           "title": "Ausbildung Mediengestaltung",
@@ -747,7 +749,7 @@ export const content = {
           "duration": "2010 – 2013",
           "date": new Date("2010-08-01"),
           "context": "Medienschule Hamburg",
-          "description": "Prinzipien des Grafik Design."
+          "description": "Prinzipien des Grafik Design"
         },
         {
           "title": "CityLAB: Dauerhafte Ausstellung",
@@ -755,7 +757,7 @@ export const content = {
           "duration": "2019",
           "date": new Date("2019-08-01"),
           "context": "Shared Mobility Flows",
-          "description": "Das Projekt ist Teil der Ausstellung für Innovation im öffentlichen Sektor."
+          "description": "Das Projekt ist Teil der Ausstellung für Innovationen in im öffentlichen Sektor"
         },
         {
           "title": "A City In Flux",
@@ -771,15 +773,15 @@ export const content = {
           "duration": "2018",
           "date": new Date("2018-08-01"),
           "context": "Konferenz für Informationsvisualisierung",
-          "description": "Konzept & Entwicklung d. visuellen Sprache und Internetauftritt"
+          "description": "Konzept & Entwicklung von visueller Sprache und Internetauftritt"
         },
         {
           "title": "Data Visualization fundamentals",
           "type": "Andere",
           "duration": "2020",
           "date": new Date("2020-02-15"),
-          "context": "E-Artsup University, Paris",
-          "description": "Vortrag über Grundlagen zu Datenvisualisierung"
+          "context": "E-Artsup University Paris",
+          "description": "Vortrag über Grundlagen zu Datenvisualisierungen"
         },
         {
           "title": "Shared Mobility Flows",
@@ -804,8 +806,8 @@ export const content = {
           "alt": "data visualization, mapping, datavis, data visualisation, datenvisualisierung: a city in flux – 800 Routen des öffentlichen und informellen Mobilitätsnetzwerks visualisiert.",
           "lazy": "public/images/cityinflux/cityinflux-lazy-960x640.jpg",
           "url": "https://city-in-flux.netlify.com/",
-          "tasks": ["concept", "visual interface design", "Data visualization"],
-          "subtitle": "Visualisierung sozioökonomischen Daten und Mobilitätsdaten von Kapstadt.",
+          "tasks": ["Konzept", "Visual Interface Design", "Datenvisualisierung"],
+          "subtitle": "Visualisierung sozioökonomischer Daten und Mobilitätsdaten von Kapstadt",
           "description": "Kapstadts Mobilität ist durch formelle und informelle Mobilitätsnetzwerke gekennzeichnet. Diese bestehen aus meist selbst organisierten Taxi- und Busdiensten. Welches Bild der Stadt entsteht, wenn soziale und wirtschaftliche Daten mit Mobilitätsdaten kombiniert werden? Welche mitreißenden Geschichten sind in diesen Daten enthalten und können mit Hilfe digitaler Werkzeuge sichtbar gemacht werden? Das interaktive Stück visualisiert einzigartige Routenprofile der formellen und informellen Mobilitätsnetzwerke Kapstadts. Ziel des Prototyps ist es, die Nutzer*innen zu motivieren sich über die vielfältigen Lebensbedingungen der Stadt zu informieren und eigene Perspektiven zur räumlichen und sozialen Mobilität einzubringen. Exemplarisch wird anhand von Annotationen gezeigt, wie entlang der Routen der Raum für persönliche Geschichten geöffnet wird. Die Mobilitätsdaten wurden vom Startup WhereIsMyTransport zur Verfügung gestellt. Die sozio-ökonomischen Daten stammen aus qualitativen Erhebungen des Statistischen Bundesamtes Südafrikas.",
           "media": [
             {
@@ -852,8 +854,8 @@ export const content = {
           "alt": "data visualization, datavis, data visualisation, datenvisualisierung, Visual Language, Frontend development: Ungleichheit der Geschlechter in Nationalen Parlamenten – How gender equal are political decisions made on a country level and what are underlying trends?",
           "url": "https://genderequality.fabiandinklage.com/",
           "tasks": ["Datenvisualisierung", "Frontend Entwicklung"],
-          "subtitle": "Was sind die zugrunde liegenden Trends der letzten 30 Jahre?",
-          "description": "Die Gleichstellung der Geschlechter in politischen Entscheidungsprozessen ist in nur sehr wenigen Ländern Realität. Frauen sind in der Politik oft unterrepräsentiert und werden nicht ausreichend an Entscheidungsprozessen beteiligt. Wie kann eine Status-quo-Kommunikation zur Gleichstellung der Geschlechter in der Politik vermittelt werden? Wie kann ein Bewusstsein für die Geschlechterverhältnisse in der Welt entstehen? Die interaktive Datenvisualisierung lädt Nutzer*innen ein, die Entwicklung der Geschlechterverteilung in 174 nationalen Parlamenten zwischen 1990 und 2018 zu verfolgen. Entlang geographischer und kategorialer Filter - wie z.B. Entwicklung - werden wichtige Facetten des Datensatzes hervorgehoben. Ein interaktiver Globus erleichtert die Orientierung bei der Erkundung der Daten. Der Datensatz wird vom Datenportal der Vereinten Nationen zur Verfügung gestellt.",
+          "subtitle": "Was sind die zugrunde liegenden Trends der letzten 30 Jahre",
+          "description": "Die Gleichstellung der Geschlechter in politischen Entscheidungsprozessen ist in nur sehr wenigen Ländern Realität. Frauen sind in der Politik oft unterrepräsentiert und werden nicht ausreichend an Entscheidungsprozessen beteiligt. Wie kann eine Status-quo-Kommunikation zur Gleichstellung der Geschlechter in der Politik vermittelt werden? Wie kann ein Bewusstsein für die Geschlechterverhältnisse in der Welt entstehen? Die interaktive Datenvisualisierung lädt NutzerInnen ein, die Entwicklung der Geschlechterverteilung in 174 nationalen Parlamenten zwischen 1990 und 2018 zu verfolgen. Entlang geographischer und kategorialer Filter - wie z.B. Entwicklung - werden wichtige Facetten des Datensatzes hervorgehoben. Ein interaktiver Globus erleichtert die Orientierung bei der Erkundung der Daten. Der Datensatz wird vom Datenportal der Vereinten Nationen zur Verfügung gestellt.",
           "media": [
             {
               "type": "img",
@@ -892,7 +894,7 @@ export const content = {
           "alt": "data visualization, datavis, map, data visualisation, datenvisualisierung, Visual Language, Frontend development: Digitale Bildungsangebote in Berlin – Innovative digitale Bildungsangebote Berlins für die Zivilgesellschaft zugänglich gemacht.",
           "url": "https://edutech.technologiestiftung-berlin.de",
           "tasks": ["Backend (CMS)", "Visual Interface Design", "Frontend Entwicklung"],
-          "subtitle": "Innovative digitale Bildungsangebote Berlins für die Zivilgesellschaft zugänglich gemacht.",
+          "subtitle": "Innovative digitale Bildungsangebote Berlins für die Zivilgesellschaft zugänglich gemacht",
           "description": "Eine große Anzahl von digitalen Bildungsangeboten sind im Berliner Stadtgebiet angesiedelt. Wie können diese Angebote klassifiziert und den NutzerInnen mittels einer Visualisierung leichter zugänglich gemacht werden? Eine interaktive Karte ermöglicht es, die Landschaft der digitalen Bildungsangebote zu überblicken und zu erkunden. Ausgearbeitete Filtermöglichkeiten wie: angebotene Dienste, Publikum und Standort helfen den NutzerInnen, passende interessante Angebote im Stadtgebiet von Berlin zu finden. Der Datensatz wurde aus einer vom Auftraggeber durchgeführten qualitativen Umfrage gewonnen.",
           "media": [
             {
@@ -911,7 +913,7 @@ export const content = {
             },
             {
               "type": "img",
-              "alt": "data visualization, datenvisualisierung: Digitale Bildungsangebote in Berlin – Alle Angebote sind können anhand unterschiedlicher Kriterien sortiert werden.",
+              "alt": "data visualization, datenvisualisierung: Digitale Bildungsangebote in Berlin – Alle Angebote können anhand unterschiedlicher Kriterien sortiert werden.",
               "content": "Alle Angebote sind können anhand unterschiedlicher Kriterien sortiert werden.",
               "url": "public/images/edutech/edutech-list-3840x2040.jpg",
               "lazy": "public/images/edutech/edutech-list-lazy-3840x2040.jpg"
@@ -935,19 +937,19 @@ export const content = {
         {
           "title": "Rhythmus der Straße",
           "path": "rhythmoftheroad",
-          "type": "Data Visualization",
+          "type": "Datenvisualisierung",
           "client": "Technologiestiftung Berlin",
           "color": ['#2824B2', '#F5F4FC', '#E8E7F1'],
           "year": 2018,
           "visible": true,
-          "alt": "data visualization, datavis, map, data visualisation, Datenvisualisierung, Visuelle Sprache, Deutschland, Frontend Entwicklung: Rhythmus der Straße – Visualisierung des Rhythmus der Berliner Radler über ein Jahr.",
+          "alt": "data visualization, datavis, map, data visualisation, Datenvisualisierung, Visuelle Sprache, Deutschland, Frontend Entwicklung: Rhythmus der Straße – Berlins Radzählstellen visualisiert.",
           "thumbnail": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.jpg",
           "overlay": "public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.gif",
           "lazy": "public/images/rhythmoftheroad/rhythmoftheroad-lazy-960x640.jpg",
           "url": "https://lab.technologiestiftung-berlin.de/projects/bikerides/de/",
           "tasks": ["Datenanalyse", "Datenvisualisierung", "Frontend Entwicklung"],
-          "subtitle": "Visualisierung des Rhythmus der Berliner Radler über ein Jahr.",
-          "description": "Seit 2015 erfasst die Berliner Senatsverwaltung mit automatisierten Zählstationen den Radverkehr in der Stadt. Wie können die 26 Zählstationen Berlins aggregiert und für die BürgerInnen zugänglich gemacht werden? Die interaktive Visualisierung ermöglicht es den NutzerInnen, das zeitliche Muster der Berliner RadfahrerInnen an den einzelnen Zählstationen zu entdecken. Die Visualisierung zeigt tägliche, wöchentliche und jährliche Zeitmuster der Radfahrer*innen. Darüber hinaus können die Daten in drei Detaillierungsstufen (Median, absolut, maximal) dargestellt werden.",
+          "subtitle": "Berlins Radzählstellen visualisiert",
+          "description": "Seit 2015 erfasst die Berliner Senatsverwaltung mit automatisierten Zählstationen den Radverkehr in der Stadt. Wie können die 26 Zählstationen Berlins aggregiert und für die BürgerInnen zugänglich gemacht werden? Die interaktive Visualisierung ermöglicht es den NutzerInnen, das zeitliche Muster der Berliner RadfahrerInnen an den einzelnen Zählstationen zu entdecken. Die Visualisierung zeigt tägliche, wöchentliche und jährliche Zeitmuster der RadfahrerInnen. Darüber hinaus können die Daten in drei Detaillierungsstufen (Median, absolut, maximal) dargestellt werden.",
           "media": [
             {
               "type": "img",
@@ -958,7 +960,7 @@ export const content = {
             {
               "type": "img",
               "alt": "data visualization, datenvisualisierung: Rhythmus der Straße – Radzählstellen ausgerichtet am Raster und geografischer Verortung",
-              "content": "Radzählstellen ausgerichtet am Raster und geografischer Verortung",
+              "content": "Radzählstellen ausgerichtet am Raster und an der geografischer Verortung",
               "url": "public/images/rhythmoftheroad/rhythmoftheroad-overview-3840x2246.jpg"
             },
           ]
@@ -972,32 +974,32 @@ export const content = {
           "year": 2019,
           "visible": true,
           "thumbnail": "public/images/bikesharing/bikesharing-thumb-960x640.jpg",
-          "alt": "data visualization, datavis, map, data visualisation, datenvisualisierung, Visual Language, Frontend development: Shared Mobility Flows – Erkunden und analysieren Sie räumlich-zeitliche Muster der Nutzung von Shared Mobility Angeboten.",
+          "alt": "data visualization, datavis, map, data visualisation, datenvisualisierung, Visual Language, Frontend development: Shared Mobility Flows – Entdecke und analysiere räumlich-zeitliche Muster der Nutzung von Shared Mobility Angeboten.",
           "overlay": "public/images/bikesharing/bikesharing-thumb-960x640.gif",
           "lazy": "public/images/bikesharing/bikesharing-lazy-960x640.jpg",
           "url": "https://bikesharing.citylab-berlin.org",
-          "tasks": ["Data Analysis", "Backend Infrastructure", "Visual Interface Design", "Data visualization"],
-          "subtitle": "Erkunden und analysieren Sie räumlich-zeitliche Muster der Nutzung von Shared Mobility Angeboten..",
-          "description": "Die städtische Mobilität unterliegt stetigen Veränderungsprozessen. Seit einigen Jahren wird in den Großstädten vermehrt Bikesharing betrieben, wodurch Fahrräder in der ganzen Stadt flexibel ausgeliehen und abgestellt werden können. Wie können die gesammelten Daten der verschiedenen AnbieterInnen bei der Stadtplanung helfen? Die interaktive Visualisierung, optimiert für Touchscreen, ermöglicht es den NutzerInnen, das Potenzial der gemeinsam genutzten Mobilitätsdienste für jeden Bezirk Berlins zu erkunden und den zeitlichen Verlauf der Nutzung zu erfassen. Ziel ist es, Interesse und Bewusstsein durch einen Überblick über die Leihfahrradangebote in Berlin mittels einer datengesteuerten immersiven Schnittstelle zu schaffen. Mikroszenarien liefern zusätzliche Informationen über die räumlichen Gegebenheiten in Berlin. Das Projekt ist Teil der Dauerausstellung des CityLAB Berlin.",
+          "tasks": ["Datenanalyse", "Backend Infrastruktur", "Visual Interface Design", "Datenvisualisierung"],
+          "subtitle": "Räumlich-zeitliche Muster der Nutzung von Shared Mobility Angeboten",
+          "description": "Die städtische Mobilität unterliegt stetigen Veränderungsprozessen. Seit einigen Jahren wird in den Großstädten vermehrt Bikesharing betrieben, wodurch Fahrräder in der ganzen Stadt flexibel ausgeliehen und abgestellt werden können. Wie können die gesammelten Daten der verschiedenen AnbieterInnen bei der Stadtplanung helfen? Die interaktive Visualisierung, optimiert für Touchscreen, ermöglicht es den NutzerInnen, das Potenzial der gemeinsam genutzten Mobilitätsdienste für jeden Bezirk Berlins zu erkunden und den zeitlichen Verlauf der Nutzung zu erfassen. Ziel ist es, durch einen Überblick über die Leihfahrradangebote in Berlin, Interesse und Bewusstsein zu schaffen. Mikroszenarien liefern zusätzliche Informationen über die räumlichen Gegebenheiten in Berlin. Das Projekt ist Teil der Dauerausstellung des CityLAB Berlin.",
           "media": [
             {
               "type": "bikesharing",
-              "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Vergleiche, wie instensiv das Angebot in den unterschiedlichen Bezirken verwendet wird.",
+              "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Vergleiche, wie intensiv das Angebot in den unterschiedlichen Bezirken verwendet wird.",
               "content": "Vergleiche, wie instensiv das Angebot in den unterschiedlichen Bezirken verwendet wird.",
               "url": "public/images/bikesharing/bikesharing-overview-3840x2040.jpg",
               "lazy": "public/images/bikesharing/bikesharing-overview-lazy-3840x2040.jpg",
             },
             {
               "type": "bikesharing",
-              "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Das Interface ermöglicht direkten Eingriff in den zeitlichen Verlauf und eine Übersicht über die Nutzung.",
-              "content": "Das Interface ermöglicht direkten Eingriff in den zeitlichen Verlauf und eine Übersicht über die Nutzung.",
+              "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Das Interface ermöglicht direkten Zugriff in den zeitlichen Verlauf und eine Übersicht über die Nutzung.",
+              "content": "Das Interface ermöglicht direkten Zugriff in den zeitlichen Verlauf und eine Übersicht über die Nutzung.",
               "url": "public/images/bikesharing/bikesharing-ui-3840x2040.jpg",
               "lazy": "public/images/bikesharing/bikesharing-ui-lazy-3840x2040.jpg",
             },
             {
               "type": "bikesharing",
-              "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Die angenäherten Fahrradrouten werden durch Fließströme abgebildet.",
-              "content": "Die angenäherten Fahrradrouten werden durch Fließströme abgebildet.",
+              "alt": "data visualization, datenvisualisierung: Shared Mobility Flows – Die möglichen Fahrradrouten werden durch Fließströme abgebildet.",
+              "content": "Die möglichen Fahrradrouten werden durch Fließströme abgebildet.",
               "url": "public/images/bikesharing/bikesharing-trails-3840x2040.jpg",
               "lazy": "public/images/bikesharing/bikesharing-trails-lazy-3840x2040.jpg",
             },
@@ -1018,7 +1020,7 @@ export const content = {
           ]
         },
         {
-          "title": "The Curricle Lens",
+          "title": "Curricle Lens",
           "path": "curricle",
           "type": "Datenvisualisierung",
           "client": "Berkmann Klein Center (at) Harvard",
@@ -1030,35 +1032,35 @@ export const content = {
           "lazy": "public/images/curricle/curricle-lazy-960x640.jpg",
           "alt": "data visualization, datenvisualisierung: The Curricle Lens – Visualisiert, kommentiert, vernetzt: Wie sollte der Kurskatalog im 21. Jahrhundert aussehen?",
           "url": "https://curricle.net",
-          "tasks": ["Storytelling Design", "Frontend Development"],
-          "subtitle": "Visualisiert, kommentiert, vernetzt: Wie sollte der Kurskatalog im 21. Jahrhundert aussehen?",
-          "description": "Der Harvard-Kurskatalog ist durch ständigen Wandel gekennzeichnet. Sich verändernde Kursinhalte und historische Ereignisse, wie z.B. soziale Bewegungen, beeinflussen das Lehren und Lernen. Dieses Forschungsprojekt war eine Zusammenarbeit mit dem [Metalab] (https://metalabharvard.github.io/). Zusammen mit [Kim Albrecht](https://kimalbrecht.com/), die für Geschichten und Visualisierung verantwortlich war, entwickelten wir das Forschungsprojekt Curricle Lens, das es den Nutzern ermöglicht, historische Ereignisse aus dem Harvard-Kurskatalog zu erforschen. Die Daten können anhand von vier umfangreichen Erzählsträngen erforscht werden. Ein scrollbasiertes Storytelling-Modul taucht in die komplexen Kursstrukturen ein, die sich im Laufe der Zeit entfalten und durch pointierte Essays zusätzlichen Kontext bieten. Reaktionsschnelle Hinweise in der Visualisierung zeigen dem Benutzer das Informationserlebnis und heben wichtige Datenpunkte in der Visualisierung hervor. Die Daten stammen aus dem Kurskatalog von Harvard von 1990 bis 2020.",
+          "tasks": ["Storytelling Design", "Frontend Entwicklung"],
+          "subtitle": "Visualisiert, kommentiert, vernetzt: Wie sollte der Kurskatalog im 21. Jahrhundert aussehen",
+          "description": "Der Harvard-Kurskatalog ist durch ständigen Wandel gekennzeichnet. Sich verändernde Kursinhalte und historische Ereignisse, wie z.B. soziale Bewegungen, beeinflussen das Lehren und Lernen. Dieses Forschungsprojekt war eine Zusammenarbeit mit dem Metalab. Gemeinsam mit Kim Albrecht entwickelten wir das Forschungsprojekt Curricle Lens, das es den NutzerInnen ermöglicht, historische Ereignisse aus dem Harvard-Kurskatalog zu erforschen. Die Daten können anhand von vier umfangreichen Erzählsträngen erkundet werden. Ein scrollbasiertes Storytelling-Modul taucht in die komplexen Kursstrukturen ein, die sich im Laufe der Zeit verändern und durch pointierte Essays zusätzlichen Kontext bieten. Annotationen in der Visualisierung zeigen NutzerInnen heben wichtige Datenpunkte in der Visualisierung hervor. Die Daten stammen aus dem Kurskatalog von der Harvard Universität (1990-2020).",
           "media": [
             {
               "type": "curricle",
-              "alt": "data visualization, datenvisualisierung: The Curricle Lens – While course structures stay consistent, labeling them is a continuous process.",
-              "content": "While course structures stay consistent, labeling them is a continuous process.",
+              "alt": "data visualization, datenvisualisierung: The Curricle Lens – Während Kursstrukturen konsistent bleiben, werden die Kurstitel regelmäßig aktualisiert",
+              "content": "Während Kursstrukturen konsistent bleiben, werden die Kurstitel regelmäßig aktualisiert",
               "url": "public/images/curricle/curricle-label-3840x2040.jpg",
               "lazy": "public/images/curricle/curricle-label-lazy-3840x2040.jpg",
             },
             {
               "type": "curricle",
-              "alt": "data visualization, datenvisualisierung: The Curricle Lens – While scrolling through the story, patterns can be highlighted at some points.",
-              "content": "While scrolling through the story, patterns can be highlighted at some points.",
+              "alt": "data visualization, datenvisualisierung: The Curricle Lens – Während des Scrollens durch die Geschichte werden Muster hervorgehoben",
+              "content": "Während des Scrollens durch die Geschichte werden Muster hervorgehoben",
               "url": "public/images/curricle/curricle-highlight-3840x2040.jpg",
               "lazy": "public/images/curricle/curricle-highlight-lazy-3840x2040.jpg",
             },
             {
               "type": "curricle",
-              "alt": "data visualization, datenvisualisierung: The Curricle Lens – Interesting patterns are annotaded.",
-              "content": "Interesting patterns are annotaded.",
+              "alt": "data visualization, datenvisualisierung: The Curricle Lens – Annotationen in der Visualisierung",
+              "content": "Annotationen in der Visualisierung",
               "url": "public/images/curricle/curricle-tooltip-3840x2040.jpg",
               "lazy": "public/images/curricle/curricle-tooltip-lazy-3840x2040.jpg",
             },
             {
               "type": "curricle",
-              "alt": "data visualization, datenvisualisierung: The Curricle Lens – The audience can choose between a set of five storylines.",
-              "content": "The audience can choose between a set of five storylines.",
+              "alt": "data visualization, datenvisualisierung: The Curricle Lens – NutzerInnen können zwischen fünf unterschiedlichen Geschichten wählen",
+              "content": "NutzerInnen können zwischen fünf unterschiedlichen Geschichten wählen",
               "url": "public/images/curricle/curricle-intro-3840x2040.jpg",
               "lazy": "public/images/curricle/curricle-intro-lazy-3840x2040.jpg",
             },
@@ -1078,8 +1080,8 @@ export const content = {
           "alt": "data visualization, datenvisualisierung: Retro Future Hacker News – Visualisierung von Kontroversität und Bekanntheit des News Aggregators.",
           "url": "https://hackernews.fabiandinklage.com",
           "tasks": ["Konzept", "Visuelle Sprache", "Frontend Entwicklung"],
-          "subtitle": "Kontroversität und Bekanntheit des News Aggregators.",
-          "description": "Die Social-Media-Website [Hacker News](https://news.ycombinator.com/) ist ein Nachrichtenaggregator mit Schwerpunkt auf Informatik und Informationstechnologie. Ihr Design ist nackt, aber sie verfügt über komplexe Funktionen für Abstimmungen und Diskussionen. Die experimentelle interaktive Visualisierung ermöglicht es dem Benutzer, aktuelle Artikel der Plattform zu erkunden. Die Kommentare werden chronologisch für jeden Artikel angezeigt und verschachtelte Kommentare werden in neuen Interpretationen der Listen erstellt. Das Ergebnis ist ein typografischer Cyber-Punk-Leser, der Benutzerfreundlichkeit und Konventionalität gegen Rohheit und Widerstand gegen den gesunden Menschenverstand der Benutzerfreundlichkeit und Webstandards eintauscht. Dieses Projekt wurde mit [Florian Zia](https://twitter.com/flozia) entwickelt und von [Boris Müller](https://twitter.com/borism) an der [Fachhochschule Potsdam](https://design.fh-potsdam.de/) betreut.",
+          "subtitle": "Kontroversität und Bekanntheit des News Aggregators",
+          "description": "Die Social-Media-Website Hacker News ist ein Nachrichtenaggregator mit Schwerpunkt auf Informatik und Informationstechnologie. Ihr Design ist roh, aber sie verfügt über komplexe Funktionen für Abstimmungen und Diskussionen. Die experimentelle interaktive Visualisierung ermöglicht es NutzerInnen, aktuelle Artikel der Plattform zu erkunden. Die Kommentare werden chronologisch für jeden Artikel angezeigt und verschachtelte Kommentare werden in neuen Interpretationen der Listen erstellt. Dieses Projekt wurde mit [Florian Zia](https://twitter.com/flozia) entwickelt und von [Boris Müller](https://twitter.com/borism) an der [Fachhochschule Potsdam](https://design.fh-potsdam.de/) betreut.",
           "media": [
             {
               "type": "hackernews",
@@ -1125,13 +1127,13 @@ export const content = {
           "lazy": "public/images/candidates/candidates-lazy-960x640.jpg",
           "url": "https://interaktiv.morgenpost.de/kandidaten-bundestagswahl-2017/",
           "tasks": ["Datenvisualisierung", "Frontend Entwicklung"],
-          "subtitle": "Wer sie sind und wofür sie stehen?",
-          "description": "Zur Wahl in den Bundestag stehen 2559 Direktkandidaten aus verschiedenen Parteien zur Verfügung. Im Rahmen des Google News Fellowship habe ich zusammen mit dem Interaktiven Team der Berliner Morgenpost verschiedene interaktive Visualisierungen über die Wahlen entwickelt. Die webbasierte Visualisierung ermöglicht es den Nutzern, weitere Perspektiven auf alle Direktkandidaten zu erhalten. Jeder Kandidat, dargestellt durch einen Punkt, kann nach Beruf, Herkunft, Alter oder politischer Nähe sortiert und verglichen werden. Unsichtbare darunterliegende Strukturen werden durch die Visualisierung sichtbar gemacht. Die Anwendung basiert auf den Daten des Bundeswahlleiters über alle zugelassenen Kandidaten.",
+          "subtitle": "Wer sie sind und wofür sie stehen",
+          "description": "Zur Wahl des Bundestags stehen 2559 Direktkandidaten aus verschiedenen Parteien zur Verfügung. Im Rahmen des Google News Fellowship habe ich zusammen mit dem Interaktiven Team der Berliner Morgenpost verschiedene interaktive Visualisierungen zu den Wahlen entwickelt. Die webbasierte Visualisierung ermöglicht es den NutzerInnen, weitere Perspektiven auf alle DirektkandidatInnen zu erhalten. Jeder KandidatIn, dargestellt durch einen Punkt, kann nach Beruf, Herkunft, Alter oder politischer Nähe sortiert und verglichen werden. Unsichtbare darunterliegende Strukturen werden durch die Visualisierung sichtbar gemacht. Die Anwendung basiert auf den Daten des Bundeswahlleiters über alle zugelassenen Kandidaten.",
           "media": [
             {
               "type": "candidates",
-              "alt": "data visualization, datenvisualisierung: Direktwahlkandidaten 2017 – Jeder Kreis entspricht einem Kandidaten und ist der zugehörigen Partei eingefärbt.",
-              "content": "Jeder Kreis entspricht einem Kandidaten und ist der zugehörigen Partei eingefärbt.",
+              "alt": "data visualization, datenvisualisierung: Direktwahlkandidaten 2017 – Jeder Kreis entspricht einer KandidatIn und ist der zugehörigen Partei eingefärbt.",
+              "content": "Jeder Kreis entspricht einer KandidatIn und ist der zugehörigen Partei eingefärbt.",
               "url": "public/images/candidates/candidates-1-3840x2040.jpg",
               "lazy": "public/images/candidates/candidates-1-lazy-3840x2040.jpg",
             },
@@ -1173,7 +1175,7 @@ export const content = {
             {
               "type": "candidates",
               "alt": "data visualization, datenvisualisierung: Direktwahlkandidaten 2017 – Abbildung der Kandidaten nach politischer Nähe.",
-              "content": "Abbildung der Kandidaten nach politischer Nähe.",
+              "content": "Abbildung der KandidatInnen nach politischer Nähe.",
               "url": "public/images/candidates/candidates-7-3840x2040.jpg",
               "lazy": "public/images/candidates/candidates-7-lazy-3840x2040.jpg",
             },
@@ -1193,13 +1195,13 @@ export const content = {
           "lazy": "public/images/invisties/invisties-lazy-960x640.jpg",
           "url": "https://meetup.fabiandinklage.com/",
           "tasks": ["Konzept", "Datenanalyse", "Datenvisualisierung", "Frontend Entwicklung"],
-          "subtitle": "Zehn Jahre Meetup-Geschichte visualisiert und kommentiert.",
-          "description": "Diese experimentelle explorative Datenvisualisierung lädt den Benutzer ein, die Plattform Meetup entlang von Indikatoren wie Popularität, Aktivität der Mitglieder oder soziale Nähe zu vergleichen. Wie hat die Nutzung der Plattform im letzten Jahrzehnt zugenommen. Wie wurde sie vom Publikum genutzt? Ein reaktionsfreudiges Storytelling-Modul bereichert die Visualisierung mit wertvollem Kontext und schafft eine spielerische, geschichtenorientierte Erfahrung. Die gesammelten Daten wurden von der Plattform abgekratzt und enthalten mehr als 75.000 Meetup-Veranstaltungen von ~3.000 Gruppen der letzten 10 Jahre, die in Berlin stattfanden.",
+          "description": "Diese explorative Datenvisualisierung lädt den NutzerInnen ein, die Plattform Meetup entlang von Indikatoren wie Popularität, Aktivität der Mitglieder oder soziale Nähe zu vergleichen. Wie hat die Nutzung der Plattform im letzten Jahrzehnt zugenommen. Wie wurde sie vom Publikum genutzt? Ein responsives Storytelling-Modul bereichert die Visualisierung mit wertvollen Kontext und schafft eine spielerische, informative Erfahrung. Die gesammelten Daten wurden von der Plattform gescraped und enthalten mehr als 75.000 Meetup-Veranstaltungen von ~3.000 Gruppen der letzten 10 Jahre, die in Berlin stattfanden.",
+          "subtitle": "10 Jahre Meetup Daten annotiert und visualisiert",
           "media": [
             {
               "type": "invisties",
-              "alt": "Meetups unsichtbare Verbindungen – Let yourself guide by a story driven introduction or dive into the data by your own.",
-              "content": "Let yourself guide by a story driven introduction or dive into the data by your own.",
+              "alt": "Meetups unsichtbare Verbindungen – Schrittweise Einführung in Visualisierung und Datensatz",
+              "content": "Schrittweise Einführung in Visualisierung und Datensatz",
               "url": "public/images/invisties/invisties-intro-3840x2040.jpg",
               "lazy": "public/images/invisties/invisties-intro-lazy-3840x2040.jpg",
             },
@@ -1227,7 +1229,7 @@ export const content = {
             {
               "type": "invisties",
               "alt": "Meetups unsichtbare Verbindungen – Das Wachstum der Mitglieder von allen verfügbaren Kategorien über Zeit.",
-              "content": "The growth of each category over time.",
+              "content": "Das Wachstum der Mitglieder von allen verfügbaren Kategorien über Zeit.",
               "url": "public/images/invisties/invisties-overview-3840x2040.jpg",
               "lazy": "public/images/invisties/invisties-overview-lazy-3840x2040.jpg",
             },

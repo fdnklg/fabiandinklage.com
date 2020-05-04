@@ -7,7 +7,7 @@ import Transition from 'react-transition-group/Transition';
 import { useStoreState } from 'easy-peasy';
 
 const StyledImage = styled(rebassImage)`
-  height: 42%;
+  height: auto;
   width: 100%;
   opacity: ${props => {
     if (props.isPrerendering) {

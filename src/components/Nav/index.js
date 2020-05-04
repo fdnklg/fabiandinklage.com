@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
@@ -50,12 +50,13 @@ const StyledLanguageSwitch = styled.span`
   border: 1px solid ${p => p.color[0]};
   border-radius: 135px;
   justify-content: center;
+  color: ${p => p.color[0]};
   cursor: pointer;
   transition: all ${p => p.theme.times[0]} ease-in-out;
 
   &:hover {
-    background: ${p => p.color[0]};
     color: ${p => p.color[1]};
+    background: ${p => p.color[0]};
     transition: all ${p => p.theme.times[0]} ease-in-out;
   }
 `;
@@ -66,17 +67,15 @@ const Nav = p => {
   const base = useStoreState(state => state.base);
   const navContent = content[base].nav;
   const color = useStoreState(state => state.color.color);
+  const [first, setFirst] = useState(false);
 
-  const handleLanguage = () => {
-    setBase();
-  };
-
-  useEffect(() => {
+  const handleLanguage = (lang) => {
+    setBase(lang);
     const location = history.location.pathname;
     const pos = getPosition(history.location.pathname, '/', -1);
     const newLocation = location.slice(0, pos - 3) + '/' + base;
     history.push(newLocation);
-  }, [base]);
+  };
 
   return (
     <Transition
@@ -158,8 +157,8 @@ const Nav = p => {
               {navContent.contact}
             </RouterLink>
           </Box>
-          <StyledLanguageSwitch color={color} onClick={() => handleLanguage()}>
-            {base === 'en' ? 'De' : 'En'}
+          <StyledLanguageSwitch color={color} onClick={() => handleLanguage(base === 'de' ? 'en' : 'de')}>
+            {base === 'en' ? 'DE' : 'EN'}
           </StyledLanguageSwitch>
         </StyledFlex>
       )}

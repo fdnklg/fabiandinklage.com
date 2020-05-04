@@ -170,6 +170,7 @@ const Grid = p => {
           sx={{
             display: 'grid',
             gridGap: 4,
+            alignItems: 'start',
             gridTemplateColumns: [
               'repeat(auto-fit, minmax(250px, 1fr))',
               'repeat(auto-fit, minmax(240px, 1fr))',
@@ -179,7 +180,7 @@ const Grid = p => {
         >
           {data.map((p, i) => {
             return (
-              <RouterLink color={color} to={`/projects/${p.path}/${base}`}>
+              <RouterLink hover={true} color={color} to={`/projects/${p.path}/${base}`}>
               <Box
                 onMouseOver={() => handleMouseOver(p.color, i)}
                 onMouseOut={() => {

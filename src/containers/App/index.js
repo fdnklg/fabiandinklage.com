@@ -8,7 +8,7 @@ const base = '/:(en|de)?';
 
 
 const App = p => {
-  const userLang = navigator.language.split(/[-_]/)[0] !== 'de' ? 'en' : 'de';
+  const userLang = navigator.language.split(/[-_]/)[0] == 'de' ? 'de' : 'en';
   const setBase = useStoreActions(actions => actions.setBase);
   const base = useStoreState(state => state.base);
 
@@ -21,8 +21,8 @@ const App = p => {
   return (
     <Router history={history}>
       <Switch>
-        <Route path={['/']} component={AppWrapper} />
-        <Route component={NotFoundRoute} />
+        {base && (<Route path={['/']} component={AppWrapper} />)}
+        {base && (<Route component={NotFoundRoute} />)}
       </Switch>
     </Router>
   );
