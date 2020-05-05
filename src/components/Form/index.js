@@ -7,7 +7,7 @@ import { content } from '~/data';
 
 const StyledButton = styled.button`
   cursor: pointer;
-  width: fit-content;
+  width: 180px;
   align-self: flex-end;
   padding-top: 7px;
   padding-bottom: 10px;
@@ -98,19 +98,25 @@ const Form = p => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(form.btnSend);
 
   const resetForm = () => {
     setName('');
     setMessage('');
     setEmail('');
-    setSent(true);
+    setTimeout(() => {
+      setSent(form.btnSend);
+    }, 1500);
   }
+
+  useEffect(() => {
+    setSent(form.btnSend)
+  }, [base])
 
   const formSubmit = (e) => {
     e.preventDefault()
 
-    setSent('Sending ...');
+    setSent(form.btnSending);
 
     let data = {
       name: name,
@@ -123,9 +129,10 @@ const Form = p => {
 
     axios.post(productionUrl, data)
       .then( res => {
-        setSent(true);
+        setSent(form.btnSuccess);
         resetForm();
       })
+
       .catch( () => {
         console.log('Message not sent')
       })
@@ -166,7 +173,7 @@ const Form = p => {
         required
       />
 
-      <StyledButton c={color} type="submit">{ form.btnSend }</StyledButton>
+      <StyledButton c={color} type="submit">{sent}</StyledButton>
     </StyledForm>
   );
 };

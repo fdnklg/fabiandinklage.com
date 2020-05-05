@@ -15,6 +15,7 @@ export const content = {
       "name": "Your name here",
       "mail": "Your E-Mail",
       "btnSend": "Send Message",
+      "btnSending": "Sending ...",
       "btnSuccess": "Message sended!",
     },
     "legal": {
@@ -55,7 +56,7 @@ export const content = {
       },
       "contact": {
         title: "Say Hi!",
-        subtitle: "Do you have an idea to collaborate or want to reach out? Let me know!"
+        subtitle: "Do you have an idea to collaborate or want to reach out? Leave a message here or at mail(at)fabiandinklage.com."
       },
       "exihibitions": [
         {
@@ -621,9 +622,10 @@ export const content = {
     "form": {
       "message": "Deine Nachricht",
       "name": "Dein Name",
-      "mail": "Deine E-Mail Adresse",
+      "mail": "E-Mail Adresse",
       "btnSend": "Nachricht senden",
-      "btnSuccess": "Nachricht gesendet",
+      "btnSending": "Sende Nachricht ...",
+      "btnSuccess": "Nachricht gesendet!",
     },
     "footer": {
       legal: 'Impressum',
