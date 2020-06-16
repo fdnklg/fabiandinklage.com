@@ -35,6 +35,7 @@ const InnerWrapper = styled.div`
 `;
 
 import Nav from '../../components/Nav';
+import Paragraph from '../../components/Paragraph';
 import Profile from '../Profile';
 import Project from '../Project';
 import Legal from '../Legal';
@@ -50,6 +51,7 @@ const AppWrapper = () => {
 
   const base = useStoreState(state => state.base);
   const cta = content[base].cta;
+  const collaborations = content[base].collaborations;
   const titleClients = content[base].title.clients;
 
   const isPrerendering = () => {
@@ -150,23 +152,19 @@ const AppWrapper = () => {
                 fontSize={[3, 4, 4, 5]}
               >
                 <>
-                <Title timeout={600} source={titleClients} color={color} />
-                <List timeout={600} c={color}>
-                  <li>Berkmann Klein Center (at) Harvard</li>
-                  <li>Berliner Morgenpost</li>
-                  <li>Deutsches Historisches Museum</li>
-                  <li>Deutsche Bahn</li>
-                  <li>GiZ</li>
-                  <li>Google News Lab</li>
-                  <li>MIT</li>
-                  <li>Spiegel Online</li>
-                </List>
+                <Title timeout={800} source={titleClients} color={color} />
+                <Paragraph
+                  paddingTop={false}
+                  color={color}
+                  content={collaborations}
+                  timeout={800}
+                />
                 </>
               </Flex>
             </>
           )} />
-          <Route exact path={`/home/${baseLang}/`} render={() => <Cta timeout={1200} />} />
-          <Footer timeout={1000} />
+          <Route exact path={`/home/${baseLang}/`} render={() => <Cta timeout={1000} />} />
+          <Footer timeout={1200} />
         </InnerWrapper>
       </Box>
     </StyledWrapper>

@@ -45,9 +45,10 @@ export const content = {
       year: "Year",
       tasks: "Tasks"
     },
+    "collaborations": "Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  /  Spiegel Online  /  ZEIT ONLINE",
     "about": {
         "intro": "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
-        "vita": "I'm a Berlin-based designer and technologist focused on **Data Visualization** and **Interaction Design**. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). I do prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
+        "vita": "I'm a Berlin-based designer and technologist focused on **Data Visualization** and **Interaction Design**. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). Currently I work at the interactive unit of [ZEIT ONLINE](https://zeit.de). Previously I did prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
         "profileUrl": "public/images/profile___.jpg"
       },
       "cta": {
@@ -77,10 +78,19 @@ export const content = {
       ],
       "activities": [
         {
+          "title": "Information Designer",
+          "type": "Experience",
+          "context": "ZEIT ONLINE, Berlin",
+          "date": new Date(),
+          "duration": "2020 – now",
+          "description": "Crafting interactive data-driven journalistic pieces for the newsroom."
+        },
+        {
           "title": "Research associate",
           "type": "Experience",
           "context": "Technologiestfitung Berlin, CityLAB Berlin",
-          "duration": "2018 – now",
+          "duration": "2018 – 2020",
+          "date": new Date("2018-01-01"),
           "description": "Crafting interactive data-driven prototypes with open data to enhance Berlin's everyday lives."
         },
         {
@@ -88,6 +98,7 @@ export const content = {
           "type": "Experience",
           "context": "organisations, institutions,  \bbusinesses and conferences",
           "duration": "2014 – now",
+          "date": new Date(),
           "description": "Interaction design, art direction, data visualization, implementation and consulting."
         },
         {
@@ -95,12 +106,14 @@ export const content = {
           "type": "Experience",
           "context": "Berliner Morgenpost",
           "duration": "2017",
+          "date": new Date("2018-01-01"),
           "description": "Development of interactive web based data visualizations for the upcoming Bundestag elections."
         },
         {
           "title": "Interaction Design Studies",
           "type": "Education",
           "duration": "2017",
+          "date": new Date("2018-01-01"),
           "context": "Malmö University, Sweden",
           "description": "Service design concept for the city of Malmö to reduce food waste in public kitchens."
         },
@@ -108,6 +121,7 @@ export const content = {
           "title": "Infographic Artist",
           "type": "Experience",
           "duration": "2016 – 2017",
+          "date": new Date("2018-01-01"),
           "context": "Infographics Group, Berlin",
           "description": "Visual interface design & frontend development of data driven interactive visualizations.",
         },
@@ -115,6 +129,7 @@ export const content = {
           "title": "Interface Design (B.A.)",
           "type": "Education",
           "duration": "2015 – 2018",
+          "date": new Date("2018-01-01"),
           "context": "University of Applied Sciences Potsdam",
           "description": "Studies of information design, data visualization and user centric design processes."
         },
@@ -122,6 +137,7 @@ export const content = {
           "title": "Media Designer",
           "type": "Experience",
           "duration": "2010 – 2014",
+          "date": new Date("2018-01-01"),
           "context": "ballyhoo, Hamburg",
           "description": "Wireframes and Visual Interface Design for clients like Spiegel Online and Payback."
         },
@@ -129,6 +145,7 @@ export const content = {
           "title": "Media Design Traineeship",
           "type": "Education",
           "duration": "2010 – 2013",
+          "date": new Date("2018-01-01"),
           "context": "Vocational school for media and communication",
           "description": "Learning about fundamental communication methods and principles of graphic design."
         },
@@ -136,13 +153,15 @@ export const content = {
           "title": "CityLAB permanent exhibition",
           "type": "Exhibition",
           "duration": "2019",
+          "date": new Date("2018-01-01"),
           "context": "Shared Mobility Flows",
           "description": "The interactive piece is part of the exhibition for innovation in the public sector."
         },
         {
-          "title": "Exhibited: [A City In Flux](https://city-in-flux.netlify.com/)",
+          "title": "Exhibited: A City In Flux",
           "type": "Exhibition",
           "duration": "2019",
+          "date": new Date("2018-01-01"),
           "context": "CityVis.io: Visualising Cities",
           "description": "The interactive piece was exhibited and shortlisted."
         },
@@ -150,6 +169,7 @@ export const content = {
           "title": "Information+ Conference",
           "type": "Other",
           "duration": "2018",
+          "date": new Date("2018-01-01"),
           "context": "InfoVis conference, Potsdam",
           "description": "Development of an interactive visual language and website for the InfoVis conference."
         },
@@ -157,6 +177,7 @@ export const content = {
           "title": "Lecture: Data Visualization fundamentals",
           "type": "Other",
           "duration": "2020",
+          "date": new Date("2018-01-01"),
           "context": "E-Artsup University Paris",
           "description": "Held a lecture about fundamental approaches to Data Visualization."
         },
@@ -164,6 +185,7 @@ export const content = {
           "title": "Exhibited: Shared Mobility Flows",
           "type": "Exhibition",
           "duration": "2019",
+          "date": new Date("2018-01-01"),
           "context": "techDetector, Berlin",
           "description": "Exhibiting the interactive mobility visualization as part of the conference."
         },
@@ -660,7 +682,7 @@ export const content = {
     },
     "about": {
         "intro": "Hallo, ich bin Fabian Dinklage, ein in Berlin ansässiger, freiberuflicher **Informationsdesigner** mit Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle ich Interfaces und interaktive datengesteuerte Produkte. Visualisierungen schaffen neue Sichtweisen auf deine Daten und helfen Dir diese besser zu verstehen und nutzbar zu machen.",
-        "vita": "Ich bin ein in Berlin ansässiger **Informationsdesigner** und **Entwickler** mit den Schwerpunkten **Datenvisualisierung** und **Interaktionsdesign**. Momentan entwickle interaktive Prototypen für das [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) der [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) und für das [CityLAB Berlin](https://citylab-berlin.org) mit offenen Daten. Einige Institutionen mit denen ich in der Vergangenheit zusammenarbeiten durfte: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/).",
+        "vita": "Ich bin ein in Berlin ansässiger **Informationsdesigner** und **Entwickler** mit den Schwerpunkten **Datenvisualisierung** und **Interaktionsdesign**. Momentan entwickle ich  Datenvisualisierungen im Interaktiv Ressort bei [ZEIT ONLINE](https://zeit.de). Vorher war ich beim [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) der [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) und habe für das [CityLAB Berlin](https://citylab-berlin.org) offene Daten visualisiert. Einige Institutionen mit denen ich in der Vergangenheit zusammenarbeiten durfte: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/).",
         "profileUrl": "public/images/profile___.jpg"
       },
       "cta": {
@@ -690,11 +712,19 @@ export const content = {
       ],
       "activities": [
         {
+          "title": "Datenvisualisierer",
+          "type": "Arbeitserfahrung",
+          "context": "ZEIT ONLINE, Berlin",
+          "duration": "2020 – now",
+          "date": new Date(),
+          "description": "Erstellung interaktiver daten-getriebener journalistischer Stücke für den Newsroom."
+        },
+        {
           "title": "Wissenschaflicher Mitarbeiter",
           "type": "Arbeitserfahrung",
           "context": "Technologiestfitung Berlin, CityLAB Berlin",
-          "duration": "2018 – Heute",
-          "date": new Date(),
+          "duration": "2018 – 2020",
+          "date": new Date("2018-01-01"),
           "description": "Erstellung interaktiver Prototypen mit offenen Daten für ein offenes Berlin"
         },
         {
@@ -778,7 +808,7 @@ export const content = {
           "description": "Konzept & Entwicklung von visueller Sprache und Internetauftritt"
         },
         {
-          "title": "Data Visualization fundamentals",
+          "title": "Grundlagen der Datenvisualisierung",
           "type": "Andere",
           "duration": "2020",
           "date": new Date("2020-02-15"),
@@ -1239,4 +1269,8 @@ export const content = {
         },
       ]
   },
+}
+
+export default {
+  content
 }

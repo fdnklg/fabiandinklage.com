@@ -155,7 +155,7 @@ const CVList = p => {
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   const [ filteredActivities, setFilteredActivities ] = useState(activities);
   const all = base === 'en' ? 'All' : 'Alle';
-  const [filteredTypes, setFilteredTypes] = useState([all]);
+  const [filteredTypes, setFilteredTypes] = useState(all);
   activities = activities.sort((a,b) => b.date - a.date);
 
   let filterArr = [];
@@ -173,17 +173,20 @@ const CVList = p => {
   }
 
   const handleClick = (value) => {
-    setFilteredTypes([value]);
+    setFilteredTypes(value);
   }
 
   useEffect(() => {
-    filterArr.push(all)
-    activities.forEach(activity => {
-      if (!filterArr.includes(activity.type)) {
-        filterArr.push(activity.type)
-      }
-    })
-  }, [])
+    setFilteredTypes(all);
+  }, [base])
+
+  filterArr = [];
+  filterArr.push(all)
+  activities.forEach(activity => {
+    if (!filterArr.includes(activity.type)) {
+      filterArr.push(activity.type)
+    }
+  })
 
   useEffect(() => {
     if (observed) {
@@ -193,20 +196,21 @@ const CVList = p => {
   }, [observed]);
 
   useEffect(() => {
+    console.log(activities, filteredTypes, filterArr, all)
     let filtered = activities.filter(activity => {
-      return filteredTypes.includes(activity.type)
+      return filteredTypes === activity.type
     });
 
     setFilteredActivities(filtered);
 
-    if (filteredTypes.includes(all)) {
+    if (filteredTypes === all) {
       setFilteredActivities(activities);
     }
 
     setTimeout(() => {
       handleResize(observed.offsetWidth)
     }, 50);
-  }, [filteredTypes])
+  }, [filteredTypes, activities]);
 
   return (
     <Transition
@@ -228,7 +232,7 @@ const CVList = p => {
           <Title timeout={timeout} source={title.cv} color={color} />
           <StyledButtonWrapper>
             {filterArr.map(f => {
-              const active = filteredTypes.includes(f);
+              const active = filteredTypes === f;
               return (
                 <StyledButton
                   active={active}
@@ -246,7 +250,7 @@ const CVList = p => {
                 return (
                   <StyledTR
                     lastItemOfYear={activities.length - 1 === i}
-                    highlighted={filteredTypes.includes(item.type) || filteredTypes.includes(all)}
+                    highlighted={filteredTypes === item.type || filteredTypes === all}
                     newYear={false}
                     c={color}
                     border={true}
