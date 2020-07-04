@@ -164,15 +164,18 @@ const List = p => {
                     key={`tr-${i}`}
                   >
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <RouterLink color={color} to={`/projects/${p.path}/${base}`}>
-                    <Box
-                      onMouseOver={() => setColor(p.color)}
-                      onMouseOut={() => setColor(colorDefault)}
-                      sx={{ textDecoration: 'none', color: color[0] }}
-                      variant="nav"
+                    <RouterLink
+                      color={color}
+                      to={`/projects/${p.path}/${base}`}
                     >
-                      <StyledTitle>{p.title}</StyledTitle>
-                    </Box>
+                      <Box
+                        // onMouseOver={() => setColor(p.color)}
+                        // onMouseOut={() => setColor(colorDefault)}
+                        sx={{ textDecoration: 'none', color: color[0] }}
+                        variant="nav"
+                      >
+                        <StyledTitle>{p.title}</StyledTitle>
+                      </Box>
                     </RouterLink>
                     <StyledTDType type="last">{p.type}</StyledTDType>
                     <StyledTDButton type="last">

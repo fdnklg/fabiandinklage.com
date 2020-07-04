@@ -11,9 +11,9 @@ import Flex from '~/components/Flex';
 import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
-  opacity: ${props => opacityFromState(props.state)};
-  transform: ${props => positionFromState(props.state)};
-  transition: all ${p => p.theme.times[1]} ease-in-out;
+  opacity: ${(props) => opacityFromState(props.state)};
+  transform: ${(props) => positionFromState(props.state)};
+  transition: all ${(p) => p.theme.times[1]} ease-in-out;
 `;
 
 const StyledParagraph = styled.p`
@@ -22,17 +22,17 @@ const StyledParagraph = styled.p`
 
 const StyledHeadline = styled.h4`
   margin-bottom: 0;
-  font-family: ${p => p.theme.fonts.headline};
+  font-family: ${(p) => p.theme.fonts.headline};
 `;
 
 const StyledList = styled(List)`
   text-align: left;
 `;
 
-const Profile = p => {
+const Profile = (p) => {
   const { timeout } = p;
-  const color = useStoreState(state => state.color.color);
-  const base = useStoreState(state => state.base);
+  const color = useStoreState((state) => state.color.color);
+  const base = useStoreState((state) => state.base);
   const legal = content[base].legal;
   return (
     <Transition
@@ -42,7 +42,7 @@ const Profile = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
+      {(state) => (
         <StyledFlex
           state={state}
           sx={{ textAlign: 'left', lineHeight: '1.5' }}
@@ -52,12 +52,10 @@ const Profile = p => {
         >
           <h2>{legal.title}</h2>
 
-          <StyledParagraph>
-            {legal.p1}
-          </StyledParagraph>
+          <StyledParagraph>{legal.p1}</StyledParagraph>
 
           <StyledList>
-            {legal.li1.map(item => (
+            {legal.li1.map((item) => (
               <li>{item}</li>
             ))}
           </StyledList>
@@ -65,7 +63,7 @@ const Profile = p => {
           <StyledHeadline>Contact</StyledHeadline>
 
           <StyledList>
-            {legal.li2.map(item => (
+            {legal.li2.map((item) => (
               <li>{item}</li>
             ))}
           </StyledList>
@@ -73,7 +71,7 @@ const Profile = p => {
           <StyledHeadline>VAT Number</StyledHeadline>
 
           <StyledList>
-            {legal.li3.map(item => (
+            {legal.li3.map((item) => (
               <li>{item}</li>
             ))}
           </StyledList>
@@ -82,21 +80,15 @@ const Profile = p => {
 
           <StyledHeadline>{legal.accountability}</StyledHeadline>
 
-          <StyledParagraph>
-            {legal.p2}
-          </StyledParagraph>
+          <StyledParagraph>{legal.p2}</StyledParagraph>
 
           <StyledHeadline>{legal.links}</StyledHeadline>
 
-          <StyledParagraph>
-            {legal.p4}
-          </StyledParagraph>
+          <StyledParagraph>{legal.p4}</StyledParagraph>
 
           <StyledHeadline>{legal.copyright}</StyledHeadline>
 
-          <StyledParagraph>
-            {legal.p3}
-          </StyledParagraph>
+          <StyledParagraph>{legal.p3}</StyledParagraph>
 
           {/* <StyledHeadline>Use of Matomo</StyledHeadline>
 

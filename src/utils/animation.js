@@ -1,11 +1,11 @@
-export const opacityFromState = state => {
+export const opacityFromState = (state) => {
   switch (state) {
     case 'entering':
       return 0;
     case 'entered':
       return 1;
     case 'exiting':
-      return .5;
+      return 0.5;
     case 'exited':
       return 0;
     default:
@@ -13,7 +13,7 @@ export const opacityFromState = state => {
   }
 };
 
-export const positionFromState = state => {
+export const positionFromState = (state) => {
   switch (state) {
     case 'entering':
       return 'translateY(10px)';
@@ -28,7 +28,7 @@ export const positionFromState = state => {
   }
 };
 
-export const positionTopFromState = state => {
+export const positionTopFromState = (state) => {
   switch (state) {
     case 'entering':
       return 'translateY(-20px)';
@@ -43,7 +43,7 @@ export const positionTopFromState = state => {
   }
 };
 
-export const displayFromState = state => {
+export const displayFromState = (state) => {
   switch (state) {
     case 'entering':
       return 'block';
@@ -61,5 +61,5 @@ export const displayFromState = state => {
 export default {
   opacityFromState,
   positionFromState,
-  displayFromState
+  displayFromState,
 };

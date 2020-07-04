@@ -19,22 +19,24 @@ export function getPosition(string, subString, index) {
 }
 
 export const piwik = (_paq) => {
-  const u = "https://matomo.fabiandinklage.com/matomo/";
-  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  const u = 'https://matomo.fabiandinklage.com/matomo/';
+  _paq.push(['setTrackerUrl', u + 'matomo.php']);
   _paq.push(['setSiteId', '1']);
-  let d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-  g.type='text/javascript'; 
-  g.async=true; 
-  g.defer=true; 
-  g.src=u+'matomo.js'; 
-  s.parentNode.insertBefore(g,s);
+  let d = document,
+    g = d.createElement('script'),
+    s = d.getElementsByTagName('script')[0];
+  g.type = 'text/javascript';
+  g.async = true;
+  g.defer = true;
+  g.src = u + 'matomo.js';
+  s.parentNode.insertBefore(g, s);
 
   return _paq;
-}
+};
 
 export default {
   getRandomInt,
   getPosition,
   compare,
-  piwik
+  piwik,
 };

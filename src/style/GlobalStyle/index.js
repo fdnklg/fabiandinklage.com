@@ -14,8 +14,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     position: relative;
-    font-family: ${p => p.theme.fonts.body};
-    font-size: ${p => p.theme.fontSizes[1]};
+    font-family: ${(p) => p.theme.fonts.body};
+    font-size: ${(p) => p.theme.fontSizes[1]};
   }
 `;
 

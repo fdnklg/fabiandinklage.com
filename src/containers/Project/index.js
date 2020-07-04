@@ -13,18 +13,19 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const Project = ({ match }) => {
-  const base = useStoreState(state => state.base);
+  const base = useStoreState((state) => state.base);
   const projects = content[base].projects;
-  const project = projects.filter(p => p.path === match.params.projectName)[0];
-  const setColor = useStoreActions(actions => actions.color.setColor);
-  
+  const project = projects.filter(
+    (p) => p.path === match.params.projectName
+  )[0];
+  const setColor = useStoreActions((actions) => actions.color.setColor);
 
   useEffect(() => {
-    setColor(project.color)
+    setColor(project.color);
     setTimeout(() => {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     }, 50);
-  }, [project])
+  }, [project]);
 
   return (
     <>

@@ -1,9 +1,9 @@
 /* eslint-disable */
-const px = d => {
+const px = (d) => {
   return `${d}px`;
 };
 
-const s = d => {
+const s = (d) => {
   return `${d}s`;
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { hydrate, render } from "react-dom";
+import { hydrate, render } from 'react-dom';
 import { StoreProvider } from 'easy-peasy';
 import { ThemeProvider } from 'styled-components';
 
@@ -15,7 +15,7 @@ if (!Object.assign) {
     enumerable: false,
     configurable: true,
     writable: true,
-    value: function(target) {
+    value: function (target) {
       'use strict';
       if (target === undefined || target === null) {
         throw new TypeError('Cannot convert first argument to object');
@@ -30,7 +30,11 @@ if (!Object.assign) {
         nextSource = Object(nextSource);
 
         var keysArray = Object.keys(Object(nextSource));
-        for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+        for (
+          var nextIndex = 0, len = keysArray.length;
+          nextIndex < len;
+          nextIndex++
+        ) {
           var nextKey = keysArray[nextIndex];
           var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
           if (desc !== undefined && desc.enumerable) {
@@ -39,7 +43,7 @@ if (!Object.assign) {
         }
       }
       return to;
-    }
+    },
   });
 }
 

@@ -8,7 +8,7 @@ const LayoutModel = {
   isPrerendering: false,
   setIsPrerendering: action((state, payload) => {
     state.isPrerendering = payload;
-  })
+  }),
 };
 
 export default LayoutModel;

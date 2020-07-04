@@ -5,7 +5,16 @@ import {
 import path from 'path'; // add path which will be needed for file write
 import fs from 'fs'; // import file system object
 
-const routes = ['/home/de', '/home/en', '/contact/de', '/contact/en', '/profile/de', '/legal/de', '/legal/en', '/projects/:slug'];
+const routes = [
+  '/home/de',
+  '/home/en',
+  '/contact/de',
+  '/contact/en',
+  '/profile/de',
+  '/legal/de',
+  '/legal/en',
+  '/projects/:slug',
+];
 
 const config = {
   '/projects/:slug': [
@@ -19,6 +28,7 @@ const config = {
         'curricle/de',
         'candidates/de',
         'invisties/de',
+        'koro-trading-flows/de',
         'gender-equality/en',
         'cityinflux/en',
         'edutech/en',
@@ -27,6 +37,7 @@ const config = {
         'curricle/en',
         'candidates/en',
         'invisties/en',
+        'koro-trading-flows/en',
       ],
     },
   ],

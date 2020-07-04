@@ -9,28 +9,28 @@ const Config = require('../config.json');
 
 module.exports = {
   entry: {
-    app: Path.resolve(__dirname, '../src/index.js')
+    app: Path.resolve(__dirname, '../src/index.js'),
   },
   output: {
     path: Path.join(__dirname, '../build'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
-      name: false
-    }
+      name: false,
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
-      { from: Path.resolve(__dirname, '../public'), to: 'public' }
+      { from: Path.resolve(__dirname, '../public'), to: 'public' },
     ]),
     new Webpack.ProvidePlugin({
-      config: '~/../config.json'
+      config: '~/../config.json',
     }),
     new Webpack.ProvidePlugin({
-    Promise: 'es6-promise-promise',
+      Promise: 'es6-promise-promise',
     }),
     new HtmlWebpackPlugin({
       inject: true,
@@ -40,24 +40,24 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '~': Path.resolve(__dirname, '../src')
-    }
+      '~': Path.resolve(__dirname, '../src'),
+    },
   },
   module: {
     rules: [
       {
         test: /\.mjs$/,
         include: /node_modules/,
-        type: 'javascript/auto'
+        type: 'javascript/auto',
       },
       {
         test: /\.(ico|jpg|jpeg|png|svg|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name].[ext]'
-          }
-        }
+            name: '[path][name].[ext]',
+          },
+        },
       },
       {
         test: /\.svg$/,
@@ -66,10 +66,10 @@ module.exports = {
           {
             loader: 'react-svg-loader',
             options: {
-              jsx: true
-            }
-          }
-        ]
+              jsx: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
@@ -80,8 +80,8 @@ module.exports = {
            * Path.resolve(__dirname, '../node_modules/query-string'),
            */
         ],
-        loader: 'babel-loader'
-      }
-    ]
-  }
+        loader: 'babel-loader',
+      },
+    ],
+  },
 };

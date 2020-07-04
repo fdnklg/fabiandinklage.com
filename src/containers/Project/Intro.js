@@ -12,19 +12,19 @@ import { content } from '~/data';
 const StyledWrapper = styled.div`
   transition: all ${p => p.theme.times[1]} ease-in-out;
 
-    opacity: ${props => {
+  opacity: ${props => {
     if (props.isPrerendering) {
-      return 0
+      return 0;
     } else {
-      return opacityFromState(props.state)
+      return opacityFromState(props.state);
     }
   }};
 
   transform: ${props => {
     if (props.isPrerendering) {
-      return 'translateY(10px)'
+      return 'translateY(10px)';
     } else {
-      return positionFromState(props.state)
+      return positionFromState(props.state);
     }
   }};
 `;
@@ -44,7 +44,6 @@ const StyledTitle = styled(Box)`
   font-family: ${p => p.theme.fonts.headline};
   line-height: 110%;
   color: ${p => p.c[0]};
-
 `;
 
 const StyledLabel = styled.span`
@@ -80,7 +79,11 @@ const Intro = props => {
     >
       {state => (
         <StyledWrapper state={state} isPrerendering={isPrerendering}>
-          <StyledFlex maxWidth={[1200, 900]} pb={[3, 3, 3, 4]} pt={[4,5,5, 6]}>
+          <StyledFlex
+            maxWidth={[1200, 900]}
+            pb={[3, 3, 3, 4]}
+            pt={[4, 5, 5, 6]}
+          >
             <StyledTitle
               pr={[4]}
               c={color}
@@ -104,31 +107,46 @@ const Intro = props => {
             pb={[4, 5, 5, 5]}
             maxWidth={[1200, 900]}
           >
-            <Box mt={[2, 2, 2]} mb={[4,4,5,5]} fontSize={[2]} width={[1, 1, 2 / 8]}>
-              <Button
-                href={url}
-                px={3}
-                py={2}
-                c={color}
-                fontSize={[2, 2, 2, 3]}
+            {url && (
+              <Box
+                mt={[2, 2, 2]}
+                mb={[4, 4, 5, 5]}
+                fontSize={[2]}
+                width={[1, 1, 2 / 8]}
               >
-                {others.launch}
-              </Button>
-            </Box>
-            <Box pr={[3]} mb={[3]} fontSize={[2,3,3]} width={[1, 1, 2 / 8]}>
+                <Button
+                  href={url}
+                  px={3}
+                  py={2}
+                  c={color}
+                  fontSize={[2, 2, 2, 3]}
+                >
+                  {others.launch}
+                </Button>
+              </Box>
+            )}
+            <Box pr={[3]} mb={[3]} fontSize={[2, 3, 3]} width={[1, 1, 2 / 8]}>
               <StyledLabelBold c={color}>{others.context}</StyledLabelBold>
               <br />
               <StyledLabel c={color}>{client}</StyledLabel>
             </Box>
-            <Box pr={[3]} mb={[3]} fontSize={[2,3,3]} width={[1, 1, 2 / 8]}>
+            <Box pr={[3]} mb={[3]} fontSize={[2, 3, 3]} width={[1, 1, 2 / 8]}>
               <StyledLabelBold c={color}>{others.year}</StyledLabelBold>
               <br />
               <StyledLabel c={color}>{year}</StyledLabel>
             </Box>
-            <Box sx={{display: 'flex', flexDirection: 'column'}} pr={[3]} mb={[3]} fontSize={[2]} width={[1, 1, 2 / 8]}>
+            <Box
+              sx={{ display: 'flex', flexDirection: 'column' }}
+              pr={[3]}
+              mb={[3]}
+              fontSize={[2]}
+              width={[1, 1, 2 / 8]}
+            >
               <StyledLabelBold c={color}>{others.tasks}</StyledLabelBold>
               {tasks.map(t => (
-                <><SpacedStyledLabel c={color}>{t}</SpacedStyledLabel></>
+                <>
+                  <SpacedStyledLabel c={color}>{t}</SpacedStyledLabel>
+                </>
               ))}
             </Box>
           </StyledFlex>

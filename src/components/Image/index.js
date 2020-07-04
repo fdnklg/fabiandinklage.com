@@ -9,7 +9,7 @@ import { useStoreState } from 'easy-peasy';
 const StyledImage = styled(rebassImage)`
   height: auto;
   width: 100%;
-  opacity: ${props => {
+  opacity: ${(props) => {
     if (props.isPrerendering) {
       return 0;
     } else {
@@ -17,19 +17,19 @@ const StyledImage = styled(rebassImage)`
     }
   }};
 
-  transform: ${props => {
+  transform: ${(props) => {
     if (props.isPrerendering) {
       return 'translateY(10px)';
     } else {
       return positionFromState(props.state);
     }
   }};
-  transition: all ${p => p.theme.times[1]} ease-in-out;
+  transition: all ${(p) => p.theme.times[1]} ease-in-out;
 `;
 
-const Image = p => {
+const Image = (p) => {
   const { src, alt, timeout } = p;
-  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
   return (
     <Transition
       in={true}
@@ -38,7 +38,7 @@ const Image = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
+      {(state) => (
         <StyledImage
           state={state}
           isPrerendering={isPrerendering}

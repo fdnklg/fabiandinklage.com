@@ -8,7 +8,7 @@ const StyledSvg = styled.svg`
   width: 100%;
 `;
 
-const Logo = p => {
+const Logo = (p) => {
   const { c } = p;
   return (
     <Box
@@ -19,12 +19,7 @@ const Logo = p => {
       }}
     >
       <StyledSvg width="42px" height="58px" viewBox="0 0 42 58">
-        <g
-          stroke="none"
-          strokeWidth="1"
-          fill="none"
-          fillRule="evenodd"
-        >
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g
             id="avatar"
             transform="translate(-1.000000, 0.000000)"

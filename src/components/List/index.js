@@ -11,9 +11,9 @@ const StyledUl = styled.ul`
   margin-top: 0;
   margin-bottom: 0;
   line-height: 150%;
-  color: ${p => p.c};
+  color: ${(p) => p.c};
 
-  opacity: ${props => {
+  opacity: ${(props) => {
     if (props.isPrerendering) {
       return 0;
     } else {
@@ -21,7 +21,7 @@ const StyledUl = styled.ul`
     }
   }};
 
-  transform: ${props => {
+  transform: ${(props) => {
     if (props.isPrerendering) {
       return 'translateY(10px)';
     } else {
@@ -30,8 +30,8 @@ const StyledUl = styled.ul`
   }};
 
   li {
-    color: ${p => p.c};
-    opacity: ${props => {
+    color: ${(p) => p.c};
+    opacity: ${(props) => {
       if (props.isPrerendering) {
         return 0;
       } else {
@@ -39,28 +39,28 @@ const StyledUl = styled.ul`
       }
     }};
 
-    transform: ${props => {
+    transform: ${(props) => {
       if (props.isPrerendering) {
         return 'translateY(10px)';
       } else {
         return positionFromState(props.state);
       }
     }};
-    transition: all ${p => p.theme.times[1]} ease-in-out;
+    transition: all ${(p) => p.theme.times[1]} ease-in-out;
 
-    @media (max-width: ${p => p.theme.sizes.tablet}) {
+    @media (max-width: ${(p) => p.theme.sizes.tablet}) {
       text-align: left;
     }
 
-    @media (max-width: ${p => p.theme.sizes.mobile}) {
+    @media (max-width: ${(p) => p.theme.sizes.mobile}) {
       text-align: left;
     }
   }
 `;
 
-const List = p => {
-  const { children,color, timeout } = p;
-  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+const List = (p) => {
+  const { children, color, timeout } = p;
+  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
   return (
     <Transition
       in={true}
@@ -69,11 +69,13 @@ const List = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
-        <StyledUl isPrerendering={isPrerendering} state={state} c={color}>{children}</StyledUl>
-       )}
+      {(state) => (
+        <StyledUl isPrerendering={isPrerendering} state={state} c={color}>
+          {children}
+        </StyledUl>
+      )}
     </Transition>
-  )
-}
+  );
+};
 
 export default List;

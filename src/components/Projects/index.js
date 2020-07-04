@@ -14,37 +14,37 @@ import List from './List';
 import Title from '../Title';
 
 const StyledProjectsWrapper = styled(Box)`
-  opacity: ${props => {
+  opacity: ${(props) => {
     if (props.isPrerendering) {
-      return 0
+      return 0;
     } else {
-      return opacityFromState(props.state)
+      return opacityFromState(props.state);
     }
   }};
 
-  transform: ${props => {
+  transform: ${(props) => {
     if (props.isPrerendering) {
-      return 'translateY(10px)'
+      return 'translateY(10px)';
     } else {
-      return positionFromState(props.state)
+      return positionFromState(props.state);
     }
   }};
 
-  transition: all ${p => p.theme.times[1]} ease-in-out;
-  font-size: ${p => p.theme.fontSizes[1]};
+  transition: all ${(p) => p.theme.times[1]} ease-in-out;
+  font-size: ${(p) => p.theme.fontSizes[1]};
 `;
 
-const Projects = p => {
+const Projects = (p) => {
   const { timeout } = p;
-  const layout = useStoreState(actions => actions.layout.layout);
-  const color = useStoreState(state => state.color.color);
-  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const layout = useStoreState((actions) => actions.layout.layout);
+  const color = useStoreState((state) => state.color.color);
+  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
 
-  const base = useStoreState(state => state.base);
+  const base = useStoreState((state) => state.base);
   const projects = content[base].projects;
   const title = content[base].title.projects;
 
-  const filtered = projects.filter(p => p.visible);
+  const filtered = projects.filter((p) => p.visible);
 
   return (
     <Transition
@@ -54,8 +54,12 @@ const Projects = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
-        <StyledProjectsWrapper isPrerendering={isPrerendering} state={state} pb={[4, 5, 5, 6]}>
+      {(state) => (
+        <StyledProjectsWrapper
+          isPrerendering={isPrerendering}
+          state={state}
+          pb={[4, 5, 5, 6]}
+        >
           <Title timeout={625} source={title} color={color} />
           <LayoutSwitch c={color} />
           {layout == 'Grid' && <Grid data={filtered} />}

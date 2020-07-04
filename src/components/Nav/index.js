@@ -3,7 +3,11 @@ import { Box, Flex, Text, Button } from 'rebass/styled-components';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
-import { opacityFromState, positionFromState, positionTopFromState } from '~/utils/animation';
+import {
+  opacityFromState,
+  positionFromState,
+  positionTopFromState,
+} from '~/utils/animation';
 import history from '../../../history';
 import { getPosition } from '../../utils';
 
@@ -14,29 +18,29 @@ import RouterLink from '~/components/RouterLink';
 import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
-  font-family: ${p => p.theme.fonts.headline};
-  opacity: ${props => {
+  font-family: ${(p) => p.theme.fonts.headline};
+  opacity: ${(props) => {
     if (props.isPrerendering) {
-      return 0
+      return 0;
     } else {
-      return opacityFromState(props.state)
+      return opacityFromState(props.state);
     }
   }};
 
-  transform: ${props => {
+  transform: ${(props) => {
     if (props.isPrerendering) {
-      return 'translateY(-20px)'
+      return 'translateY(-20px)';
     } else {
-      return positionTopFromState(props.state)
+      return positionTopFromState(props.state);
     }
   }};
-  transition: all ${p => p.theme.times[1]} ease-in-out;
-  color: ${p => p.c[0]};
-  background: lighten("${p => p.c[1]}", 5);
+  transition: all ${(p) => p.theme.times[1]} ease-in-out;
+  color: ${(p) => p.c[0]};
+  background: lighten("${(p) => p.c[1]}", 5);
 `;
 
 const StyledLabel = styled.span`
-  @media (max-width: ${p => p.theme.sizes.mobile}) {
+  @media (max-width: ${(p) => p.theme.sizes.mobile}) {
     display: none;
   }
 `;
@@ -47,26 +51,26 @@ const StyledLanguageSwitch = styled.span`
   display: flex;
   align-items: center;
   height: 35px;
-  border: 1px solid ${p => p.color[0]};
+  border: 1px solid ${(p) => p.color[0]};
   border-radius: 135px;
   justify-content: center;
-  color: ${p => p.color[0]};
+  color: ${(p) => p.color[0]};
   cursor: pointer;
-  transition: all ${p => p.theme.times[0]} ease-in-out;
+  transition: all ${(p) => p.theme.times[0]} ease-in-out;
 
   &:hover {
-    color: ${p => p.color[1]};
-    background: ${p => p.color[0]};
-    transition: all ${p => p.theme.times[0]} ease-in-out;
+    color: ${(p) => p.color[1]};
+    background: ${(p) => p.color[0]};
+    transition: all ${(p) => p.theme.times[0]} ease-in-out;
   }
 `;
 
-const Nav = p => {
+const Nav = (p) => {
   const { timeout } = p;
-  const setBase = useStoreActions(actions => actions.setBase);
-  const base = useStoreState(state => state.base);
+  const setBase = useStoreActions((actions) => actions.setBase);
+  const base = useStoreState((state) => state.base);
   const navContent = content[base].nav;
-  const color = useStoreState(state => state.color.color);
+  const color = useStoreState((state) => state.color.color);
   const [first, setFirst] = useState(false);
 
   const handleLanguage = (lang) => {
@@ -85,7 +89,7 @@ const Nav = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
+      {(state) => (
         <StyledFlex c={color} alignItems="center" state={state}>
           <Box
             sx={{ flexDirection: 'row', display: 'flex', alignItems: 'center' }}
@@ -124,7 +128,8 @@ const Nav = p => {
               textDecoration: 'none',
               color: color[0],
               transition: 'all .125s ease-in-out',
-              opacity: history.location.pathname !== `/profile/${base}` ? 0.4 : 1,
+              opacity:
+                history.location.pathname !== `/profile/${base}` ? 0.4 : 1,
             }}
             mr={[3, 3, 4]}
             variant="nav"
@@ -143,7 +148,8 @@ const Nav = p => {
               textDecoration: 'none',
               color: color[0],
               transition: 'all .125s ease-in-out',
-              opacity: history.location.pathname !== `/contact/${base}` ? 0.4 : 1,
+              opacity:
+                history.location.pathname !== `/contact/${base}` ? 0.4 : 1,
             }}
             variant="nav"
             mr={[3, 3, 4]}
@@ -157,13 +163,16 @@ const Nav = p => {
               {navContent.contact}
             </RouterLink>
           </Box>
-          <StyledLanguageSwitch color={color} onClick={() => handleLanguage(base === 'de' ? 'en' : 'de')}>
+          <StyledLanguageSwitch
+            color={color}
+            onClick={() => handleLanguage(base === 'de' ? 'en' : 'de')}
+          >
             {base === 'en' ? 'DE' : 'EN'}
           </StyledLanguageSwitch>
         </StyledFlex>
       )}
-  </Transition>
-  )
+    </Transition>
+  );
 };
 
 export default Nav;

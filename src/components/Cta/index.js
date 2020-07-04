@@ -17,17 +17,17 @@ const StyledFlex = styled(Flex)`
 
   opacity: ${props => {
     if (props.isPrerendering) {
-      return 0
+      return 0;
     } else {
-      return opacityFromState(props.state)
+      return opacityFromState(props.state);
     }
   }};
 
   transform: ${props => {
     if (props.isPrerendering) {
-      return 'translateY(10px)'
+      return 'translateY(10px)';
     } else {
-      return positionFromState(props.state)
+      return positionFromState(props.state);
     }
   }};
 
@@ -72,7 +72,9 @@ const Cta = props => {
           width={[1, 4 / 5, 3 / 4, 2 / 3]}
           fontSize={[3, 4, 4, 5]}
         >
-          <StyledText c={color} fontSize={[3, 4, 4, 5]}>{cta.text}</StyledText>
+          <StyledText c={color} fontSize={[3, 4, 4, 5]}>
+            {cta.text}
+          </StyledText>
           <RouterLink marginTop={'30px'} color={color} to={`/contact/${base}`}>
             <Button
               c={color}

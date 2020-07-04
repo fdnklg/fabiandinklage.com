@@ -7,22 +7,22 @@ import { Box, Flex, Text } from 'rebass/styled-components';
 import Transition from 'react-transition-group/Transition';
 
 import Title from '../Title/';
-import { content } from '~/data'
+import { content } from '~/data';
 
 const StyledBox = styled(Box)`
   opacity: ${props => {
     if (props.isPrerendering) {
-      return 0
+      return 0;
     } else {
-      return opacityFromState(props.state)
+      return opacityFromState(props.state);
     }
   }};
 
   transform: ${props => {
     if (props.isPrerendering) {
-      return 'translateY(10px)'
+      return 'translateY(10px)';
     } else {
-      return positionFromState(props.state)
+      return positionFromState(props.state);
     }
   }};
   transition: all ${p => p.theme.times[1]} ease-in-out;
@@ -55,39 +55,40 @@ const Services = p => {
             display: 'flex',
             flexDirection: 'column',
             mb: [4, 5, 6],
-            px: ['0%', '0%', '6%', '8%']
+            px: ['0%', '0%', '6%', '8%'],
           }}
         >
           <Title timeout={timeout} source={title} color={color} />
-          {services.map((tile,i) => (
+          {services.map((tile, i) => (
             <Flex
+              key={`key-flex-tile-${i}`}
               sx={{
                 alignItems: 'center',
                 mt: [2],
                 mb: i === 0 ? [3, 4] : [0],
-                flexDirection: ['column', 'column', 'row', 'row']
+                flexDirection: ['column', 'column', 'row', 'row'],
               }}
             >
               <Text
-                sx={{ 
-                  fontFamily: 'headline', 
-                  width: ['100%', '100%', '35%','30%'],
+                sx={{
+                  fontFamily: 'headline',
+                  width: ['100%', '100%', '35%', '30%'],
                   letterSpacing: '0.125px',
                   lineHeight: 'heading',
                   pr: '40px',
-                  mb: ['2', '2','2', '0']
+                  mb: ['2', '2', '2', '0'],
                 }}
                 fontSize={[3, 5, 5, 5]}
               >
                 {tile.title}
               </Text>
               <Text
-                sx={{ 
-                  fontFamily: 'body', 
+                sx={{
+                  fontFamily: 'body',
                   width: ['100%', '100%', '65%', '70%'],
                   lineHeight: 'body',
-                  opacity: .66,
-                  letterSpacing: '0.125px'
+                  opacity: 0.66,
+                  letterSpacing: '0.125px',
                 }}
                 fontSize={[3, 4, 4, 4]}
               >

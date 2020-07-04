@@ -106,7 +106,7 @@ const Grid = p => {
 
     cite {
       font-family: 'Mier A Regular';
-      opacity: .66;
+      opacity: 0.66;
       font-style: normal;
     }
 
@@ -116,34 +116,56 @@ const Grid = p => {
     }
   `;
 
-  const handleResize = (w) => {
+  const handleResize = w => {
     const h = (w / 3) * 2;
     const boxes = document.querySelectorAll('.thumb-box');
     boxes.forEach(box => (box.style.height = `${h}px`));
-  }
+  };
 
   useEffect(() => {
     if (observed) {
-      handleResize(observed.offsetWidth)
-      window.addEventListener('resize', () => handleResize(observed.offsetWidth))
+      handleResize(observed.offsetWidth);
+      window.addEventListener('resize', () =>
+        handleResize(observed.offsetWidth)
+      );
     }
   }, [observed, activeIndex]);
 
-  const handleMouseOver = (color, index) => {
-    setColor(color)
+  const handleMouseOver = (data, index) => {
+    const vidNode = document.getElementById(`video-${data.path}`);
+    vidNode.style.filter = 'grayscale(0)';
+    vidNode.parentElement.style.transition = 'all .125s ease-in-out';
+    vidNode.parentElement.style.boxShadow =
+      '4px 21px 40px 1px rgba(0,0,0,0.085)';
+    vidNode.parentElement.style.transform = 'scale(1.025)';
+
+    vidNode.play();
+    // setColor(data.color);
     setActiveIndex(index);
-  }
+  };
+
+  const handleMouseOut = data => {
+    const vidNode = document.getElementById(`video-${data.path}`);
+    vidNode.style.filter = 'grayscale(0.75)';
+    vidNode.parentElement.style.transform = 'scale(1)';
+    vidNode.parentElement.style.boxShadow = '4px 21px 20px 1px rgba(0,0,0,0)';
+    vidNode.pause();
+    setColor(colorDefault);
+    setActiveIndex(null);
+  };
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      const thumbnails = document.querySelectorAll('.thumbnail-img');
+      const thumbnails = document.querySelectorAll('.thumbnail-video');
 
       thumbnails.forEach((thumb, i) => {
         const elm = thumb.getBoundingClientRect();
         if (elm.top < 400 && elm.top > 100) {
-          thumb.classList.add('hide');
+          thumb.style.filter = 'grayscale(0)';
+          thumb.play();
         } else {
-          thumb.classList.remove('hide');
+          thumb.style.filter = 'grayscale(.75)';
+          thumb.pause();
         }
       });
 
@@ -180,65 +202,58 @@ const Grid = p => {
         >
           {data.map((p, i) => {
             return (
-              <RouterLink hover={true} color={color} to={`/projects/${p.path}/${base}`}>
-              <Box
-                onMouseOver={() => handleMouseOver(p.color, i)}
-                onMouseOut={() => {
-                  setColor(colorDefault);
-                  setActiveIndex(null);
-                }}
-                sx={{ textDecoration: 'none' }}
-                key={`griditem-key-${i}`}
-                variant="nav"
-                href={`projects/${p.path}/${base}`}
+              <RouterLink
+                key={`key-routerlink-${p.label}-${i}`}
+                hover={true}
+                color={color}
+                to={`/projects/${p.path}/${base}`}
               >
-                <StyledThumbBox
-                  className="thumb-box"
-                  sx={{ overflow: 'hidden', position: 'relative' }}
-                  key={`tile-${i}`}
-                  color="primary"
+                <Box
+                  onMouseOver={() => handleMouseOver(p, i)}
+                  onMouseOut={() => handleMouseOut(p)}
+                  sx={{ textDecoration: 'none' }}
+                  key={`griditem-key-${i}`}
+                  variant="nav"
+                  href={`projects/${p.path}/${base}`}
                 >
-                  <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
-                    {src => (
-                      <GifImage
-                        ref={target => {
-                          // only set ref dom object if it exists!
-                          if (target) {
-                            observed = target;
-                          }
-                        }}
-                        src={p.overlay}
-                        index={i}
-                        alt={p.alt}
-                        sx={{
-                          width: ['100%'],
-                          position: 'absolute',
-                        }}
-                      />
-                    )}
-                  </ProgressiveImage>
-                  <ProgressiveImage src={p.thumbnail} placeholder={p.lazy}>
-                    {src => (
-                      <ThumbnailImage
-                        className="thumbnail-img"
-                        src={p.thumbnail}
-                        alt={p.alt}
-                        index={i}
-                        sx={{
-                          width: ['100%'],
-                        }}
-                      />
-                    )}
-                  </ProgressiveImage>
-                </StyledThumbBox>
-                <StyledText 
-                  c={color}
-                  index={i}
-                >
-                  <b>{p.title}: </b>
-                  <cite>{p.subtitle}</cite>
-                </StyledText>
-              </Box>
+                  <StyledThumbBox
+                    className="thumb-box"
+                    sx={{ overflow: 'hidden', position: 'relative' }}
+                    key={`tile-${i}`}
+                    color="primary"
+                  >
+                    <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
+                      {src => (
+                        <video
+                          className="thumbnail-video"
+                          id={`video-${p.path}`}
+                          ref={target => {
+                            if (target) {
+                              observed = target;
+                            }
+                          }}
+                          style={{
+                            position: 'absolute',
+                            width: '100%',
+                            filter: 'grayscale(0.5)',
+                          }}
+                          width="100%"
+                          height="100%"
+                          loop
+                          playsInline
+                          muted
+                        >
+                          <source src={p.overlay} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      )}
+                    </ProgressiveImage>
+                  </StyledThumbBox>
+                  <StyledText c={color} index={i}>
+                    <b>{p.title}: </b>
+                    <cite>{p.subtitle}</cite>
+                  </StyledText>
+                </Box>
               </RouterLink>
             );
           })}

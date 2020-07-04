@@ -15,18 +15,18 @@ import { content } from '~/data/';
 const FlexRow = styled(Box)``;
 
 const StyledSubtitle = styled(Box)`
-  font-family: ${p => p.theme.fonts.body};
+  font-family: ${(p) => p.theme.fonts.body};
 `;
 
 const StyledTitle = styled(Box)`
-  font-family: ${p => p.theme.fonts.headline};
+  font-family: ${(p) => p.theme.fonts.headline};
   line-height: 110%;
-  color: ${p => p.c[0]};
+  color: ${(p) => p.c[0]};
   text-align: left;
 `;
 
 const StyledFlex = styled(Flex)`
-  opacity: ${props => {
+  opacity: ${(props) => {
     if (props.isPrerendering) {
       return 0;
     } else {
@@ -34,29 +34,29 @@ const StyledFlex = styled(Flex)`
     }
   }};
 
-  transform: ${props => {
+  transform: ${(props) => {
     if (props.isPrerendering) {
       return 'translateY(10px)';
     } else {
       return positionFromState(props.state);
     }
   }};
-  transition: all ${p => p.theme.times[1]} ease-in-out;
+  transition: all ${(p) => p.theme.times[1]} ease-in-out;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  border-bottom: 1px solid ${p => p.c[0]};
-  color: ${p => p.c[0]};
-  letter-spacing: ${p => p.theme.letterSpacing[2]};
+  border-bottom: 1px solid ${(p) => p.c[0]};
+  color: ${(p) => p.c[0]};
+  letter-spacing: ${(p) => p.theme.letterSpacing[2]};
 `;
 
-const Contact = p => {
+const Contact = (p) => {
   const { timeout } = p;
-  const base = useStoreState(state => state.base);
+  const base = useStoreState((state) => state.base);
   const contact = content[base].contact;
-  const color = useStoreState(state => state.color.color);
-  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+  const color = useStoreState((state) => state.color.color);
+  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
   const { title, subtitle } = contact;
   return (
     <Transition
@@ -66,7 +66,7 @@ const Contact = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
+      {(state) => (
         <StyledFlex
           state={state}
           isPrerendering={isPrerendering}
@@ -96,7 +96,7 @@ const Contact = p => {
                 pr={[4]}
                 c={color}
                 fontSize={[6, 6, 7]}
-                mb={[3,3,4]}
+                mb={[3, 3, 4]}
                 width={[1, 1, 4 / 8]}
               >
                 {title}
@@ -104,7 +104,7 @@ const Contact = p => {
               <StyledSubtitle
                 sx={{ textAlign: 'left' }}
                 fontSize={[3, 3, 4]}
-                mb={[3,3,4]}
+                mb={[3, 3, 4]}
                 width={[1, 1, 4 / 8]}
                 c={color}
               >

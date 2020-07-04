@@ -13,23 +13,23 @@ import Title from '~/components/Title';
 import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
-  opacity: ${props => {
+  opacity: ${(props) => {
     if (props.isPrerendering) {
-      return 0
+      return 0;
     } else {
-      return opacityFromState(props.state)
+      return opacityFromState(props.state);
     }
   }};
 
-  transform: ${props => {
+  transform: ${(props) => {
     if (props.isPrerendering) {
-      return 'translateY(10px)'
+      return 'translateY(10px)';
     } else {
-      return positionFromState(props.state)
+      return positionFromState(props.state);
     }
   }};
   width: 100%;
-  transition: all ${p => p.theme.times[1]} ease-in-out;
+  transition: all ${(p) => p.theme.times[1]} ease-in-out;
 `;
 
 const StyledLi = styled.li`
@@ -40,11 +40,11 @@ const StyledLi = styled.li`
   margin-bottom: 20px;
 `;
 
-const Profile = p => {
+const Profile = (p) => {
   const { timeout } = p;
-  const color = useStoreState(state => state.color.color);
-  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
-  const base = useStoreState(state => state.base);
+  const color = useStoreState((state) => state.color.color);
+  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
+  const base = useStoreState((state) => state.base);
   const about = content[base].about;
   const { intro, profileUrl, vita } = about;
 
@@ -58,7 +58,7 @@ const Profile = p => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {state => (
+      {(state) => (
         <StyledFlex state={state} isPrerendering={isPrerendering}>
           <Flex
             sx={{ textAlign: ['left', 'left', 'center'] }}
@@ -70,7 +70,9 @@ const Profile = p => {
             <Paragraph timeout={timeout + 200} content={vita} color={color} />
             <Image
               src={profileUrl}
-              alt={"Fabian Dinklage is a Data Visualization & Interaction Designer."}
+              alt={
+                'Fabian Dinklage is a Data Visualization & Interaction Designer.'
+              }
               timeout={timeout + 400}
             />
           </Flex>

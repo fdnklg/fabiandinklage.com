@@ -10,8 +10,8 @@ import IconGrid from '~/components/IconGrid';
 import IconList from '~/components/IconList';
 
 const StyledLayoutSwitchesWrapper = styled.div`
-  font-size: ${p => p.theme.fontSizes[2]};
-  font-family: ${p => p.theme.fonts.headline};
+  font-size: ${(p) => p.theme.fontSizes[2]};
+  font-family: ${(p) => p.theme.fonts.headline};
   width: 100%;
 `;
 
@@ -19,41 +19,41 @@ const StyledImg = styled.img`
   height: 24px;
   width: 24px;
 
-  @media (max-width: ${p => p.theme.sizes.tablet}) {
+  @media (max-width: ${(p) => p.theme.sizes.tablet}) {
     height: 20px;
     width: 20px;
   }
 
-  @media (max-width: ${p => p.theme.sizes.mobile}) {
+  @media (max-width: ${(p) => p.theme.sizes.mobile}) {
     height: 20px;
     width: 20px;
   }
 `;
 
 const LayoutSwitch = () => {
-  const setLayout = useStoreActions(actions => actions.layout.setLayout);
-  const color = useStoreState(state => state.color.color);
+  const setLayout = useStoreActions((actions) => actions.layout.setLayout);
+  const color = useStoreState((state) => state.color.color);
   const [active, setActive] = useState('Grid');
 
-  const handleClick = selected => {
+  const handleClick = (selected) => {
     setActive(selected);
     setLayout(selected);
   };
 
   const StyledButton = styled(Button)`
     cursor: pointer;
-    transition: all ${p => p.theme.times[0]} ease-in-out;
-    color: ${p => p.c[0]};
+    transition: all ${(p) => p.theme.times[0]} ease-in-out;
+    color: ${(p) => p.c[0]};
     width: 25px;
     background: none;
-    opacity: ${p => (p.activeNow === p.value ? 1 : 0.5)};
+    opacity: ${(p) => (p.activeNow === p.value ? 1 : 0.5)};
     &:focus {
       outline: 0;
     }
     &:hover {
       cursor: pointer;
       opacity: 1;
-      transition: all ${p => p.theme.times[0]} ease-in-out;
+      transition: all ${(p) => p.theme.times[0]} ease-in-out;
     }
   `;
 
