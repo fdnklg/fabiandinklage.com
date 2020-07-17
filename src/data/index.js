@@ -229,7 +229,7 @@ export const content = {
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung: a city in flux – 800 route of public and informal mobility routes visualized',
         lazy: 'public/images/cityinflux/cityinflux-lazy-960x640.jpg',
         url: 'https://city-in-flux.netlify.com/',
-        tasks: ['concept', 'visual interface design', 'Data visualization'],
+        tasks: ['Concept', 'Visual Interface Design', 'Data Visualization'],
         subtitle: 'Mapping socio-economic and mobility data of Cape Town.',
         description:
           "Cape Town's mobility is characterized by formal and informal mobility networks consisting of taxis and buses. These services are mostly self-organised. What image of a city emerges when combining social and economic data with mobility data? What stirring stories are contained in this data and how can they be conveyed with the help of digital tools? The interactive piece visualizes unique route profiles of the informal and formal mobility networks of Cape Town. The intention of the prototype is to motivate users to get information about the diverse living conditions of the city and to contribute their own perspectives on spatial and social mobility. Exemplarily, it is shown how annotation for specific routes opens up the space for personal stories along routes. The mobility data was provided by the startup [WhereIsMyTransport](https://www.whereismytransport.com/). The socio-economic data were obtained from qualitative surveys conducted by the [Federal Statistical Office of South Africa](http://www.statssa.gov.za/).",
@@ -290,8 +290,13 @@ export const content = {
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung: Handelsströme, Lieferketten, Datenvisualisierung',
         lazy:
           'public/images/koro-trading-flows/koro-trading-flows-lazy-960x640.jpg',
-        url: null,
-        tasks: ['Konzept', 'Visual Interface Design', 'Datenvisualisierung'],
+        url:
+          'https://www.korodrogerie.de/blog/detail/sCategory/81/blogArticle/1463',
+        tasks: [
+          'Concept',
+          'Visual Interface Design',
+          'Data Visualization Design',
+        ],
         subtitle:
           'Visualization of all product imports for transparency and sustainability',
         description:
@@ -355,9 +360,9 @@ export const content = {
           {
             type: 'img',
             alt:
-              'data visualization, datenvisualisierung: International trade flows - Die Detailansicht informiert Nutzerinnen über die Art des Transports und Beschreibungen zu allen Artikeln.',
+              'data visualization, datenvisualisierung: International trade flows - The detailed view informs users about the type of transport and descriptions of all items.',
             content:
-              'Die Detailansicht informiert Nutzerinnen über die Art des Transports und Beschreibungen zu allen Artikeln.',
+              'The detailed view informs users about the type of transport and descriptions of all items.',
             url:
               'public/images/koro-trading-flows/koro-trading-flows-6-3840x2592.jpg',
             lazy:
@@ -521,7 +526,7 @@ export const content = {
           'public/images/rhythmoftheroad/rhythmoftheroad-thumb-960x640.mp4',
         lazy: 'public/images/rhythmoftheroad/rhythmoftheroad-lazy-960x640.jpg',
         url: 'https://lab.technologiestiftung-berlin.de/projects/bikerides/de/',
-        tasks: ['Data Analysis', 'Data visualization', 'Frontend Development'],
+        tasks: ['Data Analysis', 'Data Visualization', 'Frontend Development'],
         subtitle: "Berlin's temporal cycling patterns visualized.",
         description:
           "Since 2015, the Berlin Senate Administration has been recording bicycle traffic in the city using automated counting stations. How can Berlin's 26 counting stations be aggregated and made accessible? The interactive visualisation allows users to read out the wheel counting stations that have been put into operation and to discover temporal patterns of Berlin cyclists. The visualization shows daily, weekly and annual cycling patterns. Furthermore, the data can be displayed in three levels of detail (median, absolute, maximum). The data comes from 26 permanent counting stations embedded in the ground and comprises more than 8760 counts.",
@@ -562,7 +567,7 @@ export const content = {
           'Data Analysis',
           'Backend Infrastructure',
           'Visual Interface Design',
-          'Data visualization',
+          'Data Visualization',
         ],
         subtitle:
           "Explore and analyse spatio-temporal patterns of Berlin's shared bike mobility providers.",
@@ -700,7 +705,7 @@ export const content = {
         subtitle:
           'Visualizing controversy and popularity of the news aggregator.',
         description:
-          'The social media site [Hacker News](https://news.ycombinator.com/) is a news aggregator, focusing on computer science and information technology. Its design is bare-bones but it has complex functionality for voting and discussions. The experimental interactive visualization allows the user to explore current articles of the platform. Comments are displayed chronologically for each article and nested comments are created in new interpretations of lists. The result is a typographic cyber punk reader that exchanges usability and conventionality for rawness and resistance against the common sense of usability and web standards. This project was developed with [Florian Zia](https://twitter.com/flozia) and supervised by [Boris Müller](https://twitter.com/borism) at the [University of Applied Sciences, Potsdam]().',
+          'The social media site [Hacker News](https://news.ycombinator.com/) is a news aggregator, focusing on computer science and information technology. Its design is bare-bones but it has complex functionality for voting and discussions. The experimental interactive visualization allows the user to explore current articles of the platform. Comments are displayed chronologically for each article and nested comments are created in new interpretations of lists. The result is a typographic cyber punk reader that exchanges usability and conventionality for rawness and resistance against the common sense of usability and web standards. This project was developed with Florian Zia and supervised by [Boris Müller](https://twitter.com/borism) at the [University of Applied Sciences, Potsdam]().',
         media: [
           {
             type: 'hackernews',
@@ -1188,7 +1193,8 @@ export const content = {
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung: Handelsströme, Lieferketten, Datenvisualisierung',
         lazy:
           'public/images/koro-trading-flows/koro-trading-flows-lazy-960x640.jpg',
-        url: null,
+        url:
+          'https://www.korodrogerie.de/blog/detail/sCategory/81/blogArticle/1463',
         tasks: ['Konzept', 'Visual Interface Design', 'Datenvisualisierung'],
         subtitle:
           'Visualisierung aller Produkt-Importe für Transparenz und Nachhaltigkeit',
@@ -1253,9 +1259,9 @@ export const content = {
           {
             type: 'img',
             alt:
-              'data visualization, datenvisualisierung: Internationale Handelsströme – Die Detailansicht informiert Nutzerinnen über die Art des Transports und Beschreibungen zu allen Artikeln.',
+              'data visualization, datenvisualisierung: Internationale Handelsströme – The detailed view informs users about the type of transport and descriptions of all items.',
             content:
-              'Die Detailansicht informiert Nutzerinnen über die Art des Transports und Beschreibungen zu allen Artikeln.',
+              'The detailed view informs users about the type of transport and descriptions of all items.',
             url:
               'public/images/koro-trading-flows/koro-trading-flows-6-3840x2592.jpg',
             lazy:

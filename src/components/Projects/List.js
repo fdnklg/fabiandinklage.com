@@ -169,8 +169,6 @@ const List = p => {
                       to={`/projects/${p.path}/${base}`}
                     >
                       <Box
-                        // onMouseOver={() => setColor(p.color)}
-                        // onMouseOut={() => setColor(colorDefault)}
                         sx={{ textDecoration: 'none', color: color[0] }}
                         variant="nav"
                       >
@@ -178,18 +176,22 @@ const List = p => {
                       </Box>
                     </RouterLink>
                     <StyledTDType type="last">{p.type}</StyledTDType>
-                    <StyledTDButton type="last">
-                      <Button
-                        href={p.url}
-                        target="_blank"
-                        px={3}
-                        py={2}
-                        c={color}
-                        fontSize={[2, 2, 2, 3]}
-                      >
-                        {others.launch}
-                      </Button>
-                    </StyledTDButton>
+                    {
+                      <StyledTDButton type="last">
+                        {p.url && (
+                          <Button
+                            href={p.url}
+                            target="_blank"
+                            px={3}
+                            py={2}
+                            c={color}
+                            fontSize={[2, 2, 2, 3]}
+                          >
+                            {others.launch}
+                          </Button>
+                        )}
+                      </StyledTDButton>
+                    }
                   </StyledTR>
                 );
               })}

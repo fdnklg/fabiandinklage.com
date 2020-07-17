@@ -1,9 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Box, Text, Image } from 'rebass/styled-components';
-import { CSSTransition } from 'react-transition-group';
 import ProgressiveImage from 'react-progressive-image';
 import { compare } from '~/utils';
 import Transition from 'react-transition-group/Transition';
@@ -23,24 +21,24 @@ const StyledBox = styled(Box)`
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
-const ThumbnailImage = styled(Image)`
-  position: absolute;
+const StyledText = styled(Text)`
+  margin-top: 15px;
+  line-height: 140%;
   transition: opacity ${p => p.theme.times[1]} ease-in-out;
-  filter: saturate(0.25);
+  font-size: ${p => p.theme.fontSizes[2]};
+  letter-spacing: ${p => p.theme.letterSpacing[2]};
+  color: ${p => p.c[0]};
+  opacity: 1;
 
-  @media (max-width: ${p => p.theme.sizes.tablet}) {
-    &.hide {
-      opacity: 0;
-    }
+  cite {
+    font-family: 'Mier A Regular';
+    opacity: 0.66;
+    font-style: normal;
   }
 
-  @media (max-width: ${p => p.theme.sizes.mobile}) {
-    filter: saturate(1);
-  }
-
-  &:hover {
-    opacity: 0;
-    transition: opacity ${p => p.theme.times[1]} ease-in-out;
+  b {
+    font-family: 'Mier A Bold';
+    opacity: 1;
   }
 `;
 
@@ -72,10 +70,6 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const GifImage = styled(Image)`
-  filter: saturate(1);
-`;
-
 const StyledThumbBox = styled(Box)`
   @media (max-width: ${p => p.theme.sizes.mobile}) {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -90,31 +84,11 @@ const Grid = p => {
   const setColor = useStoreActions(actions => actions.color.setColor);
   const sortedByYear = data.sort(compare);
   const [activeIndex, setActiveIndex] = useState(null);
+  const [hovered, setHovered] = useState(false);
   const [hideOnScroll, setHideOnScroll] = useState(true);
   const [height, setHeight] = useState(null);
   let observed = null;
   let colors = '';
-
-  const StyledText = styled(Text)`
-    margin-top: 15px;
-    line-height: 140%;
-    transition: opacity ${p => p.theme.times[1]} ease-in-out;
-    font-size: ${p => p.theme.fontSizes[2]};
-    letter-spacing: ${p => p.theme.letterSpacing[2]};
-    color: ${p => p.c[0]};
-    opacity: 1;
-
-    cite {
-      font-family: 'Mier A Regular';
-      opacity: 0.66;
-      font-style: normal;
-    }
-
-    b {
-      font-family: 'Mier A Bold';
-      opacity: 1;
-    }
-  `;
 
   const handleResize = w => {
     const h = (w / 3) * 2;
@@ -132,43 +106,57 @@ const Grid = p => {
   }, [observed, activeIndex]);
 
   const handleMouseOver = (data, index) => {
+    pauseAllVideos();
+
     const vidNode = document.getElementById(`video-${data.path}`);
     vidNode.style.filter = 'grayscale(0)';
     vidNode.parentElement.style.transition = 'all .125s ease-in-out';
     vidNode.parentElement.style.boxShadow =
       '4px 21px 40px 1px rgba(0,0,0,0.085)';
     vidNode.parentElement.style.transform = 'scale(1.025)';
+    setHovered(true);
 
     vidNode.play();
     // setColor(data.color);
     setActiveIndex(index);
   };
 
+  const pauseAllVideos = data => {
+    const thumbnails = document.querySelectorAll('.thumbnail-video');
+    thumbnails.forEach(thumb => {
+      thumb.style.filter = 'grayscale(.75)';
+      thumb.pause();
+    });
+  };
+
   const handleMouseOut = data => {
     const vidNode = document.getElementById(`video-${data.path}`);
     vidNode.style.filter = 'grayscale(0.75)';
+    vidNode.parentElement.style.transition = 'all .125s ease-in-out';
     vidNode.parentElement.style.transform = 'scale(1)';
     vidNode.parentElement.style.boxShadow = '4px 21px 20px 1px rgba(0,0,0,0)';
     vidNode.pause();
     setColor(colorDefault);
     setActiveIndex(null);
+    setHovered(false);
   };
 
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const thumbnails = document.querySelectorAll('.thumbnail-video');
 
-      thumbnails.forEach((thumb, i) => {
-        const elm = thumb.getBoundingClientRect();
-        if (elm.top < 400 && elm.top > 100) {
-          thumb.style.filter = 'grayscale(0)';
-          thumb.play();
-        } else {
-          thumb.style.filter = 'grayscale(.75)';
-          thumb.pause();
-        }
-      });
-
+      if (!hovered) {
+        thumbnails.forEach((thumb, i) => {
+          const elm = thumb.getBoundingClientRect();
+          if (elm.top < 400 && elm.top > 100) {
+            thumb.style.filter = 'grayscale(0)';
+            thumb.play();
+          } else {
+            thumb.style.filter = 'grayscale(.75)';
+            thumb.pause();
+          }
+        });
+      }
       const isShow = currPos.y > prevPos.y;
       if (isShow !== hideOnScroll) setHideOnScroll(isShow);
     },

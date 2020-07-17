@@ -7,12 +7,12 @@ import { Box } from 'rebass/styled-components';
 import { useStoreState } from 'easy-peasy';
 
 const StyledParagraph = styled(ReactMarkdown)`
-  color: ${(p) => p.c[0]};
-  line-height: ${(p) => p.theme.lineHeights.body};
-  letter-spacing: ${(p) => p.theme.letterSpacing[1]};
-  transition: all ${(p) => p.theme.times[1]} ease-in-out;
+  color: ${p => p.c[0]};
+  line-height: ${p => p.theme.lineHeights.body};
+  letter-spacing: ${p => p.theme.letterSpacing[1]};
+  transition: all ${p => p.theme.times[1]} ease-in-out;
 
-  opacity: ${(props) => {
+  opacity: ${props => {
     if (props.isPrerendering) {
       return 0;
     } else {
@@ -20,7 +20,7 @@ const StyledParagraph = styled(ReactMarkdown)`
     }
   }};
 
-  transform: ${(props) => {
+  transform: ${props => {
     if (props.isPrerendering) {
       return 'translateY(10px)';
     } else {
@@ -38,20 +38,20 @@ const StyledParagraph = styled(ReactMarkdown)`
 
   a {
     text-decoration: none;
-    border-bottom: 1px solid ${(p) => p.c[0]};
-    color: ${(p) => p.c[0]};
-    transition: all ${(p) => p.theme.times[1]} ease-in-out;
+    border-bottom: 1px solid ${p => '#89899B'};
+    color: ${p => p.c[0]};
+    transition: all ${p => p.theme.times[1]} ease-in-out;
 
     &:hover {
       opacity: 0.5;
-      transition: all ${(p) => p.theme.times[1]} ease-in-out;
+      transition: all ${p => p.theme.times[1]} ease-in-out;
     }
   }
 `;
 
-const Paragraph = (p) => {
+const Paragraph = p => {
   const { content, color, timeout, paddingTop, paddingBottom } = p;
-  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
 
   return (
     <Transition
@@ -61,7 +61,7 @@ const Paragraph = (p) => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {(state) => {
+      {state => {
         return (
           <Box
             sx={{

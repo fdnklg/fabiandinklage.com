@@ -1,9 +1,9 @@
 /* eslint-disable */
-const px = (d) => {
+const px = d => {
   return `${d}px`;
 };
 
-const s = (d) => {
+const s = d => {
   return `${d}s`;
 };
 
@@ -15,8 +15,9 @@ const defaultTheme = {
     primaryLight: '#E6E6EA',
     secondary: '#30c',
     muted: '#f6f6f9',
-    gray: '#dddddf',
+    gray: '#D0D0D7',
     highlight: 'hsla(205, 100%, 40%, 0.125)',
+    medium: 'hsla(205, 100%, 40%, 0.3)',
   },
   fonts: {
     body: 'Mier A Regular, sans-serif',
@@ -40,7 +41,7 @@ const defaultTheme = {
     desktop: '1080px',
     hd: '1920px',
   },
-  times: [0.128, 0.256, 0.512].map(s),
+  times: [0.128, 0.2, 0.512].map(s),
   radii: {
     default: 4,
     circle: 99999,
