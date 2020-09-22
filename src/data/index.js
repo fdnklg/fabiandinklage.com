@@ -46,7 +46,7 @@ export const content = {
       clients: 'collaborations',
     },
     others: {
-      launch: 'Launch project',
+      more: 'Case study',
       context: 'Context',
       year: 'Year',
       tasks: 'Tasks',
@@ -215,6 +215,21 @@ export const content = {
       },
     ],
     projects: [
+      {
+        title: 'Noise Prevention Measures',
+        type: 'Infographics',
+        url:
+          'https://gruen.deutschebahn.com/de/dialog/veroeffentlichungen/laermschutzbericht2019',
+        year: 2020,
+        visible: true,
+      },
+      {
+        title: 'Pour Your Neighbourhood',
+        type: 'Mapping',
+        url: 'https://giessdenkiez.de/',
+        year: 2020,
+        visible: true,
+      },
       {
         title: 'A City In Flux',
         path: 'cityinflux',
@@ -914,9 +929,9 @@ export const content = {
       message: 'Deine Nachricht',
       name: 'Dein Name',
       mail: 'E-Mail Adresse',
-      btnSend: 'Nachricht senden',
-      btnSending: 'Sende Nachricht ...',
-      btnSuccess: 'Nachricht gesendet!',
+      btnSend: 'Senden',
+      btnSending: 'Sende...',
+      btnSuccess: 'Gesendet!',
     },
     footer: {
       legal: 'Impressum',
@@ -924,7 +939,7 @@ export const content = {
       twitter: 'Twitter',
     },
     others: {
-      launch: 'Starte Projekt',
+      more: 'Mehr erfahren',
       context: 'Kontext',
       year: 'Jahr',
       tasks: 'Aufgaben',
@@ -996,7 +1011,7 @@ export const content = {
         title: 'Datenvisualisierer',
         type: 'Arbeitserfahrung',
         context: 'ZEIT ONLINE, Berlin',
-        duration: '2020 – now',
+        duration: '2020 – Heute',
         date: new Date(),
         description:
           'Erstellung interaktiver daten-getriebener journalistischer Stücke für den Newsroom.',
@@ -1116,6 +1131,21 @@ export const content = {
       },
     ],
     projects: [
+      {
+        title: 'Lärmschutzbericht',
+        type: 'Infografik',
+        url:
+          'https://gruen.deutschebahn.com/de/dialog/veroeffentlichungen/laermschutzbericht2019',
+        year: 2020,
+        visible: true,
+      },
+      {
+        title: 'Giess den Kiez',
+        type: 'Interaktive Karte',
+        url: 'https://giessdenkiez.de/',
+        year: 2020,
+        visible: true,
+      },
       {
         title: 'A City In Flux',
         path: 'cityinflux',

@@ -14,6 +14,8 @@
   "reactSnap": {
     "inlineCss": false,
     "include": [
+      "/projects/koro-trading-flows/de",
+      "/projects/koro-trading-flows/en",
       "/projects/curricle/de",
       "/projects/curricle/en",
       "/projects/cityinflux/de",

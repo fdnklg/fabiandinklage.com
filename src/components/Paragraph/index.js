@@ -38,7 +38,7 @@ const StyledParagraph = styled(ReactMarkdown)`
 
   a {
     text-decoration: none;
-    border-bottom: 1px solid ${p => '#89899B'};
+    border-bottom: 1px solid ${p => p.c[0]};
     color: ${p => p.c[0]};
     transition: all ${p => p.theme.times[1]} ease-in-out;
 

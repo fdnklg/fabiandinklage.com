@@ -18,8 +18,8 @@ import RouterLink from '~/components/RouterLink';
 import { content } from '~/data';
 
 const StyledFlex = styled(Flex)`
-  font-family: ${(p) => p.theme.fonts.headline};
-  opacity: ${(props) => {
+  font-family: ${p => p.theme.fonts.headline};
+  opacity: ${props => {
     if (props.isPrerendering) {
       return 0;
     } else {
@@ -27,20 +27,20 @@ const StyledFlex = styled(Flex)`
     }
   }};
 
-  transform: ${(props) => {
+  transform: ${props => {
     if (props.isPrerendering) {
       return 'translateY(-20px)';
     } else {
       return positionTopFromState(props.state);
     }
   }};
-  transition: all ${(p) => p.theme.times[1]} ease-in-out;
-  color: ${(p) => p.c[0]};
-  background: lighten("${(p) => p.c[1]}", 5);
+  transition: all ${p => p.theme.times[1]} ease-in-out;
+  color: ${p => p.c[0]};
+  background: lighten("${p => p.c[1]}", 5);
 `;
 
 const StyledLabel = styled.span`
-  @media (max-width: ${(p) => p.theme.sizes.mobile}) {
+  @media (max-width: ${p => p.theme.sizes.mobile}) {
     display: none;
   }
 `;
@@ -51,33 +51,33 @@ const StyledLanguageSwitch = styled.span`
   display: flex;
   align-items: center;
   height: 35px;
-  border: 1px solid ${(p) => p.color[0]};
+  border: 1px solid ${p => p.color[0]};
   border-radius: 135px;
   justify-content: center;
-  color: ${(p) => p.color[0]};
+  color: ${p => p.color[0]};
   cursor: pointer;
-  transition: all ${(p) => p.theme.times[0]} ease-in-out;
+  transition: all ${p => p.theme.times[0]} ease-in-out;
 
   &:hover {
-    color: ${(p) => p.color[1]};
-    background: ${(p) => p.color[0]};
-    transition: all ${(p) => p.theme.times[0]} ease-in-out;
+    color: ${p => p.color[1]};
+    background: ${p => p.color[0]};
+    transition: all ${p => p.theme.times[0]} ease-in-out;
   }
 `;
 
-const Nav = (p) => {
+const Nav = p => {
   const { timeout } = p;
-  const setBase = useStoreActions((actions) => actions.setBase);
-  const base = useStoreState((state) => state.base);
+  const setBase = useStoreActions(actions => actions.setBase);
+  const base = useStoreState(state => state.base);
   const navContent = content[base].nav;
-  const color = useStoreState((state) => state.color.color);
+  const color = useStoreState(state => state.color.color);
   const [first, setFirst] = useState(false);
 
-  const handleLanguage = (lang) => {
-    setBase(lang);
+  const handleLanguage = lang => {
     const location = history.location.pathname;
     const pos = getPosition(history.location.pathname, '/', -1);
-    const newLocation = location.slice(0, pos - 3) + '/' + base;
+    const newLocation = location.slice(0, pos - 2) + lang;
+    setBase(lang);
     history.push(newLocation);
   };
 
@@ -89,7 +89,7 @@ const Nav = (p) => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {(state) => (
+      {state => (
         <StyledFlex c={color} alignItems="center" state={state}>
           <Box
             sx={{ flexDirection: 'row', display: 'flex', alignItems: 'center' }}

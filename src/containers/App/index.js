@@ -6,14 +6,26 @@ import AppWrapper from './AppWrapper';
 
 const base = '/:(en|de)?';
 
-const App = (p) => {
+const App = p => {
   const userLang = navigator.language.split(/[-_]/)[0] == 'de' ? 'de' : 'en';
-  const setBase = useStoreActions((actions) => actions.setBase);
-  const base = useStoreState((state) => state.base);
+  const setBase = useStoreActions(actions => actions.setBase);
+  const base = useStoreState(state => state.base);
 
   useEffect(() => {
-    setBase(userLang);
-    history.push(`/home/${userLang}`);
+    let lang;
+    if (history.location.pathname.includes('/en')) {
+      lang = 'en';
+    }
+    if (history.location.pathname.includes('/de')) {
+      lang = 'de';
+    }
+
+    if (lang === 'de' || lang === 'en') {
+      setBase(lang);
+    } else {
+      setBase(userLang);
+      history.push(`/home/${userLang}`);
+    }
   }, []);
 
   const NotFoundRoute = () => <Redirect to={`/home/${base}`} />;

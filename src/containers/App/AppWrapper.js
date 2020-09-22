@@ -15,7 +15,7 @@ const baseLang = '(en|de)';
 const StyledWrapper = styled.div`
   width: 100%;
   height: 100%;
-  color: ${(p) => p.c[0]};
+  color: ${p => p.c[0]};
   transition: all 0.25s ease-in-out;
 `;
 
@@ -25,11 +25,11 @@ const InnerWrapper = styled.div`
   flex-direction: column;
   min-height: calc(100vh - 80px);
 
-  @media screen and (max-width: ${(p) => p.theme.sizes.tablet}) {
+  @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
     min-height: calc(100vh - 50px);
   }
 
-  @media screen and (max-width: ${(p) => p.theme.sizes.mobile}) {
+  @media screen and (max-width: ${p => p.theme.sizes.mobile}) {
     min-height: calc(100vh - 15px);
   }
 `;
@@ -46,12 +46,12 @@ import Footer from '../../components/Footer';
 import Contact from '../Contact';
 
 const AppWrapper = () => {
-  let color = useStoreState((state) => state.color.color);
+  let color = useStoreState(state => state.color.color);
   let setIsPrerendering = useStoreActions(
-    (actions) => actions.layout.setIsPrerendering
+    actions => actions.layout.setIsPrerendering
   );
 
-  const base = useStoreState((state) => state.base);
+  const base = useStoreState(state => state.base);
   const cta = content[base].cta;
   const collaborations = content[base].collaborations;
   const titleClients = content[base].title.clients;

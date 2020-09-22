@@ -188,63 +188,65 @@ const Grid = p => {
             ],
           }}
         >
-          {data.map((p, i) => {
-            return (
-              <RouterLink
-                key={`key-routerlink-${p.label}-${i}`}
-                hover={true}
-                color={color}
-                to={`/projects/${p.path}/${base}`}
-              >
-                <Box
-                  onMouseOver={() => handleMouseOver(p, i)}
-                  onMouseOut={() => handleMouseOut(p)}
-                  sx={{ textDecoration: 'none' }}
-                  key={`griditem-key-${i}`}
-                  variant="nav"
-                  href={`projects/${p.path}/${base}`}
+          {data
+            .filter(p => p.subtitle)
+            .map((p, i) => {
+              return (
+                <RouterLink
+                  key={`key-routerlink-${p.label}-${i}`}
+                  hover={true}
+                  color={color}
+                  to={`/projects/${p.path}/${base}`}
                 >
-                  <StyledThumbBox
-                    className="thumb-box"
-                    sx={{ overflow: 'hidden', position: 'relative' }}
-                    key={`tile-${i}`}
-                    color="primary"
+                  <Box
+                    onMouseOver={() => handleMouseOver(p, i)}
+                    onMouseOut={() => handleMouseOut(p)}
+                    sx={{ textDecoration: 'none' }}
+                    key={`griditem-key-${i}`}
+                    variant="nav"
+                    href={`projects/${p.path}/${base}`}
                   >
-                    <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
-                      {src => (
-                        <video
-                          className="thumbnail-video"
-                          id={`video-${p.path}`}
-                          ref={target => {
-                            if (target) {
-                              observed = target;
-                            }
-                          }}
-                          style={{
-                            position: 'absolute',
-                            width: '100%',
-                            filter: 'grayscale(0.5)',
-                          }}
-                          width="100%"
-                          height="100%"
-                          loop
-                          playsInline
-                          muted
-                        >
-                          <source src={p.overlay} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      )}
-                    </ProgressiveImage>
-                  </StyledThumbBox>
-                  <StyledText c={color} index={i}>
-                    <b>{p.title}: </b>
-                    <cite>{p.subtitle}</cite>
-                  </StyledText>
-                </Box>
-              </RouterLink>
-            );
-          })}
+                    <StyledThumbBox
+                      className="thumb-box"
+                      sx={{ overflow: 'hidden', position: 'relative' }}
+                      key={`tile-${i}`}
+                      color="primary"
+                    >
+                      <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
+                        {src => (
+                          <video
+                            className="thumbnail-video"
+                            id={`video-${p.path}`}
+                            ref={target => {
+                              if (target) {
+                                observed = target;
+                              }
+                            }}
+                            style={{
+                              position: 'absolute',
+                              width: '100%',
+                              filter: 'grayscale(0.5)',
+                            }}
+                            width="100%"
+                            height="100%"
+                            loop
+                            playsInline
+                            muted
+                          >
+                            <source src={p.overlay} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        )}
+                      </ProgressiveImage>
+                    </StyledThumbBox>
+                    <StyledText c={color} index={i}>
+                      <b>{p.title}: </b>
+                      <cite>{p.subtitle}</cite>
+                    </StyledText>
+                  </Box>
+                </RouterLink>
+              );
+            })}
         </StyledBox>
       )}
     </Transition>

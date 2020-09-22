@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
-import { Box } from 'rebass/styled-components';
+import { Box, Link } from 'rebass/styled-components';
 import { compare } from '~/utils';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
@@ -164,21 +164,52 @@ const List = p => {
                     key={`tr-${i}`}
                   >
                     <StyledTD>{newYear ? p.year : ''}</StyledTD>
-                    <RouterLink
-                      color={color}
-                      to={`/projects/${p.path}/${base}`}
-                    >
+                    {p.url && (
+                      <a
+                        color={color}
+                        href={p.url}
+                        target="_blank"
+                        style={{ textDecoration: 'none', cursor: 'pointer' }}
+                      >
+                        <Box
+                          sx={{ textDecoration: 'none', color: color[0] }}
+                          variant="nav"
+                        >
+                          <StyledTitle>{p.title}</StyledTitle>
+                        </Box>
+                      </a>
+                    )}
+                    {!p.url && (
                       <Box
-                        sx={{ textDecoration: 'none', color: color[0] }}
+                        sx={{
+                          textDecoration: 'none',
+                          color: color[0],
+                          opacity: 0.5,
+                        }}
                         variant="nav"
                       >
                         <StyledTitle>{p.title}</StyledTitle>
                       </Box>
-                    </RouterLink>
+                    )}
                     <StyledTDType type="last">{p.type}</StyledTDType>
                     {
                       <StyledTDButton type="last">
-                        {p.url && (
+                        {p.path && (
+                          <RouterLink
+                            color={color}
+                            to={`/projects/${p.path}/${base}`}
+                          >
+                            <Button
+                              px={3}
+                              py={2}
+                              c={color}
+                              fontSize={[2, 2, 2, 3]}
+                            >
+                              {others.more}
+                            </Button>
+                          </RouterLink>
+                        )}
+                        {/* {p.url && (
                           <Button
                             href={p.url}
                             target="_blank"
@@ -187,9 +218,9 @@ const List = p => {
                             c={color}
                             fontSize={[2, 2, 2, 3]}
                           >
-                            {others.launch}
+                            {others.more}
                           </Button>
-                        )}
+                        )} */}
                       </StyledTDButton>
                     }
                   </StyledTR>
