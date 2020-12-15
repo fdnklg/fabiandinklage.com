@@ -139,7 +139,7 @@ const Intro = props => {
               sx={{ display: 'flex', flexDirection: 'column' }}
               pr={[3]}
               mb={[3]}
-              fontSize={[2]}
+              fontSize={[2, 3, 3]}
               width={[1, 1, 2 / 8]}
             >
               <StyledLabelBold c={color}>{others.tasks}</StyledLabelBold>

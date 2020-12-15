@@ -5,15 +5,12 @@ import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
 import {
   opacityFromState,
-  positionFromState,
   positionTopFromState,
 } from '~/utils/animation';
 import history from '../../../history';
 import { getPosition } from '../../utils';
 
 import Logo from '~/components/Logo';
-import Label from '~/components/Label';
-import Link from '~/components/Link';
 import RouterLink from '~/components/RouterLink';
 import { content } from '~/data';
 

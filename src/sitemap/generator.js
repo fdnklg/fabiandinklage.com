@@ -21,6 +21,7 @@ const config = {
     {
       slug: [
         'gender-equality/de',
+        'demos/de',
         'cityinflux/de',
         'edutech/de',
         'rhythmoftheroad/de',
@@ -30,6 +31,7 @@ const config = {
         'invisties/de',
         'koro-trading-flows/de',
         'gender-equality/en',
+        'demos/en',
         'cityinflux/en',
         'edutech/en',
         'rhythmoftheroad/en',

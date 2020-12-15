@@ -5,6 +5,10 @@ export const content = {
       profile: 'Profile',
       contact: 'Contact',
     },
+    layout: {
+      grid: 'Grid',
+      list: 'List',
+    },
     footer: {
       legal: 'Legal note',
       photos: 'Photos',
@@ -50,9 +54,10 @@ export const content = {
       context: 'Context',
       year: 'Year',
       tasks: 'Tasks',
+      launch: 'Launch Project',
     },
     collaborations:
-      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  /  Spiegel Online  /  ZEIT ONLINE',
+      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
       intro:
         "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
@@ -229,6 +234,86 @@ export const content = {
         url: 'https://giessdenkiez.de/',
         year: 2020,
         visible: true,
+      },
+      {
+        title: 'Protest Capital',
+        path: 'demos',
+        color: ['#52676D', '#EBEFEF', '#E8E6ED'],
+        client: 'Open Knowledge Foundation',
+        type: 'Data Visualization',
+        year: 2020,
+        visible: true,
+        thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
+        overlay: 'public/images/demos/demos-thumb-960x640.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/demos/demos-lazy-960x640.jpg',
+        url: 'https://fragdenstaat.de/dossier/demo-hauptstadt-berlin/',
+        tasks: ['Concept', 'Visual Interface Design', 'Data Visualization'],
+        subtitle: 'Visualizing last three years of public protests in Berlin',
+        description:
+          "From January 2018 to mid-July 2020, according to police data, there were a total of 12,774 registered demonstrations. This makes Berlin the capital of protest in Germany. Together with [Frag den Staat](https://fragdenstaat.de/) and [Webkid](https://webkid.io) we show which topics mobilize most people. The data was provided by the Berlin police for a fee and was optimized by us for machine readability. We have grouped the demonstrations into categories and provided them as [open data](https://media.frag-den-staat.de/files/media/main/6d/5e/6d5e61d5-f5cc-474d-9e61-d7ec0d23715a/versammlungen-berlin.csv).",
+                media: [
+          {
+            type: 'img',
+            alt:
+              '',
+            content: '',
+            url: 'public/images/demos/demos-intro-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-intro-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Tooltip',
+            url: 'public/images/demos/demos-tooltip-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-tooltip-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'The visualization shows a total of 12,774 demonstrations.',
+            url: 'public/images/demos/demos-vis-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-vis-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Full text search',
+            url: 'public/images/demos/demos-search-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-search-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'The relationship between participants and registrations sorted by topic.',
+            url: 'public/images/demos/demos-charts-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-charts-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Some reactions to the project on Twitter.',
+            url: 'public/images/demos/demos-tweets-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-tweets-lazy-3840x2040.jpg',
+          },
+        ],
       },
       {
         title: 'A City In Flux',
@@ -925,6 +1010,10 @@ export const content = {
       profile: 'Profil',
       contact: 'Kontakt',
     },
+    layout: {
+      grid: 'Kacheln',
+      list: 'Liste',
+    },
     form: {
       message: 'Deine Nachricht',
       name: 'Dein Name',
@@ -943,6 +1032,7 @@ export const content = {
       context: 'Kontext',
       year: 'Jahr',
       tasks: 'Aufgaben',
+      launch: 'Zum Projekt',
     },
     legal: {
       title: 'Impressum',
@@ -971,7 +1061,7 @@ export const content = {
       clients: 'Kollaborationen',
     },
     collaborations:
-      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  /  Spiegel Online  /  ZEIT ONLINE',
+      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
       intro:
         'Hallo, ich bin Fabian Dinklage, ein in Berlin ansässiger, freiberuflicher **Informationsdesigner** mit Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle ich Interfaces und interaktive datengesteuerte Produkte. Visualisierungen schaffen neue Sichtweisen auf deine Daten und helfen Dir diese besser zu verstehen und nutzbar zu machen.',
@@ -1131,6 +1221,84 @@ export const content = {
       },
     ],
     projects: [
+            {
+        title: 'Demo-Hauptstadt Berlin',
+        path: 'demos',
+        color: ['#52676D', '#EBEFEF', '#E8E6ED'],
+        client: 'Open Knowledge Foundation',
+        type: 'Datenvisualisierung',
+        year: 2020,
+        visible: true,
+        thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
+        overlay: 'public/images/demos/demos-thumb-960x640.mp4',
+        alt: '',
+        lazy: 'public/images/demos/demos-lazy-960x640.jpg',
+        url: 'https://fragdenstaat.de/dossier/demo-hauptstadt-berlin/',
+        tasks: ['Konzept', 'Design', 'Datenvisualisierung'],
+        subtitle: 'Alle Demonstrationen der letzten 3 Jahre visualisiert',
+        description: "Von Januar 2018 bis Mitte Juli 2020 gab es laut Polizeiangaben insgesamt 12.774 angemeldete Demonstrationen. Damit ist Berlin die Hauptstadt des Protests in Deutschland. Zusammen mit [Frag den Staat](https://fragdenstaat.de/) und [Webkid](https://webkid.io) zeigen welche Themen die meisten Menschen mobilisieren. Der Datensatz wurde gegen eine Gebühr von der Berliner Polizei bereitgestellt und von uns für Maschinenlesbarkeit optimiert. Wir haben die Demonstrationen in Kategorien zusammengefasst und als [offene Daten](https://media.frag-den-staat.de/files/media/main/6d/5e/6d5e61d5-f5cc-474d-9e61-d7ec0d23715a/versammlungen-berlin.csv) bereitgestellt.",
+        media: [
+          {
+            type: 'img',
+            alt:
+              '',
+            content: '',
+            url: 'public/images/demos/demos-intro-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-intro-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Tooltip der Visualisierung',
+            url: 'public/images/demos/demos-tooltip-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-tooltip-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Die Visualiserung zeigt insgesamt 12.774 Demonstrationen.',
+            url: 'public/images/demos/demos-vis-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-vis-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Volltextsuche',
+            url: 'public/images/demos/demos-search-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-search-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Das Verhältnis zwischen Teilnehmenden Personen und Anmeldungen sortiert nach Themen.',
+            url: 'public/images/demos/demos-charts-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-charts-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              '',
+            content:
+              'Einige Reaktionen zum Projekt auf Twitter',
+            url: 'public/images/demos/demos-tweets-3840x2040.jpg',
+            lazy:
+              'public/images/demos/demos-tweets-lazy-3840x2040.jpg',
+          },
+        ],
+      },
       {
         title: 'Lärmschutzbericht',
         type: 'Infografik',

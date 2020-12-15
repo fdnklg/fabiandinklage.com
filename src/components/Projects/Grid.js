@@ -71,6 +71,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledThumbBox = styled(Box)`
+  box-shadow: 0 2.8px 2.2px rgba(26,25,43,0.014), 0 12.5px 10px rgba(26,25,43,0.02), 0 22.3px 17.9px rgba(26,25,43,0.022), 0 41.8px 33.4px rgba(26,25,43,0.026), 0 100px 80px rgba(26,25,43,0.02);
   @media (max-width: ${p => p.theme.sizes.mobile}) {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -111,8 +112,8 @@ const Grid = p => {
     const vidNode = document.getElementById(`video-${data.path}`);
     vidNode.style.filter = 'grayscale(0)';
     vidNode.parentElement.style.transition = 'all .125s ease-in-out';
-    vidNode.parentElement.style.boxShadow =
-      '4px 21px 40px 1px rgba(0,0,0,0.085)';
+    // vidNode.parentElement.style.boxShadow =
+    //   '4px 21px 40px 1px rgba(0,0,0,0.085)';
     vidNode.parentElement.style.transform = 'scale(1.025)';
     setHovered(true);
 
@@ -134,7 +135,6 @@ const Grid = p => {
     vidNode.style.filter = 'grayscale(0.75)';
     vidNode.parentElement.style.transition = 'all .125s ease-in-out';
     vidNode.parentElement.style.transform = 'scale(1)';
-    vidNode.parentElement.style.boxShadow = '4px 21px 20px 1px rgba(0,0,0,0)';
     vidNode.pause();
     setColor(colorDefault);
     setActiveIndex(null);

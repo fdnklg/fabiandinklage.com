@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box } from 'rebass/styled-components';
 import { useStoreState } from 'easy-peasy';
 
 const StyledSvg = styled.svg`

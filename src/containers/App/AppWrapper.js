@@ -78,7 +78,7 @@ const AppWrapper = () => {
     }
 
     html {
-      background: #F2F2F4;
+      background: ${color[1]};
       transition: all .125s ease-in-out;
     }
   `;
