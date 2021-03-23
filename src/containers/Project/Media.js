@@ -11,13 +11,13 @@ import Label from '~/components/Label';
 
 const StyledFlex = styled(Flex)`
   margin: 0 auto;
-  @media (max-width: ${(p) => p.theme.sizes.tablet}) {
+  @media (max-width: ${p => p.theme.sizes.tablet}) {
     flex-direction: column;
   }
 `;
 
 const MediaWrapper = styled.div`
-  opacity: ${(props) => {
+  opacity: ${props => {
     if (props.isPrerendering) {
       return 0;
     } else {
@@ -25,7 +25,7 @@ const MediaWrapper = styled.div`
     }
   }};
 
-  transform: ${(props) => {
+  transform: ${props => {
     if (props.isPrerendering) {
       return 'translateY(10px)';
     } else {
@@ -33,12 +33,12 @@ const MediaWrapper = styled.div`
     }
   }};
 
-  transition: all ${(p) => p.theme.times[0]} ease-in-out;
+  transition: all ${p => p.theme.times[0]} ease-in-out;
 `;
 
-const Media = (props) => {
+const Media = props => {
   const { data, timeout } = props;
-  const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   return (
     <Transition
       in={true}
@@ -47,7 +47,7 @@ const Media = (props) => {
       mountOnEnter={true}
       unmountOnExit={true}
     >
-      {(state) => (
+      {state => (
         <MediaWrapper state={state} isPrerendering={isPrerendering}>
           {data.map((media, i) => {
             return (
@@ -57,10 +57,10 @@ const Media = (props) => {
                   src={media.url}
                   placeholder={media.lazy}
                 >
-                  {(src) => (
+                  {src => (
                     <Image
                       src={media.url}
-                      alt={media.alt}
+                      alt={media.content}
                       mb={2}
                       sx={{
                         width: ['100%'],

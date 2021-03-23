@@ -26,7 +26,12 @@ export const content = {
       title: 'Legal note',
       p1:
         'Information in accordance with section 5 TMG and person responsible for content in accordance with 55 Abs. 2 RStV',
-      li1: ['Fabian Dinklage', 'Schlegelstraße 22', '10115 Berlin', 'Germany'],
+      li1: [
+        'Fabian Dinklage',
+        'Thurneysserstraße 5',
+        '13357 Berlin',
+        'Germany',
+      ],
       li2: ['mail(at)fabiandinklage.com', 'fabiandinklage.com'],
       li3: [
         'VAT indentification number in accorance with section 27 a of the German VAT act: DE 291545410',
@@ -54,10 +59,10 @@ export const content = {
       context: 'Context',
       year: 'Year',
       tasks: 'Tasks',
-      launch: 'Launch Project',
+      launch: 'Live',
     },
     collaborations:
-      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
+      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
       intro:
         "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
@@ -221,6 +226,235 @@ export const content = {
     ],
     projects: [
       {
+        title: 'Climate change risks in Germany',
+        path: 'klimarisiken',
+        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        client: 'German Federal Ministry of Education and Research',
+        type: 'Data Visualization',
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/klimarisiken/demos-thumb-960x640.jpg',
+        overlay: 'public/images/klimarisiken/klimarisiken-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/klimarisiken/demos-lazy-960x640.jpg',
+        url: 'https://klima-risiken.vislab.io/',
+        tasks: [
+          'Concept',
+          'Design',
+          'Data Visualization',
+          'Fontend development',
+        ],
+        subtitle: 'Personalized visualization of climate change risks',
+        description:
+          "In the context of the research project LoCobSS for the [German Federal Ministry of Education and Research](https://www.bmbf.de/), I developed two prototypes together with [Sebastian Meier](https://www.sebastianmeier.eu/) that demonstrate data-driven storytelling approaches tailored to users. Through personalization, especially for otherwise abstract topics, direct references to the users' lifeworld make these more accessible. The interactive application shows users which risks (e.g. drought, flooding, densification) are expected in their environment. I supervised the entire process starting from the concept over to design and implementation.",
+        media: [
+          {
+            type: 'img',
+            content: 'Climate zones for selected postal codes',
+            url: 'public/images/klimarisiken/klimarisiken-klimazonen.jpg',
+            lazy: 'public/images/klimarisiken/klimarisiken-klimazonen.jpg',
+          },
+          {
+            type: 'img',
+            content: 'Flood zones for selected postal codes',
+            url:
+              'public/images/klimarisiken/klimarisiken-ueberschwemmungen.jpg',
+            lazy:
+              'public/images/klimarisiken/klimarisiken-ueberschwemmungen.jpg',
+          },
+          {
+            type: 'img',
+            content: 'Condensation areas for selected postal codes',
+            url:
+              'public/images/klimarisiken/klimarisiken-verdichtungsraeume.jpg',
+            lazy:
+              'public/images/klimarisiken/klimarisiken-verdichtungsraeume.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Users learn step by step how the temperature in their own region develops over time compared to the German average.',
+            url: 'public/images/klimarisiken/klimarisiken-zeitreihe.jpg',
+            lazy: 'public/images/klimarisiken/klimarisiken-zeitreihe.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'The animated map shows the positive trend in average temperatures at the county level and for Germany over time.',
+            url: 'public/images/klimarisiken/klimarisiken-kreise-animation.jpg',
+            lazy:
+              'public/images/klimarisiken/klimarisiken-kreise-animation.jpg',
+          },
+        ],
+      },
+      {
+        title: 'CO₂ Mobilität',
+        path: 'co2-mobilitaet',
+        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        client: 'Bundesministerium für Bildung und Forschung',
+        type: 'Data Visualization',
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/co2-mobilitaet/demos-thumb-960x640.jpg',
+        overlay: 'public/images/co2-mobilitaet/co2-mobilitaet-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/co2-mobilitaet/demos-lazy-960x640.jpg',
+        url: 'https://co2-mobilitaet.vislab.io',
+        tasks: [
+          'Konzept',
+          'Design',
+          'Datenvisualisierung',
+          'Fontend Entwicklung',
+        ],
+        subtitle:
+          'Personalisierte Visualisierung über Nachhaltigkeit individueller Mobilität',
+        description:
+          'Im Zusammenhang mit dem Forschungs­vorhaben LoCobSS für das [Bundesministerium für Bildung und Forschung](https://www.bmbf.de/) habe ich zusammen mit [Sebastian Meier](https://www.sebastianmeier.eu/) zwei Prototypen entwickelt, die auf Nutzerinnen zugeschnittene datengestützte Storytelling-Ansätze aufzuzeigen. Durch die Personalisierung sollen besonders für sonst abstrakte Themen direkte Bezüge zur Lebenswelt der Leserinnen aufgezeigt werden. Die interaktive Anwendung zeigt Nutzerinnen wie nachhaltig ihre Reise-Gewohnheiten sind. Die Anwendung erhöht die Achtsamkeit für die persönliche Mobilität und zeigt greifbare Vergleiche, um das Thema CO₂-Verbrauch verständlicher zu machen. Ich habe das Konzept entwickelt, die Anwendung gestaltet und im Code umgesetzt. Die Daten stammen vom [Umweltbundesamt](https://www.umweltbundesamt.de/) und [OpenStreetMap](https://www.openstreetmap.de/).',
+        media: [
+          {
+            type: 'img',
+            alt:
+              'Visualisierung der Mobilitätsradien für eingegebene Postleitzahlen und Mobilitätsform',
+            content:
+              'Visualisierung der Mobilitätsradien für eingegebene Postleitzahlen und Mobilitätsform',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-isochrones.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-isochrones.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              'Diagramm zum CO2 Verlgleich zwischen Flughaefen und anderen Mobilitätsformen',
+            content:
+              'Vergleich des CO₂ Ausstoßes zwischen Flügen und alternativen Mobilitätstypen.',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-flughaefen.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-flughaefen.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              'Diagramm das den zeitlichen Verlauf der CO₂ Emissionen für unterschiedliche Sektoren zeigt.',
+            content:
+              'Vergleich des Zeitlicher Verlaufs der CO₂ Emissionen der unterschiedlichen Sektoren',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-sektoren.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-sektoren.jpg',
+          },
+          {
+            type: 'img',
+            content: 'Anteil der Emissionen des privater Autos im Verkehr',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-emissionen.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-emissionen.jpg',
+          },
+        ],
+      },
+      {
+        title: 'Corona Dashboard',
+        path: 'corona-dashboard',
+        color: ['#53555F', '#EEEEEF', '#252525'],
+        client: 'ZEIT ONLINE',
+        type: 'Data Visualization',
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/corona-dashboard/demos-thumb-960x640.jpg',
+        overlay: 'public/images/corona-dashboard/corona-dashboard-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/corona-dashboard/demos-lazy-960x640.jpg',
+        url: 'https://www.zeit.de',
+        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        subtitle:
+          'Visualisierung der aktuellen Corona Zahlen für Deutschland und die Welt',
+        description:
+          '[ZEIT ONLINE](https://zeit.de) trägt seit Beginn der Pandemie täglich die aktuellsten Coronal Zahlen für Deutschland zusammen. Im März 2021 wird eine überarbeitete reduzierte Version des Dashboards mit neuer Datenanbindung auf der Startseite veröffentlicht. Die Anwendung zeigt die aktuellen bestätigten Infektionen, Todesfälle, COVID-19 Patienten und Impfungen  für deutsche Kreise, Bundesländer, internationale Länder und Kontinente. Ich habe bei der Umsetzung der unterschiedlichen Ansichten im Code geholfen und die Anwendung für unterschiedliche Geräte optimiert.',
+        media: [
+          {
+            type: 'img',
+            content: 'Bestätigte Fälle für Deutschland',
+            url: 'public/images/corona-dashboard/corona-dashboard.jpg',
+            lazy: 'public/images/corona-dashboard/corona-dashboard.jpg',
+          },
+        ],
+      },
+      {
+        title: 'Corona Aerosole Simulator',
+        path: 'corona-aerosole-b117',
+        color: ['#E26372', '#FEF7F8', '#FEF7F8'],
+        client: 'ZEIT ONLINE',
+        type: 'Data Visualization',
+        year: 2020,
+        visible: true,
+        thumbnail: 'public/images/corona-aerosole-b117/demos-thumb-960x640.jpg',
+        overlay:
+          'public/images/corona-aerosole-b117/corona-aerosole-b117-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/corona-aerosole-b117/demos-lazy-960x640.jpg',
+        url:
+          'https://www.zeit.de/wissen/gesundheit/2021-02/corona-infektion-ansteckungsgefahr-coronavirus-mutation-b117-aerosole',
+        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        subtitle:
+          'Visualisierung zur Verbreitung des Coronavirus in Innenräumen',
+        description:
+          '[ZEIT ONLINE](https://zeit.de) hat eine interaktive Anwendung zum Thema Aerosole veröffentlicht. Der Rechner zeigt, wie hoch das Risiko einer Ansteckung durch das Coronavirus in geschlossenen Räumen ist. Der Rechner basiert auf einem Modell, das eine Forschergruppe des Max-Planck-Instituts für Chemie entwickelt hat. Die interaktive Anwendung ermöglicht Nutzerinnen persönliche Szenarien zu testen und die abstrakte Gefahr die von den Aerosolen ausgeht greifbarer zu machen. Ich durfte bei der Gestaltung des Interfaces und der Umsetzung der Anwendung im Code unterstützen.',
+        media: [
+          {
+            type: 'img',
+            content:
+              'Der Simulator ermöglicht es Umgebungen in geschlossenen Räumen zu simulieren und Parameter wie Lautstärke, Anzahl der Personen, Maske anzupassen um zu erfahren, wie sich das Infektionsrisiko bedingt.',
+            url:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-simulator.jpg',
+            lazy:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-simulator.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Im Diagramm kann mit unterschiedlichen R-Werten die Entwicklung der Sieben-Tage-Inzidenz in Deutschland beeinflusst werden.',
+            url:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-chart.jpg',
+            lazy:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-chart.jpg',
+          },
+        ],
+      },
+      {
+        title: 'US-Wahl Dashboard',
+        path: 'us-election-2020',
+        color: ['#2C677D', '#EEF4F6', '#252525'],
+        client: 'ZEIT ONLINE',
+        type: 'Data Visualization',
+        year: 2020,
+        visible: true,
+        thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
+        overlay: 'public/images/us-election-2020/us-election-2020-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/demos/demos-lazy-960x640.jpg',
+        url:
+          'https://www.zeit.de/politik/ausland/2020-11/us-wahl-ergebnisse-donald-trump-joe-biden-auszaehlung-hochrechnung-live',
+        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        subtitle: 'Live Visualisierung der Wahlergebnisse der US-Wahl 2020',
+        description:
+          'Während der Nacht der US-Wahl 2020 hat [ZEIT ONLINE](https://zeit.de) ein kompaktes Dashboard zur Verfügung gestellt auf der alle wichtigen Informationen zur Wahl auf einen Blick zu sehen sind. Die Daten wurden live von der [DPA](https://dpa.com)  zu Verfügung gestellt. Ich durfte dabei unterstützen die Diagramme und die Karte im Code umzusetzen.',
+        media: [
+          {
+            type: 'img',
+            content:
+              'Die Hexagon Karte zeigt wie viele Wahlleute jeder Bundesstaat bereitstellt. (Anzahl der Waben entspricht der Anzahl der Wahlleute für den Bundesstaat.) Die Größe des Bundesstaates entspricht der tatsächlichen Anzahl der Wahlleute für den Bundesstaat. Die kreisförmig angeordneten Diagramme zeigen die Besetzung der Sitze durch Politiker im Senat und im Repräsentantenhaus.',
+            url: 'public/images/us-election-2020/us-election-2020-map.jpg',
+            lazy: 'public/images/us-election-2020/us-election-2020-map.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Das Wahlleute Diagramm zeigt die aktuelle Verteilung der Wahlleute zwischen Donald Trump und Joe Biden.',
+            url: 'public/images/us-election-2020/us-election-2020-chart.jpg',
+            lazy: 'public/images/us-election-2020/us-election-2020-chart.jpg',
+          },
+        ],
+      },
+      {
         title: 'Noise Prevention Measures',
         type: 'Infographics',
         url:
@@ -238,7 +472,7 @@ export const content = {
       {
         title: 'Protest Capital',
         path: 'demos',
-        color: ['#52676D', '#EBEFEF', '#E8E6ED'],
+        color: ['#367289', '#EBEFEF', '#E8E6ED'],
         client: 'Open Knowledge Foundation',
         type: 'Data Visualization',
         year: 2020,
@@ -252,66 +486,45 @@ export const content = {
         tasks: ['Concept', 'Visual Interface Design', 'Data Visualization'],
         subtitle: 'Visualizing last three years of public protests in Berlin',
         description:
-          "From January 2018 to mid-July 2020, according to police data, there were a total of 12,774 registered demonstrations. This makes Berlin the capital of protest in Germany. Together with [Frag den Staat](https://fragdenstaat.de/) and [Webkid](https://webkid.io) we show which topics mobilize most people. The data was provided by the Berlin police for a fee and was optimized by us for machine readability. We have grouped the demonstrations into categories and provided them as [open data](https://media.frag-den-staat.de/files/media/main/6d/5e/6d5e61d5-f5cc-474d-9e61-d7ec0d23715a/versammlungen-berlin.csv).",
-                media: [
+          'From January 2018 to mid-July 2020, according to police data, there were a total of 12,774 registered demonstrations. This makes Berlin the capital of protest in Germany. Together with [Frag den Staat](https://fragdenstaat.de/) and [Webkid](https://webkid.io) we show which topics mobilize most people. The data was provided by the Berlin police for a fee and was optimized by us for machine readability. We have grouped the demonstrations into categories and provided them as [open data](https://media.frag-den-staat.de/files/media/main/6d/5e/6d5e61d5-f5cc-474d-9e61-d7ec0d23715a/versammlungen-berlin.csv).',
+        media: [
           {
             type: 'img',
-            alt:
-              '',
             content: '',
             url: 'public/images/demos/demos-intro-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-intro-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-intro-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
-            content:
-              'Tooltip',
+            content: 'Tooltip',
             url: 'public/images/demos/demos-tooltip-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-tooltip-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-tooltip-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
             content:
               'The visualization shows a total of 12,774 demonstrations.',
             url: 'public/images/demos/demos-vis-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-vis-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-vis-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
-            content:
-              'Full text search',
+            content: 'Full text search',
             url: 'public/images/demos/demos-search-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-search-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-search-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
             content:
               'The relationship between participants and registrations sorted by topic.',
             url: 'public/images/demos/demos-charts-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-charts-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-charts-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
-            content:
-              'Some reactions to the project on Twitter.',
+            content: 'Some reactions to the project on Twitter.',
             url: 'public/images/demos/demos-tweets-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-tweets-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-tweets-lazy-3840x2040.jpg',
           },
         ],
       },
@@ -1032,7 +1245,7 @@ export const content = {
       context: 'Kontext',
       year: 'Jahr',
       tasks: 'Aufgaben',
-      launch: 'Zum Projekt',
+      launch: 'Live',
     },
     legal: {
       title: 'Impressum',
@@ -1221,7 +1434,236 @@ export const content = {
       },
     ],
     projects: [
-            {
+      {
+        title: 'Klimarisiken in Deutschland',
+        path: 'klimarisiken',
+        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        client: 'Bundesministerium für Bildung und Forschung',
+        type: 'Data Visualization',
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/klimarisiken/demos-thumb-960x640.jpg',
+        overlay: 'public/images/klimarisiken/klimarisiken-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/klimarisiken/demos-lazy-960x640.jpg',
+        url: 'https://klima-risiken.vislab.io/',
+        tasks: [
+          'Konzept',
+          'Design',
+          'Datenvisualisierung',
+          'Fontend Entwicklung',
+        ],
+        subtitle: 'Personalisierte Visualisierung von Klimawandelrisiken',
+        description:
+          'Im Zusammenhang mit dem Forschungs­vorhaben LoCobSS für das [Bundesministerium für Bildung und Forschung](https://www.bmbf.de/) habe ich zusammen mit [Sebastian Meier](https://www.sebastianmeier.eu/) zwei Prototypen entwickelt die auf Nutzerinnen zugeschnittene datengestützte Storytelling-Ansätze aufzuzeigen. Durch die Personalisierung sollen besonders für sonst abstrakte Themen direkte Bezüge zur Lebenswelt der Nutzerinnen aufgezeigt werden. Die interaktive Anwendung zeigt Nutzerinnen welche Risiken (z.B. Dürre, Überschwemmungen, Verdichtung) in ihrer Umgebung erwartet werden. Ich den gesamten Prozess von Konzept, über Design bis Umsetzung betreut.',
+        media: [
+          {
+            type: 'img',
+            content: 'Klimazonen für ausgewählte Postleitzahlen',
+            url: 'public/images/klimarisiken/klimarisiken-klimazonen.jpg',
+            lazy: 'public/images/klimarisiken/klimarisiken-klimazonen.jpg',
+          },
+          {
+            type: 'img',
+            content: 'Überschwemmungsgebiete für ausgewählte Postleitzahlen',
+            url:
+              'public/images/klimarisiken/klimarisiken-ueberschwemmungen.jpg',
+            lazy:
+              'public/images/klimarisiken/klimarisiken-ueberschwemmungen.jpg',
+          },
+          {
+            type: 'img',
+            content: 'Verdichtungsräume für ausgewählte Postleitzahlen',
+            url:
+              'public/images/klimarisiken/klimarisiken-verdichtungsraeume.jpg',
+            lazy:
+              'public/images/klimarisiken/klimarisiken-verdichtungsraeume.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Nutzerinnen erfahren schrittweise, wie sich die Temperatur in der eigenen Region im zeitlichen Verlauf im Vergleich zum deutschen Durchschnitt entwickelt.',
+            url: 'public/images/klimarisiken/klimarisiken-zeitreihe.jpg',
+            lazy: 'public/images/klimarisiken/klimarisiken-zeitreihe.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Die animierte Kreiskarte zeigt den positiven Trend der durchschnittlichen Temperaturen auf Kreisebene und für Deutschland im zeitlichen Verlauf.',
+            url: 'public/images/klimarisiken/klimarisiken-kreise-animation.jpg',
+            lazy:
+              'public/images/klimarisiken/klimarisiken-kreise-animation.jpg',
+          },
+        ],
+      },
+      {
+        title: 'CO₂ Mobilität',
+        path: 'co2-mobilitaet',
+        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        client: 'Bundesministerium für Bildung und Forschung',
+        type: 'Data Visualization',
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/co2-mobilitaet/demos-thumb-960x640.jpg',
+        overlay: 'public/images/co2-mobilitaet/co2-mobilitaet-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/co2-mobilitaet/demos-lazy-960x640.jpg',
+        url: 'https://co2-mobilitaet.vislab.io',
+        tasks: [
+          'Konzept',
+          'Design',
+          'Datenvisualisierung',
+          'Fontend Entwicklung',
+        ],
+        subtitle:
+          'Personalisierte Visualisierung über Nachhaltigkeit individueller Mobilität',
+        description:
+          'Im Zusammenhang mit dem Forschungs­vorhaben LoCobSS für das [Bundesministerium für Bildung und Forschung](https://www.bmbf.de/) habe ich zusammen mit [Sebastian Meier](https://www.sebastianmeier.eu/) zwei Prototypen entwickelt, die auf Nutzerinnen zugeschnittene datengestützte Storytelling-Ansätze aufzuzeigen. Durch die Personalisierung sollen besonders für sonst abstrakte Themen direkte Bezüge zur Lebenswelt der Leserinnen aufgezeigt werden. Die interaktive Anwendung zeigt Nutzerinnen wie nachhaltig ihre Reise-Gewohnheiten sind. Die Anwendung erhöht die Achtsamkeit für die persönliche Mobilität und zeigt greifbare Vergleiche, um das Thema CO₂-Verbrauch verständlicher zu machen. Ich habe das Konzept entwickelt, die Anwendung gestaltet und im Code umgesetzt. Die Daten stammen vom [Umweltbundesamt](https://www.umweltbundesamt.de/) und [OpenStreetMap](https://www.openstreetmap.de/).',
+        media: [
+          {
+            type: 'img',
+            alt:
+              'Visualisierung der Mobilitätsradien für eingegebene Postleitzahlen und Mobilitätsform',
+            content:
+              'Visualisierung der Mobilitätsradien für eingegebene Postleitzahlen und Mobilitätsform',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-isochrones.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-isochrones.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              'Diagramm zum CO2 Verlgleich zwischen Flughaefen und anderen Mobilitätsformen',
+            content:
+              'Vergleich des CO₂ Ausstoßes zwischen Flügen und alternativen Mobilitätstypen.',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-flughaefen.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-flughaefen.jpg',
+          },
+          {
+            type: 'img',
+            alt:
+              'Diagramm das den zeitlichen Verlauf der CO₂ Emissionen für unterschiedliche Sektoren zeigt.',
+            content:
+              'Vergleich des Zeitlicher Verlaufs der CO₂ Emissionen der unterschiedlichen Sektoren',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-sektoren.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-sektoren.jpg',
+          },
+          {
+            type: 'img',
+            content: 'Anteil der Emissionen des privater Autos im Verkehr',
+            url: 'public/images/co2-mobilitaet/co2-mobilitaet-emissionen.jpg',
+            lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-emissionen.jpg',
+          },
+        ],
+      },
+      {
+        title: 'Corona Dashboard',
+        path: 'corona-dashboard',
+        color: ['#53555F', '#EEEEEF', '#252525'],
+        client: 'ZEIT ONLINE',
+        type: 'Data Visualization',
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/corona-dashboard/demos-thumb-960x640.jpg',
+        overlay: 'public/images/corona-dashboard/corona-dashboard-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/corona-dashboard/demos-lazy-960x640.jpg',
+        url: 'https://www.zeit.de',
+        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        subtitle:
+          'Visualisierung der aktuellen Corona Zahlen für Deutschland und die Welt',
+        description:
+          '[ZEIT ONLINE](https://zeit.de) trägt seit Beginn der Pandemie täglich die aktuellsten Coronal Zahlen für Deutschland zusammen. Im März 2021 wird eine überarbeitete reduzierte Version des Dashboards mit neuer Datenanbindung auf der Startseite veröffentlicht. Die Anwendung zeigt die aktuellen bestätigten Infektionen, Todesfälle, COVID-19 Patienten und Impfungen  für deutsche Kreise, Bundesländer, internationale Länder und Kontinente. Ich habe bei der Umsetzung der unterschiedlichen Ansichten im Code geholfen und die Anwendung für unterschiedliche Geräte optimiert.',
+        media: [
+          {
+            type: 'img',
+            content: 'Bestätigte Fälle für Deutschland',
+            url: 'public/images/corona-dashboard/corona-dashboard.jpg',
+            lazy: 'public/images/corona-dashboard/corona-dashboard.jpg',
+          },
+        ],
+      },
+      {
+        title: 'Corona Aerosole Simulator',
+        path: 'corona-aerosole-b117',
+        color: ['#E26372', '#FEF7F8', '#FEF7F8'],
+        client: 'ZEIT ONLINE',
+        type: 'Data Visualization',
+        year: 2020,
+        visible: true,
+        thumbnail: 'public/images/corona-aerosole-b117/demos-thumb-960x640.jpg',
+        overlay:
+          'public/images/corona-aerosole-b117/corona-aerosole-b117-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/corona-aerosole-b117/demos-lazy-960x640.jpg',
+        url:
+          'https://www.zeit.de/wissen/gesundheit/2021-02/corona-infektion-ansteckungsgefahr-coronavirus-mutation-b117-aerosole',
+        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        subtitle:
+          'Visualisierung zur Verbreitung des Coronavirus in Innenräumen',
+        description:
+          '[ZEIT ONLINE](https://zeit.de) hat eine interaktive Anwendung zum Thema Aerosole veröffentlicht. Der Rechner zeigt, wie hoch das Risiko einer Ansteckung durch das Coronavirus in geschlossenen Räumen ist. Der Rechner basiert auf einem Modell, das eine Forschergruppe des Max-Planck-Instituts für Chemie entwickelt hat. Die interaktive Anwendung ermöglicht Nutzerinnen persönliche Szenarien zu testen und die abstrakte Gefahr die von den Aerosolen ausgeht greifbarer zu machen. Ich durfte bei der Gestaltung des Interfaces und der Umsetzung der Anwendung im Code unterstützen.',
+        media: [
+          {
+            type: 'img',
+            content:
+              'Der Simulator ermöglicht es Umgebungen in geschlossenen Räumen zu simulieren und Parameter wie Lautstärke, Anzahl der Personen, Maske anzupassen um zu erfahren, wie sich das Infektionsrisiko bedingt.',
+            url:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-simulator.jpg',
+            lazy:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-simulator.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Im Diagramm kann mit unterschiedlichen R-Werten die Entwicklung der Sieben-Tage-Inzidenz in Deutschland beeinflusst werden.',
+            url:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-chart.jpg',
+            lazy:
+              'public/images/corona-aerosole-b117/corona-aerosole-b117-chart.jpg',
+          },
+        ],
+      },
+      {
+        title: 'US-Wahl Dashboard',
+        path: 'us-election-2020',
+        color: ['#2C677D', '#EEF4F6', '#252525'],
+        client: 'ZEIT ONLINE',
+        type: 'Data Visualization',
+        year: 2020,
+        visible: true,
+        thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
+        overlay: 'public/images/us-election-2020/us-election-2020-trailer.mp4',
+        alt:
+          'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
+        lazy: 'public/images/demos/demos-lazy-960x640.jpg',
+        url:
+          'https://www.zeit.de/politik/ausland/2020-11/us-wahl-ergebnisse-donald-trump-joe-biden-auszaehlung-hochrechnung-live',
+        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        subtitle: 'Live Visualisierung der Wahlergebnisse der US-Wahl 2020',
+        description:
+          'Während der Nacht der US-Wahl 2020 hat [ZEIT ONLINE](https://zeit.de) ein kompaktes Dashboard zur Verfügung gestellt auf der alle wichtigen Informationen zur Wahl auf einen Blick zu sehen sind. Die Daten wurden live von der [DPA](https://dpa.com)  zu Verfügung gestellt. Ich durfte dabei unterstützen die Diagramme und die Karte im Code umzusetzen.',
+        media: [
+          {
+            type: 'img',
+            content:
+              'Die Hexagon Karte zeigt wie viele Wahlleute jeder Bundesstaat bereitstellt. (Anzahl der Waben entspricht der Anzahl der Wahlleute für den Bundesstaat.) Die Größe des Bundesstaates entspricht der tatsächlichen Anzahl der Wahlleute für den Bundesstaat. Die kreisförmig angeordneten Diagramme zeigen die Besetzung der Sitze durch Politiker im Senat und im Repräsentantenhaus.',
+            url: 'public/images/us-election-2020/us-election-2020-map.jpg',
+            lazy: 'public/images/us-election-2020/us-election-2020-map.jpg',
+          },
+          {
+            type: 'img',
+            content:
+              'Das Wahlleute Diagramm zeigt die aktuelle Verteilung der Wahlleute zwischen Donald Trump und Joe Biden.',
+            url: 'public/images/us-election-2020/us-election-2020-chart.jpg',
+            lazy: 'public/images/us-election-2020/us-election-2020-chart.jpg',
+          },
+        ],
+      },
+      {
         title: 'Demo-Hauptstadt Berlin',
         path: 'demos',
         color: ['#52676D', '#EBEFEF', '#E8E6ED'],
@@ -1231,71 +1673,50 @@ export const content = {
         visible: true,
         thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
         overlay: 'public/images/demos/demos-thumb-960x640.mp4',
-        alt: '',
         lazy: 'public/images/demos/demos-lazy-960x640.jpg',
         url: 'https://fragdenstaat.de/dossier/demo-hauptstadt-berlin/',
         tasks: ['Konzept', 'Design', 'Datenvisualisierung'],
         subtitle: 'Alle Demonstrationen der letzten 3 Jahre visualisiert',
-        description: "Von Januar 2018 bis Mitte Juli 2020 gab es laut Polizeiangaben insgesamt 12.774 angemeldete Demonstrationen. Damit ist Berlin die Hauptstadt des Protests in Deutschland. Zusammen mit [Frag den Staat](https://fragdenstaat.de/) und [Webkid](https://webkid.io) zeigen welche Themen die meisten Menschen mobilisieren. Der Datensatz wurde gegen eine Gebühr von der Berliner Polizei bereitgestellt und von uns für Maschinenlesbarkeit optimiert. Wir haben die Demonstrationen in Kategorien zusammengefasst und als [offene Daten](https://media.frag-den-staat.de/files/media/main/6d/5e/6d5e61d5-f5cc-474d-9e61-d7ec0d23715a/versammlungen-berlin.csv) bereitgestellt.",
+        description:
+          'Von Januar 2018 bis Mitte Juli 2020 gab es laut Polizeiangaben insgesamt 12.774 angemeldete Demonstrationen. Damit ist Berlin die Hauptstadt des Protests in Deutschland. Zusammen mit [Frag den Staat](https://fragdenstaat.de/) und [Webkid](https://webkid.io) zeigen welche Themen die meisten Menschen mobilisieren. Der Datensatz wurde gegen eine Gebühr von der Berliner Polizei bereitgestellt und von uns für Maschinenlesbarkeit optimiert. Wir haben die Demonstrationen in Kategorien zusammengefasst und als [offene Daten](https://media.frag-den-staat.de/files/media/main/6d/5e/6d5e61d5-f5cc-474d-9e61-d7ec0d23715a/versammlungen-berlin.csv) bereitgestellt.',
         media: [
           {
             type: 'img',
-            alt:
-              '',
             content: '',
             url: 'public/images/demos/demos-intro-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-intro-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-intro-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
-            content:
-              'Tooltip der Visualisierung',
+            content: 'Tooltip der Visualisierung',
             url: 'public/images/demos/demos-tooltip-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-tooltip-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-tooltip-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
             content:
               'Die Visualiserung zeigt insgesamt 12.774 Demonstrationen.',
             url: 'public/images/demos/demos-vis-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-vis-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-vis-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
-            content:
-              'Volltextsuche',
+            content: 'Volltextsuche',
             url: 'public/images/demos/demos-search-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-search-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-search-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
             content:
               'Das Verhältnis zwischen Teilnehmenden Personen und Anmeldungen sortiert nach Themen.',
             url: 'public/images/demos/demos-charts-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-charts-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-charts-lazy-3840x2040.jpg',
           },
           {
             type: 'img',
-            alt:
-              '',
-            content:
-              'Einige Reaktionen zum Projekt auf Twitter',
+            content: 'Einige Reaktionen zum Projekt auf Twitter',
             url: 'public/images/demos/demos-tweets-3840x2040.jpg',
-            lazy:
-              'public/images/demos/demos-tweets-lazy-3840x2040.jpg',
+            lazy: 'public/images/demos/demos-tweets-lazy-3840x2040.jpg',
           },
         ],
       },
@@ -1950,7 +2371,6 @@ export const content = {
           },
           {
             type: 'invisties',
-            alt: 'Meetups unsichtbare Verbindungen – Das Storytelling Modul',
             content: 'Das Storytelling Modul',
             url: 'public/images/invisties/invisties-story-3840x2040.jpg',
             lazy: 'public/images/invisties/invisties-story-lazy-3840x2040.jpg',
