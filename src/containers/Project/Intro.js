@@ -7,6 +7,7 @@ import { opacityFromState, positionFromState } from '~/utils/animation';
 
 import Button from '~/components/Button';
 import IconArrowRight from '~/components/IconArrowRight';
+import IconArrowLeft from '~/components/IconArrowLeft';
 import { content } from '~/data';
 
 const StyledWrapper = styled.div`
@@ -151,16 +152,18 @@ const Intro = ({ data, timeout, color, projects }) => {
                 </Button>
                 <Button
                   href={previousProjectUrl}
-                  px={3}
+                  px={'13px'}
+                  ml={'15px'}
                   py={2}
                   c={color}
                   fontSize={[2, 2, 2, 3]}
                 >
-                  <IconArrowRight />
+                  <IconArrowLeft />
                 </Button>
                 <Button
                   href={nextProjectUrl}
-                  px={3}
+                  px={'13px'}
+                  ml={'5px'}
                   py={2}
                   c={color}
                   fontSize={[2, 2, 2, 3]}

@@ -13,7 +13,7 @@ const StyledSvg = styled.svg`
 const IconArrowRight = () => {
   const color = useStoreState(state => state.color.color)[0];
   return (
-    <StyledSvg width="16px" height="20px">
+    <StyledSvg width="15px" height="13px">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
