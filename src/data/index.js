@@ -55,7 +55,7 @@ export const content = {
       clients: 'collaborations',
     },
     others: {
-      more: 'Case study',
+      more: 'Details',
       context: 'Context',
       year: 'Year',
       tasks: 'Tasks',
@@ -289,10 +289,10 @@ export const content = {
         ],
       },
       {
-        title: 'CO₂ Mobilität',
+        title: 'CO₂ Mobility',
         path: 'co2-mobilitaet',
         color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
-        client: 'Bundesministerium für Bildung und Forschung',
+        client: 'German Federal Ministry of Education and Research',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
@@ -303,46 +303,40 @@ export const content = {
         lazy: 'public/images/co2-mobilitaet/demos-lazy-960x640.jpg',
         url: 'https://co2-mobilitaet.vislab.io',
         tasks: [
-          'Konzept',
+          'Concept',
           'Design',
-          'Datenvisualisierung',
-          'Fontend Entwicklung',
+          'Data Visualization',
+          'Fontend development',
         ],
         subtitle:
-          'Personalisierte Visualisierung über Nachhaltigkeit individueller Mobilität',
+          'Personalized visualization about the sustainability of individual mobility',
         description:
-          'Im Zusammenhang mit dem Forschungs­vorhaben LoCobSS für das [Bundesministerium für Bildung und Forschung](https://www.bmbf.de/) habe ich zusammen mit [Sebastian Meier](https://www.sebastianmeier.eu/) zwei Prototypen entwickelt, die auf Nutzerinnen zugeschnittene datengestützte Storytelling-Ansätze aufzuzeigen. Durch die Personalisierung sollen besonders für sonst abstrakte Themen direkte Bezüge zur Lebenswelt der Leserinnen aufgezeigt werden. Die interaktive Anwendung zeigt Nutzerinnen wie nachhaltig ihre Reise-Gewohnheiten sind. Die Anwendung erhöht die Achtsamkeit für die persönliche Mobilität und zeigt greifbare Vergleiche, um das Thema CO₂-Verbrauch verständlicher zu machen. Ich habe das Konzept entwickelt, die Anwendung gestaltet und im Code umgesetzt. Die Daten stammen vom [Umweltbundesamt](https://www.umweltbundesamt.de/) und [OpenStreetMap](https://www.openstreetmap.de/).',
+          "In the context of the research project LoCobSS for the [German Federal Ministry of Education and Research](https://www.bmbf.de/), I developed two prototypes together with [Sebastian Meier](https://www.sebastianmeier.eu/) to show data-driven storytelling approaches tailored to users. The personalization is intended to show direct references to the readers' lifeworld, especially for otherwise abstract topics. The interactive application shows users how sustainable their travel habits are. The application increases awareness for personal mobility and shows tangible comparisons to make the topic of CO₂ consumption more accessible. I developed the concept, designed the application and implemented it in code. The data comes from [Umweltbundesamt](https://www.umweltbundesamt.de/) and [OpenStreetMap](https://www.openstreetmap.de/).",
         media: [
           {
             type: 'img',
-            alt:
-              'Visualisierung der Mobilitätsradien für eingegebene Postleitzahlen und Mobilitätsform',
             content:
-              'Visualisierung der Mobilitätsradien für eingegebene Postleitzahlen und Mobilitätsform',
+              'Visualization of mobility radii for entered postal codes and mobility type',
             url: 'public/images/co2-mobilitaet/co2-mobilitaet-isochrones.jpg',
             lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-isochrones.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Diagramm zum CO2 Verlgleich zwischen Flughaefen und anderen Mobilitätsformen',
             content:
-              'Vergleich des CO₂ Ausstoßes zwischen Flügen und alternativen Mobilitätstypen.',
+              'Chart showing CO2 comparison between airports and other forms of mobility',
             url: 'public/images/co2-mobilitaet/co2-mobilitaet-flughaefen.jpg',
             lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-flughaefen.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Diagramm das den zeitlichen Verlauf der CO₂ Emissionen für unterschiedliche Sektoren zeigt.',
             content:
-              'Vergleich des Zeitlicher Verlaufs der CO₂ Emissionen der unterschiedlichen Sektoren',
+              'Chart showing the development of CO₂ emissions over time for different sectors',
             url: 'public/images/co2-mobilitaet/co2-mobilitaet-sektoren.jpg',
             lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-sektoren.jpg',
           },
           {
             type: 'img',
-            content: 'Anteil der Emissionen des privater Autos im Verkehr',
+            content: 'Share of private car emissions in transport',
             url: 'public/images/co2-mobilitaet/co2-mobilitaet-emissionen.jpg',
             lazy: 'public/images/co2-mobilitaet/co2-mobilitaet-emissionen.jpg',
           },
@@ -362,22 +356,22 @@ export const content = {
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
         lazy: 'public/images/corona-dashboard/demos-lazy-960x640.jpg',
         url: 'https://www.zeit.de',
-        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
+        tasks: ['Data Visualization', 'Fontend development'],
         subtitle:
-          'Visualisierung der aktuellen Corona Zahlen für Deutschland und die Welt',
+          'Visualization of the current Corona data for Germany and the world',
         description:
-          '[ZEIT ONLINE](https://zeit.de) trägt seit Beginn der Pandemie täglich die aktuellsten Coronal Zahlen für Deutschland zusammen. Im März 2021 wird eine überarbeitete reduzierte Version des Dashboards mit neuer Datenanbindung auf der Startseite veröffentlicht. Die Anwendung zeigt die aktuellen bestätigten Infektionen, Todesfälle, COVID-19 Patienten und Impfungen  für deutsche Kreise, Bundesländer, internationale Länder und Kontinente. Ich habe bei der Umsetzung der unterschiedlichen Ansichten im Code geholfen und die Anwendung für unterschiedliche Geräte optimiert.',
+          '[ZEIT ONLINE](https://zeit.de) has been compiling the latest Coronal figures for Germany daily since the beginning of the pandemic. In March 2021, a revised reduced version of the dashboard is published with a new data link on the home page. The application shows the currently confirmed infections, deaths, COVID-19 patients, and vaccinations for German counties, states, international countries, and continents. I helped implement the different views in the code and optimized the application for a range of devices.',
         media: [
           {
             type: 'img',
-            content: 'Bestätigte Fälle für Deutschland',
+            content: 'Confirmed cases for Germany',
             url: 'public/images/corona-dashboard/corona-dashboard.jpg',
             lazy: 'public/images/corona-dashboard/corona-dashboard.jpg',
           },
         ],
       },
       {
-        title: 'Corona Aerosole Simulator',
+        title: 'Corona Aerosol Simulator',
         path: 'corona-aerosole-b117',
         color: ['#E26372', '#FEF7F8', '#FEF7F8'],
         client: 'ZEIT ONLINE',
@@ -392,16 +386,15 @@ export const content = {
         lazy: 'public/images/corona-aerosole-b117/demos-lazy-960x640.jpg',
         url:
           'https://www.zeit.de/wissen/gesundheit/2021-02/corona-infektion-ansteckungsgefahr-coronavirus-mutation-b117-aerosole',
-        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
-        subtitle:
-          'Visualisierung zur Verbreitung des Coronavirus in Innenräumen',
+        tasks: ['Data Visualization', 'Fontend development'],
+        subtitle: 'Visualizing the spread of coronavirus indoors',
         description:
-          '[ZEIT ONLINE](https://zeit.de) hat eine interaktive Anwendung zum Thema Aerosole veröffentlicht. Der Rechner zeigt, wie hoch das Risiko einer Ansteckung durch das Coronavirus in geschlossenen Räumen ist. Der Rechner basiert auf einem Modell, das eine Forschergruppe des Max-Planck-Instituts für Chemie entwickelt hat. Die interaktive Anwendung ermöglicht Nutzerinnen persönliche Szenarien zu testen und die abstrakte Gefahr die von den Aerosolen ausgeht greifbarer zu machen. Ich durfte bei der Gestaltung des Interfaces und der Umsetzung der Anwendung im Code unterstützen.',
+          '[ZEIT ONLINE](https://zeit.de) has published an interactive application on the subject of aerosols. The calculator shows how high the risk of infection by the coronavirus is in closed rooms. The calculator uses a model developed by a group of researchers at the Max Planck Institute for Chemistry. The interactive application allows users to test personal scenarios and make the abstract danger posed by aerosols more tangible. I supported the design of the interface and the implementation of the application in the code.',
         media: [
           {
             type: 'img',
             content:
-              'Der Simulator ermöglicht es Umgebungen in geschlossenen Räumen zu simulieren und Parameter wie Lautstärke, Anzahl der Personen, Maske anzupassen um zu erfahren, wie sich das Infektionsrisiko bedingt.',
+              'The simulator allows us to simulate indoor environments and explore how the risk of infection changes. Users can adjust parameters such as volume, the number of people, wearing masks to alter the spread.',
             url:
               'public/images/corona-aerosole-b117/corona-aerosole-b117-simulator.jpg',
             lazy:
@@ -410,7 +403,7 @@ export const content = {
           {
             type: 'img',
             content:
-              'Im Diagramm kann mit unterschiedlichen R-Werten die Entwicklung der Sieben-Tage-Inzidenz in Deutschland beeinflusst werden.',
+              'In the chart, changing R-values influence the development of seven-day incidence in Germany.',
             url:
               'public/images/corona-aerosole-b117/corona-aerosole-b117-chart.jpg',
             lazy:
@@ -419,7 +412,7 @@ export const content = {
         ],
       },
       {
-        title: 'US-Wahl Dashboard',
+        title: 'U.S. Election Dashboard',
         path: 'us-election-2020',
         color: ['#2C677D', '#EEF4F6', '#252525'],
         client: 'ZEIT ONLINE',
@@ -433,22 +426,23 @@ export const content = {
         lazy: 'public/images/demos/demos-lazy-960x640.jpg',
         url:
           'https://www.zeit.de/politik/ausland/2020-11/us-wahl-ergebnisse-donald-trump-joe-biden-auszaehlung-hochrechnung-live',
-        tasks: ['Datenvisualisierung', 'Fontend Entwicklung'],
-        subtitle: 'Live Visualisierung der Wahlergebnisse der US-Wahl 2020',
+        tasks: ['Data Visualization', 'Fontend development'],
+        subtitle:
+          'Visualizing the U.S. election 2020 results live during the election night',
         description:
-          'Während der Nacht der US-Wahl 2020 hat [ZEIT ONLINE](https://zeit.de) ein kompaktes Dashboard zur Verfügung gestellt auf der alle wichtigen Informationen zur Wahl auf einen Blick zu sehen sind. Die Daten wurden live von der [DPA](https://dpa.com)  zu Verfügung gestellt. Ich durfte dabei unterstützen die Diagramme und die Karte im Code umzusetzen.',
+          'During the night of the 2020 U.S. election, [ZEIT ONLINE](https://zeit.de) provided a compact dashboard that provides all relevant information about the election at a glance. The data was provided live by [DPA](https://dpa.com). I was allowed to support the implementation of the charts and the map in the code.',
         media: [
           {
             type: 'img',
             content:
-              'Die Hexagon Karte zeigt wie viele Wahlleute jeder Bundesstaat bereitstellt. (Anzahl der Waben entspricht der Anzahl der Wahlleute für den Bundesstaat.) Die Größe des Bundesstaates entspricht der tatsächlichen Anzahl der Wahlleute für den Bundesstaat. Die kreisförmig angeordneten Diagramme zeigen die Besetzung der Sitze durch Politiker im Senat und im Repräsentantenhaus.',
+              'The hexagon map shows how many electors each state provides. (Number of combs corresponds to the number of electoral people for the state.) The size of the state matches among one actual number of electoral people for the state. The circular charts show how statespeople fill seats in the Senate and House of Representatives.',
             url: 'public/images/us-election-2020/us-election-2020-map.jpg',
             lazy: 'public/images/us-election-2020/us-election-2020-map.jpg',
           },
           {
             type: 'img',
             content:
-              'Das Wahlleute Diagramm zeigt die aktuelle Verteilung der Wahlleute zwischen Donald Trump und Joe Biden.',
+              'The electoral chart shows the current distribution of electoral people between Donald Trump and Joe Biden.',
             url: 'public/images/us-election-2020/us-election-2020-chart.jpg',
             lazy: 'public/images/us-election-2020/us-election-2020-chart.jpg',
           },

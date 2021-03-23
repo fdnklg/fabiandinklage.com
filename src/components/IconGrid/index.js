@@ -6,13 +6,13 @@ const StyledSvg = styled.svg`
   width: 100%;
   svg {
     g {
-      transition: all ${(p) => p.theme.times[0]} ease-in-out;
+      transition: all ${p => p.theme.times[0]} ease-in-out;
     }
   }
 `;
 
-const IconGrid = () => {
-  const color = useStoreState((state) => state.color.color)[0];
+const IconArrowRight = () => {
+  const color = useStoreState(state => state.color.color)[0];
   return (
     <StyledSvg width="20px" height="20px" viewBox="0 0 9 9">
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -29,4 +29,4 @@ const IconGrid = () => {
   );
 };
 
-export default IconGrid;
+export default IconArrowRight;

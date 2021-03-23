@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useStoreState, useStoreActions } from 'easy-peasy';
-import { Box, Text, Image } from 'rebass/styled-components';
+import { Box, Text } from 'rebass/styled-components';
 import ProgressiveImage from 'react-progressive-image';
 import { compare } from '~/utils';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState } from '~/utils/animation';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
-import Label from '~/components/Label';
 import Link from '~/components/Link';
 import RouterLink from '~/components/RouterLink';
 
@@ -71,7 +70,10 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledThumbBox = styled(Box)`
-  box-shadow: 0 2.8px 2.2px rgba(26,25,43,0.014), 0 12.5px 10px rgba(26,25,43,0.02), 0 22.3px 17.9px rgba(26,25,43,0.022), 0 41.8px 33.4px rgba(26,25,43,0.026), 0 100px 80px rgba(26,25,43,0.02);
+  box-shadow: 0 2.8px 2.2px rgba(26, 25, 43, 0.014),
+    0 12.5px 10px rgba(26, 25, 43, 0.02),
+    0 22.3px 17.9px rgba(26, 25, 43, 0.022),
+    0 41.8px 33.4px rgba(26, 25, 43, 0.026), 0 100px 80px rgba(26, 25, 43, 0.02);
   @media (max-width: ${p => p.theme.sizes.mobile}) {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -118,7 +120,6 @@ const Grid = p => {
     setHovered(true);
 
     vidNode.play();
-    // setColor(data.color);
     setActiveIndex(index);
   };
 

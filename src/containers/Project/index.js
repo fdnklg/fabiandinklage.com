@@ -13,12 +13,10 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const Project = ({ match }) => {
-  const base = useStoreState((state) => state.base);
+  const base = useStoreState(state => state.base);
   const projects = content[base].projects;
-  const project = projects.filter(
-    (p) => p.path === match.params.projectName
-  )[0];
-  const setColor = useStoreActions((actions) => actions.color.setColor);
+  const project = projects.filter(p => p.path === match.params.projectName)[0];
+  const setColor = useStoreActions(actions => actions.color.setColor);
 
   useEffect(() => {
     setColor(project.color);
@@ -29,7 +27,12 @@ const Project = ({ match }) => {
 
   return (
     <>
-      <Intro color={project.color} timeout={600} data={project} />
+      <Intro
+        color={project.color}
+        timeout={600}
+        projects={projects}
+        data={project}
+      />
       <Flex
         sx={{ margin: '0 auto' }}
         pb={[4, 5, 6]}

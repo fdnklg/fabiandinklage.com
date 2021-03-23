@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components/';
 import { useStoreState } from 'easy-peasy';
 import Transition from 'react-transition-group/Transition';
 import { opacityFromState, positionFromState } from '~/utils/animation';
 
-import Label from '~/components/Label';
 import Button from '~/components/Button';
+import IconArrowRight from '~/components/IconArrowRight';
 import { content } from '~/data';
 
 const StyledWrapper = styled.div`
@@ -62,13 +62,39 @@ const StyledLabelBold = styled.span`
   color: ${p => p.c[0]};
 `;
 
-const Intro = props => {
-  const { data, timeout, color } = props;
-  const { title, subtitle, year, tasks, client, url } = data;
-  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
+function siblingProjectUrl(index, projects, direction, base) {
+  let lastProjectIndex = projects.length - 1;
+  let currentIndex;
+  if (direction === 'next')
+    currentIndex = index >= lastProjectIndex ? 0 : index + 1;
+  if (direction === 'previous')
+    currentIndex = index === 0 ? lastProjectIndex : index - 1;
+  console.log(lastProjectIndex, currentIndex, index);
+  return `/projects/${projects[currentIndex].path}/${base}`;
+}
+
+const Intro = ({ data, timeout, color, projects }) => {
   const base = useStoreState(state => state.base);
+  const { title, subtitle, year, tasks, client, url, path } = data;
+  const filtered = projects.filter(p => p.subtitle);
+  const currentIndex = filtered.findIndex(d => d.path === path);
+
+  const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   const others = content[base].others;
 
+  const nextProjectUrl = siblingProjectUrl(
+    currentIndex,
+    filtered,
+    'next',
+    base
+  );
+
+  const previousProjectUrl = siblingProjectUrl(
+    currentIndex,
+    filtered,
+    'previous',
+    base
+  );
   return (
     <Transition
       in={true}
@@ -122,6 +148,24 @@ const Intro = props => {
                   fontSize={[2, 2, 2, 3]}
                 >
                   {others.launch}
+                </Button>
+                <Button
+                  href={previousProjectUrl}
+                  px={3}
+                  py={2}
+                  c={color}
+                  fontSize={[2, 2, 2, 3]}
+                >
+                  <IconArrowRight />
+                </Button>
+                <Button
+                  href={nextProjectUrl}
+                  px={3}
+                  py={2}
+                  c={color}
+                  fontSize={[2, 2, 2, 3]}
+                >
+                  <IconArrowRight />
                 </Button>
               </Box>
             )}
