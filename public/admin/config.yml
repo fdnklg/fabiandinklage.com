@@ -1,0 +1,13 @@
+backend:
+  name: github
+  repo: fdnklg/fabiandinklage.com
+  branch: master
+
+collections:
+  - name: Project
+    label: Project
+    folder: public/content/projects
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }

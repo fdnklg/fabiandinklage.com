@@ -16,10 +16,6 @@ const StyledButton = styled(Link)`
   text-decoration: none;
   transition: all ${p => p.theme.times[0]} ease-in-out;
 
-  @media (max-width: ${p => p.theme.sizes.mobile}) {
-    font-size: ${p => p.theme.fontSizes[3]};
-  }
-
   &:hover {
     color: ${p => p.c[1]};
     background: ${p => p.c[0]};

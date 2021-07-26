@@ -20,6 +20,11 @@ const config = {
   '/projects/:slug': [
     {
       slug: [
+        'us-election-2020/de',
+        'corona-aerosole-b117/de',
+        'corona-dashboard/de',
+        'co2-mobilitaet/de',
+        'klimarisiken/de',
         'gender-equality/de',
         'demos/de',
         'cityinflux/de',
@@ -30,6 +35,11 @@ const config = {
         'candidates/de',
         'invisties/de',
         'koro-trading-flows/de',
+        'us-election-2020/en',
+        'corona-aerosole-b117/en',
+        'corona-dashboard/en',
+        'co2-mobilitaet/en',
+        'klimarisiken/en',
         'gender-equality/en',
         'demos/en',
         'cityinflux/en',

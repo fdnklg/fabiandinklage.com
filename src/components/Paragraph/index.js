@@ -11,6 +11,7 @@ const StyledParagraph = styled(ReactMarkdown)`
   line-height: ${p => p.theme.lineHeights.body};
   letter-spacing: ${p => p.theme.letterSpacing[1]};
   transition: all ${p => p.theme.times[1]} ease-in-out;
+  max-width: 750px;
 
   opacity: ${props => {
     if (props.isPrerendering) {
@@ -67,6 +68,7 @@ const Paragraph = p => {
             sx={{
               pt: paddingTop ? [4, 5, 5, 6] : 0,
               pb: paddingBottom ? [4, 5, 5, 6] : 0,
+              m: 'auto',
             }}
           >
             <StyledParagraph

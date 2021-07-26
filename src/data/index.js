@@ -62,7 +62,7 @@ export const content = {
       launch: 'Live',
     },
     collaborations:
-      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
+      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
       intro:
         "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
@@ -228,12 +228,12 @@ export const content = {
       {
         title: 'Climate change risks in Germany',
         path: 'klimarisiken',
-        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        color: ['#0A0F2E', '#F7F9FA', '#F3F3F5'],
         client: 'German Federal Ministry of Education and Research',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/klimarisiken/demos-thumb-960x640.jpg',
+        thumbnail: 'public/images/klimarisiken/klimarisiken-thumb-960x640.jpg',
         overlay: 'public/images/klimarisiken/klimarisiken-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -291,12 +291,13 @@ export const content = {
       {
         title: 'CO₂ Mobility',
         path: 'co2-mobilitaet',
-        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        color: ['#0A0F2E', '#F7F9FA', '#E9E9EC'],
         client: 'German Federal Ministry of Education and Research',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/co2-mobilitaet/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/co2-mobilitaet/co2-mobilitaet-thumb-960x640.jpg',
         overlay: 'public/images/co2-mobilitaet/co2-mobilitaet-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -345,12 +346,13 @@ export const content = {
       {
         title: 'Corona Dashboard',
         path: 'corona-dashboard',
-        color: ['#53555F', '#EEEEEF', '#252525'],
+        color: ['#53555F', '#EEEEEF', '#D5E1E5'],
         client: 'ZEIT ONLINE',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/corona-dashboard/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/corona-dashboard/corona-dashboard-thumb-960x640.jpg',
         overlay: 'public/images/corona-dashboard/corona-dashboard-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -373,12 +375,13 @@ export const content = {
       {
         title: 'Corona Aerosol Simulator',
         path: 'corona-aerosole-b117',
-        color: ['#E26372', '#FEF7F8', '#FEF7F8'],
+        color: ['#E26372', '#FEF7F8', '#D5E1E5'],
         client: 'ZEIT ONLINE',
         type: 'Data Visualization',
         year: 2020,
         visible: true,
-        thumbnail: 'public/images/corona-aerosole-b117/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/corona-aerosole-b117/corona-aerosole-b117-thumb-960x640.jpg',
         overlay:
           'public/images/corona-aerosole-b117/corona-aerosole-b117-trailer.mp4',
         alt:
@@ -414,12 +417,13 @@ export const content = {
       {
         title: 'U.S. Election Dashboard',
         path: 'us-election-2020',
-        color: ['#2C677D', '#EEF4F6', '#252525'],
+        color: ['#2C677D', '#EEF4F6', '#DFE8EB'],
         client: 'ZEIT ONLINE',
         type: 'Data Visualization',
         year: 2020,
         visible: true,
-        thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/us-election-2020/us-election-2020-thumb-960x640.jpg',
         overlay: 'public/images/us-election-2020/us-election-2020-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -693,7 +697,7 @@ export const content = {
         path: 'gender-equality',
         type: 'Data Visualization',
         client: 'Self initiated',
-        color: ['#882C94', '#F5F3F7', '#ECE8EF'],
+        color: ['#882C94', '#F5F3F7', '#EDDFEF'],
         year: 2019,
         visible: true,
         overlay:
@@ -752,7 +756,7 @@ export const content = {
         path: 'edutech',
         type: 'Mapping',
         client: 'Technologiestiftung Berlin',
-        color: ['#41B496', '#F6FCFA', '#E9EFEF'],
+        color: ['#41B496', '#F6FCFA', '#EEF8F6'],
         year: 2020,
         visible: true,
         thumbnail: 'public/images/edutech/edutech-thumb-960x640.jpg',
@@ -861,7 +865,7 @@ export const content = {
         path: 'bikesharing',
         type: 'Mapping',
         client: 'CityLAB Berlin',
-        color: ['#EE7B4B', '#fff', '#F2ECEB'],
+        color: ['#EE7B4B', '#fff', '#FDF2ED'],
         year: 2019,
         visible: true,
         thumbnail: 'public/images/bikesharing/bikesharing-thumb-960x640.jpg',
@@ -1097,7 +1101,7 @@ export const content = {
           {
             type: 'candidates',
             alt:
-              'data visualization, datenvisualisierung: Election Candidates 2017 – What are their electives professions?',
+              'data visualization, datenvisualisierung: Election Candidates 2017 – What are their / electives professions?',
             content: 'What are their electives professions?',
             url: 'public/images/candidates/candidates-3-3840x2040.jpg',
             lazy: 'public/images/candidates/candidates-3-lazy-3840x2040.jpg',
@@ -1268,7 +1272,7 @@ export const content = {
       clients: 'Kollaborationen',
     },
     collaborations:
-      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Deutsches Historisches Museum  /  Deutsche Bahn  /  Gesellschaft für internationale Zusammenarbeit  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
+      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
       intro:
         'Hallo, ich bin Fabian Dinklage, ein in Berlin ansässiger, freiberuflicher **Informationsdesigner** mit Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle ich Interfaces und interaktive datengesteuerte Produkte. Visualisierungen schaffen neue Sichtweisen auf deine Daten und helfen Dir diese besser zu verstehen und nutzbar zu machen.',
@@ -1431,12 +1435,12 @@ export const content = {
       {
         title: 'Klimarisiken in Deutschland',
         path: 'klimarisiken',
-        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        color: ['#0A0F2E', '#F7F9FA', '#E8E8E9'],
         client: 'Bundesministerium für Bildung und Forschung',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/klimarisiken/demos-thumb-960x640.jpg',
+        thumbnail: 'public/images/klimarisiken/klimarisiken-thumb-960x640.jpg',
         overlay: 'public/images/klimarisiken/klimarisiken-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -1494,12 +1498,13 @@ export const content = {
       {
         title: 'CO₂ Mobilität',
         path: 'co2-mobilitaet',
-        color: ['#0A0F2E', '#F7F9FA', '#F7F9FA'],
+        color: ['#0A0F2E', '#F7F9FA', '#E9E9EC'],
         client: 'Bundesministerium für Bildung und Forschung',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/co2-mobilitaet/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/co2-mobilitaet/co2-mobilitaet-thumb-960x640.jpg',
         overlay: 'public/images/co2-mobilitaet/co2-mobilitaet-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -1554,12 +1559,13 @@ export const content = {
       {
         title: 'Corona Dashboard',
         path: 'corona-dashboard',
-        color: ['#53555F', '#EEEEEF', '#252525'],
+        color: ['#53555F', '#EEEEEF', '#E8E8E9'],
         client: 'ZEIT ONLINE',
         type: 'Data Visualization',
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/corona-dashboard/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/corona-dashboard/corona-dashboard-thumb-960x640.jpg',
         overlay: 'public/images/corona-dashboard/corona-dashboard-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -1587,7 +1593,8 @@ export const content = {
         type: 'Data Visualization',
         year: 2020,
         visible: true,
-        thumbnail: 'public/images/corona-aerosole-b117/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/corona-aerosole-b117/corona-aerosole-b117-thumb-960x640.jpg',
         overlay:
           'public/images/corona-aerosole-b117/corona-aerosole-b117-trailer.mp4',
         alt:
@@ -1624,12 +1631,13 @@ export const content = {
       {
         title: 'US-Wahl Dashboard',
         path: 'us-election-2020',
-        color: ['#2C677D', '#EEF4F6', '#252525'],
+        color: ['#2C677D', '#EEF4F6', '#DFE8EB'],
         client: 'ZEIT ONLINE',
         type: 'Data Visualization',
         year: 2020,
         visible: true,
-        thumbnail: 'public/images/demos/demos-thumb-960x640.jpg',
+        thumbnail:
+          'public/images/us-election-2020//us-election-2020-thumb-960x640.jpg',
         overlay: 'public/images/us-election-2020/us-election-2020-trailer.mp4',
         alt:
           'data visualization, mapping, datavis, data visualisation, datenvisualisierung',
@@ -1898,7 +1906,7 @@ export const content = {
         path: 'gender-equality',
         type: 'Datenvisualisierung',
         client: 'Selbst initiiert',
-        color: ['#882C94', '#F5F3F7', '#ECE8EF'],
+        color: ['#882C94', '#F5F3F7', '#F4ECF5'],
         year: 2019,
         visible: true,
         overlay:
@@ -1952,7 +1960,7 @@ export const content = {
         path: 'edutech',
         type: 'Interaktive Karte',
         client: 'Technologiestiftung Berlin',
-        color: ['#41B496', '#F6FCFA', '#E9EFEF'],
+        color: ['#41B496', '#F6FCFA', '#EEF8F6'],
         year: 2020,
         visible: true,
         thumbnail: 'public/images/edutech/edutech-thumb-960x640.jpg',
@@ -2062,7 +2070,7 @@ export const content = {
         path: 'bikesharing',
         type: 'Datenvisualisierung',
         client: 'CityLAB Berlin',
-        color: ['#EE7B4B', '#fff', '#F2ECEB'],
+        color: ['#EE7B4B', '#fff', '#FDF2ED'],
         year: 2019,
         visible: true,
         thumbnail: 'public/images/bikesharing/bikesharing-thumb-960x640.jpg',
@@ -2336,7 +2344,7 @@ export const content = {
         path: 'invisties',
         type: 'Datenvisualisierung',
         client: 'Bachelor Thesis',
-        color: ['#013ED9', '#F3F6FD', '#E6E9F3'],
+        color: ['#013ED9', '#F3F6FD', '#E6ECFB'],
         year: 2018,
         alt:
           'data visualization, datenvisualisierung: Meetups unsichtbare Verbindungen – Zehn Jahre Meetup-Geschichte visualisiert und kommentiert.',

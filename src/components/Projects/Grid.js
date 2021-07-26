@@ -20,6 +20,10 @@ const StyledBox = styled(Box)`
   transition: all ${p => p.theme.times[1]} ease-in-out;
 `;
 
+const ProjectBox = styled(Box)`
+  border-radius: 6px;
+`;
+
 const StyledText = styled(Text)`
   margin-top: 15px;
   line-height: 140%;
@@ -70,6 +74,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledThumbBox = styled(Box)`
+  border-radius: 10px;
   box-shadow: 0 2.8px 2.2px rgba(26, 25, 43, 0.014),
     0 12.5px 10px rgba(26, 25, 43, 0.02),
     0 22.3px 17.9px rgba(26, 25, 43, 0.022),
@@ -113,10 +118,10 @@ const Grid = p => {
 
     const vidNode = document.getElementById(`video-${data.path}`);
     vidNode.style.filter = 'grayscale(0)';
-    vidNode.parentElement.style.transition = 'all .125s ease-in-out';
+    vidNode.parentElement.style.transition = 'all .075s ease-in-out';
     // vidNode.parentElement.style.boxShadow =
     //   '4px 21px 40px 1px rgba(0,0,0,0.085)';
-    vidNode.parentElement.style.transform = 'scale(1.025)';
+    vidNode.parentElement.style.transform = 'scale(1.045)';
     setHovered(true);
 
     vidNode.play();
@@ -134,7 +139,7 @@ const Grid = p => {
   const handleMouseOut = data => {
     const vidNode = document.getElementById(`video-${data.path}`);
     vidNode.style.filter = 'grayscale(0.75)';
-    vidNode.parentElement.style.transition = 'all .125s ease-in-out';
+    vidNode.parentElement.style.transition = 'all .075s ease-in-out';
     vidNode.parentElement.style.transform = 'scale(1)';
     vidNode.pause();
     setColor(colorDefault);
@@ -151,9 +156,12 @@ const Grid = p => {
           const elm = thumb.getBoundingClientRect();
           if (elm.top < 400 && elm.top > 100) {
             thumb.style.filter = 'grayscale(0)';
+            thumb.parentElement.style.transition = 'all .075s ease-in-out';
+            thumb.parentElement.style.transform = 'scale(1.045)';
             thumb.play();
           } else {
             thumb.style.filter = 'grayscale(.75)';
+            thumb.parentElement.style.transform = 'scale(1)';
             thumb.pause();
           }
         });
@@ -213,32 +221,30 @@ const Grid = p => {
                       key={`tile-${i}`}
                       color="primary"
                     >
-                      <ProgressiveImage src={p.overlay} placeholder={p.lazy}>
-                        {src => (
-                          <video
-                            className="thumbnail-video"
-                            id={`video-${p.path}`}
-                            ref={target => {
-                              if (target) {
-                                observed = target;
-                              }
-                            }}
-                            style={{
-                              position: 'absolute',
-                              width: '100%',
-                              filter: 'grayscale(0.5)',
-                            }}
-                            width="100%"
-                            height="100%"
-                            loop
-                            playsInline
-                            muted
-                          >
-                            <source src={p.overlay} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        )}
-                      </ProgressiveImage>
+                      <video
+                        className="thumbnail-video"
+                        id={`video-${p.path}`}
+                        ref={target => {
+                          if (target) {
+                            observed = target;
+                          }
+                        }}
+                        style={{
+                          position: 'absolute',
+                          width: '100%',
+                          filter: 'grayscale(0.5)',
+                        }}
+                        width="100%"
+                        height="100%"
+                        loop
+                        preload="none"
+                        poster={p.thumbnail}
+                        playsInline
+                        muted
+                      >
+                        <source src={p.overlay} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
                     </StyledThumbBox>
                     <StyledText c={color} index={i}>
                       <b>{p.title}: </b>
@@ -255,3 +261,32 @@ const Grid = p => {
 };
 
 export default Grid;
+
+/*
+
+                          return (
+                            <video
+                              className="thumbnail-video"
+                              id={`video-${p.path}`}
+                              ref={target => {
+                                if (target) {
+                                  observed = target;
+                                }
+                              }}
+                              style={{
+                                position: 'absolute',
+                                width: '100%',
+                                filter: 'grayscale(0.5)',
+                              }}
+                              width="100%"
+                              height="100%"
+                              loop
+                              playsInline
+                              muted
+                            >
+                              <source src={p.overlay} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          );
+
+*/

@@ -12,9 +12,9 @@ const StyledFlex = styled(Flex)`
   margin: 0 auto;
 `;
 
-const Home = (p) => {
-  const color = useStoreState((state) => state.color.color);
-  const base = useStoreState((state) => state.base);
+const Home = p => {
+  const color = useStoreState(state => state.color.color);
+  const base = useStoreState(state => state.base);
   const intro = content[base].about.intro;
 
   return (

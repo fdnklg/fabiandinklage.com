@@ -10,6 +10,39 @@ import IconArrowRight from '~/components/IconArrowRight';
 import IconArrowLeft from '~/components/IconArrowLeft';
 import { content } from '~/data';
 
+const StyledButtonLeft = styled(Button)`
+  display: none;
+  @media (min-width: ${p => p.theme.sizes.desktop}) {
+    display: block;
+    position: fixed;
+    left: 25px;
+    padding-top: 10px;
+    height: 43px;
+    width: 43px;
+    top: calc(50% - 25px);
+  }
+`;
+
+const StyledButtonRight = styled(Button)`
+  display: none;
+  @media (min-width: ${p => p.theme.sizes.desktop}) {
+    display: block;
+    position: fixed;
+    right: 25px;
+    padding-top: 10px;
+    height: 43px;
+    width: 43px;
+    top: calc(50% - 25px);
+  }
+`;
+
+const StyledButton = styled(Button)`
+  opacity: 0;
+  @media (max-width: ${p => p.theme.sizes.desktop}) {
+    opacity: 1;
+  }
+`;
+
 const StyledWrapper = styled.div`
   transition: all ${p => p.theme.times[1]} ease-in-out;
 
@@ -105,99 +138,127 @@ const Intro = ({ data, timeout, color, projects }) => {
       unmountOnExit={true}
     >
       {state => (
-        <StyledWrapper state={state} isPrerendering={isPrerendering}>
-          <StyledFlex
-            maxWidth={[1200, 900]}
-            pb={[3, 3, 3, 4]}
-            pt={[4, 5, 5, 6]}
+        <>
+          <StyledButtonLeft
+            href={previousProjectUrl}
+            px={'13px'}
+            ml={'15px'}
+            py={2}
+            c={color}
+            fontSize={[2, 2, 2, 3]}
           >
-            <StyledTitle
-              pr={[4]}
-              c={color}
-              fontSize={[6, 6, 7]}
-              mb={[3]}
-              width={[1, 1, 4 / 8]}
-            >
-              {title}
-            </StyledTitle>
-            <StyledBox
-              sx={{ lineHeight: '1.5', letterSpacing: '.5px' }}
-              fontSize={[3, 4]}
-              c={color}
-              width={[1, 1, 4 / 8]}
-            >
-              {subtitle}
-            </StyledBox>
-          </StyledFlex>
-          <StyledFlex
-            sx={{ lineHeight: '1.5' }}
-            pb={[4, 5, 5, 5]}
-            maxWidth={[1200, 900]}
+            <IconArrowLeft />
+          </StyledButtonLeft>
+          <StyledButtonRight
+            href={nextProjectUrl}
+            px={'13px'}
+            ml={'5px'}
+            py={2}
+            c={color}
+            fontSize={[2, 2, 2, 3]}
           >
-            {url && (
+            <IconArrowRight />
+          </StyledButtonRight>
+          <StyledWrapper state={state} isPrerendering={isPrerendering}>
+            <StyledFlex
+              maxWidth={[1200, 900]}
+              pb={[3, 3, 3, 4]}
+              pt={[4, 5, 5, 6]}
+            >
+              <StyledTitle
+                pr={[4]}
+                c={color}
+                fontSize={[6, 6, 7]}
+                mb={[3]}
+                width={[1, 1, 4 / 8]}
+              >
+                {title}
+              </StyledTitle>
+              <StyledBox
+                sx={{ lineHeight: '1.5', letterSpacing: '.5px' }}
+                fontSize={[3, 4]}
+                c={color}
+                width={[1, 1, 4 / 8]}
+              >
+                {subtitle}
+              </StyledBox>
+            </StyledFlex>
+            <StyledFlex
+              sx={{ lineHeight: '1.5' }}
+              pb={[4, 5, 5, 5]}
+              maxWidth={[1200, 900]}
+            >
+              {url && (
+                <Box
+                  mt={[2, 2, 2]}
+                  mb={[4, 4, 5, 5]}
+                  pr={[0, 2, 2, 4]}
+                  display={'flex'}
+                  alignItems={'center'}
+                  justifyContent={'space-between'}
+                  fontSize={[2]}
+                  width={[1, 1, 2 / 8]}
+                >
+                  <Button
+                    href={url}
+                    px={3}
+                    py={2}
+                    c={color}
+                    fontSize={[2, 2, 2, 3]}
+                  >
+                    {others.launch}
+                  </Button>
+                  <Box>
+                    <StyledButton
+                      href={previousProjectUrl}
+                      px={'13px'}
+                      ml={'15px'}
+                      py={2}
+                      c={color}
+                      fontSize={[2, 2, 2, 3]}
+                    >
+                      <IconArrowLeft />
+                    </StyledButton>
+                    <StyledButton
+                      href={nextProjectUrl}
+                      px={'13px'}
+                      ml={'5px'}
+                      py={2}
+                      c={color}
+                      fontSize={[2, 2, 2, 3]}
+                    >
+                      <IconArrowRight />
+                    </StyledButton>
+                  </Box>
+                </Box>
+              )}
+              <Box pr={[3]} mb={[3]} fontSize={[2, 3, 3]} width={[1, 1, 2 / 8]}>
+                <StyledLabelBold c={color}>{others.context}</StyledLabelBold>
+                <br />
+                <StyledLabel c={color}>{client}</StyledLabel>
+              </Box>
+              <Box pr={[3]} mb={[3]} fontSize={[2, 3, 3]} width={[1, 1, 2 / 8]}>
+                <StyledLabelBold c={color}>{others.year}</StyledLabelBold>
+                <br />
+                <StyledLabel c={color}>{year}</StyledLabel>
+              </Box>
               <Box
-                mt={[2, 2, 2]}
-                mb={[4, 4, 5, 5]}
-                fontSize={[2]}
+                sx={{ display: 'flex', flexDirection: 'column' }}
+                pr={[3]}
+                mb={[3]}
+                fontSize={[2, 3, 3]}
                 width={[1, 1, 2 / 8]}
               >
-                <Button
-                  href={url}
-                  px={3}
-                  py={2}
-                  c={color}
-                  fontSize={[2, 2, 2, 3]}
-                >
-                  {others.launch}
-                </Button>
-                <Button
-                  href={previousProjectUrl}
-                  px={'13px'}
-                  ml={'15px'}
-                  py={2}
-                  c={color}
-                  fontSize={[2, 2, 2, 3]}
-                >
-                  <IconArrowLeft />
-                </Button>
-                <Button
-                  href={nextProjectUrl}
-                  px={'13px'}
-                  ml={'5px'}
-                  py={2}
-                  c={color}
-                  fontSize={[2, 2, 2, 3]}
-                >
-                  <IconArrowRight />
-                </Button>
+                <StyledLabelBold c={color}>{others.tasks}</StyledLabelBold>
+                {tasks.map(t => (
+                  <>
+                    <SpacedStyledLabel c={color}>{t}</SpacedStyledLabel>
+                  </>
+                ))}
               </Box>
-            )}
-            <Box pr={[3]} mb={[3]} fontSize={[2, 3, 3]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold c={color}>{others.context}</StyledLabelBold>
-              <br />
-              <StyledLabel c={color}>{client}</StyledLabel>
-            </Box>
-            <Box pr={[3]} mb={[3]} fontSize={[2, 3, 3]} width={[1, 1, 2 / 8]}>
-              <StyledLabelBold c={color}>{others.year}</StyledLabelBold>
-              <br />
-              <StyledLabel c={color}>{year}</StyledLabel>
-            </Box>
-            <Box
-              sx={{ display: 'flex', flexDirection: 'column' }}
-              pr={[3]}
-              mb={[3]}
-              fontSize={[2, 3, 3]}
-              width={[1, 1, 2 / 8]}
-            >
-              <StyledLabelBold c={color}>{others.tasks}</StyledLabelBold>
-              {tasks.map(t => (
-                <>
-                  <SpacedStyledLabel c={color}>{t}</SpacedStyledLabel>
-                </>
-              ))}
-            </Box>
-          </StyledFlex>
-        </StyledWrapper>
+            </StyledFlex>
+          </StyledWrapper>
+        </>
       )}
     </Transition>
   );
