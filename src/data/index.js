@@ -226,6 +226,62 @@ export const content = {
     ],
     projects: [
       {
+        title: 'German federal election parlament',
+        path: 'parlament-2021',
+        type: 'Data visualization',
+        client: 'ZEIT ONLINE',
+        color: ['#000', '#fff', '#E5E5E7'],
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/parlament-2021/parlament-thumb-960x640.jpg',
+        overlay: 'public/images/parlament-2021/parlament-thumb-960x640.mp4',
+        lazy: 'public/images/parlament-2021/hackernews-lazy-960x640.jpg',
+        alt:
+        'title image',
+        url: 'https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete',
+        tasks: [
+          'Data Visualization',
+          'Frontend Development',
+        ],
+        subtitle: '735 elected members of the Bundestag 2021 visualized',
+        description: 'Intro description in markdown',
+        media: [
+          {
+            type: 'parlament-2021',
+            alt:
+              'Text here',
+            content:
+              'Text here',
+            url:
+              'public/images/parlament-2021/parlament-filtered-3840x2040.jpg',
+            lazy:
+              'public/images/parlament-2021/parlament-filtered-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'parlament-2021',
+            alt:
+              'Text here',
+            content:
+              'Text here',
+            url:
+              'public/images/parlament-2021/parlament-filtergroup-3840x2040.jpg',
+            lazy:
+              'public/images/parlament-2021/parlament-filtergroup-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'parlament-2021',
+            alt:
+              'Text here',
+            content:
+              'Text here',
+            url:
+              'public/images/parlament-2021/parlament-list-3840x2040.jpg',
+            lazy:
+              'public/images/parlament-2021/parlament-list-lazy-3840x2040.jpg',
+          },
+        ]
+      },
+      {
         title: 'Climate change risks in Germany',
         path: 'klimarisiken',
         color: ['#0A0F2E', '#F7F9FA', '#F3F3F5'],
@@ -1437,7 +1493,7 @@ export const content = {
         path: 'klimarisiken',
         color: ['#0A0F2E', '#F7F9FA', '#E8E8E9'],
         client: 'Bundesministerium für Bildung und Forschung',
-        type: 'Data Visualization',
+        type: 'Datenvisualisierung',
         year: 2021,
         visible: true,
         thumbnail: 'public/images/klimarisiken/klimarisiken-thumb-960x640.jpg',
@@ -1500,7 +1556,7 @@ export const content = {
         path: 'co2-mobilitaet',
         color: ['#0A0F2E', '#F7F9FA', '#E9E9EC'],
         client: 'Bundesministerium für Bildung und Forschung',
-        type: 'Data Visualization',
+        type: 'Datenvisualisierung',
         year: 2021,
         visible: true,
         thumbnail:
@@ -1561,7 +1617,7 @@ export const content = {
         path: 'corona-dashboard',
         color: ['#53555F', '#EEEEEF', '#E8E8E9'],
         client: 'ZEIT ONLINE',
-        type: 'Data Visualization',
+        type: 'Datenvisualisierung',
         year: 2021,
         visible: true,
         thumbnail:
@@ -1633,7 +1689,7 @@ export const content = {
         path: 'us-election-2020',
         color: ['#2C677D', '#EEF4F6', '#DFE8EB'],
         client: 'ZEIT ONLINE',
-        type: 'Data Visualization',
+        type: 'Datenvisualisierung',
         year: 2020,
         visible: true,
         thumbnail:
