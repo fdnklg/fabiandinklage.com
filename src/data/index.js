@@ -226,7 +226,7 @@ export const content = {
     ],
     projects: [
       {
-        title: 'German federal election parlament',
+        title: 'German federal election parliament',
         path: 'parlament-2021',
         type: 'Data visualization',
         client: 'ZEIT ONLINE',
@@ -244,14 +244,14 @@ export const content = {
           'Frontend Development',
         ],
         subtitle: '735 elected members of the Bundestag 2021 visualized',
-        description: 'Intro description in markdown',
+        description: "For the 2021 federal election, the interactive team from [Zeit Online] (https://www.zeit.de/index) had a selection of [live visualizations] (https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete) realized on the election evening. I designed and implemented the visualization of the members of the Bundestag. Different filters give users a detailed insight into the composition of the Bundestag. The application receives the data directly from the DPA's API immediately after the direct-candidates have been announced and shows them live. Like all visualizations for this federal election at ZEIT ONLINE, it's also prerendered on the server. The application can thus be displayed without delay while further data is being reloaded in the background.",
         media: [
           {
             type: 'parlament-2021',
             alt:
-              'Text here',
+            'The number of seats per party shows the shares for the activated filter (here direct candidates).',
             content:
-              'Text here',
+              'The number of seats per party shows the shares for the activated filter (here direct candidates).',
             url:
               'public/images/parlament-2021/parlament-filtered-3840x2040.jpg',
             lazy:
@@ -260,9 +260,9 @@ export const content = {
           {
             type: 'parlament-2021',
             alt:
-              'Text here',
+              'People can be filtered based on different criteria such as age, gender or new in parliament. (Data visualization, Bundestag election)',
             content:
-              'Text here',
+              'People can be filtered based on different criteria such as age, gender or new in parliament.',
             url:
               'public/images/parlament-2021/parlament-filtergroup-3840x2040.jpg',
             lazy:
@@ -271,9 +271,9 @@ export const content = {
           {
             type: 'parlament-2021',
             alt:
-              'Text here',
+              "A face is assigned to almost every elected candidate and further information about the person is obtained through hover. (Data visualization, federal election, members of parliament)",
             content:
-              'Text here',
+              'A face is assigned to almost every elected candidate and further information about the person is obtained via hover or touch.',
             url:
               'public/images/parlament-2021/parlament-list-3840x2040.jpg',
             lazy:
@@ -1488,6 +1488,62 @@ export const content = {
       },
     ],
     projects: [
+      {
+        title: 'Parlament des Bundestags',
+        path: 'parlament-2021',
+        type: 'Datenvisualisierung',
+        client: 'ZEIT ONLINE',
+        color: ['#000', '#fff', '#E5E5E7'],
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/parlament-2021/parlament-thumb-960x640.jpg',
+        overlay: 'public/images/parlament-2021/parlament-thumb-960x640.mp4',
+        lazy: 'public/images/parlament-2021/hackernews-lazy-960x640.jpg',
+        alt:
+        'title image',
+        url: 'https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete',
+        tasks: [
+          'Design',
+          'Frontend Entwicklung',
+        ],
+        subtitle: '735 gewählte Abgeordnete des deutschen Bundestags visualisiert',
+        description: 'Zur Bundestagswahl 2021 habe mit dem Interaktiv Team von [Zeit Online](https://www.zeit.de/index) eine Auswahl an [Live Visualisierungen](https://www.zeit.de/politik/deutschland/2021-09/wahlergebnisse-bundestagswahl-2021-wahlkreise-karte-deutschland-live) zum Abend der Auszählung realisiert. Ich habe die Visualisierung der Bundestagsabgeordneten gestaltet und umgesetzt. Nutzerinnen bekommen durch unterschiedliche Filter einen detaillierten Einblick in die Zusammensetzung des Bundestags. Die Anwendung erhält die Daten direkt von der API der DPA direkt nach Bekanntgabe der feststehenden Kandidaten und zeigt diese Live. Wie alle Visualisierungen zur Bundestagswahl wird auch diese Visualisierung serverseitig gerendert. Die Anwendung kann so ohne Verzögerung angezeigt werden, während das Nachladen weiterer Daten im Hintergrund passiert.',
+        media: [
+          {
+            type: 'parlament-2021',
+            alt:
+              'Personen können anhand unterschiedlicher Kriterien wie Alter, Geschlecht oder neu im Parlament gefiltert werden. (Datenvisualiserung, Bundestagswahl, Abgeordnete)',
+            content:
+              'Personen können anhand unterschiedlicher Kriterien wie Alter, Geschlecht oder neu im Parlament gefiltert werden.',
+            url:
+              'public/images/parlament-2021/parlament-filtergroup-3840x2040.jpg',
+            lazy:
+              'public/images/parlament-2021/parlament-filtergroup-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'parlament-2021',
+            alt:
+            'Die Anzahl der Sitze pro Partei zeigt die Anteile für den aktivierten Filter (hier Direktkandidaten).',
+            content:
+              'Die Anzahl der Sitze pro Partei zeigt die Anteile für den aktivierten Filter (hier Direktkandidaten).',
+            url:
+              'public/images/parlament-2021/parlament-filtered-3840x2040.jpg',
+            lazy:
+              'public/images/parlament-2021/parlament-filtered-lazy-3840x2040.jpg',
+          },
+          {
+            type: 'parlament-2021',
+            alt:
+              'Zu fast jeder gewählten Kandidatin wird ist ein Gesicht zugeordnet und weitere Informationen zur Person durch Hover erhalten. (Datenvisualiserung, Bundestagswahl, Abgeordnete)',
+            content:
+              'Zu fast jeder gewählten Kandidatin wird ist ein Gesicht zugeordnet und weitere Informationen zur Person durch Hover erhalten.',
+            url:
+              'public/images/parlament-2021/parlament-list-3840x2040.jpg',
+            lazy:
+              'public/images/parlament-2021/parlament-list-lazy-3840x2040.jpg',
+          },
+        ]
+      },
       {
         title: 'Klimarisiken in Deutschland',
         path: 'klimarisiken',
