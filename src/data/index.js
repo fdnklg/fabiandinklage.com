@@ -49,6 +49,7 @@ export const content = {
     },
     title: {
       projects: 'selected projects',
+      projectsSubtitle: 'Hover via a tile for an animated project preview.',
       services: 'services',
       about: 'about me',
       cv: 'resumé',
@@ -62,7 +63,7 @@ export const content = {
       launch: 'Live',
     },
     collaborations:
-      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
+      'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
       intro:
         "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
@@ -1295,7 +1296,7 @@ export const content = {
       twitter: 'Twitter',
     },
     others: {
-      more: 'Mehr erfahren',
+      more: 'Mehr',
       context: 'Kontext',
       year: 'Jahr',
       tasks: 'Aufgaben',
@@ -1322,6 +1323,7 @@ export const content = {
     },
     title: {
       projects: 'ausgewählte projekte',
+      projectsSubtitle: 'Hovere über eine Kachel für eine animierte Projektvorschau.',
       services: 'dienstleistungen',
       about: 'über mich',
       cv: 'lebenslauf',
@@ -1353,7 +1355,7 @@ export const content = {
     ],
     services: [
       {
-        title: 'Datenvisualisierung',
+        title: 'Daten Visualisierung',
         description:
           'Ich analysiere und organisiere deine Daten, um mit Dir neue Einsichten zu gewinnen. Mein Designprozess zeichnet sich durch iteratives Vorgehen, interaktive Prototypen und eine enge Zusammenarbeit aus. Gemeinsam prüfen wir Annahmen und entwickeln interaktive Datenvisualisierungen, die Dir wertvolle Perspektiven für deine Daten geben. Ich interessiere mich für datenintensive Probleme und die Entwicklung innovativer Plattformen, die Dir die Arbeit erleichtern.',
       },

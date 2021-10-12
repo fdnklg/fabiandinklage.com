@@ -63,8 +63,8 @@ const Profile = (p) => {
           <Flex
             sx={{ textAlign: ['left', 'left', 'center'] }}
             pt={[4, 5, 5, 6]}
-            width={[1, 4 / 5, 4 / 5, 3 / 4]}
-            fontSize={[3, 4, 4, 5]}
+            width={[1, 4 / 5, 4 / 5, 1]}
+            fontSize={[3, 4, 5, 5]}
           >
             <Title timeout={timeout + 200} source={titleAbout} color={color} />
             <Paragraph timeout={timeout + 200} content={vita} color={color} />

@@ -70,7 +70,7 @@ const LayoutSwitch = () => {
 
   const switches = [
     { value: 'Grid', icon: <IconGrid />, label: 'grid' },
-    { value: 'List', icon: <IconList />, label: 'list' },
+    { value: 'List', icon: <IconList />, label: 'all public projects' },
   ];
 
   return (

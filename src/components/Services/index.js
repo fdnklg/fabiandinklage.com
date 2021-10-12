@@ -54,8 +54,9 @@ const Services = p => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
+            margin: 'auto',
             mb: [4, 5, 6],
-            px: ['0%', '0%', '6%', '8%'],
+            px: ['0%', '0%', '0%', '10%'],
           }}
         >
           <Title timeout={timeout} source={title} color={color} />
@@ -72,7 +73,7 @@ const Services = p => {
               <Text
                 sx={{
                   fontFamily: 'headline',
-                  width: ['100%', '100%', '35%', '30%'],
+                  width: ['100%', '100%', '35%', '40%'],
                   letterSpacing: '0.125px',
                   lineHeight: 'heading',
                   pr: '40px',
@@ -85,7 +86,7 @@ const Services = p => {
               <Text
                 sx={{
                   fontFamily: 'body',
-                  width: ['100%', '100%', '65%', '70%'],
+                  width: ['100%', '100%', '65%', '100%'],
                   lineHeight: 'body',
                   opacity: 0.66,
                   letterSpacing: '0.125px',

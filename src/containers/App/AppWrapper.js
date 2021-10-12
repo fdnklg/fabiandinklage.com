@@ -24,6 +24,8 @@ const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 80px);
+  max-width: 1200px;
+  margin: auto;
 
   @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
     min-height: calc(100vh - 50px);
@@ -196,7 +198,7 @@ const AppWrapper = () => {
                 <Flex
                   sx={{
                     textAlign: ['left', 'left', 'center'],
-                    px: [0, 0, 5, 6],
+                    // px: [0, 0, 5, 6],
                     flexDirection: 'column',
                     margin: ['0', '0 auto'],
                   }}

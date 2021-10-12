@@ -43,6 +43,8 @@ const Projects = (p) => {
   const base = useStoreState((state) => state.base);
   const projects = content[base].projects;
   const title = content[base].title.projects;
+  const subtitle = content[base].title.projectsSubtitle;
+  const isGrid = layout == 'Grid';
 
   const filtered = projects.filter((p) => p.visible);
 
@@ -60,10 +62,10 @@ const Projects = (p) => {
           state={state}
           pb={[4, 5, 5, 6]}
         >
-          <Title timeout={625} source={title} color={color} />
+          <Title timeout={625} source={title} subtitle={isGrid ? subtitle : null} color={color} />
           <LayoutSwitch c={color} />
-          {layout == 'Grid' && <Grid data={filtered} />}
-          {layout == 'List' && <List color={color} data={filtered} />}
+          {isGrid && <Grid data={filtered} />}
+          {!isGrid && <List color={color} data={filtered} />}
         </StyledProjectsWrapper>
       )}
     </Transition>

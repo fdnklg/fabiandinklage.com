@@ -20,6 +20,7 @@ const config = {
   '/projects/:slug': [
     {
       slug: [
+        'parlament-2021/de',
         'us-election-2020/de',
         'corona-aerosole-b117/de',
         'corona-dashboard/de',
@@ -50,6 +51,7 @@ const config = {
         'candidates/en',
         'invisties/en',
         'koro-trading-flows/en',
+        'parlament-2021/en',
       ],
     },
   ],

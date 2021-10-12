@@ -72,7 +72,9 @@ const Media = props => {
                 <Label
                   key={`media-label-${i}`}
                   align="center"
+                  disabled={true}
                   content={media.content}
+                  maxWidth={'600px'}
                 ></Label>
               </Box>
             );
