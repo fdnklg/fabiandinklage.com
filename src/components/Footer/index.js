@@ -18,6 +18,7 @@ const StyledBox = styled(Box)`
 const StyledFlex = styled(Flex)`
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
+  opacity: .5;
 `;
 
 const Footer = p => {

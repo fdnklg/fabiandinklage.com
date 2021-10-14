@@ -49,7 +49,7 @@ const SVGWrapper = styled.div`
 `;
 
 const StyledTile = styled.div`
-  height: 130px;
+  height: 120px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -57,6 +57,10 @@ const StyledTile = styled.div`
   background-color: ${p => p?.c[2]};
   border-radius: 8px;
   margin-bottom: 5px;
+
+  @media (min-width: ${p => p.theme.sizes.mobile}) {
+    height: 150px;
+  }
 
   @media (min-width: ${p => p.theme.sizes.tablet}) {
     margin-bottom: 10px;
@@ -68,7 +72,12 @@ const StyledWrapper = styled.div`
   border: none;
   margin-top: 10px;
   text-align: center;
-  width: calc(50% - 5px) !important;
+  width: calc(100%) !important;
+  
+  @media (min-width: ${p => p.theme.sizes.mobile}) {
+    margin-top: 20px;
+    width: calc(50% - 10px) !important;
+  }
   
   @media (min-width: ${p => p.theme.sizes.tablet}) {
     margin-top: 20px;
@@ -126,11 +135,10 @@ function Clients({timeout}) {
   const isPrerendering = useStoreState(state => state.layout.isPrerendering);
   const base = useStoreState(state => state.base);
 
-  const clients = content[base].clients;
+  const clients = content.global.clients;
 
   const title = content[base].title.clients;
   const subtitle = content[base].title.clientsSubtitle;
-  const hasSubtitle = subtitle ? true : false;
 
   if (clients) {
     return (
@@ -176,6 +184,8 @@ function Clients({timeout}) {
       }
     </Transition>
   )}
+
+  return (<></>)
 }
 
 export default Clients

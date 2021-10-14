@@ -60,6 +60,7 @@ font-size: ${(p) => p.theme.fontSizes[1]};
 opacity: .66;
 padding: 0 !important;
 transform: translateY(-7px);
+letter-spacing: .5px;
 
 @media screen and (max-width: ${(p) => p.theme.sizes.tablet}) {
   text-align: left;

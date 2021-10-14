@@ -51,12 +51,17 @@ const StyledLanguageSwitch = styled.span`
   border: 1px solid ${p => p.color[0]};
   border-radius: 135px;
   justify-content: center;
-  color: ${p => p.color[0]};
+  color: ${p => p.color[1]};
+  background-color: ${p => p.color[0]};
   cursor: pointer;
   transition: all ${p => p.theme.times[0]} ease-in-out;
 
+  letter-spacing: 2px !important;
+  font-size: 10px !important;
+
   &:hover {
     color: ${p => p.color[1]};
+    opacity: .66;
     background: ${p => p.color[0]};
     transition: all ${p => p.theme.times[0]} ease-in-out;
   }
@@ -68,6 +73,8 @@ const Nav = p => {
   const base = useStoreState(state => state.base);
   const navContent = content[base].nav;
   const color = useStoreState(state => state.color.color);
+  const setColor = useStoreActions(actions => actions.color.setColor);
+  const colorDefault = useStoreState(state => state.color.default);
   const [first, setFirst] = useState(false);
 
   const handleLanguage = lang => {
@@ -77,6 +84,10 @@ const Nav = p => {
     setBase(lang);
     history.push(newLocation);
   };
+
+  function handleClick() {
+    setColor(colorDefault);
+  }
 
   return (
     <Transition
@@ -89,6 +100,7 @@ const Nav = p => {
       {state => (
         <StyledFlex c={color} alignItems="center" state={state}>
           <Box
+            onClick={() => handleClick()}
             sx={{ flexDirection: 'row', display: 'flex', alignItems: 'center' }}
             ml={2}
           >
@@ -101,6 +113,7 @@ const Nav = p => {
           </Box>
           <Box mx="auto" />
           <Box
+            onClick={() => handleClick()}
             sx={{
               textDecoration: 'none',
               color: color[0],
@@ -121,6 +134,7 @@ const Nav = p => {
             </RouterLink>
           </Box>
           <Box
+            onClick={() => handleClick()}
             sx={{
               textDecoration: 'none',
               color: color[0],
@@ -141,6 +155,7 @@ const Nav = p => {
             </RouterLink>
           </Box>
           <Box
+            onClick={() => handleClick()}
             sx={{
               textDecoration: 'none',
               color: color[0],

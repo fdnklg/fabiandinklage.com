@@ -38,7 +38,6 @@ const InnerWrapper = styled.div`
 `;
 
 import Nav from '../../components/Nav';
-import Paragraph from '../../components/Paragraph';
 import Profile from '../Profile';
 import Project from '../Project';
 import Legal from '../Legal';
@@ -56,9 +55,6 @@ const AppWrapper = () => {
   );
 
   const base = useStoreState(state => state.base);
-  const cta = content[base].cta;
-  const collaborations = content[base].collaborations;
-  const titleClients = content[base].title.clients;
 
   const isPrerendering = () => {
     return navigator.userAgent == 'ReactSnap';
@@ -197,35 +193,6 @@ const AppWrapper = () => {
             path={`/home/${baseLang}/`}
             render={() => <Clients timeout={900} />}
           />
-          {/* <Route
-            exact
-            path={`/home/${baseLang}/`}
-            render={() => (
-              <>
-                <Flex
-                  sx={{
-                    textAlign: ['left', 'left', 'center'],
-                    // px: [0, 0, 5, 6],
-                    flexDirection: 'column',
-                    margin: ['0', '0 auto'],
-                  }}
-                  pb={[4, 5, 5, 6]}
-                  width={[1, 1, 4 / 5, 3 / 4]}
-                  fontSize={[3, 4, 4, 5]}
-                >
-                  <>
-                    <Title timeout={800} source={titleClients} color={color} />
-                    <Paragraph
-                      paddingTop={false}
-                      color={color}
-                      content={collaborations}
-                      timeout={800}
-                    />
-                  </>
-                </Flex>
-              </>
-            )}
-          /> */}
           <Route
             exact
             path={`/home/${baseLang}/`}
