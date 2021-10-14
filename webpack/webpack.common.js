@@ -51,7 +51,7 @@ module.exports = {
         type: 'javascript/auto',
       },
       {
-        test: /\.(ico|jpg|jpeg|png|svg|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -61,16 +61,20 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: [
-          'babel-loader',
-          {
-            loader: 'react-svg-loader',
-            options: {
-              jsx: true,
-            },
-          },
-        ],
+        use: ['@svgr/webpack'],
       },
+      // {
+      //   test: /\.svg$/,
+      //   use: [
+      //     'babel-loader',
+      //     {
+      //       loader: 'react-svg-loader',
+      //       options: {
+      //         jsx: true,
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.(js|jsx)$/,
         include: [

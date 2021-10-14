@@ -103,7 +103,6 @@ function siblingProjectUrl(index, projects, direction, base) {
     currentIndex = index >= lastProjectIndex ? 0 : index + 1;
   if (direction === 'previous')
     currentIndex = index === 0 ? lastProjectIndex : index - 1;
-  console.log(lastProjectIndex, currentIndex, index);
   return `/projects/${projects[currentIndex].path}/${base}`;
 }
 

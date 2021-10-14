@@ -5,10 +5,10 @@ import styled from 'styled-components';
 
 const StyledText = styled(Text)`
   letter-spacing: ${(p) => p.theme.letterSpacing[2]};
-  text-align: ${(p) => p.align};
+  text-align: ${(p) => p?.align};
   margin: auto;
-  max-width: ${(p) => p.maxWidth};
-  opacity: ${(p) => (p.disabled ? 0.6 : 1)};
+  max-width: ${(p) => p?.maxWidth};
+  opacity: ${(p) => (p?.disabled ? 0.6 : 1)};
 `;
 
 const Label = (p) => {

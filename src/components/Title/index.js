@@ -15,6 +15,10 @@ const StyledTitle = styled(ReactMarkdown)`
     }
   }};
 
+  margin-bottom: ${(props) => {
+    return props.hasSubtitle ? "0px !important" : "15px";
+  }}
+
   transform: ${(props) => {
     if (props.isPrerendering) {
       return 'translateY(10px)';
@@ -23,20 +27,10 @@ const StyledTitle = styled(ReactMarkdown)`
     }
   }};
   transition: all ${(p) => p.theme.times[1]} ease-in-out;
-  margin-bottom: ${(props) => {
-    console.log(props);
-    if (props.hasSubtitle) {
-      return '0px';
-    } 
-    if (!props.hasSubtitle) {
-      return '15px !important';
-    }
-  }}
-  min-height: 30px;
-  width: fit-content;
+  width: fit-content !important;
   color: ${(p) => p.c[0]};
   p {
-    margin-bottom: 15px;
+    margin-bottom: ${p => p.hasSubtitle ? '0px' : '15px'};
     font-family: 'Mier A Bold';
     font-size: ${(p) => p.theme.fontSizes[2]};
     letter-spacing: 3px;
@@ -47,7 +41,7 @@ const StyledTitle = styled(ReactMarkdown)`
 
     p {
       font-size: ${(p) => p.theme.fontSizes[2]};
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
   @media screen and (max-width: ${(p) => p.theme.sizes.mobile}) {
@@ -63,19 +57,22 @@ const StyledTitle = styled(ReactMarkdown)`
 const StyledSubtitle = styled(ReactMarkdown)`
 text-align: center;
 font-size: ${(p) => p.theme.fontSizes[1]};
-opacity: .5;
-margin-top: 0px !important;
+opacity: .66;
+padding: 0 !important;
 transform: translateY(-7px);
 
 @media screen and (max-width: ${(p) => p.theme.sizes.tablet}) {
   text-align: left;
+  p {
+    margin-top: 0px !important;
   }
+}
 
 `;
 
-const Title = (p) => {
-  const { source, color, timeout, subtitle } = p;
+const Title = ({ source, color, timeout, subtitle }) => {
   const isPrerendering = useStoreState((state) => state.layout.isPrerendering);
+  const hasSubtitle = subtitle ? true : false;
   return (
     <Transition
       in={true}
@@ -85,12 +82,12 @@ const Title = (p) => {
       unmountOnExit={true}
     >
       {(state) => (
-        <>
-        <StyledTitle hasSubtitle={subtitle ? true : false} isPrerendering={isPrerendering} state={state} c={color}>
-          {source}
-        </StyledTitle>
-        {subtitle && <StyledSubtitle>{subtitle}</StyledSubtitle>}
-        </>
+        <React.Fragment>
+          <StyledTitle hasSubtitle={hasSubtitle} isPrerendering={isPrerendering} state={state} c={color}>
+            {source}
+          </StyledTitle>
+          {subtitle && <StyledSubtitle>{subtitle}</StyledSubtitle>}
+        </React.Fragment>
       )}
     </Transition>
   );

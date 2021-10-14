@@ -25,6 +25,7 @@ const InnerWrapper = styled.div`
   flex-direction: column;
   min-height: calc(100vh - 80px);
   max-width: 1200px;
+  width: 100%;
   margin: auto;
 
   @media screen and (max-width: ${p => p.theme.sizes.tablet}) {
@@ -42,6 +43,7 @@ import Profile from '../Profile';
 import Project from '../Project';
 import Legal from '../Legal';
 import Services from '../../components/Services';
+import Clients from '../../components/Clients';
 import Cta from '../../components/Cta';
 import Home from '../Home';
 import Footer from '../../components/Footer';
@@ -193,6 +195,11 @@ const AppWrapper = () => {
           <Route
             exact
             path={`/home/${baseLang}/`}
+            render={() => <Clients timeout={900} />}
+          />
+          {/* <Route
+            exact
+            path={`/home/${baseLang}/`}
             render={() => (
               <>
                 <Flex
@@ -218,7 +225,7 @@ const AppWrapper = () => {
                 </Flex>
               </>
             )}
-          />
+          /> */}
           <Route
             exact
             path={`/home/${baseLang}/`}

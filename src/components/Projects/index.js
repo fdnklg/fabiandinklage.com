@@ -42,8 +42,8 @@ const Projects = (p) => {
 
   const base = useStoreState((state) => state.base);
   const projects = content[base].projects;
-  const title = content[base].title.projects;
-  const subtitle = content[base].title.projectsSubtitle;
+  const title = content[base]?.title?.projects;
+  const subtitle = content[base]?.title?.projectsSubtitle;
   const isGrid = layout == 'Grid';
 
   const filtered = projects.filter((p) => p.visible);

@@ -53,7 +53,8 @@ export const content = {
       services: 'services',
       about: 'about me',
       cv: 'resumé',
-      clients: 'collaborations',
+      clients: 'selected collaborations',
+      clientsSubtitle: 'I had the honor to work with international clients like:',
     },
     others: {
       more: 'Details',
@@ -64,6 +65,81 @@ export const content = {
     },
     collaborations:
       'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
+    clients: [
+      {
+        svg: {
+          url: 'public/logos/bmbf.svg',
+          width: '40%',
+          height: '90%',
+          id: 'bmbf'
+        },
+        client: {
+          name: 'Bundesministerium für Bildung und Forschung',
+          url: 'https://www.bmbf.de/bmbf/de/home/home_node.html'
+        }
+      },
+      {
+        svg: {
+          url: 'public/logos/DB_Logo.svg',
+          height: '10%',
+          width: '18%',
+          id: 'db'
+        },
+        client: {
+          name: 'Deutsche Bahn',
+          url: 'https://www.bahn.de/'
+        }
+      },
+      {
+        svg: {
+          url: 'public/logos/Google_logo.svg',
+          width: '60%',
+          height: '10%',
+          id: 'gni'
+        },
+        client: {
+          name: 'Google News Initiative',
+          url: 'https://newsinitiative.withgoogle.com/intl/de/'
+        }
+      },
+      {
+        svg: {
+          url: 'public/logos/zon.svg',
+          width: '65%',
+          height: '100%',
+          id: 'zon'
+        },
+        client: {
+          name: 'Zeit Online',
+          url: 'https://newsinitiative.withgoogle.com/intl/de/'
+        }
+      },
+      {
+        svg: {
+          url: 'public/logos/okf.svg',
+          width: '50%',
+          height: '30%',
+          id: 'okf'
+        },
+        client: {
+          name: 'Open Knowledge Foundation',
+          url: 'https://newsinitiative.withgoogle.com/intl/de/'
+        }
+      },
+      {
+        svg: {
+          url: 'public/logos/fraunhofer.svg',
+
+          width: '40%',
+          height: '50%',
+          id: 'fraunhofer'
+        },
+        client: {
+          name: 'Fraunhofer Institut',
+          url: 'https://newsinitiative.withgoogle.com/intl/de/'
+        }
+      },
+    ],
     about: {
       intro:
         "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
@@ -1306,7 +1382,7 @@ export const content = {
       title: 'Impressum',
       p1:
         'Angaben nach § 5 TMG und inhaltlich Verantwortlicher gemäß 55 Abs. 2 RStV',
-      li1: ['Fabian Dinklage', 'Schlegelstraße 22', '10115 Berlin', 'Germany'],
+      li1: ['Fabian Dinklage', 'Thurneysserstraße 5', '13357 Berlin', 'Germany'],
       li2: ['mail(at)fabiandinklage.com', 'fabiandinklage.com'],
       li3: [
         'Umsatzsteuer-Identifikationsnummer gemäß § 27 a des deutschen Umsatzsteuergesetzes: DE 291545410',
