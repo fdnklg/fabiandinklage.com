@@ -305,6 +305,82 @@ export const content = {
     ],
     projects: [
       {
+        title: `Transforming Education in Côte d'Ivoire`,
+        path: 'enveritas-education-dashboard',
+        type: 'Data visualisation',
+        client: 'Enveritas',
+        color: ['#000', '#fff', '#E5E5E7'],
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.jpg',
+        overlay: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.mp4',
+        alt:
+        'title image',
+        url: 'https://products.enveritas.org/civ-ed-dashboard-2021/',
+        tasks: [
+          'Design',
+          'Frontend Development',
+        ],
+        subtitle: 'Prototyping an administrative dashboard to reduce child labor',
+        description: `Together with the engineering team of [Enveritas](https://www.enveritas.org/), a non-profit tech startup located in New York, I protoyped a dashboard within a short sprint to show the progress of education projects in Côte d'Ivoire. We envisioned a tool designed for policy makers to facilitate reporting indicators like infrastructure, child labour, initiatives, literacy and classrooms. The current state of the prototype displays random data to provide an idea about potential perspectives of visualisation. The tool enhances trust and credibility of Enveritas's product of data-collection and provides guidance about possible use cases. My responsibility was to craft a visual language and develop the data-product with the support of React and D3.`,
+        media: [
+          {
+            type: 'img',
+            alt:
+              'Literacy rate of elementary school students',
+            content:
+              'Literacy rate of elementary school students',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Progress of school projects being developed on location',
+            content:
+              'Progress of school projects being developed on location',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'description here',
+            content:
+              'description here',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Distribution of coffee initiatives',
+            content:
+              'Distribution of coffee initiatives',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
+            content:
+              'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Showing teacher/student ratio and the level of teacher training.',
+            content:
+              'Showing teacher/student ratio and the level of teacher training.',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
+          },
+        ]
+      },
+      {
         title: 'German federal election parliament',
         path: 'parlament-2021',
         type: 'Data visualization',
@@ -1568,6 +1644,82 @@ export const content = {
       },
     ],
     projects: [
+      {
+        title: `Bildungsqualität an der Elfenbeinküste`,
+        path: 'enveritas-education-dashboard',
+        type: 'Datenvisualisierung',
+        client: 'Enveritas',
+        color: ['#000', '#fff', '#E5E5E7'],
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.jpg',
+        overlay: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.mp4',
+        alt:
+        'title image',
+        url: 'https://products.enveritas.org/civ-ed-dashboard-2021/',
+        tasks: [
+          'Design',
+          'Frontend Entwicklung',
+        ],
+        subtitle: 'Dashboard-Prototyp zur Visualisierung von Bildungsqualität',
+        description: `Zusammen mit dem Team des gemeinnützigen Startups [Enveritas](https://www.enveritas.org/), habe ich ein prototypisches Dashboard erstellt. Es soll aktuelle Schulprojekte, und die Qualität der Bildung anhand einer Reihe ermittelter Indikatoren auf einer Karte verorten. Die Anwendung ist innerhalb einer kurzen Sprintphase entstanden und dient als Grundlage um Interessengruppen für eine Kollaboration zu motivieren. Im Fall der weiteren Entwicklung werden die zu dem Zeitpunkt zufällig generierten Daten anhand Ort erhoben. Ich war für die gestalterische und technische Realisierung des Prototypen mithilfe von Figma, React und D3 verantwortlich.`,
+        media: [
+          {
+            type: 'img',
+            alt:
+              'Literacy rate of elementary school students',
+            content:
+              'Literacy rate of elementary school students',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Progress of school projects being developed on location',
+            content:
+              'Progress of school projects being developed on location',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'description here',
+            content:
+              'description here',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Distribution of coffee initiatives',
+            content:
+              'Distribution of coffee initiatives',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
+            content:
+              'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Showing teacher/student ratio and the level of teacher training.',
+            content:
+              'Showing teacher/student ratio and the level of teacher training.',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
+          },
+        ]
+      },
       {
         title: 'Parlament des Bundestags',
         path: 'parlament-2021',

@@ -261,32 +261,3 @@ const Grid = p => {
 };
 
 export default Grid;
-
-/*
-
-                          return (
-                            <video
-                              className="thumbnail-video"
-                              id={`video-${p.path}`}
-                              ref={target => {
-                                if (target) {
-                                  observed = target;
-                                }
-                              }}
-                              style={{
-                                position: 'absolute',
-                                width: '100%',
-                                filter: 'grayscale(0.5)',
-                              }}
-                              width="100%"
-                              height="100%"
-                              loop
-                              playsInline
-                              muted
-                            >
-                              <source src={p.overlay} type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
-                          );
-
-*/
