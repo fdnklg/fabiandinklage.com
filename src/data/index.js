@@ -307,7 +307,7 @@ export const content = {
       {
         title: `Transforming Education in Côte d'Ivoire`,
         path: 'enveritas-education-dashboard',
-        type: 'Data visualisation',
+        type: 'Interactive Map',
         client: 'Enveritas',
         color: ['#000', '#fff', '#E5E5E7'],
         year: 2021,
@@ -673,7 +673,7 @@ export const content = {
       },
       {
         title: 'Pour Your Neighbourhood',
-        type: 'Mapping',
+        type: 'Interactive Map',
         url: 'https://giessdenkiez.de/',
         year: 2020,
         visible: true,
@@ -742,7 +742,7 @@ export const content = {
         path: 'cityinflux',
         color: ['#2B1174', '#F5F3F8', '#E8E6ED'],
         client: 'GiZ',
-        type: 'Mapping',
+        type: 'Interactive Map',
         year: 2018,
         visible: true,
         thumbnail: 'public/images/cityinflux/cityinflux-thumb-960x640.jpg',
@@ -965,7 +965,7 @@ export const content = {
       {
         title: 'Educational Technology In Berlin',
         path: 'edutech',
-        type: 'Mapping',
+        type: 'Interactive Map',
         client: 'Technologiestiftung Berlin',
         color: ['#41B496', '#F6FCFA', '#EEF8F6'],
         year: 2020,
@@ -1074,7 +1074,7 @@ export const content = {
       {
         title: 'Shared Mobility Flows',
         path: 'bikesharing',
-        type: 'Mapping',
+        type: 'Interactive Map',
         client: 'CityLAB Berlin',
         color: ['#EE7B4B', '#fff', '#FDF2ED'],
         year: 2019,
@@ -1645,9 +1645,85 @@ export const content = {
     ],
     projects: [
       {
+        title: `Differences in Female Representation`,
+        path: 'differences-in-female-representation',
+        type: 'Wissenschaftskommunikation',
+        client: 'FU Berlin',
+        color: ['#000', '#fff', '#E5E5E7'],
+        year: 2021,
+        visible: true,
+        thumbnail: 'public/images/differences-in-female-representation/differences-in-gender-thumb.jpg',
+        overlay: 'public/images/differences-in-female-representation/differences-in-gender-thumb.mp4',
+        alt:
+        'title image',
+        url: null,
+        tasks: [
+          'Design',
+          'Frontend Entwicklung',
+        ],
+        subtitle: 'Dashboard-Prototyp zur Visualisierung von Bildungsqualität',
+        description: `Zusammen mit dem Team des gemeinnützigen Startups [Enveritas](https://www.enveritas.org/), habe ich ein prototypisches Dashboard erstellt. Es soll aktuelle Schulprojekte, und die Qualität der Bildung anhand einer Reihe ermittelter Indikatoren auf einer Karte verorten. Die Anwendung ist innerhalb einer kurzen Sprintphase entstanden und dient als Grundlage um Interessengruppen für eine Kollaboration zu motivieren. Im Fall der weiteren Entwicklung werden die zu dem Zeitpunkt zufällig generierten Daten anhand Ort erhoben. Ich war für die gestalterische und technische Realisierung des Prototypen mithilfe von Figma, React und D3 verantwortlich.`,
+        media: [
+          {
+            type: 'img',
+            alt:
+              'Rate der Alphabetisierung',
+            content:
+              'Rate der Alphabetisierung',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Räumliche Verortung und Fortschritt aktueller Schulbau Projekte',
+            content:
+              'Räumliche Verortung und Fortschritt aktueller Schulbau Projekte',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Räumliche Verortung der Kaffee-Initiativen',
+            content:
+              'Räumliche Verortung der Kaffee-Initiativen',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Risiko der Kinderarbeit im Land',
+            content:
+              'Risiko der Kinderarbeit im Land',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Darstellung von unterschiedlichen Indikatoren wie: Anzahl Bücher, Elektriziät, Zugang zu Wasser',
+            content:
+              'Darstellung von unterschiedlichen Indikatoren wie: Anzahl Bücher, Elektriziät, Zugang zu Wasser',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
+          },
+          {
+            type: 'img',
+            alt:
+              'Verhältnis zwischen Lehrern und Schülern',
+            content:
+              'Verhältnis zwischen Lehrern und Schülern',
+            url:
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
+          },
+        ]
+      },
+      {
         title: `Bildungsqualität an der Elfenbeinküste`,
         path: 'enveritas-education-dashboard',
-        type: 'Datenvisualisierung',
+        type: 'Interaktive Karte',
         client: 'Enveritas',
         color: ['#000', '#fff', '#E5E5E7'],
         year: 2021,
@@ -1667,54 +1743,54 @@ export const content = {
           {
             type: 'img',
             alt:
-              'Literacy rate of elementary school students',
+              'Rate der Alphabetisierung',
             content:
-              'Literacy rate of elementary school students',
+              'Rate der Alphabetisierung',
             url:
               'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
           },
           {
             type: 'img',
             alt:
-              'Progress of school projects being developed on location',
+              'Räumliche Verortung und Fortschritt aktueller Schulbau Projekte',
             content:
-              'Progress of school projects being developed on location',
+              'Räumliche Verortung und Fortschritt aktueller Schulbau Projekte',
             url:
               'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
           },
           {
             type: 'img',
             alt:
-              'description here',
+              'Räumliche Verortung der Kaffee-Initiativen',
             content:
-              'description here',
+              'Räumliche Verortung der Kaffee-Initiativen',
             url:
               'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
           },
           {
             type: 'img',
             alt:
-              'Distribution of coffee initiatives',
+              'Risiko der Kinderarbeit im Land',
             content:
-              'Distribution of coffee initiatives',
+              'Risiko der Kinderarbeit im Land',
             url:
               'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
           },
           {
             type: 'img',
             alt:
-              'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
+              'Darstellung von unterschiedlichen Indikatoren wie: Anzahl Bücher, Elektriziät, Zugang zu Wasser',
             content:
-              'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
+              'Darstellung von unterschiedlichen Indikatoren wie: Anzahl Bücher, Elektriziät, Zugang zu Wasser',
             url:
               'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
           },
           {
             type: 'img',
             alt:
-              'Showing teacher/student ratio and the level of teacher training.',
+              'Verhältnis zwischen Lehrern und Schülern',
             content:
-              'Showing teacher/student ratio and the level of teacher training.',
+              'Verhältnis zwischen Lehrern und Schülern',
             url:
               'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
           },
