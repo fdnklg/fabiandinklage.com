@@ -7,8 +7,6 @@ import { Helmet } from 'react-helmet';
 import { piwik } from '../../utils/';
 import { content } from '~/data';
 
-import List from '~/components/List';
-import Title from '~/components/Title';
 import { withRouter, Route, Switch } from 'react-router-dom';
 const baseLang = '(en|de)';
 
@@ -37,6 +35,7 @@ const InnerWrapper = styled.div`
   }
 `;
 
+import Disclaimer from '~/components/Disclaimer';
 import Nav from '../../components/Nav';
 import Profile from '../Profile';
 import Project from '../Project';
@@ -156,11 +155,12 @@ const AppWrapper = () => {
           flexDirection: 'column',
           minHeight: '100vh',
           px: [3, 4, 5, 6],
-          pt: [3, 4, 5, 5],
+          pt: [6, 6, 6, 6],
           pb: [0, 3, 3, 3],
         }}
       >
         <InnerWrapper>
+          <Disclaimer timeout={100} />
           <Nav timeout={100} />
           <Route
             exact

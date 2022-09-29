@@ -6,60 +6,60 @@ export const content = {
           url: 'public/logos/zon.svg',
           width: '65%',
           height: '100%',
-          id: 'zon'
+          id: 'zon',
         },
         client: {
           name: 'Zeit Online',
-          url: 'https://newsinitiative.withgoogle.com/intl/de/'
-        }
+          url: 'https://newsinitiative.withgoogle.com/intl/de/',
+        },
       },
       {
         svg: {
           url: 'public/logos/Google_logo.svg',
           width: '60%',
           height: '10%',
-          id: 'gni'
+          id: 'gni',
         },
         client: {
           name: 'Google News Initiative',
-          url: 'https://newsinitiative.withgoogle.com/intl/de/'
-        }
+          url: 'https://newsinitiative.withgoogle.com/intl/de/',
+        },
       },
       {
         svg: {
           url: 'public/logos/bmbf.svg',
           width: '40%',
           height: '90%',
-          id: 'bmbf'
+          id: 'bmbf',
         },
         client: {
           name: 'Bundesministerium für Bildung und Forschung',
-          url: 'https://www.bmbf.de/bmbf/de/home/home_node.html'
-        }
+          url: 'https://www.bmbf.de/bmbf/de/home/home_node.html',
+        },
       },
       {
         svg: {
           url: 'public/logos/DB_Logo.svg',
           height: '10%',
           width: '18%',
-          id: 'db'
+          id: 'db',
         },
         client: {
           name: 'Deutsche Bahn',
-          url: 'https://www.bahn.de/'
-        }
+          url: 'https://www.bahn.de/',
+        },
       },
       {
         svg: {
           url: 'public/logos/okf.svg',
           width: '50%',
           height: '30%',
-          id: 'okf'
+          id: 'okf',
         },
         client: {
           name: 'Open Knowledge Foundation',
-          url: 'https://newsinitiative.withgoogle.com/intl/de/'
-        }
+          url: 'https://newsinitiative.withgoogle.com/intl/de/',
+        },
       },
       {
         svg: {
@@ -67,12 +67,12 @@ export const content = {
 
           width: '40%',
           height: '50%',
-          id: 'fraunhofer'
+          id: 'fraunhofer',
         },
         client: {
           name: 'Fraunhofer Institut',
-          url: 'https://newsinitiative.withgoogle.com/intl/de/'
-        }
+          url: 'https://newsinitiative.withgoogle.com/intl/de/',
+        },
       },
     ],
   },
@@ -131,7 +131,8 @@ export const content = {
       about: 'about me',
       cv: 'resumé',
       clients: 'selected collaborations',
-      clientsSubtitle: 'I had the honor to work with international clients like:',
+      clientsSubtitle:
+        'I had the honor to work with international clients like:',
     },
     others: {
       more: 'Details',
@@ -143,8 +144,10 @@ export const content = {
     collaborations:
       'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
+      disclaimer:
+        "I'm **not taking any new projects** right now – I'm currently taking care of [coffee smallholders data on a global scale](https://enveritas.org). If you need a DataViz Person, [look here](https://datavis.berlin).",
       intro:
-        "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
+        "Hi I'm Fabian Dinklage, a **data visualization engineer** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
       vita:
         "I'm a Berlin-based designer and technologist focused on **Data Visualization** and **Interaction Design**. I graduated at the Interface Design Programme at the [University of Applied Sciences, Potsdam](https://design.fh-potsdam.de/) and was enrolled in the Interaction Design Programme at [Malmö University, Sweden](http://mah.se/). Currently I work at the interactive unit of [ZEIT ONLINE](https://zeit.de). Previously I did prototype-based research for the [Ideation & Prototyping Lab](https://lab.technologiestiftung-berlin.de) of the [Technologiestiftung Berlin](https://technologiestiftung-berlin.de) and the [CityLAB Berlin](https://citylab-berlin.org) with open data. I collaborated with: [Berkmann Klein Center (at) Harvard](https://cyber.harvard.edu/), [GiZ](https://giz.de/), [Google News Lab](https://newsinitiative.withgoogle.com/intl/de/google-news-lab/), [MIT](https://web.mit.edu/), [Deutsches Historisches Museum](https://www.dhm.de/), [Spiegel Online](https://spiegel.de/). Fun fact: I'm also a Freestyle Frisbee Vice World Champion!",
       profileUrl: 'public/images/profile___.jpg',
@@ -178,11 +181,20 @@ export const content = {
     ],
     activities: [
       {
+        title: 'Data Visualization Engineer & Interaction Designer',
+        type: 'Experience',
+        context: 'Enveritas, New York',
+        date: new Date(),
+        duration: '2021 – now',
+        description:
+          'Crafting data-driven platforms to increase coffee smallholders lives on a global scale.',
+      },
+      {
         title: 'Information Designer',
         type: 'Experience',
         context: 'ZEIT ONLINE, Berlin',
         date: new Date(),
-        duration: '2020 – now',
+        duration: '2020 – 2021',
         description:
           'Crafting interactive data-driven journalistic pieces for the newsroom.',
       },
@@ -312,53 +324,44 @@ export const content = {
         color: ['#000', '#fff', '#E5E5E7'],
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.jpg',
-        overlay: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.mp4',
-        alt:
-        'title image',
+        thumbnail:
+          'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.jpg',
+        overlay:
+          'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.mp4',
+        alt: 'title image',
         url: 'https://products.enveritas.org/civ-ed-dashboard-2021/',
-        tasks: [
-          'Design',
-          'Frontend Development',
-        ],
-        subtitle: 'Prototyping an administrative dashboard to reduce child labor',
+        tasks: ['Design', 'Frontend Development'],
+        subtitle:
+          'Prototyping an administrative dashboard to reduce child labor',
         description: `Together with the engineering team of [Enveritas](https://www.enveritas.org/), a non-profit tech startup located in New York, I protoyped a dashboard within a short sprint to show the progress of education projects in Côte d'Ivoire. We envisioned a tool designed for policy makers to facilitate reporting indicators like infrastructure, child labour, initiatives, literacy and classrooms. The current state of the prototype displays random data to provide an idea about potential perspectives of visualisation. The tool enhances trust and credibility of Enveritas's product of data-collection and provides guidance about possible use cases. My responsibility was to craft a visual language and develop the data-product with the support of React and D3.`,
         media: [
           {
             type: 'img',
-            alt:
-              'Literacy rate of elementary school students',
-            content:
-              'Literacy rate of elementary school students',
+            alt: 'Literacy rate of elementary school students',
+            content: 'Literacy rate of elementary school students',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Progress of school projects being developed on location',
-            content:
-              'Progress of school projects being developed on location',
+            alt: 'Progress of school projects being developed on location',
+            content: 'Progress of school projects being developed on location',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg',
           },
           {
             type: 'img',
-            alt:
-              'description here',
-            content:
-              'description here',
+            alt: 'description here',
+            content: 'description here',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Distribution of coffee initiatives',
-            content:
-              'Distribution of coffee initiatives',
+            alt: 'Distribution of coffee initiatives',
+            content: 'Distribution of coffee initiatives',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg',
           },
           {
             type: 'img',
@@ -367,7 +370,7 @@ export const content = {
             content:
               'Mapping school infratructure indicators such as amount of books, electricity or access to water.',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg',
           },
           {
             type: 'img',
@@ -376,9 +379,9 @@ export const content = {
             content:
               'Showing teacher/student ratio and the level of teacher training.',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg',
           },
-        ]
+        ],
       },
       {
         title: 'German federal election parliament',
@@ -391,20 +394,18 @@ export const content = {
         thumbnail: 'public/images/parlament-2021/parlament-thumb-960x640.jpg',
         overlay: 'public/images/parlament-2021/parlament-thumb-960x640.mp4',
         lazy: 'public/images/parlament-2021/hackernews-lazy-960x640.jpg',
-        alt:
-        'title image',
-        url: 'https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete',
-        tasks: [
-          'Data Visualization',
-          'Frontend Development',
-        ],
+        alt: 'title image',
+        url:
+          'https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete',
+        tasks: ['Data Visualization', 'Frontend Development'],
         subtitle: '735 elected members of the Bundestag 2021 visualized',
-        description: "For the 2021 federal election, the interactive team from [Zeit Online] (https://www.zeit.de/index) had a selection of [live visualizations] (https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete) realized on the election evening. I designed and implemented the visualization of the members of the Bundestag. Different filters give users a detailed insight into the composition of the Bundestag. The application receives the data directly from the DPA's API immediately after the direct-candidates have been announced and shows them live. Like all visualizations for this federal election at ZEIT ONLINE, it's also prerendered on the server. The application can thus be displayed without delay while further data is being reloaded in the background.",
+        description:
+          "For the 2021 federal election, the interactive team from [Zeit Online] (https://www.zeit.de/index) had a selection of [live visualizations] (https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete) realized on the election evening. I designed and implemented the visualization of the members of the Bundestag. Different filters give users a detailed insight into the composition of the Bundestag. The application receives the data directly from the DPA's API immediately after the direct-candidates have been announced and shows them live. Like all visualizations for this federal election at ZEIT ONLINE, it's also prerendered on the server. The application can thus be displayed without delay while further data is being reloaded in the background.",
         media: [
           {
             type: 'parlament-2021',
             alt:
-            'The number of seats per party shows the shares for the activated filter (here direct candidates).',
+              'The number of seats per party shows the shares for the activated filter (here direct candidates).',
             content:
               'The number of seats per party shows the shares for the activated filter (here direct candidates).',
             url:
@@ -426,15 +427,14 @@ export const content = {
           {
             type: 'parlament-2021',
             alt:
-              "A face is assigned to almost every elected candidate and further information about the person is obtained through hover. (Data visualization, federal election, members of parliament)",
+              'A face is assigned to almost every elected candidate and further information about the person is obtained through hover. (Data visualization, federal election, members of parliament)',
             content:
               'A face is assigned to almost every elected candidate and further information about the person is obtained via hover or touch.',
-            url:
-              'public/images/parlament-2021/parlament-list-3840x2040.jpg',
+            url: 'public/images/parlament-2021/parlament-list-3840x2040.jpg',
             lazy:
               'public/images/parlament-2021/parlament-list-lazy-3840x2040.jpg',
           },
-        ]
+        ],
       },
       {
         title: 'Climate change risks in Germany',
@@ -1460,7 +1460,12 @@ export const content = {
       title: 'Impressum',
       p1:
         'Angaben nach § 5 TMG und inhaltlich Verantwortlicher gemäß 55 Abs. 2 RStV',
-      li1: ['Fabian Dinklage', 'Thurneysserstraße 5', '13357 Berlin', 'Germany'],
+      li1: [
+        'Fabian Dinklage',
+        'Thurneysserstraße 5',
+        '13357 Berlin',
+        'Germany',
+      ],
       li2: ['mail(at)fabiandinklage.com', 'fabiandinklage.com'],
       li3: [
         'Umsatzsteuer-Identifikationsnummer gemäß § 27 a des deutschen Umsatzsteuergesetzes: DE 291545410',
@@ -1477,7 +1482,8 @@ export const content = {
     },
     title: {
       projects: 'ausgewählte projekte',
-      projectsSubtitle: 'Hovere über eine Kachel für eine animierte Projektvorschau.',
+      projectsSubtitle:
+        'Hovere über eine Kachel für eine animierte Projektvorschau.',
       services: 'dienstleistungen',
       about: 'über mich',
       cv: 'lebenslauf',
@@ -1486,6 +1492,8 @@ export const content = {
     collaborations:
       'Berkmann Klein Center (at) Harvard  /  Berliner Morgenpost / Bundesministerium für Bildung und Forschung /  Deutsches Historisches Museum  /  Deutsche Bahn  / Fraunhofer-Gesellschaft / GiZ  /  Google News Lab  /  MIT  / Open Knowledge Foundation / Spiegel Online  /  ZEIT ONLINE',
     about: {
+      disclaimer:
+        'Ich nehme momentan **keine weiteren Projekte** an – Ich kümmere mich zurzeit um die [Visualisierung der Daten von Kaffeebauern](https://enveritas.org/) weltweit. Suchst du einen DataVis Mensch, [schau hier vorbei](https://datavis.berlin).',
       intro:
         'Hallo, ich bin Fabian Dinklage, ein in Berlin ansässiger, freiberuflicher **Informationsdesigner** mit Fokus auf **Datenvisualisierungen**. Aus deinen Daten gestalte und entwickle ich Interfaces und interaktive datengesteuerte Produkte. Visualisierungen schaffen neue Sichtweisen auf deine Daten und helfen Dir diese besser zu verstehen und nutzbar zu machen.',
       vita:
@@ -1652,26 +1660,22 @@ export const content = {
         color: ['#000', '#fff', '#E5E5E7'],
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/differences-in-female-representation/differences-in-gender-thumb.jpg',
-        overlay: 'public/images/differences-in-female-representation/differences-in-gender-thumb.mp4',
-        alt:
-        'title image',
+        thumbnail:
+          'public/images/differences-in-female-representation/differences-in-gender-thumb.jpg',
+        overlay:
+          'public/images/differences-in-female-representation/differences-in-gender-thumb.mp4',
+        alt: 'title image',
         url: null,
-        tasks: [
-          'Design',
-          'Frontend Entwicklung',
-        ],
+        tasks: ['Design', 'Frontend Entwicklung'],
         subtitle: 'Dashboard-Prototyp zur Visualisierung von Bildungsqualität',
         description: `Zusammen mit dem Team des gemeinnützigen Startups [Enveritas](https://www.enveritas.org/), habe ich ein prototypisches Dashboard erstellt. Es soll aktuelle Schulprojekte, und die Qualität der Bildung anhand einer Reihe ermittelter Indikatoren auf einer Karte verorten. Die Anwendung ist innerhalb einer kurzen Sprintphase entstanden und dient als Grundlage um Interessengruppen für eine Kollaboration zu motivieren. Im Fall der weiteren Entwicklung werden die zu dem Zeitpunkt zufällig generierten Daten anhand Ort erhoben. Ich war für die gestalterische und technische Realisierung des Prototypen mithilfe von Figma, React und D3 verantwortlich.`,
         media: [
           {
             type: 'img',
-            alt:
-              'Rate der Alphabetisierung',
-            content:
-              'Rate der Alphabetisierung',
+            alt: 'Rate der Alphabetisierung',
+            content: 'Rate der Alphabetisierung',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg',
           },
           {
             type: 'img',
@@ -1680,25 +1684,21 @@ export const content = {
             content:
               'Räumliche Verortung und Fortschritt aktueller Schulbau Projekte',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Räumliche Verortung der Kaffee-Initiativen',
-            content:
-              'Räumliche Verortung der Kaffee-Initiativen',
+            alt: 'Räumliche Verortung der Kaffee-Initiativen',
+            content: 'Räumliche Verortung der Kaffee-Initiativen',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Risiko der Kinderarbeit im Land',
-            content:
-              'Risiko der Kinderarbeit im Land',
+            alt: 'Risiko der Kinderarbeit im Land',
+            content: 'Risiko der Kinderarbeit im Land',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg',
           },
           {
             type: 'img',
@@ -1707,18 +1707,16 @@ export const content = {
             content:
               'Darstellung von unterschiedlichen Indikatoren wie: Anzahl Bücher, Elektriziät, Zugang zu Wasser',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Verhältnis zwischen Lehrern und Schülern',
-            content:
-              'Verhältnis zwischen Lehrern und Schülern',
+            alt: 'Verhältnis zwischen Lehrern und Schülern',
+            content: 'Verhältnis zwischen Lehrern und Schülern',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg',
           },
-        ]
+        ],
       },
       {
         title: `Bildungsqualität an der Elfenbeinküste`,
@@ -1728,26 +1726,22 @@ export const content = {
         color: ['#000', '#fff', '#E5E5E7'],
         year: 2021,
         visible: true,
-        thumbnail: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.jpg',
-        overlay: 'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.mp4',
-        alt:
-        'title image',
+        thumbnail:
+          'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.jpg',
+        overlay:
+          'public/images/enveritas-education-dashboard/enveritas-thumb-960x640.mp4',
+        alt: 'title image',
         url: 'https://products.enveritas.org/civ-ed-dashboard-2021/',
-        tasks: [
-          'Design',
-          'Frontend Entwicklung',
-        ],
+        tasks: ['Design', 'Frontend Entwicklung'],
         subtitle: 'Dashboard-Prototyp zur Visualisierung von Bildungsqualität',
         description: `Zusammen mit dem Team des gemeinnützigen Startups [Enveritas](https://www.enveritas.org/), habe ich ein prototypisches Dashboard erstellt. Es soll aktuelle Schulprojekte, und die Qualität der Bildung anhand einer Reihe ermittelter Indikatoren auf einer Karte verorten. Die Anwendung ist innerhalb einer kurzen Sprintphase entstanden und dient als Grundlage um Interessengruppen für eine Kollaboration zu motivieren. Im Fall der weiteren Entwicklung werden die zu dem Zeitpunkt zufällig generierten Daten anhand Ort erhoben. Ich war für die gestalterische und technische Realisierung des Prototypen mithilfe von Figma, React und D3 verantwortlich.`,
         media: [
           {
             type: 'img',
-            alt:
-              'Rate der Alphabetisierung',
-            content:
-              'Rate der Alphabetisierung',
+            alt: 'Rate der Alphabetisierung',
+            content: 'Rate der Alphabetisierung',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-elementary-students.jpg',
           },
           {
             type: 'img',
@@ -1756,25 +1750,21 @@ export const content = {
             content:
               'Räumliche Verortung und Fortschritt aktueller Schulbau Projekte',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-classrooms.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Räumliche Verortung der Kaffee-Initiativen',
-            content:
-              'Räumliche Verortung der Kaffee-Initiativen',
+            alt: 'Räumliche Verortung der Kaffee-Initiativen',
+            content: 'Räumliche Verortung der Kaffee-Initiativen',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-educational-initiatives.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Risiko der Kinderarbeit im Land',
-            content:
-              'Risiko der Kinderarbeit im Land',
+            alt: 'Risiko der Kinderarbeit im Land',
+            content: 'Risiko der Kinderarbeit im Land',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-child-labor-risk.jpg',
           },
           {
             type: 'img',
@@ -1783,18 +1773,16 @@ export const content = {
             content:
               'Darstellung von unterschiedlichen Indikatoren wie: Anzahl Bücher, Elektriziät, Zugang zu Wasser',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-infrastructure-quality.jpg',
           },
           {
             type: 'img',
-            alt:
-              'Verhältnis zwischen Lehrern und Schülern',
-            content:
-              'Verhältnis zwischen Lehrern und Schülern',
+            alt: 'Verhältnis zwischen Lehrern und Schülern',
+            content: 'Verhältnis zwischen Lehrern und Schülern',
             url:
-              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg'
+              'public/images/enveritas-education-dashboard/enveritas-education-dashboard-education-quality.jpg',
           },
-        ]
+        ],
       },
       {
         title: 'Parlament des Bundestags',
@@ -1807,15 +1795,14 @@ export const content = {
         thumbnail: 'public/images/parlament-2021/parlament-thumb-960x640.jpg',
         overlay: 'public/images/parlament-2021/parlament-thumb-960x640.mp4',
         lazy: 'public/images/parlament-2021/hackernews-lazy-960x640.jpg',
-        alt:
-        'title image',
-        url: 'https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete',
-        tasks: [
-          'Design',
-          'Frontend Entwicklung',
-        ],
-        subtitle: '735 gewählte Abgeordnete des deutschen Bundestags visualisiert',
-        description: 'Zur Bundestagswahl 2021 habe mit dem Interaktiv Team von [Zeit Online](https://www.zeit.de/index) eine Auswahl an [Live Visualisierungen](https://www.zeit.de/politik/deutschland/2021-09/wahlergebnisse-bundestagswahl-2021-wahlkreise-karte-deutschland-live) zum Abend der Auszählung realisiert. Ich habe die Visualisierung der Bundestagsabgeordneten gestaltet und umgesetzt. Nutzerinnen bekommen durch unterschiedliche Filter einen detaillierten Einblick in die Zusammensetzung des Bundestags. Die Anwendung erhält die Daten direkt von der API der DPA direkt nach Bekanntgabe der feststehenden Kandidaten und zeigt diese Live. Wie alle Visualisierungen zur Bundestagswahl wird auch diese Visualisierung serverseitig gerendert. Die Anwendung kann so ohne Verzögerung angezeigt werden, während das Nachladen weiterer Daten im Hintergrund passiert.',
+        alt: 'title image',
+        url:
+          'https://www.zeit.de/politik/deutschland/2021-09/bundestag-interaktive-sitzverteilung-bundestagswahl-abgeordnete',
+        tasks: ['Design', 'Frontend Entwicklung'],
+        subtitle:
+          '735 gewählte Abgeordnete des deutschen Bundestags visualisiert',
+        description:
+          'Zur Bundestagswahl 2021 habe mit dem Interaktiv Team von [Zeit Online](https://www.zeit.de/index) eine Auswahl an [Live Visualisierungen](https://www.zeit.de/politik/deutschland/2021-09/wahlergebnisse-bundestagswahl-2021-wahlkreise-karte-deutschland-live) zum Abend der Auszählung realisiert. Ich habe die Visualisierung der Bundestagsabgeordneten gestaltet und umgesetzt. Nutzerinnen bekommen durch unterschiedliche Filter einen detaillierten Einblick in die Zusammensetzung des Bundestags. Die Anwendung erhält die Daten direkt von der API der DPA direkt nach Bekanntgabe der feststehenden Kandidaten und zeigt diese Live. Wie alle Visualisierungen zur Bundestagswahl wird auch diese Visualisierung serverseitig gerendert. Die Anwendung kann so ohne Verzögerung angezeigt werden, während das Nachladen weiterer Daten im Hintergrund passiert.',
         media: [
           {
             type: 'parlament-2021',
@@ -1831,7 +1818,7 @@ export const content = {
           {
             type: 'parlament-2021',
             alt:
-            'Die Anzahl der Sitze pro Partei zeigt die Anteile für den aktivierten Filter (hier Direktkandidaten).',
+              'Die Anzahl der Sitze pro Partei zeigt die Anteile für den aktivierten Filter (hier Direktkandidaten).',
             content:
               'Die Anzahl der Sitze pro Partei zeigt die Anteile für den aktivierten Filter (hier Direktkandidaten).',
             url:
@@ -1845,12 +1832,11 @@ export const content = {
               'Zu fast jeder gewählten Kandidatin wird ist ein Gesicht zugeordnet und weitere Informationen zur Person durch Hover erhalten. (Datenvisualiserung, Bundestagswahl, Abgeordnete)',
             content:
               'Zu fast jeder gewählten Kandidatin wird ist ein Gesicht zugeordnet und weitere Informationen zur Person durch Hover erhalten.',
-            url:
-              'public/images/parlament-2021/parlament-list-3840x2040.jpg',
+            url: 'public/images/parlament-2021/parlament-list-3840x2040.jpg',
             lazy:
               'public/images/parlament-2021/parlament-list-lazy-3840x2040.jpg',
           },
-        ]
+        ],
       },
       {
         title: 'Klimarisiken in Deutschland',

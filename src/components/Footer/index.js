@@ -18,7 +18,7 @@ const StyledBox = styled(Box)`
 const StyledFlex = styled(Flex)`
   opacity: ${props => opacityFromState(props.state)};
   transition: all ${p => p.theme.times[1]} ease-in-out;
-  opacity: .5;
+  opacity: 0.5;
 `;
 
 const Footer = p => {
@@ -37,7 +37,7 @@ const Footer = p => {
       {state => (
         <StyledFlex sx={{ pb: ['3', '4', '5'] }} state={state}>
           <StyledBox width={[1 / 3, 1 / 2]}>
-            <Label content="©2021, F.D." />
+            <Label content={`©${new Date().getFullYear()}, F.D.`} />
           </StyledBox>
           <StyledBox sx={{ textAlign: 'right' }} width={[2 / 3, 1 / 2]}>
             <RouterLink color={color} to={`/legal/${base}`}>

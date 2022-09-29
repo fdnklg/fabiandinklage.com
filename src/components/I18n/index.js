@@ -9,7 +9,7 @@ const translations = {
   en: {
     about: {
       intro:
-        "Hi I'm Fabian Dinklage, a freelance **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
+        "Hi I'm Fabian Dinklage, a **data visualization** and **information designer** based in Berlin. I design interfaces and craft interactive **data-driven experiences** to help you understand your data.",
     },
   },
   de: {
